@@ -1,4 +1,6 @@
-# parsnip-kit [![TypeScript](https://img.shields.io/badge/TypeScript-支持-blue)](https://www.typescriptlang.org/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+# <center> Parsnip-Kit
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-blue)](https://www.typescriptlang.org/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 `parsnip-kit` 是一个零依赖的 JavaScript 工具库，支持 TypeScript。它提供了一系列实用的工具函数，帮助开发者更高效地处理常见的编程任务。
 

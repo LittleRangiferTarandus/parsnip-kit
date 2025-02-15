@@ -1,4 +1,6 @@
-# parsnip-kit [![TypeScript](https://img.shields.io/badge/TypeScript-対応-blue)](https://www.typescriptlang.org/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+# <center> Parsnip-Kit
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-blue)](https://www.typescriptlang.org/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 `parsnip-kit` は TypeScript 対応のゼロ依存 JavaScript ユーティリティライブラリです。開発者が一般的なプログラミングタスクをより効率的に処理できるように、実用的なユーティリティ関数のコレクションを提供します。
 
