@@ -46,16 +46,15 @@ function formatExample(sources) {
   }
   return sources.filter((item) => !item.includes("@example")).map((item) => item.slice(3)).join("\n");
 }
+
+const langArr = ['zh', 'en', 'jp']
+
 function getFormatJsdoc(comment) {
   const [jsdoc] = parse(comment);
   const returns = jsdoc.tags.find((item) => item.tag === "returns");
   const example = jsdoc.tags.find((item) => item.tag === "example");
   const args = jsdoc.tags.filter((item) => item.tag === "param").map((item) => {
-    let desc
-    try {
-      desc = JSON.parse(item.description)
-    } catch (error) {
-    }
+    const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
       name: item.name,
       type: item.type,
@@ -63,32 +62,24 @@ function getFormatJsdoc(comment) {
       default: item.default,
       desc: item.description,
     }
-    if (desc) {
-      Object.keys(desc).forEach(key => {
-        ans[key + 'Desc'] = desc[key]
-      })
+    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+      ans[arr[i * 2] + 'Desc'] = arr[i * 2 + 1]
     }
     return ans
   })
   const funcDesc = jsdoc.description
-  let parsedFuncDesc
-  try {
-    parsedFuncDesc = JSON.parse(funcDesc)
-  } catch (err) {
-    console.log(err);
-  }
   const ans = {
     description: funcDesc,
     returnType: returns?.type || "void",
     example: example?.source ? formatExample(example.source.map((item) => item.source)) : "",
     args
   }
-  if (parsedFuncDesc) {
-    Object.keys(parsedFuncDesc).forEach(key => {
-      ans[key + 'Description'] = parsedFuncDesc[key]
-    })
-  }
-
+  langArr.forEach(langStr => {
+    const textItem = jsdoc.tags.find((item) => item.tag === langStr)
+    if (textItem) {
+      ans[langStr + 'Description'] = [textItem.name, textItem.description].filter(Boolean).join(' ')
+    }
+  })
   return ans
 }
 function getFunctionName(content) {
