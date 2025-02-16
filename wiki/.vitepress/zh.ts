@@ -2,10 +2,14 @@ import { defineConfig } from 'vitepress'
 import { dfs4Md } from './dfs4Md'
 
 const titleMap = {
-  'starting': '快速开始'
+  'starting': '快速开始',
+}
+const additionMap = {
+  'string': '字符串',
+  'typed': '类型检查',
 }
 
-const sidebar = dfs4Md('zh', titleMap)
+const sidebar = dfs4Md('zh', titleMap, additionMap)
 
 export default defineConfig({
   title: "Parsnip-Kit 文档",
