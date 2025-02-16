@@ -12,8 +12,8 @@ import { htmlDecode } from '../htmlDecode'
 
 describe('transform naming string', () => {
   test('splitToWords', () => {
-    const words = splitToWords('-_i need XmlHTTPRequest -_')
-    const ans = ['i', 'need', 'Xml', 'HTTP', 'Request']
+    const words = splitToWords('-_i need 123XmlHTTPRequest -_')
+    const ans = ['i', 'need', '123', 'Xml', 'HTTP', 'Request']
 
     expect(words.length).eq(ans.length)
     words.forEach((item, i) => {

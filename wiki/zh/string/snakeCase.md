@@ -5,6 +5,8 @@
 ### Usage
 
 ```ts
+import { snakeCase } from 'parsnip-kit'
+
 snakeCase('HelloWorld') // 'hello_world'
 snakeCase('helloWorld') // 'hello_world'
 snakeCase('hello-world') // 'hello_world'
@@ -19,7 +21,7 @@ snakeCase('-_HELLO World -_') // 'hello_world'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `{"zh": "待转换的字符串", "en": "The string to be converted."}` |
       
 ### Returns
 

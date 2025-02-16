@@ -5,6 +5,8 @@ Encode the string into HTML entities, converting special characters (such as <, 
 ### Usage
 
 ```ts
+import { htmlEncode } from 'parsnip-kit'
+
 htmlEncode('\'test\'') // '&#39;test&#39;'
 htmlEncode('"test"') // '&quot;test&quot;'
 htmlEncode('<img/>') // '&lt;img/&gt;'
@@ -16,7 +18,7 @@ htmlEncode('talk & code') // 'talk &amp; code'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
+| `arg` | `any` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

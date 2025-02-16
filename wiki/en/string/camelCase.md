@@ -5,6 +5,8 @@ Convert the string to camelCase.
 ### Usage
 
 ```ts
+import { camelCase } from 'parsnip-kit'
+
 camelCase('HelloWorld') // 'helloWorld'
 camelCase('helloWorld') // 'helloWorld'
 camelCase('hello-world') // 'helloWorld'
@@ -19,7 +21,7 @@ camelCase('-_HELLO World -_') // 'helloWorld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
+| `arg` | `any` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

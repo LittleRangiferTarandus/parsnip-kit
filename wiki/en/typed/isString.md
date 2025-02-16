@@ -1,11 +1,14 @@
 # isString
       
-Check if the input parameter is a string.
+Check whether the input parameter is a primitive string or a `String` instance.
 
 ### Usage
 
 ```ts
+import { isString } from 'parsnip-kit'
+
 isString('test') // true
+isString(new String('test')) // true
 isString(123) // false
 ```
 

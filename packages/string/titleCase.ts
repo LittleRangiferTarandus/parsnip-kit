@@ -2,11 +2,14 @@ import { capitalize } from './capitalize'
 import { splitToWords } from './splitToWords'
 
 /**
- * {"zh": "把字符串转换到标题命名，单词之间用空格间隔，首字母大写。","en":"Convert the string to Title Case, with words separated by spaces and each word capitalized."}
- * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
+ * @zh 把字符串转换到标题命名，单词之间用空格间隔，首字母大写。
+ * @en Convert the string to Title Case, with words separated by spaces and each word capitalized.
+ * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
  * @example
  * ```ts
+ * import { titleCase } from 'parsnip-kit'
+ * 
  * titleCase('HelloWorld') // 'Hello World'
  * titleCase('helloWorld') // 'Hello World'
  * titleCase('hello-world') // 'Hello World'

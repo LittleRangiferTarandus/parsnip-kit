@@ -1,11 +1,14 @@
 import { splitToWords } from './splitToWords'
 
 /**
- * {"zh": "把字符串转换到大驼峰命名。","en": "Convert the string to PascalCase (also known as UpperCamelCase)."}
- * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
+ * @zh 把字符串转换到大驼峰命名。
+ * @en Convert the string to PascalCase (also known as UpperCamelCase).
+ * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
  * @example
  * ```ts
+ * import { pascalCase } from 'parsnip-kit'
+ * 
  * pascalCase('HelloWorld') // 'HelloWorld'
  * pascalCase('helloWorld') // 'HelloWorld'
  * pascalCase('hello-world') // 'HelloWorld'

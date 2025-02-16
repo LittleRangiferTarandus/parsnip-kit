@@ -5,7 +5,9 @@
 ### Usage
 
 ```ts
-splitToWords('-_i need XmlHTTPRequest -_') // ['i', 'need', 'Xml', 'HTTP', 'Request']
+import { splitToWords } from 'parsnip-kit'
+
+splitToWords('-_i need 123XmlHTTPRequest -_') // ['i', 'need', '123', 'Xml', 'HTTP', 'Request']
 ```
 
       
@@ -13,7 +15,7 @@ splitToWords('-_i need XmlHTTPRequest -_') // ['i', 'need', 'Xml', 'HTTP', 'Requ
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
       
 ### Returns
 

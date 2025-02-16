@@ -1,11 +1,14 @@
-import { splitToWords } from '../../script/string/splitToWords'
+import { splitToWords } from './splitToWords'
 
 /**
- * {"zh": "把字符串转换到大写蛇形命名。", "en": "Convert the string to UPPERCASE_SNAKE_CASE."}
- * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
+ * @zh 把字符串转换到大写蛇形命名。
+ * @en Convert the string to UPPERCASE_SNAKE_CASE.
+ * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
  * @example
  * ```ts
+ * import { upperSnakeCase } from 'parsnip-kit'
+ * 
  * upperSnakeCase('HelloWorld') // 'HELLO_WORLD'
  * upperSnakeCase('helloWorld') // 'HELLO_WORLD'
  * upperSnakeCase('hello-world') // 'HELLO_WORLD'

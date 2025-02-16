@@ -1,11 +1,14 @@
 import { splitToWords } from './splitToWords'
 
 /**
- * {"zh": "把字符串转换到小驼峰命名。","en":"Convert the string to camelCase."}
- * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
+ * @zh 把字符串转换到小驼峰命名。
+ * @en Convert the string to camelCase.
+ * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
  * @example
  * ```ts
+ * import { camelCase } from 'parsnip-kit'
+ * 
  * camelCase('HelloWorld') // 'helloWorld'
  * camelCase('helloWorld') // 'helloWorld'
  * camelCase('hello-world') // 'helloWorld'

@@ -5,6 +5,8 @@
 ### Usage
 
 ```ts
+import { camelCase } from 'parsnip-kit'
+
 camelCase('HelloWorld') // 'helloWorld'
 camelCase('helloWorld') // 'helloWorld'
 camelCase('hello-world') // 'helloWorld'
@@ -19,7 +21,7 @@ camelCase('-_HELLO World -_') // 'helloWorld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
       
 ### Returns
 

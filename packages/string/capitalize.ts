@@ -1,9 +1,12 @@
 /**
- * {"zh":"把字符串变成首字母大写的形式。","en":"Capitalize the first letter of the string."}
- * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
+ * @zh 把字符串变成首字母大写的形式。
+ * @en Capitalize the first letter of the string.
+ * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
  * @example
  * ```ts
+ * import { capitalize } from 'parsnip-kit'
+ * 
  * capitalize('HelloWorld') // 'Helloworld'
  * ```
  */

@@ -5,6 +5,8 @@
 ### Usage
 
 ```ts
+import { pascalCase } from 'parsnip-kit'
+
 pascalCase('HelloWorld') // 'HelloWorld'
 pascalCase('helloWorld') // 'HelloWorld'
 pascalCase('hello-world') // 'HelloWorld'
@@ -19,7 +21,7 @@ pascalCase('-_HELLO World -_') // 'HelloWorld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
       
 ### Returns
 

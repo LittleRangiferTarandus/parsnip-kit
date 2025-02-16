@@ -5,6 +5,8 @@ Convert the string to Title Case, with words separated by spaces and each word c
 ### Usage
 
 ```ts
+import { titleCase } from 'parsnip-kit'
+
 titleCase('HelloWorld') // 'Hello World'
 titleCase('helloWorld') // 'Hello World'
 titleCase('hello-world') // 'Hello World'
@@ -19,7 +21,7 @@ titleCase('-_HELLO World -_') // 'Hello World'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
+| `arg` | `any` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

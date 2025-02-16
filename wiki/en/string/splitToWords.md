@@ -5,7 +5,9 @@ Split the string used for naming into individual words.
 ### Usage
 
 ```ts
-splitToWords('-_i need XmlHTTPRequest -_') // ['i', 'need', 'Xml', 'HTTP', 'Request']
+import { splitToWords } from 'parsnip-kit'
+
+splitToWords('-_i need 123XmlHTTPRequest -_') // ['i', 'need', '123', 'Xml', 'HTTP', 'Request']
 ```
 
       
@@ -13,7 +15,7 @@ splitToWords('-_i need XmlHTTPRequest -_') // ['i', 'need', 'Xml', 'HTTP', 'Requ
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
+| `arg` | `any` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

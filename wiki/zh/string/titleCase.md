@@ -5,6 +5,8 @@
 ### Usage
 
 ```ts
+import { titleCase } from 'parsnip-kit'
+
 titleCase('HelloWorld') // 'Hello World'
 titleCase('helloWorld') // 'Hello World'
 titleCase('hello-world') // 'Hello World'
@@ -19,7 +21,7 @@ titleCase('-_HELLO World -_') // 'Hello World'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
       
 ### Returns
 
