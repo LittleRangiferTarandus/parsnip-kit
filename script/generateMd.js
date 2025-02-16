@@ -2,9 +2,9 @@ import fs from 'fs'
 import { fileURLToPath } from 'url'
 import { jsdocToMD } from './jsdoc2Md.js'
 
-function generateMD() {
+function generateMD(lang) {
   const examplePath = fileURLToPath(new URL('../packages', import.meta.url))
-  const docsPath = fileURLToPath(new URL('../docs', import.meta.url))
+  const docsPath = fileURLToPath(new URL('../wiki' + (!lang ? '' : ('/' + lang)), import.meta.url))
   const exampleFiles = fs.readdirSync(examplePath)
 
   const dfs = (fileNames, prefixPath = []) => {
@@ -24,7 +24,7 @@ function generateMD() {
         prefixPath.pop()
       } else {
         const input = fs.readFileSync(fullPath, 'utf-8')
-        const output = jsdocToMD({ input, extname })
+        const output = jsdocToMD({ input, extname, lang })
         
         if (!output) {
           return
@@ -49,4 +49,6 @@ function generateMD() {
   dfs(exampleFiles)
 }
 
-generateMD()
+['en', 'zh'].forEach(item => {
+  generateMD(item)
+})

@@ -1,8 +1,8 @@
-import { splitToWords } from './splitToWords'
+import { splitToWords } from '../../script/string/splitToWords'
 
 /**
- * 把字符串转换到大写蛇形命名。
- * @param {string} - 待转换的字符串
+ * {"zh": "把字符串转换到大写蛇形命名。", "en": "Convert the string to UPPERCASE_SNAKE_CASE."}
+ * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
  * @returns {string}
  * @example
  * ```ts

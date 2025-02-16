@@ -1,6 +1,6 @@
 # titleCase
       
-把字符串转换到标题命名，单词之间用空格间隔，首字母大写。
+Convert the string to Title Case, with words separated by spaces and each word capitalized.
 
 ### Usage
 
@@ -19,7 +19,7 @@ titleCase('-_HELLO World -_') // 'Hello World'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

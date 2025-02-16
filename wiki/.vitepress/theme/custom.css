@@ -1,0 +1,16 @@
+:root {
+  /* 标题 */
+  --vp-home-hero-name-color: transparent;
+  /* 渐变色 */
+  --vp-home-hero-name-background: rgb(241, 169, 80);
+  --vp-button-brand-bg: rgb(241, 169, 80);
+  --vp-button-brand-hover-bg: rgb(251, 203, 100);
+  --vp-button-brand-active-bg: rgb(195, 134, 59);
+  --vp-c-brand-1: rgb(255, 140, 0);
+}
+
+.VPHero.VPHomeHero > .container {
+  background-image: url("/logo.svg");
+  background-repeat: no-repeat;
+  background-position: right 15% top 50px;
+}

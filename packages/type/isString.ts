@@ -1,6 +1,6 @@
 /**
- * 判断入参是否为字符串。
- * @param {any} - 待判断的入参
+ * {"zh": "判断入参是否为字符串。", "en": "Check if the input parameter is a string."}
+ * @param {any} arg {"zh": "待判断的入参", "en": "Parameters for check"}
  * @returns {boolean}
  * @example
  * ```ts

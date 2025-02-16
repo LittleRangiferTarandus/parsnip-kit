@@ -1,6 +1,6 @@
 # capitalize
       
-把单词变成首字母大写的形式。
+把字符串变成首字母大写的形式。
 
 ### Usage
 
@@ -13,7 +13,7 @@ capitalize('HelloWorld') // 'Helloworld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
       
 ### Returns
 

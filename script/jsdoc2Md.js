@@ -13,11 +13,11 @@ function formatType(types) {
   return [types];
 }
 function generateMD(func) {
-  const { functionName, description, content, args, returnType, extname, example } = func;
+  const { functionName, content, args, returnType, lang, example } = func;
   return `
 # ${functionName}
       
-${description}
+${func[lang + 'Description'] || func.description}
 
 ### Usage
 
@@ -27,7 +27,7 @@ ${example}
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" \\| ") + "`"} | \`${item.optional}\` | \`${item.default}\` | \`${item.desc}\` |`).join("\n")}
+${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" \\| ") + "`"} | \`${item.optional}\` | \`${item.default}\` | \`${item[lang + 'Desc'] || item.desc}\` |`).join("\n")}
       
 ### Returns
 
@@ -40,10 +40,6 @@ ${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" 
 function isEmpty(val) {
   return val === void 0 || val === null || val === "" || Array.isArray(val) && !val.length;
 }
-function isFunction(val) {
-  return typeof val === "function";
-}
-
 function formatExample(sources) {
   if (isEmpty(sources)) {
     return "";
@@ -54,19 +50,46 @@ function getFormatJsdoc(comment) {
   const [jsdoc] = parse(comment);
   const returns = jsdoc.tags.find((item) => item.tag === "returns");
   const example = jsdoc.tags.find((item) => item.tag === "example");
-  const args = jsdoc.tags.filter((item) => item.tag === "param").map((item) => ({
-    name: item.name,
-    type: item.type,
-    optional: item.optional,
-    default: item.default,
-    desc: item.description
-  }));
-  return {
-    description: jsdoc.description,
+  const args = jsdoc.tags.filter((item) => item.tag === "param").map((item) => {
+    let desc
+    try {
+      desc = JSON.parse(item.description)
+    } catch (error) {
+    }
+    const ans = {
+      name: item.name,
+      type: item.type,
+      optional: item.optional,
+      default: item.default,
+      desc: item.description,
+    }
+    if (desc) {
+      Object.keys(desc).forEach(key => {
+        ans[key + 'Desc'] = desc[key]
+      })
+    }
+    return ans
+  })
+  const funcDesc = jsdoc.description
+  let parsedFuncDesc
+  try {
+    parsedFuncDesc = JSON.parse(funcDesc)
+  } catch (err) {
+    console.log(err);
+  }
+  const ans = {
+    description: funcDesc,
     returnType: returns?.type || "void",
     example: example?.source ? formatExample(example.source.map((item) => item.source)) : "",
     args
-  };
+  }
+  if (parsedFuncDesc) {
+    Object.keys(parsedFuncDesc).forEach(key => {
+      ans[key + 'Description'] = parsedFuncDesc[key]
+    })
+  }
+
+  return ans
 }
 function getFunctionName(content) {
   const tokens = esprima.tokenize(content);
@@ -112,16 +135,15 @@ function parseFile(file) {
   return result.filter(Boolean);
 }
 function jsdocToMD(options) {
-  const { input, extname, generate } = options;
+  const { input, extname, lang } = options;
   const parsedFiles = parseFile(input);
   const mds = parsedFiles.map((file) => {
     const { comment, content } = file;
-    const { description, returnType, args, example } = getFormatJsdoc(comment);
+    const formatJsdoc = getFormatJsdoc(comment);
     const functionName = getFunctionName(content);
-    if (isFunction(generate)) {
-      return generate({ functionName, content, description, returnType, args, extname, example });
-    }
-    return generateMD({ functionName, content, description, returnType, args, extname, example });
+    return generateMD({
+      ...formatJsdoc, lang, functionName
+    });
   });
   return mds.join("\n").trim();
 }

@@ -1,11 +1,12 @@
-# kebabCase
+# isString
       
-把字符串转换到短横线命名。
+判断入参是否为字符串。
 
 ### Usage
 
 ```ts
-camelCase('HelloWorld') // 'hello-world'
+isString('test') // true
+isString(123) // false
 ```
 
       
@@ -13,10 +14,10 @@ camelCase('HelloWorld') // 'hello-world'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `any` | `false` | `undefined` | `待判断的入参` |
       
 ### Returns
 
 | Type |
 | ---  |
-| `string`  |
+| `boolean`  |

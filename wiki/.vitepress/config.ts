@@ -1,28 +1,25 @@
 import { defineConfig } from 'vitepress'
+import zh from './zh'
+import en from './en'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "parsnip-kit wiki",
-  description: "the API document site of the javascript tool libary parsnip-kit",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+  head: [
+    [
+      'link',
+      { rel: 'icon', href: 'logo.svg' }
     ]
+  ],
+  lastUpdated: true,
+  cleanUrls: true,
+  metaChunk: true,
+  themeConfig: {
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' }
+    ],
+    logo: '/logo.svg',
+  },
+  locales: {
+    zh: { label: '中文', ...zh },
+    en: { label: 'English', ...en },
   }
 })

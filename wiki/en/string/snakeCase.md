@@ -1,6 +1,6 @@
 # snakeCase
       
-把字符串转换到蛇形命名。
+Convert the string to snake_case.
 
 ### Usage
 
@@ -19,7 +19,7 @@ snakeCase('-_HELLO World -_') // 'hello_world'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

@@ -19,7 +19,7 @@ upperSnakeCase('-_HELLO World -_') // 'HELLO_WORLD'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
       
 ### Returns
 

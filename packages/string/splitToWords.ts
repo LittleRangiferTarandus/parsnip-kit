@@ -1,8 +1,8 @@
 const regExp = /[-_\s]|(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/
 
 /**
- * 把用于命名的字符串拆分为单词。
- * @param {string} - 待转换的字符串
+ * {"zh": "把用于命名的字符串拆分为单词。","en": "Split the string used for naming into individual words."}
+ * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
  * @returns {string[]}
  * @example
  * ```ts

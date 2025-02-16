@@ -1,6 +1,6 @@
 # htmlDecode
       
-将字符串进行 HTML 解码，将特定的 HTML 实体（如 &\lt;、&\gt;、&\amp;）还原为普通字符（如 <、>、&）。
+Decode the string from HTML entities, converting specific HTML entities (such as `&lt;`, `&gt;`, `&amp;`) back to their corresponding plain characters (e.g., <, >, &).
 
 ### Usage
 
@@ -16,7 +16,7 @@ htmlDecode('talk &amp; code') // 'talk & code'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `The string to be converted.` |
       
 ### Returns
 

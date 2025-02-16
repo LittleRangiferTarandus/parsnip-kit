@@ -1,6 +1,6 @@
 # isString
       
-判断入参是否为字符串。
+Check if the input parameter is a string.
 
 ### Usage
 
@@ -14,7 +14,7 @@ isString(123) // false
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `any` | `false` | `undefined` | `待判断的入参` |
+| `arg` | `any` | `false` | `undefined` | `Parameters for check` |
       
 ### Returns
 

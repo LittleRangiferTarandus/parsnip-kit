@@ -19,7 +19,7 @@ camelCase('-_HELLO World -_') // 'helloWorld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `-` | `string` | `false` | `undefined` | `待转换的字符串` |
+| `arg` | `string` | `false` | `undefined` | `待转换的字符串` |
       
 ### Returns
 

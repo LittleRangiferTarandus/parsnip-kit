@@ -1,8 +1,8 @@
 import { splitToWords } from './splitToWords'
 
 /**
- * 把字符串转换到小驼峰命名。
- * @param {string} - 待转换的字符串
+ * {"zh": "把字符串转换到小驼峰命名。","en":"Convert the string to camelCase."}
+ * @param {string} arg {"zh": "待转换的字符串", "en": "The string to be converted."}
  * @returns {string}
  * @example
  * ```ts
