@@ -29,3 +29,9 @@ export { isNanValue } from './typed/isNanValue'
 export { isInt } from './typed/isInt'
 export { isFloat } from './typed/isFloat'
 
+export { getByPath } from './object/getByPath'
+export { setByPath } from './object/setByPath'
+
+export { difference } from './array/difference'
+export { intersection } from './array/intersection'
+export { union } from './array/union'
