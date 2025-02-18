@@ -38,8 +38,8 @@ const dfs = (files, prefix: string[], container: any[], titleMap: Record<string,
 
 const order = [
   'guide',
-  'array',
   'object',
+  'array',
   'function',
   'async',
   'string',
