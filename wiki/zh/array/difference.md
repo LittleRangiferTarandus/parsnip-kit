@@ -33,8 +33,8 @@ difference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: numb
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `any[]` | `arr1` | `false` | `undefined` | 需要求差集的数组  |
-| `path` | `arr2` | `false` | `undefined` | 需要求差集的数组  |
+| `arr1` | `any[]` | `false` | `undefined` | 需要求差集的数组  |
+| `arr2` | `any[]` | `false` | `undefined` | 需要求差集的数组  |
 | `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
       
 ### Returns

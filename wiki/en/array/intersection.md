@@ -33,8 +33,8 @@ intersection([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: nu
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `any[]` | `arr1` | `false` | `undefined` | Array to be intersected |
-| `path` | `arr2` | `false` | `undefined` | Array to be intersected |
+| `arr1` | `any[]` | `false` | `undefined` | Array to be intersected |
+| `arr2` | `any[]` | `false` | `undefined` | Array to be intersected |
 | `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
       
 ### Returns

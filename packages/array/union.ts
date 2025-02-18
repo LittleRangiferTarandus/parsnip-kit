@@ -6,8 +6,8 @@ import { getByPath } from '../object/getByPath'
 /**
  * @zh 输入两个数组`arr1`、`arr2`，输出它们的并集。`getter`提供区分元素的标识。
  * @en Input two arrays `arr1` and `arr2`, and output their union. A `getter` is provided to distinguish the elements.
- * @param {arr1} any[] @zh 需要求并集的数组 @en Array for computing the union
- * @param {arr2} path @zh 需要求并集的数组 @en Array for computing the union
+ * @param {any[]} arr1 @zh 需要求并集的数组 @en Array for computing the union
+ * @param {any[]} arr2 @zh 需要求并集的数组 @en Array for computing the union
  * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
  * @returns {any[]}
  * @example

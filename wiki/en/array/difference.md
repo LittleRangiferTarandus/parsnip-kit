@@ -33,8 +33,8 @@ difference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: numb
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `any[]` | `arr1` | `false` | `undefined` | Array for computing the difference |
-| `path` | `arr2` | `false` | `undefined` | Array for computing the difference |
+| `arr1` | `any[]` | `false` | `undefined` | Array for computing the difference |
+| `arr2` | `any[]` | `false` | `undefined` | Array for computing the difference |
 | `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
       
 ### Returns
