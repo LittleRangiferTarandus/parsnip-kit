@@ -1,7 +1,5 @@
 import { splitToWords } from './splitToWords'
 
-// prettier-ignore
-{
 /**
  * @zh 把字符串转换到小驼峰命名。
  * @en Convert the string to camelCase.
@@ -10,7 +8,7 @@ import { splitToWords } from './splitToWords'
  * @example
  * ```ts
  * import { camelCase } from 'parsnip-kit'
- * 
+ *
  * camelCase('HelloWorld') // 'helloWorld'
  * camelCase('helloWorld') // 'helloWorld'
  * camelCase('hello-world') // 'helloWorld'
@@ -20,7 +18,6 @@ import { splitToWords } from './splitToWords'
  * camelCase('-_HELLO World -_') // 'helloWorld'
  * ```
  */
-}
 export function camelCase(arg: string): string {
   const words = splitToWords(arg)
   let ans = ''

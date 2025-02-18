@@ -1,8 +1,6 @@
 import { isString } from '../typed/isString'
 import { getByPath } from '../object/getByPath'
 
-// prettier-ignore
-{
 /**
  * @zh 输入两个数组`arr1`、`arr2`，输出`arr1` - `arr2` 的差集。`getter`提供区分元素的标识。
  * @en Input two arrays arr1 and arr2, and output the difference set of arr1 - arr2. A getter is provided to distinguish the elements.
@@ -13,29 +11,28 @@ import { getByPath } from '../object/getByPath'
  * @example
  * ```ts
  * import { difference } from 'parsnip-kit'
- * 
+ *
  * difference([1, 2, 3, NaN], [1, 4, 8, NaN]) // [2, 3]
- * 
+ *
  * difference(
  *   [{ v: 1 }, { v: 2 }, { v: 3 }],
  *   [{ v: 1 }, { v: 4 }, { v: 8 }],
  *   'v'
  * ) // [{ v: 2 }, { v: 3 }]
- * 
+ *
  * difference(
  *   [{ v: [1] }, { v: [2] }, { v: [3] }],
  *   [{ v: [1] }, { v: [4] }, { v: [8] }],
  *   'v[0]'
  * ) // [{ v: [2] }, { v: [3] }]
- * 
+ *
  * difference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], Math.floor) // []
- * 
+ *
  * difference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: number, arr: number[]) => {
  *   return Math.floor(item)
  * }) // []
  * ```
  */
-}
 
 export function difference(
   arr1: any[],

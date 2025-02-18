@@ -1,8 +1,6 @@
 import { capitalize } from './capitalize'
 import { splitToWords } from './splitToWords'
 
-// prettier-ignore
-{
 /**
  * @zh 把字符串转换到标题命名，单词之间用空格间隔，首字母大写。
  * @en Convert the string to Title Case, with words separated by spaces and each word capitalized.
@@ -11,7 +9,7 @@ import { splitToWords } from './splitToWords'
  * @example
  * ```ts
  * import { titleCase } from 'parsnip-kit'
- * 
+ *
  * titleCase('HelloWorld') // 'Hello World'
  * titleCase('helloWorld') // 'Hello World'
  * titleCase('hello-world') // 'Hello World'
@@ -21,7 +19,6 @@ import { splitToWords } from './splitToWords'
  * titleCase('-_HELLO World -_') // 'Hello World'
  * ```
  */
-}
 export function titleCase(arg: string): string {
   const words = splitToWords(arg)
   let ans = ''

@@ -1,5 +1,3 @@
-// prettier-ignore
-{
 /**
  * @zh 把字符串变成首字母大写的形式。
  * @en Capitalize the first letter of the string.
@@ -8,11 +6,10 @@
  * @example
  * ```ts
  * import { capitalize } from 'parsnip-kit'
- * 
+ *
  * capitalize('HelloWorld') // 'Helloworld'
  * ```
  */
-}
 
 export function capitalize(arg: string): string {
   return arg.charAt(0).toUpperCase() + arg.slice(1).toLowerCase()

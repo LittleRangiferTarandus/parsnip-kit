@@ -115,7 +115,7 @@ function parseFile(file) {
       }
       comment = "/**\n";
       content = "";
-    } else if (comment && (code.startsWith(" * ") || code.startsWith(" */"))) {
+    } else if (comment && (code == ' *' || code.startsWith(" * ") || code.startsWith(" */"))) {
       comment += `${code}
 `;
     } else if (!code.startsWith(" * ") || !code.startsWith(" */")) {

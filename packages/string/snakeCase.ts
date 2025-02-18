@@ -1,6 +1,5 @@
 import { splitToWords } from './splitToWords'
-// prettier-ignore
-{
+
 /**
  * @zh 把字符串转换到蛇形命名。
  * @en Convert the string to snake_case.
@@ -9,7 +8,7 @@ import { splitToWords } from './splitToWords'
  * @example
  * ```ts
  * import { snakeCase } from 'parsnip-kit'
- * 
+ *
  * snakeCase('HelloWorld') // 'hello_world'
  * snakeCase('helloWorld') // 'hello_world'
  * snakeCase('hello-world') // 'hello_world'
@@ -19,7 +18,6 @@ import { splitToWords } from './splitToWords'
  * snakeCase('-_HELLO World -_') // 'hello_world'
  * ```
  */
-}
 
 export function snakeCase(arg: string): string {
   const words = splitToWords(arg)
