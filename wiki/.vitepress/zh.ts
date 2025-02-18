@@ -7,6 +7,8 @@ const titleMap = {
 const additionMap = {
   'string': '字符串',
   'typed': '类型检查',
+  'array': '数组',
+  'object': '对象',
 }
 
 const sidebar = dfs4Md('zh', titleMap, additionMap)

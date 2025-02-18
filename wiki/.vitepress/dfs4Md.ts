@@ -14,7 +14,11 @@ const dfs = (files, prefix: string[], container: any[], titleMap: Record<string,
       const add = additionMap?.[file]
       
       container.push({
-        text: titleMap[file] || file + (add ? `  ${add}` : ''), items: curContainer, collapsible: true, collapsed: false
+        key: file,
+        text: titleMap[file] || (file.charAt(0).toUpperCase() + file.slice(1)) + (add ? `  ${add}` : ''),
+        items: curContainer,
+        collapsible: true,
+        collapsed: false
       })
       dfs(curFiles, prefix, curContainer, titleMap)
       prefix.pop()
@@ -25,15 +29,36 @@ const dfs = (files, prefix: string[], container: any[], titleMap: Record<string,
       }
       const add = additionMap?.[fileName]
       container.push({
-        text: titleMap[fileName] || fileName + (add ? `  ${add}` : ''), link: '/' + prefix.slice(1).join('/') + `/${fileName}`
+        text: titleMap[fileName] || fileName + (add ? `  ${add}` : ''),
+        link: '/' + prefix.slice(1).join('/') + `/${fileName}`,
+        key: fileName
       })
     }
   })
 }
 
+const order = [
+  'guide',
+  'array',
+  'object',
+  'function',
+  'async',
+  'string',
+  'typed',
+  'random',
+  'math'
+]
+
 export const dfs4Md = (lang: string, titleMap: Record<string, string>, additionMap?: Record<string, string>) => {
-  const ans: DefaultTheme.Sidebar = []
+  const ans: any[] = []
   const files = fs.readdirSync('wiki/' + lang)
   dfs(files, ['wiki', lang], ans, titleMap, additionMap)
-  return ans
+  const orderedAns: any[] = []
+  order.forEach(e => {
+    const entity = ans.find(item => item.key?.toLowerCase() === e)
+    if (entity) {
+      orderedAns.push(entity)
+    }
+  })
+  return orderedAns
 }
