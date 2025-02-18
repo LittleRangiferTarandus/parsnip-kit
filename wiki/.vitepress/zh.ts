@@ -24,7 +24,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/zh' },
-      { text: '文档', link: '/zh/starting' }
+      { text: '文档', link: '/zh/guide/starting' }
     ],
     sidebar: sidebar,
 

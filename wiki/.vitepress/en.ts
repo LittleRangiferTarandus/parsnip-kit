@@ -18,7 +18,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/en' },
-      { text: 'Doc', link: '/en/starting' }
+      { text: 'Doc', link: '/en/guide/starting' }
     ],
     sidebar: sidebar,
 

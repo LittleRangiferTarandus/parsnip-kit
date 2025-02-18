@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /zh/starting
+      link: /zh/guide/starting
     # - theme: alt
     #   text: API Examples
     #   link: /api-examples
