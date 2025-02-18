@@ -1,6 +1,6 @@
 # intersection
       
-Input two arrays `arr1` and `arr2`, and output their intersection. A `getter` is provided to distinguish the elements.
+Input two arrays `arr1` and `arr2`, and output their intersection. Accepts a `getter`, which can be a field path similar to [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
 
 ### Usage
 

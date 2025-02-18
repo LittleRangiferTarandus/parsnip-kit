@@ -1,6 +1,6 @@
 # difference
       
-输入两个数组`arr1`、`arr2`，输出`arr1` - `arr2` 的差集。`getter`提供区分元素的标识。
+输入两个数组`arr1`、`arr2`，输出`arr1` - `arr2`的差集。接收一个`getter`，它是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提供区分元素的标识。
 
 ### Usage
 
