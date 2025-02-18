@@ -21,7 +21,7 @@ pascalCase('-_HELLO World -_') // 'HelloWorld'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
+| `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
       
 ### Returns
 

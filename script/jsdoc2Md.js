@@ -27,7 +27,7 @@ ${example}
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" \\| ") + "`"} | \`${item.optional}\` | \`${item.default}\` | \`${item[lang + 'Desc'] || item.desc}\` |`).join("\n")}
+${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" \\| ") + "`"} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join("\n")}
       
 ### Returns
 

@@ -20,7 +20,7 @@ isInt(Infinity) // false
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `待判断的入参 ` |
+| `arg` | `any` | `false` | `undefined` | 待判断的入参  |
       
 ### Returns
 

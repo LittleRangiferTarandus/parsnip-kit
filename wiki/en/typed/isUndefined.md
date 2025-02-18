@@ -17,7 +17,7 @@ isUndefined(undefined) // true
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `Parameters for check` |
+| `arg` | `any` | `false` | `undefined` | Parameters for check |
       
 ### Returns
 

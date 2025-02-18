@@ -21,7 +21,7 @@ upperSnakeCase('-_HELLO World -_') // 'HELLO_WORLD'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `The string to be converted.` |
+| `arg` | `any` | `false` | `undefined` | The string to be converted. |
       
 ### Returns
 

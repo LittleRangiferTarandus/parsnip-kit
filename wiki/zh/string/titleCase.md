@@ -21,7 +21,7 @@ titleCase('-_HELLO World -_') // 'Hello World'
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
+| `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
       
 ### Returns
 

@@ -15,7 +15,7 @@ splitToWords('-_i need 123XmlHTTPRequest -_') // ['i', 'need', '123', 'Xml', 'HT
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | `待转换的字符串 ` |
+| `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
       
 ### Returns
 
