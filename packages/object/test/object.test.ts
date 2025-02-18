@@ -1,6 +1,7 @@
 import { test, describe, expect } from 'vitest'
 import { getByPath } from '../getByPath'
 import { setByPath } from '../setByPath'
+import { deleteByPath } from '../deleteByPath'
 
 describe('object', () => {
   test('getByPath', () => {
@@ -26,7 +27,6 @@ describe('object', () => {
 
     const test3 = {}
     setByPath(test3, 'b[2]', 2)
-    console.log(test3)
 
     expect(JSON.stringify(test3)).eq('{"b":[null,null,2]}')
 
@@ -41,5 +41,34 @@ describe('object', () => {
     const test6 = {}
     setByPath(test6, 'a.b', 1)
     expect(JSON.stringify(test6)).eq('{"a":{"b":1}}')
+  })
+  test('deleteByPath', () => {
+    const test0 = { a: 1 }
+    deleteByPath(test0, 'a')
+    expect(JSON.stringify(test0)).eq('{}')
+
+    const test1 = [1]
+    deleteByPath(test1, '[0]')
+    expect(JSON.stringify(test1)).eq('[]')
+
+    const test2 = { a: { b: { c: 1 } }, d: [2] }
+    deleteByPath(test2, 'a.b')
+    expect(JSON.stringify(test2)).eq('{"a":{},"d":[2]}')
+
+    const test3 = { a: 1 }
+    try {
+      deleteByPath(test3, 'a.b')
+    } catch (error) {
+      expect(error).instanceOf(TypeError)
+      expect(error.message).eq('a.b is not an object.')
+    }
+
+    const test4 = { a: 1 }
+    try {
+      deleteByPath(test4, 'a[0]')
+    } catch (error) {
+      expect(error).instanceOf(TypeError)
+      expect(error.message).eq('a[0] is not an object.')
+    }
   })
 })

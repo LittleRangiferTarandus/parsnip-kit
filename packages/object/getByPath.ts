@@ -1,6 +1,5 @@
+import { splitToKeys } from '../string/splitToKeys'
 import { isObject } from '../typed/isObject'
-
-const regSplitPath = /\.|\[(\d+)\]/
 
 /**
  * @zh 输入一个对象`obj`，和字段所在的路径`path`，按照路径深度遍历取值。当遍历路径中断或值为`undefined`、`null`时，使用`defaultValue`作为默认值。
@@ -23,7 +22,7 @@ const regSplitPath = /\.|\[(\d+)\]/
  */
 
 export function getByPath(obj: object, path: string, defaultValue?: any): any {
-  const pathArr = path.split(regSplitPath).filter(Boolean)
+  const pathArr = splitToKeys(path)
   const len = pathArr.length
   let cur = obj
   for (let i = 0; i < len; i++) {

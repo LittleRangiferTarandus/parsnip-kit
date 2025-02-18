@@ -1,6 +1,5 @@
+import { splitToKeys } from '../string/splitToKeys'
 import { isObject } from '../typed/isObject'
-
-const regSplitPath = /\.|\[(\d+)\]/
 
 /**
  * @zh 输入一个对象`obj`，和字段所在的路径`path`，按照路径深度遍历设置对象的值`value`。
@@ -8,7 +7,7 @@ const regSplitPath = /\.|\[(\d+)\]/
  * @param {object} obj @zh 待取值的对象 @en Object to be set
  * @param {string} path @zh 字段所在的路径 @en Field path
  * @param {any} value @zh 设置的值 @en Value to be set
- * @returns {any}
+ * @returns {undefined}
  * @example
  * ```ts
  * import { setByPath } from 'parsnip-kit'
@@ -33,7 +32,7 @@ const regSplitPath = /\.|\[(\d+)\]/
  * ```
  */
 export function setByPath(obj: object, path: string, value: any) {
-  const pathArr = path.split(regSplitPath).filter(Boolean)
+  const pathArr = splitToKeys(path)
   const len = pathArr.length
   let cur = obj
   for (let i = 0; i < len; i++) {

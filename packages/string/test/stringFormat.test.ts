@@ -9,8 +9,18 @@ import { capitalize } from '../capitalize'
 import { titleCase } from '../titleCase'
 import { htmlEncode } from '../htmlEncode'
 import { htmlDecode } from '../htmlDecode'
+import { splitToKeys } from '../splitToKeys'
 
 describe('transform naming string', () => {
+  test('splitToKeys', () => {
+    const words = splitToKeys('a[0].b.c')
+    const ans = ['a', '0', 'b', 'c']
+
+    expect(words.length).eq(ans.length)
+    words.forEach((item, i) => {
+      expect(item).eq(ans[i])
+    })
+  })
   test('splitToWords', () => {
     const words = splitToWords('-_i need 123XmlHTTPRequest -_')
     const ans = ['i', 'need', '123', 'Xml', 'HTTP', 'Request']
