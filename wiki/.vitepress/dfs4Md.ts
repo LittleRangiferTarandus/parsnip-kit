@@ -1,5 +1,4 @@
 import fs from 'fs'
-import { DefaultTheme } from 'vitepress'
 
 const dfs = (files, prefix: string[], container: any[], titleMap: Record<string, string>, additionMap?: Record<string, string>) => {
   files.forEach(file => {
