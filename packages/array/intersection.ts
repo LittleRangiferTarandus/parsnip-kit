@@ -2,7 +2,6 @@ import { isString } from '../typed/isString'
 import { getByPath } from '../object/getByPath'
 
 // prettier-ignore
-{
 /**
  * @zh 输入两个数组`arr1`、`arr2`，输出它们的交集。`getter`提供区分元素的标识。
  * @en Input two arrays `arr1` and `arr2`, and output their intersection. A `getter` is provided to distinguish the elements.
@@ -35,7 +34,6 @@ import { getByPath } from '../object/getByPath'
  * }) // [1.1, 2.4, 3.9, 4.16]
  * ```
  */
-}
 
 export function intersection(
   arr1: any[],
