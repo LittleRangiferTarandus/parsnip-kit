@@ -1,3 +1,5 @@
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为`undefined`。
  * @en Check if the input parameter is a `undefined`.
@@ -12,6 +14,7 @@
  * isUndefined(undefined) // true
  * ```
  */
+}
 export function isUndefined(arg): arg is undefined {
   return arg === undefined
 }

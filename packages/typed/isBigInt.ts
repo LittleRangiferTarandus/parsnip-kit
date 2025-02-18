@@ -1,3 +1,5 @@
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为`bigint`。
  * @en Check if the input parameter is a `bigint`.
@@ -13,6 +15,7 @@
  * isBigInt(Infinity) // false
  * ```
  */
+}
 export function isBigInt(arg): arg is bigint {
   return typeof arg === 'bigint'
 }

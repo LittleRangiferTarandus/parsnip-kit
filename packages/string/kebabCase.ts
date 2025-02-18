@@ -1,5 +1,7 @@
 import { splitToWords } from './splitToWords'
 
+// prettier-ignore
+{
 /**
  * @zh 把字符串转换到短横线命名。
  * @en Convert the string to kebab-case.
@@ -18,6 +20,8 @@ import { splitToWords } from './splitToWords'
  * camelCase('-_HELLO World -_') // 'hello-world'
  * ```
  */
+}
+
 export function kebabCase(arg: string): string {
   const words = splitToWords(arg)
   let ans = ''

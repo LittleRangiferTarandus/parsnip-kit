@@ -1,5 +1,7 @@
 import { splitToWords } from './splitToWords'
 
+// prettier-ignore
+{
 /**
  * @zh 把字符串转换到大写蛇形命名。
  * @en Convert the string to UPPERCASE_SNAKE_CASE.
@@ -18,6 +20,7 @@ import { splitToWords } from './splitToWords'
  * upperSnakeCase('-_HELLO World -_') // 'HELLO_WORLD'
  * ```
  */
+}
 export function upperSnakeCase(arg: string): string {
   const words = splitToWords(arg)
   let ans = ''

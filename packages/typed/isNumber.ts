@@ -1,3 +1,5 @@
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为基本类型数字或者`Number`实例。
  * @en Check whether the input parameter is a primitive number or a `Number` instance.
@@ -14,6 +16,7 @@
  * isNumber(NaN) // true
  * ```
  */
+}
 export function isNumber(arg): arg is number {
   return typeof arg === 'number' || arg instanceof Number
 }

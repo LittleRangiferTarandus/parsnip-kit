@@ -1,7 +1,9 @@
-import { isInfinity } from "./isInfinity";
-import { isNanValue } from "./isNanValue";
-import { isNumber } from "./isNumber";
+import { isInfinity } from './isInfinity'
+import { isNanValue } from './isNanValue'
+import { isNumber } from './isNumber'
 
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为整数或整数值的`Number`对象。
  * @en Check if the input parameter is an integer or a `Number` object with an integer value.
@@ -19,10 +21,14 @@ import { isNumber } from "./isNumber";
  * isInt(Infinity) // false
  * ```
  */
+}
 export function isInt(arg): arg is number {
-  return isNumber(arg) && !isInfinity(arg) && !isNanValue(arg) && (
-    typeof arg === 'number'
+  return (
+    isNumber(arg) &&
+    !isInfinity(arg) &&
+    !isNanValue(arg) &&
+    (typeof arg === 'number'
       ? arg === Math.floor(arg)
-      : (arg as Number).valueOf() === Math.floor(arg)
+      : (arg as number).valueOf() === Math.floor(arg))
   )
 }

@@ -1,3 +1,5 @@
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为`symbol`。
  * @en Check if the input parameter is a `symbol`.
@@ -11,6 +13,7 @@
  * isSymbol('test') // false
  * ```
  */
+}
 export function isSymbol(arg): arg is symbol {
   return typeof arg === 'symbol'
 }

@@ -1,5 +1,7 @@
 import { splitToWords } from './splitToWords'
 
+// prettier-ignore
+{
 /**
  * @zh 把字符串转换到大驼峰命名。
  * @en Convert the string to PascalCase (also known as UpperCamelCase).
@@ -18,6 +20,8 @@ import { splitToWords } from './splitToWords'
  * pascalCase('-_HELLO World -_') // 'HelloWorld'
  * ```
  */
+}
+
 export function pascalCase(arg: string): string {
   const words = splitToWords(arg)
   let ans = ''

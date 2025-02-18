@@ -5,6 +5,9 @@ const escapeMap: { [key: string]: string } = {
   '"': '&quot;',
   "'": '&#39;',
 }
+
+// prettier-ignore
+{
 /**
  * @zh 将字符串进行 HTML 编码，将特殊字符（如 <、>、&）转换为对应的 HTML 实体（如 `&lt;`、`&gt;`、`&amp;`），从而防止这些字符被浏览器错误解析为 HTML 标签的一部分。
  * @en Encode the string into HTML entities, converting special characters (such as <, >, &) to their corresponding HTML entities (e.g., `&lt;`, `&gt;`, `&amp;`). This prevents these characters from being mistakenly interpreted as part of HTML tags by the browser.
@@ -20,6 +23,8 @@ const escapeMap: { [key: string]: string } = {
  * htmlEncode('talk & code') // 'talk &amp; code'
  * ```
  */
+}
+
 export function htmlEncode(arg: string): string {
   let result = ''
   for (let i = 0; i < arg.length; i++) {

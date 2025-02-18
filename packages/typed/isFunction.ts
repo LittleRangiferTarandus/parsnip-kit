@@ -1,3 +1,5 @@
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为函数，包括类（`class {}`）、生成器（`function*() {}`）、异步函数（`async function() {}`）。
  * @en Check if the input parameter is a function, including classes (`class {}`), generator functions (`function*() {}`), and async functions (`async function() {}`).
@@ -14,6 +16,7 @@
  * isFunction(async () => {}) // true
  * ```
  */
+}
 export function isFunction(arg): arg is Function {
   return typeof arg === 'function'
 }

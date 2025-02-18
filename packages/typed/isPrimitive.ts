@@ -1,5 +1,7 @@
-import { isObject } from "./isObject";
+import { isObject } from './isObject'
 
+// prettier-ignore
+{
 /**
  * @zh 判断入参是否为基本类型，基本类型包括数字、字符串、布尔值、`null`、`undefined`、`symbol`、`bigint`。
  * @en Check if the input parameter is a primitive type, including `number`, `string`, `boolean`, `null`, `undefined`, `symbol`, and `bigint`.
@@ -24,6 +26,9 @@ import { isObject } from "./isObject";
  * isPrimitive(new Date()) // false
  * ```
  */
-export function isPrimitive(arg): arg is undefined | null | number | string | boolean | bigint | symbol {
+}
+export function isPrimitive(
+  arg,
+): arg is undefined | null | number | string | boolean | bigint | symbol {
   return !isObject(arg)
 }
