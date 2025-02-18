@@ -9,7 +9,7 @@ describe('object type', () => {
     expect(isFunction({})).eq(false)
     expect(isFunction(() => {})).eq(true)
     expect(isFunction(class {})).eq(true)
-    expect(isFunction(function*() {})).eq(true)
+    expect(isFunction(function* () {})).eq(true)
     expect(isFunction(async () => {})).eq(true)
   })
   test('isObjectLike', () => {
@@ -26,7 +26,7 @@ describe('object type', () => {
     expect(isPseudoArray({ length: 1 })).eq(true)
     expect(isPseudoArray([])).eq(true)
 
-    function test () {
+    function test() {
       expect(isPseudoArray(arguments)).eq(true)
     }
     test()
