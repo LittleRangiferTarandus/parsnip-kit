@@ -8,7 +8,7 @@ import { getByPath } from '../object/getByPath'
  * @en Input two arrays `arr1` and `arr2`, and output their intersection. A `getter` is provided to distinguish the elements.
  * @param {arr1} any[] @zh 需要求交集的数组 @en Array to be intersected
  * @param {arr2} path @zh 需要求交集的数组 @en Array to be intersected
- * @param {string | ((item: any, index: number, arr: any[]) => any)} getter @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
+ * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
  * @returns {any[]}
  * @example
  * ```ts

@@ -35,7 +35,7 @@ intersection([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: nu
 | --- | --- | --- | --- | --- |
 | `any[]` | `arr1` | `false` | `undefined` | 需要求交集的数组  |
 | `path` | `arr2` | `false` | `undefined` | 需要求交集的数组  |
-| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | 提供区分元素的标识  |
+| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
       
 ### Returns
 

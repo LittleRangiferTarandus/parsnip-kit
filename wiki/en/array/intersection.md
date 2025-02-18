@@ -35,7 +35,7 @@ intersection([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: nu
 | --- | --- | --- | --- | --- |
 | `any[]` | `arr1` | `false` | `undefined` | Array to be intersected |
 | `path` | `arr2` | `false` | `undefined` | Array to be intersected |
-| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish the elements |
+| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
       
 ### Returns
 

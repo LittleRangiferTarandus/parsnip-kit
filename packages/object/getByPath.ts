@@ -9,7 +9,7 @@ const regSplitPath = /\.|\[(\d+)\]/
  * @en Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to retrieve the value. If the traversal is interrupted (e.g., the path is invalid) or the value is undefined or null, use `defaultValue` as the default value.
  * @param {object} obj @zh 待取值的对象 @en Object to be got
  * @param {string} path @zh 字段所在的路径 @en Field path
- * @param {any} defaultValue @zh 默认值 @en Default value
+ * @param {any} [defaultValue] @zh 默认值 @en Default value
  * @returns {any}
  * @example
  * ```ts

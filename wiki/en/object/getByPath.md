@@ -22,7 +22,7 @@ getByPath({ a: 1 }, 'a[0].b.c', 'test') // 'test'
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | Object to be got |
 | `path` | `string` | `false` | `undefined` | Field path |
-| `defaultValue` | `any` | `false` | `undefined` | Default value |
+| `defaultValue` | `any` | `true` | `undefined` | Default value |
       
 ### Returns
 
