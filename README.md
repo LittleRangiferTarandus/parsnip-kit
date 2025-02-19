@@ -10,12 +10,12 @@
 - [日本語](README.jp.md)
 
 ## Features
-1. **Zero Dependencies**: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
-2. **Multi-functional**: Supports a wide range of modules including arrays, objects, strings, type checking, async, and functions to meet diverse development needs.
-3. **Type-friendly**: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-4. **Modern**: Built with modern JavaScript APIs, removing redundant functions already supported by other libraries to ensure clean and efficient code.
-5. **Modular**: Supports ES, CommonJS, and UMD modules to fit various development environments and build tools.
-6. **Engineering-focused**: The project includes comprehensive engineering configurations, such as documentation generation, unit testing, code standards, and a documentation site, facilitating maintenance and scalability.
+1. **🧳 Zero Dependencies**: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
+2. **🔩 Multi-functional**: Supports a wide range of modules including arrays, objects, strings, type checking, async, and functions to meet diverse development needs.
+3. **💡 Type-friendly**: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
+4. **🚀 Modern**: Built with modern JavaScript APIs, removing redundant functions already supported by other libraries to ensure clean and efficient code.
+5. **📦 Modular**: Supports ES6 modularization and tree-shaking.
+6. **🛠️ Engineering-focused**: Comprehensive front-end engineering: documentation generation, unit testing, code standards, and a documentation site.
 
 ## Use Cases
 `parsnip-kit` is designed for various JavaScript and TypeScript projects, from small tools to large applications. It aims to provide concise and efficient utility functions to save developers' time and effort.

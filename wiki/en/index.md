@@ -14,17 +14,17 @@ hero:
     #   link: /api-examples
 
 features:
-  - title: Zero Dependencies
+  - title: 🧳 Zero Dependencies
     details: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
-  - title: Multi-functional
+  - title: 🔩 Multi-functional
     details: Supports a wide range of modules including arrays, objects, strings, type checking, async, and functions to meet diverse development needs.
-  - title: Type-friendly
+  - title: 💡 Type-friendly
     details: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-  - title: Modern
+  - title: 🚀 Modern
     details: Built with modern JavaScript APIs, removing redundant functions already supported by other libraries to ensure clean and efficient code.
-  - title: Modular
-    details: Supports ES, CommonJS, and UMD modules to fit various development environments and build tools.
-  - title: Engineering-focused
-    details: Comprehensive engineering configurations： documentation generation, unit testing, code standards, and a documentation site, facilitating maintenance and scalability.
+  - title: 📦 Modular
+    details: Supports ES6 modularization and tree-shaking.
+  - title: 🛠️ Engineering-focused
+    details: Comprehensive front-end engineering：documentation generation, unit testing, code standards, and a documentation site.
 ---
 
