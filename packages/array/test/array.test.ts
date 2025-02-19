@@ -1,25 +1,10 @@
 import { test, describe, expect } from 'vitest'
-import { range } from '../range'
 import { leftJoin } from '../leftJoin'
 import { sortIndex } from '../sortIndex'
+import { zipToObject } from '../zipToObject'
+import { pairsToObject } from '../pairsToObject'
 
 describe('array', () => {
-  test('range', () => {
-    expect(JSON.stringify(range(1, 10))).eq('[1,2,3,4,5,6,7,8,9]')
-    expect(JSON.stringify(range(1, 10, 2))).eq('[1,3,5,7,9]')
-    expect(JSON.stringify(range(10, 1, -2))).eq('[10,8,6,4,2]')
-
-    expect(JSON.stringify(range(1, 10, -2))).eq('[]')
-    expect(JSON.stringify(range(10, 1, 2))).eq('[]')
-    expect(JSON.stringify(range(10, 10, 2))).eq('[]')
-
-    try {
-      range(0, 1, 0)
-    } catch (error) {
-      expect(error).instanceOf(TypeError)
-      expect(error.message).eq('range step must be not equal 0.')
-    }
-  })
   test('leftJoin', () => {
     const leftArray0 = [
       { id: 1, name: 'Alice' },
@@ -74,5 +59,61 @@ describe('array', () => {
     expect(
       JSON.stringify(sortIndex(sortIndex([1, 25, 4, 9, 16])))
     ).eq('[0,2,3,4,1]')
+  })
+  test('zipToObject', () => {
+    expect(
+      JSON.stringify(
+        zipToObject(['id', 'name', 'skill'], [1, 'Alex', ['Javascript']])
+      )
+    ).eq('{"id":1,"name":"Alex","skill":["Javascript"]}')
+
+    const users = [{ id: 0, user: 'IAmBot' }, { id: 2, user: 'Alice' }, { id: 5, user: 'Tom' }]
+    const record = [
+      { system: 'Linux', count: 99999, userId: 0 },
+      { system: 'Mac OS', count: 10, userId: 2 },
+      { system: 'Window', count: 2, userId: 5 },
+    ]
+    expect(
+      JSON.stringify(
+        zipToObject(users, record, 'user', 'count')
+      )
+    ).eq('{"IAmBot":99999,"Alice":10,"Tom":2}')
+
+    expect(
+      JSON.stringify(
+        zipToObject(
+          users, record,
+          (item, index, arr) => {
+            expect(item).eq(arr[index])
+            expect(item).eq(users[index])
+            return item.user
+          },
+          (item, index, arr) => {
+            expect(item).eq(arr[index])
+            expect(item).eq(record[index])
+            return item.count
+          }
+        )
+      )
+    ).eq('{"IAmBot":99999,"Alice":10,"Tom":2}')
+  })
+  test('pairsToObject', () => {
+    const users = [['Alex', 16, 'vip'], ['Bob', 659, 'viewer'], ['Carter', 155, 'user'], ['Daniel', 825, 'user']]
+    expect(
+      JSON.stringify(
+        pairsToObject(users)
+      )
+    ).eq('{"Alex":16,"Bob":659,"Carter":155,"Daniel":825}')
+    expect(
+      JSON.stringify(
+        pairsToObject(users, '[0]', '[2]')
+      )
+    ).eq('{"Alex":"vip","Bob":"viewer","Carter":"user","Daniel":"user"}')
+    expect(
+      JSON.stringify(
+        pairsToObject(users, pair => pair[0], pair => `${pair[1]} replies`)
+      )
+    ).eq(
+      '{"Alex":"16 replies","Bob":"659 replies","Carter":"155 replies","Daniel":"825 replies"}')
   })
 })

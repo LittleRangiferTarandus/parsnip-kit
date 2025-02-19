@@ -40,6 +40,12 @@ export { union } from './array/union'
 export { symmetricDifference } from './array/symmetricDifference'
 export { unique } from './array/unique'
 
-export { range } from './number/range'
 export { leftJoin } from './array/leftJoin'
 export { sortIndex } from './array/sortIndex'
+
+export { range } from './number/range'
+
+export { pairsToObject } from './array/pairsToObject'
+export { zipToObject } from './array/zipToObject'
+export { unzipToArrays } from './object/unzipToArrays'
+export { objectToPairs } from './object/objectToPairs'

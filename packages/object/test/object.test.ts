@@ -2,6 +2,8 @@ import { test, describe, expect } from 'vitest'
 import { getByPath } from '../getByPath'
 import { setByPath } from '../setByPath'
 import { deleteByPath } from '../deleteByPath'
+import { unzipToArrays } from '../unzipToArrays'
+import { objectToPairs } from '../objectToPairs'
 
 describe('object', () => {
   test('getByPath', () => {
@@ -70,5 +72,27 @@ describe('object', () => {
       expect(error).instanceOf(TypeError)
       expect(error.message).eq('a[0] is not an object.')
     }
+  })
+  test('unzipToArrays', () => {
+    const obj = {
+      Alex: 16,
+      Bob: 659,
+      Carter: 155,
+      Daniel: 825
+    }
+    expect(JSON.stringify(
+      unzipToArrays(obj)
+    )).eq('[["Alex","Bob","Carter","Daniel"],[16,659,155,825]]')
+  })
+  test('objectToPairs', () => {
+    const obj = {
+      Alex: 16,
+      Bob: 659,
+      Carter: 155,
+      Daniel: 825
+    }
+    expect(JSON.stringify(
+      objectToPairs(obj)
+    )).eq('[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]')
   })
 })
