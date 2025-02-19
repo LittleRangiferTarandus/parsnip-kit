@@ -1,5 +1,7 @@
 import { test, describe, expect } from 'vitest'
 import { range } from '../range'
+import { percent } from '../percent'
+import { thousandSeparator } from '../thousandSeparator'
 
 describe('number', () => {
   test('range', () => {
@@ -17,5 +19,22 @@ describe('number', () => {
       expect(error).instanceOf(TypeError)
       expect(error.message).eq('range step must be not equal 0.')
     }
+  })
+  test('percent', () => {
+    expect(percent(75, 200, 0)).eq(`38%`)
+
+    try {
+      percent(10, 0)
+    } catch (error) {
+      expect(error).instanceOf(TypeError)
+      expect(error.message).eq('Total cannot be zero.')
+    }
+  })
+  test('thousandSeparator', () => {
+    expect(thousandSeparator(100)).eq('100')
+    expect(thousandSeparator(1000)).eq('1,000')
+    expect(thousandSeparator(1234567)).eq('1,234,567')
+    expect(thousandSeparator(-1234567)).eq('-1,234,567')
+    expect(thousandSeparator(1234.567)).eq('1,234.567')
   })
 })

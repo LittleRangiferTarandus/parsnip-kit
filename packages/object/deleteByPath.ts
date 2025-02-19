@@ -1,4 +1,5 @@
 import { splitToKeys } from '../string/splitToKeys'
+import { isNumberString } from '../typed/isNumberString'
 import { isObject } from '../typed/isObject'
 
 /**
@@ -31,7 +32,7 @@ export function deleteByPath(obj: object, path: string) {
       if (i < len - 1) {
         cur = cur[pathArr[i]]
       } else {
-        if (/\d+/.test(pathArr[i]) && Array.isArray(cur)) {
+        if (isNumberString(pathArr[i]) && Array.isArray(cur)) {
           cur.splice(parseInt(pathArr[i]), 1)
         } else {
           delete cur[pathArr[i]]
@@ -44,7 +45,7 @@ export function deleteByPath(obj: object, path: string) {
           .reduce(
             (pre, cur, index) =>
               pre +
-              (/\d+/.test(cur)
+              (isNumberString(cur)
                 ? `[${cur}]`
                 : index === 0
                   ? `${cur}`

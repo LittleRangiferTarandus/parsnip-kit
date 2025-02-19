@@ -3,8 +3,14 @@ import { isInfinity } from '../isInfinity'
 import { isNanValue } from '../isNanValue'
 import { isInt } from '../isInt'
 import { isFloat } from '../isFloat'
+import { isNumberString } from '../isNumberString'
 
 describe('number type', () => {
+  test('isNumberString', () => {
+    expect(isNumberString('12345')).eq(true)
+    expect(isNumberString('123a5')).eq(false)
+    expect(isNumberString('')).eq(false)
+  })
   test('isInfinity', () => {
     expect(isInfinity(123)).eq(false)
     expect(isInfinity('123')).eq(false)

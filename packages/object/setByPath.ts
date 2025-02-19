@@ -1,4 +1,5 @@
 import { splitToKeys } from '../string/splitToKeys'
+import { isNumberString } from '../typed/isNumberString'
 import { isObject } from '../typed/isObject'
 
 /**
@@ -37,13 +38,13 @@ export function setByPath(obj: object, path: string, value: any) {
   let cur = obj
   for (let i = 0; i < len; i++) {
     let numIdx: undefined | number
-    if (/\d+/.test(pathArr[i])) {
+    if (isNumberString(pathArr[i])) {
       numIdx = parseInt(pathArr[i])
     }
     if (i === len - 1) {
       cur[numIdx === undefined ? pathArr[i] : numIdx] = value
     } else {
-      const nextIsNumberIdx = /\d+/.test(pathArr[i + 1])
+      const nextIsNumberIdx = isNumberString(pathArr[i + 1])
       const idx = numIdx === undefined ? pathArr[i] : numIdx
       if (!isObject(cur[idx])) {
         cur[idx] = !nextIsNumberIdx ? {} : []
