@@ -12,7 +12,7 @@
  * ```
  */
 export function isObjectLike(
-  arg,
+  arg
 ): arg is Record<string | number | symbol, any> {
   return arg !== null && typeof arg === 'object'
 }

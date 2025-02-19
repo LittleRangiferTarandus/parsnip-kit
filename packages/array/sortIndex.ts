@@ -14,7 +14,7 @@ const stringComparator = (a: string, b: string) => {
  *
  * sort([1, 25, 4, 9, 16], (a, b) => a - b) // [1, 4, 9, 16, 25]
  * sortIndex([1, 25, 4, 9, 16], (a, b) => a - b) // [0, 4, 1, 2, 3]
- * 
+ *
  * sort([1, 25, 4, 9, 16]) // [1, 16, 25, 4, 9]
  * sortIndex([1, 25, 4, 9, 16]) // [0, 2, 3, 4, 1]
  * ```
@@ -22,7 +22,7 @@ const stringComparator = (a: string, b: string) => {
 
 export function sortIndex<T>(
   arr: T[],
-  comparator?: (a: T, b: T) => number,
+  comparator?: (a: T, b: T) => number
 ): number[] {
   const indices = arr.map((_, index) => index)
   indices.sort((a, b) => {

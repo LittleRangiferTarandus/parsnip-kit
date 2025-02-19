@@ -37,7 +37,7 @@ import { getByPath } from '../object/getByPath'
 export function union<T>(
   arr1: T[],
   arr2: T[],
-  getter?: string | ((item: T, index: number, arr: T[]) => any),
+  getter?: string | ((item: T, index: number, arr: T[]) => any)
 ): T[] {
   const map = new Map<any, T>()
   const len1 = arr1.length

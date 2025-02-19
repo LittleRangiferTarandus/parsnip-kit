@@ -25,7 +25,7 @@ import { isObject } from './isObject'
  * ```
  */
 export function isPrimitive(
-  arg,
+  arg
 ): arg is undefined | null | number | string | boolean | bigint | symbol {
   return !isObject(arg)
 }

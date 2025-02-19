@@ -1,4 +1,4 @@
-import { getByPath, isString } from "../main"
+import { getByPath, isString } from '../main'
 
 /**
  * @zh 输入两个数组`keys`和`values`，输出`keys`元素作为键，`values`元素作为值的平凡对象。可选参数`getKey`和`getValue`用于把对象元素转换为键和值，它们是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
@@ -14,7 +14,7 @@ import { getByPath, isString } from "../main"
  *
  * zipToObject(['id', 'name', 'skill'], [1, 'Alex', ['Javascript']])
  * // { id: 1, name: 'Alex', skill: ['Javascript'] }
- * 
+ *
  * const users = [{ id: 0, user: 'IAmBot' }, { id: 2, user: 'Alice' }, { id: 5, user: 'Tom' }]
  * const record = [
  *   { system: 'Linux', count: 99999, userId: 0 },
@@ -24,7 +24,7 @@ import { getByPath, isString } from "../main"
  * zipToObject(
  *   users, record, 'user', 'count'
  * ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
- * 
+ *
  * zipToObject(
  *   users, record, item => item.user, item => item.count
  * ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
@@ -34,10 +34,10 @@ export function zipToObject<T, U>(
   keys: T[],
   values: U[],
   getKey?: string | ((item: T, index: number, arr: T[]) => any),
-  getValue?: string | ((item: U, index: number, arr: U[]) => any),
+  getValue?: string | ((item: U, index: number, arr: U[]) => any)
 ) {
   const ans = {}
-  
+
   const len = keys.length
   for (let i = 0; i < len; i++) {
     const key = getKey

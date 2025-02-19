@@ -49,8 +49,8 @@ export function deleteByPath(obj: object, path: string) {
                 : index === 0
                   ? `${cur}`
                   : `.${cur}`),
-            '',
-          )} is not an object.`,
+            ''
+          )} is not an object.`
       )
     }
   }

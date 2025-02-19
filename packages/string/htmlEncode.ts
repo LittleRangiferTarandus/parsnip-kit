@@ -3,7 +3,7 @@ const escapeMap: { [key: string]: string } = {
   '<': '&lt;',
   '>': '&gt;',
   '"': '&quot;',
-  "'": '&#39;',
+  "'": '&#39;'
 }
 
 /**

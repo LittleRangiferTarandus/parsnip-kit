@@ -19,18 +19,18 @@ describe('arraySet', () => {
         union(
           [{ v: 1 }, { v: 2 }, { v: 3 }],
           [{ v: 1 }, { v: 4 }, { v: 8 }],
-          'v',
-        ),
-      ),
+          'v'
+        )
+      )
     ).eq('[{"v":1},{"v":2},{"v":3},{"v":4},{"v":8}]')
     expect(
       JSON.stringify(
         union(
           [{ v: [1] }, { v: [2] }, { v: [3] }],
           [{ v: [1] }, { v: [4] }, { v: [8] }],
-          'v[0]',
-        ),
-      ),
+          'v[0]'
+        )
+      )
     ).eq('[{"v":[1]},{"v":[2]},{"v":[3]},{"v":[4]},{"v":[8]}]')
     let times = 0
     const test1 = [1.1, 2.4, 3.9, 4.16, 1, 2, 3, 4, 5, 6]
@@ -41,8 +41,8 @@ describe('arraySet', () => {
           expect(Object.is(arr[index], item)).eq(true)
           times++
           return Math.floor(item)
-        }),
-      ),
+        })
+      )
     ).eq('[1.1,2.4,3.9,4.16,5,6]')
   })
   test('intersection', () => {
@@ -53,25 +53,25 @@ describe('arraySet', () => {
       expect(Object.is(item, test0[i])).eq(true)
     })
     expect(JSON.stringify(intersection([1, 1, 2, 3], [1, 1, 2, 3]))).eq(
-      '[1,2,3]',
+      '[1,2,3]'
     )
     expect(
       JSON.stringify(
         intersection(
           [{ v: 1 }, { v: 2 }, { v: 3 }],
           [{ v: 1 }, { v: 4 }, { v: 8 }],
-          'v',
-        ),
-      ),
+          'v'
+        )
+      )
     ).eq('[{"v":1}]')
     expect(
       JSON.stringify(
         intersection(
           [{ v: [1] }, { v: [2] }, { v: [3] }],
           [{ v: [1] }, { v: [4] }, { v: [8] }],
-          'v[0]',
-        ),
-      ),
+          'v[0]'
+        )
+      )
     ).eq('[{"v":[1]}]')
     let times = 0
     const test1 = [1.1, 2.4, 3.9, 4.16, 1, 2, 3, 4, 5, 6]
@@ -85,9 +85,9 @@ describe('arraySet', () => {
             expect(Object.is(arr[index], item)).eq(true)
             times++
             return Math.floor(item)
-          },
-        ),
-      ),
+          }
+        )
+      )
     ).eq('[1.1,2.4,3.9,4.16]')
   })
 
@@ -104,18 +104,18 @@ describe('arraySet', () => {
         difference(
           [{ v: 1 }, { v: 2 }, { v: 3 }],
           [{ v: 1 }, { v: 4 }, { v: 8 }],
-          'v',
-        ),
-      ),
+          'v'
+        )
+      )
     ).eq('[{"v":2},{"v":3}]')
     expect(
       JSON.stringify(
         difference(
           [{ v: [1] }, { v: [2] }, { v: [3] }],
           [{ v: [1] }, { v: [4] }, { v: [8] }],
-          'v[0]',
-        ),
-      ),
+          'v[0]'
+        )
+      )
     ).eq('[{"v":[2]},{"v":[3]}]')
     let times = 0
     const test1 = [1.1, 2.4, 3.9, 4.16, 1, 2, 3, 4, 5, 6]
@@ -129,9 +129,9 @@ describe('arraySet', () => {
             expect(Object.is(arr[index], item)).eq(true)
             times++
             return Math.floor(item)
-          },
-        ),
-      ),
+          }
+        )
+      )
     ).eq('[]')
   })
 
@@ -143,25 +143,25 @@ describe('arraySet', () => {
       expect(Object.is(item, test0[i])).eq(true)
     })
     expect(JSON.stringify(symmetricDifference([1, 1, 2, 3], [1, 1, 2, 3]))).eq(
-      '[]',
+      '[]'
     )
     expect(
       JSON.stringify(
         symmetricDifference(
           [{ v: 1 }, { v: 2 }, { v: 3 }],
           [{ v: 1 }, { v: 4 }, { v: 8 }],
-          'v',
-        ),
-      ),
+          'v'
+        )
+      )
     ).eq('[{"v":2},{"v":3},{"v":4},{"v":8}]')
     expect(
       JSON.stringify(
         symmetricDifference(
           [{ v: [1] }, { v: [2] }, { v: [3] }],
           [{ v: [1] }, { v: [4] }, { v: [8] }],
-          'v[0]',
-        ),
-      ),
+          'v[0]'
+        )
+      )
     ).eq('[{"v":[2]},{"v":[3]},{"v":[4]},{"v":[8]}]')
     let times = 0
     const test1 = [1.1, 2.4, 3.9, 4.16, 1, 2, 3, 4, 5, 6]
@@ -175,9 +175,9 @@ describe('arraySet', () => {
             expect(Object.is(arr[index], item)).eq(true)
             times++
             return Math.floor(item)
-          },
-        ),
-      ),
+          }
+        )
+      )
     ).eq('[5,6]')
   })
   test('unique', () => {
@@ -191,9 +191,9 @@ describe('arraySet', () => {
       JSON.stringify(
         unique(
           [{ v: 1 }, { v: 2 }, { v: 3 }, { v: 1 }, { v: 4 }, { v: 8 }],
-          'v',
-        ),
-      ),
+          'v'
+        )
+      )
     ).eq('[{"v":1},{"v":2},{"v":3},{"v":4},{"v":8}]')
     expect(
       JSON.stringify(
@@ -204,11 +204,11 @@ describe('arraySet', () => {
             { v: [3] },
             { v: [1] },
             { v: [4] },
-            { v: [8] },
+            { v: [8] }
           ],
-          'v[0]',
-        ),
-      ),
+          'v[0]'
+        )
+      )
     ).eq('[{"v":[1]},{"v":[2]},{"v":[3]},{"v":[4]},{"v":[8]}]')
     let times = 0
     const test1 = [1.1, 2.4, 3.9, 4.16, 1, 2, 3, 4, 5, 6]
@@ -219,8 +219,8 @@ describe('arraySet', () => {
           expect(Object.is(arr[index], item)).eq(true)
           times++
           return Math.floor(item)
-        }),
-      ),
+        })
+      )
     ).eq('[1.1,2.4,3.9,4.16,5,6]')
   })
 })

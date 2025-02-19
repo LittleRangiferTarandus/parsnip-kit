@@ -20,7 +20,8 @@ export default tseslint.config({
   rules: {
     "prettier/prettier": ["warn", {
       "semi": false,
-      "singleQuote": true
+      "singleQuote": true,
+      'trailingComma': 'none'
     }], // 默认为 error
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",

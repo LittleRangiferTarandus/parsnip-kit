@@ -33,7 +33,7 @@ import { getByPath } from '../object/getByPath'
 
 export function unique<T>(
   arr: T[],
-  getter?: string | ((item: T, index: number, arr: T[]) => any),
+  getter?: string | ((item: T, index: number, arr: T[]) => any)
 ): T[] {
   const map = new Map<any, any>()
   const len1 = arr.length

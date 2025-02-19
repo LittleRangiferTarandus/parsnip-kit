@@ -32,7 +32,7 @@ import { getByPath } from '../object/getByPath'
  *   (left, right) => ({ ...left, ...(right || {}) }),
  * ) // [{ id: 1, name: 'Alice', age: 25 }, { id: 2, name: 'Bob' }, { id: 3, name: 'Charlie', age: 30 }]
  *
- * 
+ *
  * const leftArray1 = [
  *   { id: 1, info: { name: 'Alice', age: 25 } },
  *   { id: 2, info: { name: 'Bob', age: 35 } },
@@ -59,7 +59,7 @@ export function leftJoin<T extends object, U extends object, R extends object>(
   right: U[],
   leftKey: string | ((item: T, index: number, arr: T[]) => any),
   rightKey: string | ((item: U, index: number, arr: U[]) => any),
-  merge: (left: T, right: U | undefined) => R,
+  merge: (left: T, right: U | undefined) => R
 ): R[] {
   const rightMap = new Map<any, U>()
 
@@ -69,7 +69,7 @@ export function leftJoin<T extends object, U extends object, R extends object>(
       isString(rightKey)
         ? getByPath(right[i] as object, rightKey)
         : rightKey(right[i], i, right),
-      right[i],
+      right[i]
     )
   }
 

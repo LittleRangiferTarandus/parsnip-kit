@@ -80,9 +80,9 @@ describe('object', () => {
       Carter: 155,
       Daniel: 825
     }
-    expect(JSON.stringify(
-      unzipToArrays(obj)
-    )).eq('[["Alex","Bob","Carter","Daniel"],[16,659,155,825]]')
+    expect(JSON.stringify(unzipToArrays(obj))).eq(
+      '[["Alex","Bob","Carter","Daniel"],[16,659,155,825]]'
+    )
   })
   test('objectToPairs', () => {
     const obj = {
@@ -91,8 +91,8 @@ describe('object', () => {
       Carter: 155,
       Daniel: 825
     }
-    expect(JSON.stringify(
-      objectToPairs(obj)
-    )).eq('[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]')
+    expect(JSON.stringify(objectToPairs(obj))).eq(
+      '[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]'
+    )
   })
 })

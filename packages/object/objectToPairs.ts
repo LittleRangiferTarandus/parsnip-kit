@@ -22,7 +22,7 @@ export function objectToPairs<T extends object>(
 ): [keyof T, T[keyof T]][] {
   const ans: [keyof T, T[keyof T]][] = []
 
-  for (let key in obj) {
+  for (const key in obj) {
     ans.push([key, obj[key]])
   }
 

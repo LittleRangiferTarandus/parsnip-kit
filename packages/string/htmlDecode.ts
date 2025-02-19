@@ -4,7 +4,7 @@ const decodeMap: { [key: string]: string } = {
   '&gt;': '>',
   '&quot;': '"',
   '&#34;': '"',
-  '&#39;': "'",
+  '&#39;': "'"
 }
 
 /**

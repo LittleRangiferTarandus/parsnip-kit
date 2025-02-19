@@ -23,7 +23,7 @@ export function unzipToArrays<T extends object>(
   const keys: (keyof T)[] = []
   const values: T[keyof T][] = []
 
-  for (let key in obj) {
+  for (const key in obj) {
     keys.push(key)
     values.push(obj[key])
   }
