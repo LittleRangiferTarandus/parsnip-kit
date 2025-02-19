@@ -40,6 +40,6 @@ export { union } from './array/union'
 export { symmetricDifference } from './array/symmetricDifference'
 export { unique } from './array/unique'
 
-export { range } from './array/range'
+export { range } from './number/range'
 export { leftJoin } from './array/leftJoin'
 export { sortIndex } from './array/sortIndex'
