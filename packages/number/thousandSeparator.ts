@@ -25,7 +25,7 @@ export function thousandSeparator(num: number): string {
   let result
   if (decimal) {
     const formattedDecimal = decimal.replace(/(\d{3})(?=\d)/g, '$1,')
-    result = `${formattedInt}${formattedDecimal ? '.' + formattedDecimal : ''}`
+    result = `${formattedInt}.${formattedDecimal}`
   } else {
     result = formattedInt
   }
