@@ -25,8 +25,6 @@ import { isObject } from './isObject'
  * isPrimitive(new Date()) // false
  * ```
  */
-export function isPrimitive(
-  arg
-): arg is PrimitiveType {
+export function isPrimitive(arg): arg is PrimitiveType {
   return !isObject(arg)
 }

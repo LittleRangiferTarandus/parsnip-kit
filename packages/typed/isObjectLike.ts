@@ -1,4 +1,4 @@
-import { ObjectLike } from "../common/types";
+import { ObjectLike } from '../common/types'
 
 /**
  * @zh 判断入参是否为对象，不包括函数。
@@ -13,8 +13,6 @@ import { ObjectLike } from "../common/types";
  * isObjectLike(() => {}) // false
  * ```
  */
-export function isObjectLike(
-  arg
-): arg is ObjectLike {
+export function isObjectLike(arg): arg is ObjectLike {
   return arg !== null && typeof arg === 'object'
 }
