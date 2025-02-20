@@ -17,11 +17,11 @@ features:
   - title: 🧳 Zero Dependencies
     details: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
   - title: 🔩 Multi-functional
-    details: Supports a wide range of modules including arrays, objects, strings, type checking, async, and functions to meet diverse development needs.
+    details: Supports modules such as array, object, string, type checking, asynchronous operation, function, and statistic. Adds functions that developers have been eager for.
   - title: 💡 Type-friendly
     details: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-  - title: 🚀 Modern
-    details: Built with modern JavaScript APIs, removing redundant functions already supported by other libraries to ensure clean and efficient code.
+  - title: 👌 Usability
+    details: Intuitive and straightforward design, providing clear documentation and examples, enabling developers to quickly get started and use it.
   - title: 📦 Modular
     details: Supports ES6 modularization and tree-shaking.
   - title: 🛠️ Engineering-focused

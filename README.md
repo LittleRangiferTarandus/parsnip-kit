@@ -11,9 +11,9 @@
 
 ## Features
 1. **🧳 Zero Dependencies**: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
-2. **🔩 Multi-functional**: Supports a wide range of modules including arrays, objects, strings, type checking, async, and functions to meet diverse development needs.
+2. **🔩 Multi-functional**: Supports modules such as array, object, string, type checking, asynchronous operation, function, and statistic. Adds functions that developers have been eager for.
 3. **💡 Type-friendly**: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-4. **🚀 Modern**: Built with modern JavaScript APIs, removing redundant functions already supported by other libraries to ensure clean and efficient code.
+4. **👌 Usability**: Intuitive and straightforward design, providing clear documentation and examples, enabling developers to quickly get started and use it.
 5. **📦 Modular**: Supports ES6 modularization and tree-shaking.
 6. **🛠️ Engineering-focused**: Comprehensive front-end engineering: documentation generation, unit testing, code standards, and a documentation site.
 
