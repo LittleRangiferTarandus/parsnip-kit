@@ -33,8 +33,10 @@ describe('number', () => {
   test('thousandSeparator', () => {
     expect(thousandSeparator(100)).eq('100')
     expect(thousandSeparator(1000)).eq('1,000')
+    expect(thousandSeparator(10000)).eq('10,000')
     expect(thousandSeparator(1234567)).eq('1,234,567')
     expect(thousandSeparator(-1234567)).eq('-1,234,567')
     expect(thousandSeparator(1234.567)).eq('1,234.567')
+    expect(thousandSeparator(1234.5678)).eq('1,234.567,8')
   })
 })
