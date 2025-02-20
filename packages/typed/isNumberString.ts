@@ -1,3 +1,4 @@
+import { NumberString } from '../common/types'
 import { isString } from './isString'
 
 /**
@@ -14,6 +15,6 @@ import { isString } from './isString'
  * isNumberString('') // false
  * ```
  */
-export function isNumberString(arg: any): arg is `${number}` {
+export function isNumberString(arg: any): arg is NumberString {
   return isString(arg) && /^\d+$/.test(arg)
 }

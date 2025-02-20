@@ -2,7 +2,7 @@
  * @zh 输入对象`obj`，输出分别是它的键和值的数组。
  * @en Input an object `obj`, and output two arrays: one containing its keys and the other containing its values.
  * @param {object} obj @zh 原对象 @en Original object
- * @returns {[KeyType[], any[]]}
+ * @returns {[PropertyKey[], any[]]}
  * @example
  * ```ts
  * import { unzipToArrays } from 'parsnip-kit'

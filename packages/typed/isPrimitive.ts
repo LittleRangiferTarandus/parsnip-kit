@@ -1,3 +1,4 @@
+import { PrimitiveType } from '../common/types'
 import { isObject } from './isObject'
 
 /**
@@ -26,6 +27,6 @@ import { isObject } from './isObject'
  */
 export function isPrimitive(
   arg
-): arg is undefined | null | number | string | boolean | bigint | symbol {
+): arg is PrimitiveType {
   return !isObject(arg)
 }
