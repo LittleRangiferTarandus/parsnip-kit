@@ -28,4 +28,4 @@ unzipToArrays(obj)
 
 | Type |
 | ---  |
-| `[KeyType[], any[]]`  |
+| `[PropertyKey[], any[]]`  |
