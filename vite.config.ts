@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     exclude: ["node_modules", "dist", "script"],
     coverage: {
-      exclude: ["node_modules", "dist", "script"],
+      exclude: ["node_modules", "dist", "script", "packages/common/types.ts"],
       include: ["packages"]
     }
   },
