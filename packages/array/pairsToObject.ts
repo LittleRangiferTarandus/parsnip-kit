@@ -1,7 +1,7 @@
 import { getByPath, isString } from '../main'
 
 /**
- * @zh 输入一个二维数组`pairs`，输出从每一项数组中提取的键值对组成的平凡对象。可选参数`getKey`和`getValue`用于把子数组转换为键和值，为空时默认取数组第 0 个元素作为键，第 1 个元素作为值。`getKey`和`getValue`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
+ * @zh 输入一个二维数组`pairs`，输出从每一项数组中提取的键值对组成的普通对象。可选参数`getKey`和`getValue`用于把子数组转换为键和值，为空时默认取数组第 0 个元素作为键，第 1 个元素作为值。`getKey`和`getValue`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
  * @en Input a two-dimensional array `pairs`, and output a plain object composed of key-value pairs extracted from each sub-array. Optional parameters `getKey` and `getValue` can be provided to transform the array elements into keys and values. If not provided, the first element of each sub-array (index 0) will be used as the key, and the second element (index 1) will be used as the value. `getKey` and `getValue` can be field paths similar to [getByPath](../object/getByPath) or callback functions.
  * @param {any[]} pairs @zh 键值对二维数组 @en The array of key-value pairs
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getKey] @zh 从子数组中提取键  @en Extract keys form sub-arrays
