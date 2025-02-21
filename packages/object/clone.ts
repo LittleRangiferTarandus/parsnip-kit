@@ -90,6 +90,9 @@ export function clone<T extends PrimitiveType | ObjectLike>(arg: T) {
       }
     } else if (Array.isArray(arg)) {
       ans = new Array(arg.length)
+      for (const key in arg as ObjectLike) {
+        ans[key] = arg[key]
+      }
     } else {
       ans = cloneNotCollectionObject(arg)
     }

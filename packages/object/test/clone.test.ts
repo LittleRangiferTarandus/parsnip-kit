@@ -72,9 +72,9 @@ describe('object', () => {
 
     expect(cloneArr === arr).eq(false)
     expect(cloneArr.length === arr.length).eq(true)
-    cloneArr.forEach((item, index) => {
-      expect(item).eq(arr[index])
-    })
+    for (let i = 0; i < cloneArr.length; i++) {
+      expect(cloneArr[i]).eq(arr[i])
+    }
 
     const obj = { a: { data: 1 }, b: { data: 2 }, c: { data: 3 } }
     const cloneObj = clone(obj)
