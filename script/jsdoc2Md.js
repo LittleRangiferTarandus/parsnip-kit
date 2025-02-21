@@ -50,7 +50,7 @@ function formatExample(sources) {
 const langArr = ['zh', 'en', 'jp']
 
 function getFormatJsdoc(comment) {
-  const [jsdoc] = parse(comment);
+  const [jsdoc] = parse(comment, { spacing: 'preserve' });
   const returns = jsdoc.tags.find((item) => item.tag === "returns");
   const example = jsdoc.tags.find((item) => item.tag === "example");
   const args = jsdoc.tags.filter((item) => item.tag === "param").map((item) => {
