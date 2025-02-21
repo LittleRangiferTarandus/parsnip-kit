@@ -9,7 +9,7 @@ export type PrimitiveType =
 
 export type NumberString = `${number}`
 
-export type ObjectLike = object & { call?: never }
+export type ObjectLike = object & { call?: never; [x: PropertyKey]: any }
 
 export type MapKey<T> = T extends Map<infer K, any> ? K : never
 export type MapValue<T> = T extends Map<any, infer V> ? V : never

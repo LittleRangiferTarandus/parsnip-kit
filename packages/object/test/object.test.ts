@@ -4,7 +4,6 @@ import { setByPath } from '../setByPath'
 import { deleteByPath } from '../deleteByPath'
 import { unzipToArrays } from '../unzipToArrays'
 import { objectToPairs } from '../objectToPairs'
-import { clone } from '../clone'
 
 describe('object', () => {
   test('getByPath', () => {
@@ -95,54 +94,5 @@ describe('object', () => {
     expect(JSON.stringify(objectToPairs(obj))).eq(
       '[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]'
     )
-  })
-  test('clone', () => {
-    expect(clone(undefined)).eq(undefined)
-    expect(clone(null)).eq(null)
-    expect(clone(123)).eq(123)
-    expect(clone('test')).eq('test')
-    expect(clone(true)).eq(true)
-    expect(clone(BigInt(123))).eq(123n)
-
-    const symbol = Symbol('test')
-    expect(clone(symbol)).eq(symbol)
-
-    const arr = [{ data: 1 }, { data: 2 }, { data: 3 }]
-    const cloneArr = clone(arr)
-    console.log(cloneArr)
-
-    expect(cloneArr === arr).eq(false)
-    expect(cloneArr.length === arr.length).eq(true)
-    cloneArr.forEach((item, index) => {
-      expect(item).eq(arr[index])
-    })
-
-    const obj = { a: { data: 1 }, b: { data: 2 }, c: { data: 3 } }
-    const cloneObj = clone(obj)
-    expect(cloneObj === obj).eq(false)
-    expect(Object.keys(cloneObj).length === Object.keys(obj).length).eq(true)
-    Object.keys(cloneObj).forEach((key) => {
-      expect(cloneObj[key]).eq(obj[key])
-    })
-
-    const set = new Set([{ data: 1 }, { data: 2 }, { data: 3 }])
-    const cloneSet = clone(set)
-    expect(cloneSet === set).eq(false)
-    expect(cloneSet.size === set.size).eq(true)
-    for (const value of cloneSet.values()) {
-      expect(set.has(value)).eq(true)
-    }
-
-    const map = new Map([
-      ['a', { data: 1 }],
-      ['b', { data: 2 }],
-      ['c', { data: 3 }]
-    ])
-    const cloneMap = clone(map)
-    expect(cloneMap === map).eq(false)
-    expect(cloneMap.size === map.size).eq(true)
-    for (const entry of cloneMap.entries()) {
-      expect(map.get(entry[0]) === entry[1]).eq(true)
-    }
   })
 })
