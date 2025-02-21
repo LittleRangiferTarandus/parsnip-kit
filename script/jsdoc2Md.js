@@ -3,12 +3,12 @@
 // Project URL: https://github.com/chouchouji/jsdoctomd.git
 // License: MIT
 
-import { parse } from "comment-parser";
-import esprima from "esprima";
+import { parse } from 'comment-parser';
+import esprima from 'esprima';
 
 function formatType(types) {
-  if (types.includes("|")) {
-    return types.split("|").map((type) => type.trim());
+  if (types.includes('|')) {
+    return types.split('|').map((type) => type.trim());
   }
   return [types];
 }
@@ -27,7 +27,7 @@ ${example}
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" \\| ") + "`"} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join("\n")}
+${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join('\n')}
       
 ### Returns
 
@@ -38,22 +38,22 @@ ${args.map((item) => `| \`${item.name}\` | ${"`" + formatType(item.type).join(" 
 }
 
 function isEmpty(val) {
-  return val === void 0 || val === null || val === "" || Array.isArray(val) && !val.length;
+  return val === void 0 || val === null || val === '' || Array.isArray(val) && !val.length;
 }
 function formatExample(sources) {
   if (isEmpty(sources)) {
-    return "";
+    return '';
   }
-  return sources.filter((item) => !item.includes("@example")).map((item) => item.slice(3)).join("\n");
+  return sources.filter((item) => !item.includes('@example')).map((item) => item.slice(3)).join('\n');
 }
 
 const langArr = ['zh', 'en', 'jp']
 
 function getFormatJsdoc(comment) {
   const [jsdoc] = parse(comment, { spacing: 'preserve' });
-  const returns = jsdoc.tags.find((item) => item.tag === "returns");
-  const example = jsdoc.tags.find((item) => item.tag === "example");
-  const args = jsdoc.tags.filter((item) => item.tag === "param").map((item) => {
+  const returns = jsdoc.tags.find((item) => item.tag === 'returns');
+  const example = jsdoc.tags.find((item) => item.tag === 'example');
+  const args = jsdoc.tags.filter((item) => item.tag === 'param').map((item) => {
     const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
       name: item.name,
@@ -70,8 +70,8 @@ function getFormatJsdoc(comment) {
   const funcDesc = jsdoc.description
   const ans = {
     description: funcDesc,
-    returnType: returns?.type || "void",
-    example: example?.source ? formatExample(example.source.map((item) => item.source)) : "",
+    returnType: returns.type ? returns.type.replace(/\|/g, '\\|') : 'void',
+    example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
     args
   }
   langArr.forEach(langStr => {
@@ -84,15 +84,15 @@ function getFormatJsdoc(comment) {
 }
 function getFunctionName(content) {
   const tokens = esprima.tokenize(content);
-  let functionName = "";
-  let lastToken = { type: "", value: "" };
+  let functionName = '';
+  let lastToken = { type: '', value: '' };
   for (let i = 0; i < tokens.length; i++) {
     if (i >= 1) {
       lastToken = tokens[i - 1];
     }
     const { type, value } = lastToken;
-    const isFunction2 = type === "Keyword" && ["function", "const"].includes(value);
-    if (tokens[i].type === "Identifier" && isFunction2) {
+    const isFunction2 = type === 'Keyword' && ['function', 'const'].includes(value);
+    if (tokens[i].type === 'Identifier' && isFunction2) {
       functionName = tokens[i].value;
       break;
     }
@@ -103,22 +103,22 @@ function parseFile(file) {
   const codes = file.split(/\r\n|\n/);
   const length = codes.length - 1;
   const result = [];
-  let comment = "";
-  let content = "";
+  let comment = '';
+  let content = '';
   codes.forEach((code, idx) => {
-    if (code === "/**" || idx === length) {
+    if (code === '/**' || idx === length) {
       if (content && comment) {
         result.push({
           comment,
           content
         });
       }
-      comment = "/**\n";
-      content = "";
-    } else if (comment && (code == ' *' || code.startsWith(" * ") || code.startsWith(" */"))) {
+      comment = '/**\n';
+      content = '';
+    } else if (comment && (code == ' *' || code.startsWith(' * ') || code.startsWith(' */'))) {
       comment += `${code}
 `;
-    } else if (!code.startsWith(" * ") || !code.startsWith(" */")) {
+    } else if (!code.startsWith(' * ') || !code.startsWith(' */')) {
       content += `${code}
 `;
     }
@@ -136,7 +136,7 @@ function jsdocToMD(options) {
       ...formatJsdoc, lang, functionName
     });
   });
-  return mds.join("\n").trim();
+  return mds.join('\n').trim();
 }
 export {
   jsdocToMD
