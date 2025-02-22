@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "npx eslint packages/",
     "lint:fix": "npx eslint packages/ --fix",
-    "doc": "node script/generateMd.js",
-    "docs:dev": "vitepress dev wiki",
+    "doc": "npm run test & node script/generateMd.js",
+    "docs:dev": "npm run doc & vitepress dev wiki",
     "docs:build": "vitepress build wiki",
     "docs:preview": "vitepress preview wiki"
   },
