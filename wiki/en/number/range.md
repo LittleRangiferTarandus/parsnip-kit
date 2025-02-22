@@ -1,4 +1,5 @@
 # range
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 Input the start value `start` and the end value `end`, and return the sequence starting from `start` with a step size of `step` in the interval [`start`, `end`). Inspired by the syntax for generating arrays with equal steps in Python, as well as in Matlab, Rust, and others.
 

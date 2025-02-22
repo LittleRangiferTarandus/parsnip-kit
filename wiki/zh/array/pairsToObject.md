@@ -1,4 +1,5 @@
 # pairsToObject
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 输入一个二维数组`pairs`，输出从每一项数组中提取的键值对组成的普通对象。可选参数`getKey`和`getValue`用于把子数组转换为键和值，为空时默认取数组第 0 个元素作为键，第 1 个元素作为值。`getKey`和`getValue`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
 

@@ -1,4 +1,5 @@
 # range
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 输入起始值`start`和结束值`end`，返回区间 [`start`, `end`) 中以`start`开始，步长为`step`的序列。灵感来自 Python，以及 Matlab、rust 等生成等步长数组的语法。
 

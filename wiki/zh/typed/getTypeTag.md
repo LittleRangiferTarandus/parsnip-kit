@@ -1,28 +1,25 @@
-# camelCase
+# getTypeTag
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-把字符串转换到小驼峰命名。
+返回传入参数的类型标签，通过调用`Object.prototype.toString`方法实现。
 
 ### Usage
 
-```ts
-import { camelCase } from 'parsnip-kit'
+import { getTypeTag } from 'parsnip-kit'
 
-camelCase('HelloWorld') // 'helloWorld'
-camelCase('helloWorld') // 'helloWorld'
-camelCase('hello-world') // 'helloWorld'
-camelCase('hello_world') // 'helloWorld'
-camelCase('HELLO_WORLD') // 'helloWorld'
-camelCase('Hello World') // 'helloWorld'
-camelCase('-_HELLO World -_') // 'helloWorld'
-```
+getTypeTag('hello') // 'String'
+getTypeTag(42) // 'Number'
+getTypeTag(null) // 'Null'
+getTypeTag([1, 2, 3]) // 'Array'
+getTypeTag({ a: 1 }) // 'Object'
+getTypeTag(() => {}) // 'Function'
 
       
 ### Arguments
       
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
+| `arg` | `any` | `false` | `undefined` | 待检测的参数  |
       
 ### Returns
 

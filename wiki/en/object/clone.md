@@ -1,4 +1,5 @@
 # clone
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-92.50%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.00%-brightgreen)
       
 Accepts an argument `arg` and returns its shallow clone.
 
@@ -10,7 +11,7 @@ For plain objects, it will attempt to construct a new object based on its protot
 
 Supported built-in objects for cloning:
 
-|分类|支持的对象|
+|Category|Supported Objects|
 |-|-|
 |Wrapper Classes|`String` `Number` `Boolean`|
 |Collection Types|`Object` `Array` `Map` `Set`|

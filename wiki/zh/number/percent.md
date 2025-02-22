@@ -1,4 +1,5 @@
 # percent
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 输入数值`num`和总数`total`（默认 100），输出格式化的百分比字符串。可选参数`fixed`，控制小数位数，默认为 2。
 

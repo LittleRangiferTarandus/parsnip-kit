@@ -6,10 +6,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   test: {
+    reporters: ['json'],
+    outputFile: 'coverage/coverage.json',
     exclude: ["node_modules", "dist", "script"],
     coverage: {
       exclude: ["node_modules", "dist", "script", "packages/common/types.ts"],
-      include: ["packages"]
+      include: ["packages"],
     }
   },
   build: {

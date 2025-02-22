@@ -14,3 +14,7 @@
   background-repeat: no-repeat;
   background-position: right 15% top 50px;
 }
+
+img[alt="Static Badge"] {
+  display: inline-block;
+}

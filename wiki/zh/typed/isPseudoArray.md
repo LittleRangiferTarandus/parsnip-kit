@@ -1,4 +1,5 @@
 # isPseudoArray
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 判断入参是否为伪数组，即可以通过数字索引访问（一般的 JS 对象都满足这一点），拥有数字`length`的对象。
 

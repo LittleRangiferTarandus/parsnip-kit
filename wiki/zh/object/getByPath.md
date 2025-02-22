@@ -1,4 +1,5 @@
 # getByPath
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 输入一个对象`obj`，和字段所在的路径`path`，按照路径深度遍历取值。当遍历路径中断或值为`undefined`、`null`时，使用`defaultValue`作为默认值。
 
