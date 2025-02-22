@@ -31,4 +31,4 @@ unzipToArrays(obj)
 
 | Type |
 | ---  |
-| `[PropertyKey[], any[]]`  |
+| `[string[], any[]]`  |

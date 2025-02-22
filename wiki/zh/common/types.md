@@ -61,5 +61,6 @@ export type KeyOrIndex<T extends string> = T extends
   | `[${infer D extends number}]`
   | `${infer D extends number}`
   ? D
+  : T
 
 ```

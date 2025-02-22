@@ -31,4 +31,4 @@ objectToPairs(obj)
 
 | Type |
 | ---  |
-| `[PropertyKey, any][]`  |
+| `[string, any][]`  |

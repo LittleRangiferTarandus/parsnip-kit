@@ -52,7 +52,7 @@ clonedTestObj1.data.getPrivateData()
 
 const testCloner = (
   value: any,
-  key: PropertyKey | undefined,
+  key: string | undefined,
   cache: WeakMap<any, any>,
   defaultClone4Object
 ) => {
@@ -89,7 +89,7 @@ clonedTestObj3.a === clonedTestObj3 // true
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `any` | `false` | `undefined` | 待复制的参数  |
-| `customizeClone` | `(arg: any, key: PropertyKey \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | 自定义复制普通对象和不支持的内置对象的行为  |
+| `customizeClone` | `(arg: any, key: string \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | 自定义复制普通对象和不支持的内置对象的行为  |
 
 #### Returns
 

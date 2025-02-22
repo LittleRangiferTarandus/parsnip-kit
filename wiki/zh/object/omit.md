@@ -1,7 +1,7 @@
 # omit
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-96.77%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-92.86%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-96.77%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-94.74%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-返回从对象或数组中删除指定的键或索引的新对象或者数组，返回值是入参`obj`的浅复制，不会修改入参。
+返回从对象或数组中，删除指定的键或索引的新对象或者数组，返回值是普通对象或数组，不会修改入参。
 
 ### Usage
 
@@ -9,7 +9,7 @@
 const obj = omit({ a: 1, b: 2, c: 3 }, ['b', 'c'] as const)
 // Omit<{ a: number; b: number; c: number; }, "b" | "c">
 // { a: 1 }
-const arr = omit([1, 2, 3, 4], ['1', '3'] as const)
+const arr = omit([1, 2, 3, 4], ['[1]', '3'] as const)
 // Omit<number[], 1 | 3>
 // [1, 3]
 ```

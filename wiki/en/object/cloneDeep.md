@@ -52,7 +52,7 @@ clonedTestObj1.data.getPrivateData()
 
 const testCloner = (
   value: any,
-  key: PropertyKey | undefined,
+  key: string | undefined,
   cache: WeakMap<any, any>,
   defaultClone4Object
 ) => {
@@ -89,7 +89,7 @@ clonedTestObj3.a === clonedTestObj3 // true
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `any` | `false` | `undefined` | Parameter to be cloned |
-| `customizeClone` | `(arg: any, key: PropertyKey \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | Customize the cloning behavior for plain objects and unsupported built-in objects |
+| `customizeClone` | `(arg: any, key: string \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | Customize the cloning behavior for plain objects and unsupported built-in objects |
 
 #### Returns
 

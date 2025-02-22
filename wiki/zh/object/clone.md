@@ -1,13 +1,13 @@
 # clone
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-92.50%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.00%-brightgreen)
       
-输入一个参数`arg`，返回它的浅复制。 
+输入一个参数`arg`，返回它的浅克隆。 
 
 支持基本类型、普通对象（`arg => Object.prototype.toString.apply(arg).slice(8, -1)`返回`Object`），以及包括这些在内的内置对象：`Array`、`Map`、`Set`、`Date`、`RegExp`。
 
 和 Lodash 处理思路类似，对于不支持复制的内置对象，例如`Error`、`Function`、`Promise`、`HTMLElement`等等，将返回空的普通对象。
 
-对于普通对象，会尝试以它的原型构造新的对象作为浅复制，如果没有原型则创建空对象。然后加上入参`arg`的可枚举属性。
+对于普通对象，会尝试以它的原型构造新的对象作为浅克隆，如果没有原型则创建空对象。然后加上入参`arg`的可枚举属性。
 
 支持复制的内置对象：
 
