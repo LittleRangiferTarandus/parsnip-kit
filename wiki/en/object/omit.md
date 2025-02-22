@@ -9,7 +9,7 @@ Generate a new object or array from the input object or array with specified key
 const obj = omit({ a: 1, b: 2, c: 3 }, ['b', 'c'] as const)
 // Omit<{ a: number; b: number; c: number; }, "b" | "c">
 // { a: 1 }
-const arr = omit([1, 2, 3, 4], ['1', '3'])
+const arr = omit([1, 2, 3, 4], ['1', '3'] as const)
 // Omit<number[], 1 | 3>
 // [1, 3]
 ```
