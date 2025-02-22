@@ -19,6 +19,7 @@ export { isUndefined } from './typed/isUndefined'
 export { isSymbol } from './typed/isSymbol'
 export { isBigInt } from './typed/isBigInt'
 export { isPrimitive } from './typed/isPrimitive'
+export { isNumberString } from './typed/isNumberString'
 
 export { isFunction } from './typed/isFunction'
 export { isObjectLike } from './typed/isObjectLike'
@@ -54,6 +55,9 @@ export { clone } from './object/clone'
 export { cloneDeep } from './object/cloneDeep'
 export { getTypeTag } from './typed/getTypeTag'
 export { omit } from './object/omit'
+export { pick } from './object/pick'
+export { filterFields } from './object/filterFields'
+export { forEachFields } from './object/forEachFields'
 
 export type {
   PrimitiveType,

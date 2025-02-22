@@ -1,10 +1,13 @@
-import { test, describe, expect } from 'vitest'
+import { test, describe, expect, vitest } from 'vitest'
 import { getByPath } from '../getByPath'
 import { setByPath } from '../setByPath'
 import { deleteByPath } from '../deleteByPath'
 import { unzipToArrays } from '../unzipToArrays'
 import { objectToPairs } from '../objectToPairs'
 import { omit } from '../omit'
+import { pick } from '../pick'
+import { forEachFields } from '../forEachFields'
+import { filterFields } from '../filterFields'
 
 describe('object', () => {
   test('getByPath', () => {
@@ -108,5 +111,48 @@ describe('object', () => {
     const obj1 = { a: 1, 0: 2, 1: 3 }
     const result2 = omit(obj1, ['a', '0'])
     expect(result2).toEqual({ '1': 3 })
+  })
+  test('pick', () => {
+    const obj = { a: 1, b: 2, c: 3 }
+    const keys0 = ['a', 'c'] as const
+    const result0 = pick(obj, keys0)
+    expect(result0).toEqual({ a: 1, c: 3 })
+
+    const arr = [1, 2, 3, 4]
+    const keys1 = ['1', '[3]'] as const
+    const result1 = pick(arr, keys1)
+    expect(result1).toEqual([2, 4])
+
+    const result2 = pick(arr, ['a', '0'])
+    expect(result2).toEqual([1])
+  })
+  test('forEachFields', () => {
+    const obj = { a: 1, b: 2, c: 3 }
+    const callback = vitest.fn()
+
+    forEachFields(obj, callback)
+
+    expect(callback).toHaveBeenCalledTimes(3)
+    expect(callback).toHaveBeenCalledWith(1, 'a', obj)
+    expect(callback).toHaveBeenCalledWith(2, 'b', obj)
+    expect(callback).toHaveBeenCalledWith(3, 'c', obj)
+  })
+  test('filterFields', () => {
+    const obj = { a: 1, b: 2, c: 3 }
+    const iterator0 = (value: number) => value > 1
+    const result0 = filterFields(obj, iterator0)
+    expect(result0).toEqual({ b: 2, c: 3 })
+
+    const arr0 = [0, 1, 2, 3]
+    const iterator1 = (value: number) => value % 2 === 0
+    const result1 = filterFields(arr0, iterator1)
+    expect(result1).toEqual([0, 2])
+
+    const arr1 = [0, 1, 2, 3]
+    arr1['test'] = 'test'
+
+    const iterator2 = (value, key) => typeof key === 'string'
+    const result2 = filterFields(arr1, iterator2)
+    expect(result2['test']).toEqual('test')
   })
 })
