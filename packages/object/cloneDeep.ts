@@ -5,7 +5,7 @@ import { cloneNotCollectionObject } from './clone'
 
 type CustomizeClone = (
   arg: any,
-  key: PropertyKey | undefined,
+  key: string | undefined,
   cache: WeakMap<any, any>,
   defaultClone4Object: (
     arg: ObjectLike,
@@ -26,7 +26,7 @@ type CustomizeClone = (
  *
  * An optional parameter `customizeClone` used to override the behavior when cloning unsupported objects and plain objects.
  * @param {any} obj @zh 待复制的参数 @en Parameter to be cloned
- * @param {(arg: any, key: PropertyKey | undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any} [customizeClone] @zh 自定义复制普通对象和不支持的内置对象的行为 @en Customize the cloning behavior for plain objects and unsupported built-in objects
+ * @param {(arg: any, key: string | undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any} [customizeClone] @zh 自定义复制普通对象和不支持的内置对象的行为 @en Customize the cloning behavior for plain objects and unsupported built-in objects
  * @returns {any}
  * @example
  * ```ts
@@ -72,7 +72,7 @@ type CustomizeClone = (
  *
  * const testCloner = (
  *   value: any,
- *   key: PropertyKey | undefined,
+ *   key: string | undefined,
  *   cache: WeakMap<any, any>,
  *   defaultClone4Object
  * ) => {
@@ -110,7 +110,7 @@ export function cloneDeep<T>(arg: T, customizeClone?: CustomizeClone) {
 function cloneWithCache(
   arg: any,
   cache: WeakMap<any, any>,
-  key?: PropertyKey,
+  key?: string,
   customizeClone?: CustomizeClone
 ) {
   let value = arg
@@ -131,7 +131,7 @@ function cloneWithCache(
 function cloneDeepHelper(
   arg: any,
   cache: WeakMap<any, any>,
-  key?: PropertyKey,
+  key?: string,
   customizeClone?: CustomizeClone
 ) {
   if (isObject(arg)) {

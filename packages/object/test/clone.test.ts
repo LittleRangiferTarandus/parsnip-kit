@@ -156,7 +156,7 @@ describe('object', () => {
 
     const testCloner = (
       value: any,
-      key: PropertyKey | undefined,
+      key: string | undefined,
       cache: WeakMap<any, any>,
       defaultClone4Object
     ) => {

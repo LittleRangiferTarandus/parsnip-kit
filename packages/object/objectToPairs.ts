@@ -2,7 +2,7 @@
  * @zh 输入对象`obj`，输出一个由每个字段键值对组成的数组。
  * @en Input an object `obj`, and output an array composed of each key-value pair of the object.
  * @param {object} obj @zh 原对象 @en Original object
- * @returns {[PropertyKey, any][]}
+ * @returns {[string, any][]}
  * @example
  * ```ts
  * import { objectToPairs } from 'parsnip-kit'

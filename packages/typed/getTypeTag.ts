@@ -4,6 +4,7 @@
  * @param {any} arg @zh 待检测的参数 @en The argument to check
  * @returns {string}
  * @example
+ * ```ts
  * import { getTypeTag } from 'parsnip-kit'
  *
  * getTypeTag('hello') // 'String'
@@ -12,6 +13,7 @@
  * getTypeTag([1, 2, 3]) // 'Array'
  * getTypeTag({ a: 1 }) // 'Object'
  * getTypeTag(() => {}) // 'Function'
+ * ```
  */
 export const getTypeTag = (arg) =>
   Object.prototype.toString.apply(arg).slice(8, -1)
