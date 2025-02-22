@@ -11,14 +11,16 @@ import { capitalize } from 'parsnip-kit'
 capitalize('HelloWorld') // 'Helloworld'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The string to be converted. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

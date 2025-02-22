@@ -13,14 +13,16 @@ isNumberString('123a5') // false
 isNumberString('') // false
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | Parameters for check |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

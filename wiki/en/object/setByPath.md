@@ -27,16 +27,18 @@ const test5 = { a: 1 }
 setByPath(test5, 'b', 2) // { a: 1, b: 2 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | Object to be set |
 | `path` | `string` | `false` | `undefined` | Field path |
 | `value` | `any` | `false` | `undefined` | Value to be set |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

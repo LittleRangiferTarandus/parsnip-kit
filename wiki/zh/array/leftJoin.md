@@ -47,9 +47,11 @@ leftJoin(
 
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `left` | `object[]` | `false` | `undefined` | 左连接中左侧的数组  |
@@ -57,8 +59,8 @@ leftJoin(
 | `leftKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | 为左侧数组提供区分元素的标识  |
 | `rightKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | 为右侧数组提供区分元素的标识  |
 | `merge` | `(left: any, right: any \| undefined) => any` | `false` | `undefined` | 返回左右数组元素合并的结果  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

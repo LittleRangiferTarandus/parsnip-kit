@@ -17,14 +17,16 @@ camelCase('Hello World') // 'helloWorld'
 camelCase('-_HELLO World -_') // 'helloWorld'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

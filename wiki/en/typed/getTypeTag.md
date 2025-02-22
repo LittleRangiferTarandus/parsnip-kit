@@ -14,14 +14,16 @@ getTypeTag([1, 2, 3]) // 'Array'
 getTypeTag({ a: 1 }) // 'Object'
 getTypeTag(() => {}) // 'Function'
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The argument to check |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

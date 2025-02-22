@@ -15,15 +15,17 @@ sort([1, 25, 4, 9, 16]) // [1, 16, 25, 4, 9]
 sortIndex([1, 25, 4, 9, 16]) // [0, 2, 3, 4, 1]
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arr` | `any[]` | `false` | `undefined` | 待排序数组  |
 | `comparator` | `(a: T, b: T) => number` | `true` | `undefined` | 比较器  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

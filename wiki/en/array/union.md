@@ -29,16 +29,18 @@ union([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: number, a
 }) // [1.1, 2.4, 3.9, 4.16, 5, 6]
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arr1` | `any[]` | `false` | `undefined` | Array for computing the union |
 | `arr2` | `any[]` | `false` | `undefined` | Array for computing the union |
 | `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

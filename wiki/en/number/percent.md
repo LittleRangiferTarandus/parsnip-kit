@@ -15,16 +15,18 @@ percent(75, 200, 0) // '38%'
 percent(0) // '0.00%'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `num` | `number` | `false` | `undefined` | The number to calculate |
 | `total` | `number` | `true` | `100` | Total value |
 | `fixed` | `number` | `true` | `2` | Decimal places |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

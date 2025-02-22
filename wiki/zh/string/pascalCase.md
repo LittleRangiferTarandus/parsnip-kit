@@ -17,14 +17,16 @@ pascalCase('Hello World') // 'HelloWorld'
 pascalCase('-_HELLO World -_') // 'HelloWorld'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

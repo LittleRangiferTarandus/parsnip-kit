@@ -15,14 +15,16 @@ isFunction(function*() {}) // true
 isFunction(async () => {}) // true
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | 待判断的入参  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

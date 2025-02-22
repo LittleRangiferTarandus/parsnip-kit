@@ -17,14 +17,16 @@ titleCase('Hello World') // 'Hello World'
 titleCase('-_HELLO World -_') // 'Hello World'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The string to be converted. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

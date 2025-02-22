@@ -46,7 +46,8 @@ const order = [
   'typed',
   'random',
   'number',
-  'math'
+  'math',
+  'common',
 ]
 
 export const dfs4Md = (lang: string, titleMap: Record<string, string>, additionMap?: Record<string, string>) => {

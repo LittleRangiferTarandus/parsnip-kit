@@ -12,14 +12,16 @@ isSymbol(Symbol('test')) // true
 isSymbol('test') // false
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | Parameters for check |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

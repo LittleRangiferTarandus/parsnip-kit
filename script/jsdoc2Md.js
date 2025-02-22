@@ -13,27 +13,25 @@ function formatType(types) {
   return [types];
 }
 function generateMD(func) {
-  const { functionName, content, args, returnType, lang, example } = func;
+  const { refer, functionName, content, needContent, args, returnType, lang, example } = func;
   return `
 # ${functionName}
       
 ${func[lang + 'Description'] || func.description}
 
-### Usage
-
-${example}
-      
-### Arguments
-      
-| Arg | Type | Optional | Default | Description |
-| --- | --- | --- | --- | --- |
-${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join('\n')}
-      
-### Returns
-
-| Type |
-| ---  |
-| \`${returnType}\`  |
+${
+  example ? `### Usage\n\n${example}\n\n`: ''
+}${
+  needContent ? `### Source\n\n\`\`\`typescript\n${content}\n\`\`\`\n\n`: ''
+}${
+  refer || returnType || args?.length ? '### API\n\n' : ''
+}${
+  args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join('\n')}\n\n` : ''
+}${
+  returnType ? `#### Returns\n\n| Type |\n| ---  |\n| \`${returnType}\`  |\n\n` : ''
+}${
+  refer ? `#### Reference\n\n${refer}` : ''
+}
 `;
 }
 
@@ -50,8 +48,12 @@ function formatExample(sources) {
 const langArr = ['zh', 'en', 'jp']
 
 function getFormatJsdoc(comment) {
+  if (!comment) {
+    return {}
+  }
   const [jsdoc] = parse(comment, { spacing: 'preserve' });
   const returns = jsdoc.tags.find((item) => item.tag === 'returns');
+  const refer = jsdoc.tags.find((item) => item.tag === 'refer');
   const example = jsdoc.tags.find((item) => item.tag === 'example');
   const args = jsdoc.tags.filter((item) => item.tag === 'param').map((item) => {
     const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
@@ -70,9 +72,12 @@ function getFormatJsdoc(comment) {
   const funcDesc = jsdoc.description
   const ans = {
     description: funcDesc,
-    returnType: returns.type ? returns.type.replace(/\|/g, '\\|') : 'void',
+    returnType: returns
+      ? returns.type ? returns.type.replace(/\|/g, '\\|') : 'void'
+      : '',
     example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
-    args
+    args,
+    refer: refer ? [refer.name, refer.description].filter(Boolean).join(' ') : ''
   }
   langArr.forEach(langStr => {
     const textItem = jsdoc.tags.find((item) => item.tag === langStr)
@@ -91,7 +96,9 @@ function getFunctionName(content) {
       lastToken = tokens[i - 1];
     }
     const { type, value } = lastToken;
-    const isFunction2 = type === 'Keyword' && ['function', 'const'].includes(value);
+    const isFunction2 =
+      type === 'Keyword' && ['function', 'const', 'type'].includes(value)
+      || type === 'Identifier' && ['interface', 'type'].includes(value);
     if (tokens[i].type === 'Identifier' && isFunction2) {
       functionName = tokens[i].value;
       break;
@@ -107,7 +114,7 @@ function parseFile(file) {
   let content = '';
   codes.forEach((code, idx) => {
     if (code === '/**' || idx === length) {
-      if (content && comment) {
+      if (content || comment) {
         result.push({
           comment,
           content
@@ -118,7 +125,7 @@ function parseFile(file) {
     } else if (comment && (code == ' *' || code.startsWith(' * ') || code.startsWith(' */'))) {
       comment += `${code}
 `;
-    } else if (!code.startsWith(' * ') || !code.startsWith(' */')) {
+    } else if (!(code == ' *' || code.startsWith(' * ') || code.startsWith(' */'))) {
       content += `${code}
 `;
     }
@@ -126,18 +133,22 @@ function parseFile(file) {
   return result.filter(Boolean);
 }
 function jsdocToMD(options) {
-  const { input, extname, lang } = options;
+  const { input, extname, lang, needContent } = options;
   const parsedFiles = parseFile(input);
   const mds = parsedFiles.map((file) => {
     const { comment, content } = file;
     const formatJsdoc = getFormatJsdoc(comment);
     const functionName = getFunctionName(content);
-    return generateMD({
-      ...formatJsdoc, lang, functionName
-    });
+    if (!comment) {
+      return ''
+    }
+    const ans = generateMD({
+      ...formatJsdoc, content, lang, functionName, needContent
+    }).trim()
+    return ans
   });
-  return mds.join('\n').trim();
+  return mds.filter(Boolean).join('\n').trim();
 }
 export {
   jsdocToMD
-};
+}

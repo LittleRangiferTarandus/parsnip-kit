@@ -23,16 +23,18 @@ try {
 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `start` | `number` | `false` | `undefined` | 起始值  |
 | `end` | `number` | `false` | `undefined` | 结束值   |
 | `step` | `number` | `true` | `1` | 步长   |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

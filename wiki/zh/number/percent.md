@@ -15,16 +15,18 @@ percent(75, 200, 0) // '38%'
 percent(0) // '0.00%'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `num` | `number` | `false` | `undefined` | 要计算的数值  |
 | `total` | `number` | `true` | `100` | 总数，默认为100  |
 | `fixed` | `number` | `true` | `2` | 小数位数  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

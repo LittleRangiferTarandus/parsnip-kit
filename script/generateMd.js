@@ -67,8 +67,11 @@ function generateMD(lang, testReport) {
         dfs(nextFileNames, prefixPath)
         prefixPath.pop()
       } else {
+        if (file.endsWith('.test.ts')) {
+          return
+        }
         const input = fs.readFileSync(fullPath, 'utf-8')
-        let output = jsdocToMD({ input, extname, lang })
+        let output = jsdocToMD({ input, extname, lang, needContent: fullPath.endsWith('types.ts') })
         
         if (!output) {
           return
@@ -77,22 +80,24 @@ function generateMD(lang, testReport) {
         const path = fullPath.replace(/\//g, '\\')
         const fileData = testReport.coverageMap[path]
 
-        const statement = `${(Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100).toFixed(2)}%`
-        const branch = `${(Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100).toFixed(2)}%`
-        const fn = `${(Object.keys(fileData.f).filter(key => fileData.f[key] > 0).length / Object.keys(fileData.fnMap).length * 100).toFixed(2)}%`
-        const line = calculateLineCoverage(fileData)
+        if (fileData) {
+          const statement = `${(Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100).toFixed(2)}%`
+          const branch = `${(Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100).toFixed(2)}%`
+          const fn = `${(Object.keys(fileData.f).filter(key => fileData.f[key] > 0).length / Object.keys(fileData.fnMap).length * 100).toFixed(2)}%`
+          const line = calculateLineCoverage(fileData)
 
-        output.replace('\r\n', '\n')
-        const idx = output.indexOf('\n')
-        output = output.slice(0, idx) + `\n![Static Badge](https://img.shields.io/badge/Statement%20Coverage-${
-          statement
-        }-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-${
-          branch
-        }-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-${
-          fn
-        }-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-${
-          line
-        }-brightgreen)` + output.slice(idx)
+          output.replace('\r\n', '\n')
+          const idx = output.indexOf('\n')
+          output = output.slice(0, idx) + `\n![Static Badge](https://img.shields.io/badge/Statement%20Coverage-${
+            statement
+          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-${
+            branch
+          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-${
+            fn
+          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-${
+            line
+          }-brightgreen)` + output.slice(idx)
+        }
 
         const dirPath = `${
           docsPath

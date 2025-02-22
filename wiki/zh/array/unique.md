@@ -27,15 +27,17 @@ unique([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: number, 
 }) // [1.1, 2.4, 3.9, 4.16, 5, 6]
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arr` | `any[]` | `false` | `undefined` | 需要求交集的数组  |
 | `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

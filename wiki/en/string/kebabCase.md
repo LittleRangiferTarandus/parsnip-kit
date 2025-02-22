@@ -6,25 +6,27 @@ Convert the string to kebab-case.
 ### Usage
 
 ```ts
-import { camelCase } from 'parsnip-kit'
+import { kebabCase } from 'parsnip-kit'
 
-camelCase('HelloWorld') // 'hello-world'
-camelCase('helloWorld') // 'hello-world'
-camelCase('hello-world') // 'hello-world'
-camelCase('hello_world') // 'hello-world'
-camelCase('HELLO_WORLD') // 'hello-world'
-camelCase('Hello World') // 'hello-world'
-camelCase('-_HELLO World -_') // 'hello-world'
+kebabCase('HelloWorld') // 'hello-world'
+kebabCase('helloWorld') // 'hello-world'
+kebabCase('hello-world') // 'hello-world'
+kebabCase('hello_world') // 'hello-world'
+kebabCase('HELLO_WORLD') // 'hello-world'
+kebabCase('Hello World') // 'hello-world'
+kebabCase('-_HELLO World -_') // 'hello-world'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The string to be converted. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

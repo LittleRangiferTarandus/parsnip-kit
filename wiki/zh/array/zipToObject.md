@@ -26,17 +26,19 @@ zipToObject(
 ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `keys` | `any[]` | `false` | `undefined` | 作为键的数组  |
 | `values` | `any[]` | `false` | `undefined` | 作为值的数组   |
 | `getKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 把数组元素转换为键   |
 | `getValue` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 把数组元素转换为值   |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

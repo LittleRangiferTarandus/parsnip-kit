@@ -18,15 +18,17 @@ const test2 = { a: { b: { c: 1 } }, d: [2] }
 deleteByPath(test2, 'a.b') // { a: {}, d: [2] }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | 待删除的对象  |
 | `path` | `string` | `false` | `undefined` | 字段所在的路径  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

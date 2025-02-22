@@ -14,14 +14,16 @@ htmlEncode('<img/>') // '&lt;img/&gt;'
 htmlEncode('talk & code') // 'talk &amp; code'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

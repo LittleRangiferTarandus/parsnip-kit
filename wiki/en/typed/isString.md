@@ -13,14 +13,16 @@ isString(new String('test')) // true
 isString(123) // false
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | Parameters for check |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

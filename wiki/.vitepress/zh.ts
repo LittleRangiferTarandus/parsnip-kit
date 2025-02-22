@@ -8,6 +8,8 @@ const additionMap = {
   'string': '字符串',
   'typed': '类型检查',
   'array': '数组',
+  'number': '数字',
+  'common': '通用',
   'object': '对象',
 }
 

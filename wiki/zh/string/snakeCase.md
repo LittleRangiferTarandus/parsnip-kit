@@ -17,14 +17,16 @@ snakeCase('Hello World') // 'hello_world'
 snakeCase('-_HELLO World -_') // 'hello_world'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `string` | `false` | `undefined` | {"zh": "待转换的字符串", "en": "The string to be converted."} |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

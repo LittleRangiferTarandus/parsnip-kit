@@ -54,15 +54,21 @@ const cloneMap = clone(map) // Map(3) {'a' => { data: 1 }, 'b' => { data: 2 }, '
 cloneMap === map // false
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `PrimitiveType \| ObjectLike` | `false` | `undefined` | 待复制的参数  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |
 | `PrimitiveType \| ObjectLike`  |
+
+#### Reference
+
+[PrimitiveType](../common/types#primitivetype) [ObjectLike](../common/types#objectlike)

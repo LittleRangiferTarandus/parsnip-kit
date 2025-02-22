@@ -17,14 +17,16 @@ upperSnakeCase('Hello World') // 'HELLO_WORLD'
 upperSnakeCase('-_HELLO World -_') // 'HELLO_WORLD'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | 待转换的字符串  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

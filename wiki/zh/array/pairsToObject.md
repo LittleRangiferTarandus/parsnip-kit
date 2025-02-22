@@ -20,16 +20,18 @@ pairsToObject(users, pair => pair[0], pair => `${pair[1]} replies`)
 // { Alex: '16 replies', Bob: '659 replies', Carter: '155 replies', Daniel: '825 replies' }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `pairs` | `any[]` | `false` | `undefined` | 键值对二维数组  |
 | `getKey` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | 从子数组中提取键   |
 | `getValue` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | 从子数组中提取值   |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

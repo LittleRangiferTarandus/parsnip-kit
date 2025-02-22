@@ -26,17 +26,19 @@ zipToObject(
 ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `keys` | `any[]` | `false` | `undefined` | The array serving as keys |
 | `values` | `any[]` | `false` | `undefined` | The array serving as values |
 | `getKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Transform array elements into keys |
 | `getValue` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Transform array elements into values |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

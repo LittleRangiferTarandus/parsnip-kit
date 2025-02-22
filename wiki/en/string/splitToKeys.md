@@ -11,14 +11,16 @@ import { splitToKeys } from 'parsnip-kit'
 splitToKeys('a[0].b.c') // ['a', '0', 'b', 'c']
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The string to be converted. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

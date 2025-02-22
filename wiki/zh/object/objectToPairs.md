@@ -18,14 +18,16 @@ objectToPairs(obj)
 // [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | 原对象  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

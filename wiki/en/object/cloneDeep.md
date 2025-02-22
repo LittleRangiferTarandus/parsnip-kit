@@ -81,15 +81,17 @@ const clonedTestObj3 = cloneDeep(testCircle)
 clonedTestObj3.a === clonedTestObj3 // true
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `any` | `false` | `undefined` | Parameter to be cloned |
 | `customizeClone` | `(arg: any, key: PropertyKey \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | Customize the cloning behavior for plain objects and unsupported built-in objects |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

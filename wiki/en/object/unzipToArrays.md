@@ -18,14 +18,16 @@ unzipToArrays(obj)
 // [['Alex', 'Bob', 'Carter', 'Daniel'], [16, 659, 155, 825]]
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | Original object |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

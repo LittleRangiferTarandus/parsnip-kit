@@ -17,14 +17,16 @@ camelCase('Hello World') // 'helloWorld'
 camelCase('-_HELLO World -_') // 'helloWorld'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `arg` | `any` | `false` | `undefined` | The string to be converted. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

@@ -27,16 +27,18 @@ const test5 = { a: 1 }
 setByPath(test5, 'b', 2) // { a: 1, b: 2 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | 待取值的对象  |
 | `path` | `string` | `false` | `undefined` | 字段所在的路径  |
 | `value` | `any` | `false` | `undefined` | 设置的值  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

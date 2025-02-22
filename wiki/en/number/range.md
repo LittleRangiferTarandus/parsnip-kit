@@ -23,16 +23,18 @@ try {
 }
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `start` | `number` | `false` | `undefined` | Start value |
 | `end` | `number` | `false` | `undefined` | End value |
 | `step` | `number` | `true` | `1` | Step size |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

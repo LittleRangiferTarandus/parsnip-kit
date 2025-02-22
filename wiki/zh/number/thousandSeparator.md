@@ -17,14 +17,16 @@ thousandSeparator(1234.567) // '1,234.567'
 thousandSeparator(1234.567/) // '1,234.567,8'
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `num` | `number` | `false` | `undefined` | 要格式化的数字  |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |

@@ -47,9 +47,11 @@ leftJoin(
 
 ```
 
-      
-### Arguments
-      
+
+### API
+
+#### Arguments
+
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `left` | `object[]` | `false` | `undefined` | The left array in a left join |
@@ -57,8 +59,8 @@ leftJoin(
 | `leftKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the left array |
 | `rightKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the right array |
 | `merge` | `(left: any, right: any \| undefined) => any` | `false` | `undefined` | Return the result of merging elements from left and right arrays. |
-      
-### Returns
+
+#### Returns
 
 | Type |
 | ---  |
