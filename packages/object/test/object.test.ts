@@ -4,6 +4,7 @@ import { setByPath } from '../setByPath'
 import { deleteByPath } from '../deleteByPath'
 import { unzipToArrays } from '../unzipToArrays'
 import { objectToPairs } from '../objectToPairs'
+import { omit } from '../omit'
 
 describe('object', () => {
   test('getByPath', () => {
@@ -94,5 +95,18 @@ describe('object', () => {
     expect(JSON.stringify(objectToPairs(obj))).eq(
       '[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]'
     )
+  })
+  test('omit', () => {
+    const obj0 = { a: 1, b: 2, c: 3 }
+    const result0 = omit(obj0, ['b', 'c'] as const)
+    expect(result0).toEqual({ a: 1 })
+
+    const arr = [1, 2, 3, 4]
+    const result1 = omit(arr, ['1', '3'] as const)
+    expect(result1).toEqual([1, 3])
+
+    const obj1 = { a: 1, 0: 2, 1: 3 }
+    const result2 = omit(obj1, ['a', '0'])
+    expect(result2).toEqual({ '1': 3 })
   })
 })
