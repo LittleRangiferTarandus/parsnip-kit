@@ -43,6 +43,7 @@ import { getTypeTag } from '../typed/getTypeTag'
  *
  * @param {PrimitiveType | ObjectLike} obj @zh 待复制的参数 @en Parameter to be cloned
  * @returns {PrimitiveType | ObjectLike}
+ * @refer [PrimitiveType](../common/types#primitivetype) [ObjectLike](../common/types#objectlike)
  * @example
  * ```ts
  * import { clone } from 'parsnip-kit'

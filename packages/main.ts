@@ -53,3 +53,11 @@ export { objectToPairs } from './object/objectToPairs'
 export { clone } from './object/clone'
 export { cloneDeep } from './object/cloneDeep'
 export { getTypeTag } from './typed/getTypeTag'
+export { omit } from './object/omit'
+
+export type {
+  PrimitiveType,
+  NumberString,
+  ExtractUnion,
+  KeyOrIndex
+} from './common/types'

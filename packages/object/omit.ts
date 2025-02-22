@@ -9,12 +9,13 @@ import { isNumberString } from '../typed/isNumberString'
  * @param {object} obj - 待处理的对象或数组 @en The object or array to process
  * @param {string[]} keys - 需要删除的键或数组索引 @en The keys or array indices to delete
  * @returns {Omit<T, KeyOrIndex<ExtractUnion<R>>>}
+ * @refer [KeyOrIndex](../common/types#keyorindex) [ExtractUnion](../common/types#extractunion)
  * @example
  * ```typescript
  * const obj = omit({ a: 1, b: 2, c: 3 }, ['b', 'c'] as const)
  * // Omit<{ a: number; b: number; c: number; }, "b" | "c">
  * // { a: 1 }
- * const arr = omit([1, 2, 3, 4], ['1', '3'])
+ * const arr = omit([1, 2, 3, 4], ['1', '3'] as const)
  * // Omit<number[], 1 | 3>
  * // [1, 3]
  * ```
