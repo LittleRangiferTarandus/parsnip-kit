@@ -49,3 +49,7 @@ export { pairsToObject } from './array/pairsToObject'
 export { zipToObject } from './array/zipToObject'
 export { unzipToArrays } from './object/unzipToArrays'
 export { objectToPairs } from './object/objectToPairs'
+
+export { clone } from './object/clone'
+export { cloneDeep } from './object/cloneDeep'
+export { getTypeTag } from './typed/getTypeTag'

@@ -8,6 +8,7 @@ import { isObject } from '../isObject'
 import { isSymbol } from '../isSymbol'
 import { isBigInt } from '../isBigInt'
 import { isPrimitive } from '../isPrimitive'
+import { getTypeTag } from '../getTypeTag'
 
 describe('normal type', () => {
   test('isString', () => {
@@ -73,5 +74,23 @@ describe('normal type', () => {
     expect(isPrimitive(new Boolean(true))).eq(false)
     expect(isPrimitive({})).eq(false)
     expect(isPrimitive(new Date())).eq(false)
+  })
+  test('getTypeTag', () => {
+    expect(getTypeTag('hello')).toBe('String')
+    expect(getTypeTag(42)).toBe('Number')
+    expect(getTypeTag(true)).toBe('Boolean')
+    expect(getTypeTag(Symbol())).toBe('Symbol')
+    expect(getTypeTag(null)).toBe('Null')
+    expect(getTypeTag(undefined)).toBe('Undefined')
+    expect(getTypeTag({ a: 1 })).toBe('Object')
+    expect(getTypeTag([1, 2, 3])).toBe('Array')
+    expect(getTypeTag(new Date())).toBe('Date')
+    expect(getTypeTag(() => {})).toBe('Function')
+    expect(getTypeTag(new Function())).toBe('Function')
+    expect(getTypeTag(/test/)).toBe('RegExp')
+    expect(getTypeTag(new Set())).toBe('Set')
+    expect(getTypeTag(new Map())).toBe('Map')
+    expect(getTypeTag(new Promise(() => {}))).toBe('Promise')
+    expect(getTypeTag(Math)).toBe('Math')
   })
 })

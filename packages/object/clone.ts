@@ -1,5 +1,6 @@
 import { ObjectLike, PrimitiveType } from '../common/types'
-import { isFunction, isObjectLike } from '../main'
+import { isObjectLike } from '../main'
+import { getTypeTag } from '../typed/getTypeTag'
 
 /**
  * @zh 输入一个参数`arg`，返回它的浅复制。
@@ -94,7 +95,28 @@ export function clone<T extends PrimitiveType | ObjectLike>(arg: T) {
         ans[key] = arg[key]
       }
     } else {
-      ans = cloneNotCollectionObject(arg)
+      const argTypeTag = getTypeTag(arg)
+      ans = cloneNotCollectionObject(arg, argTypeTag)
+      if (!ans) {
+        if (argTypeTag === 'Object') {
+          if ((arg as any).__proto__) {
+            ans = Object.create((arg as any).__proto__)
+            Object.defineProperty(ans, 'constructor', {
+              value: arg.constructor,
+              writable: true,
+              enumerable: false,
+              configurable: true
+            })
+          } else {
+            ans = {}
+          }
+          for (const key in arg as ObjectLike) {
+            ans[key] = arg[key]
+          }
+        } else {
+          ans = {}
+        }
+      }
     }
     return ans as T
   } else {
@@ -102,19 +124,14 @@ export function clone<T extends PrimitiveType | ObjectLike>(arg: T) {
   }
 }
 
-const getTypeTag = (arg) => Object.prototype.toString.apply(arg).slice(8, -1)
-
 export const cloneNotCollectionObject = (
   arg: ObjectLike,
-  key?: PropertyKey,
-  cache?: WeakMap<any, any>,
-  customizeClone?: (
-    value: any,
-    key: PropertyKey,
-    cache: WeakMap<any, any>
-  ) => any
+  argTypeTag: string,
+  cache?: WeakMap<any, any>
 ) => {
-  const argTypeTag = getTypeTag(arg)
+  if (cache && cache.has(arg)) {
+    return cache.get(arg)
+  }
   let ans
   switch (argTypeTag) {
     case 'Number':
@@ -152,20 +169,9 @@ export const cloneNotCollectionObject = (
     case 'BigUint64Array':
       ans = arg.slice()
       break
-    default:
-      if (isFunction(customizeClone)) {
-        ans = customizeClone(arg, key!, cache!)
-      } else if (argTypeTag === 'Object') {
-        if ((arg as any).prototype) {
-          ans = Object.create((arg as any).prototype)
-          ans.constructor = arg.constructor
-        } else {
-          ans = {}
-        }
-        for (const key in arg as ObjectLike) {
-          ans[key] = arg[key]
-        }
-      }
+  }
+  if (cache && ans) {
+    cache.set(arg, ans)
   }
   return ans
 }
