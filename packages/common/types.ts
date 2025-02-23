@@ -36,8 +36,8 @@ export type ExtractUnion<T extends readonly string[]> = {
 }[number]
 
 /**
- * @zh 从形如`\`[${number}]\``或`\`${number}\``的字符串中提取数字。其他情况则返回原始字符串。
- * @en Extracts a number from a string in the form of `\`[${number}]\`` or `\`${number}\``. Otherwise, returns the original string.
+ * @zh 从形如 [${number}] 或 ${number} 的字符串中提取数字。其他情况则返回原始字符串。
+ * @en Extracts a number from a string in the form of [${number}] or ${number}. Otherwise, returns the original string.
  */
 export type KeyOrIndex<T extends string> = T extends
   | `[${infer D extends number}]`
