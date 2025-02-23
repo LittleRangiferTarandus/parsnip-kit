@@ -3,6 +3,10 @@
       
 Input an array `arr` and output an array representing the mapping from the indices of the original array to the indices of the sorted array. Note that the array `arr` itself will not be sorted. A custom comparator `comparator` can be provided; if not provided, the comparison logic will be the same as the native `sort`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

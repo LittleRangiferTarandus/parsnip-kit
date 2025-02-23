@@ -3,6 +3,10 @@
       
 Input a number `num` and output a string with thousand separators.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

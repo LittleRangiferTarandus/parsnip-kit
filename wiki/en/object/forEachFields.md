@@ -25,3 +25,9 @@ forEachFields(user, (value, key, obj) => {
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | Object to iterate |
 | `iterator` | `(value: any, key: string, object: T) => void` | `false` | `undefined` | Iterator function |
+
+#### Returns
+
+| Type |
+| ---  |
+| `undefined`  |

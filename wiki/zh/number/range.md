@@ -3,6 +3,10 @@
       
 输入起始值`start`和结束值`end`，返回区间 [`start`, `end`) 中以`start`开始，步长为`step`的序列。灵感来自 Python，以及 Matlab、rust 等生成等步长数组的语法。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

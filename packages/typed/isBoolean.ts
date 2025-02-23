@@ -3,6 +3,7 @@
  * @en Check whether the input parameter is a primitive boolean or a `Boolean` instance.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isBoolean } from 'parsnip-kit'

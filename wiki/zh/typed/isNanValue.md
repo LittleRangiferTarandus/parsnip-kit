@@ -3,6 +3,10 @@
       
 判断入参是否为`NaN`或`NaN`值的`Number`对象。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

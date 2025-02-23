@@ -5,6 +5,7 @@
  * @param {number} end @zh 结束值  @en End value
  * @param {number} [step=1] @zh 步长  @en Step size
  * @returns {number[]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { range } from 'parsnip-kit'

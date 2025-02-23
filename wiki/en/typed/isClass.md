@@ -3,6 +3,10 @@
       
 Check if the input parameter is a class.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

@@ -5,6 +5,7 @@
  * @param {number} [total=100] @zh 总数，默认为100 @en Total value
  * @param {number} [fixed=2] @zh 小数位数 @en Decimal places
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { percent } from 'parsnip-kit'

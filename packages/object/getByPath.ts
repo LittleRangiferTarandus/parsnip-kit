@@ -8,6 +8,7 @@ import { isObject } from '../typed/isObject'
  * @param {string} path @zh 字段所在的路径 @en Field path
  * @param {any} [defaultValue] @zh 默认值 @en Default value
  * @returns {any}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { getByPath } from 'parsnip-kit'

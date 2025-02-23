@@ -3,6 +3,10 @@
       
 Input an object `obj`, and output two arrays: one containing its keys and the other containing its values.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

@@ -3,6 +3,10 @@
       
 Returns a new object or array containing the specified keys or indices extracted from the input object or array. The return value is a plain object or array and does not modify the original input.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript

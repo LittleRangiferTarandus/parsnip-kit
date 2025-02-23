@@ -3,6 +3,10 @@
       
 Input a number `num` and a total `total` (default is 100), and output a formatted percentage string. An optional parameter `fixed` is available to control the number of decimal places, defaulting to 2.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

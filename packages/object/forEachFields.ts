@@ -3,6 +3,7 @@
  * @en A function that takes an object `obj` and an `iterator` function, iterates over each field of the object, and executes the `iterator` for each field's value.
  * @param {object} obj @zh 待遍历的对象 @en Object to iterate
  * @param {(value: any, key: string, object: T) => void} iterator @zh 迭代器函数 @en Iterator function
+ * @returns {undefined}
  * @example
  * ```ts
  * import { forEachFields } from 'parsnip-kit'

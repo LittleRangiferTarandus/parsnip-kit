@@ -3,6 +3,10 @@
       
 Capitalize the first letter of the string.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

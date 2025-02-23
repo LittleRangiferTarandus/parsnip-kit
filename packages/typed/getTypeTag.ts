@@ -3,6 +3,7 @@
  * @en Returns the type tag of the provided argument using `Object.prototype.toString`.
  * @param {any} arg @zh 待检测的参数 @en The argument to check
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { getTypeTag } from 'parsnip-kit'

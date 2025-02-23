@@ -7,6 +7,10 @@
 
 可选参数`customizeClone`，用于替代复制不支持的对象和普通对象时的行为。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

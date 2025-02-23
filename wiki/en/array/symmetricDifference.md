@@ -3,6 +3,10 @@
       
 Input two arrays `arr1` and `arr2`, and output their symmetric difference. Symmetric difference refers to the elements that are in either of the two sets but not in their intersection. Accepts a `getter`, which can be a field path similar to [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

@@ -3,6 +3,10 @@
       
 Returns the type tag of the provided argument using `Object.prototype.toString`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

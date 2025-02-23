@@ -3,6 +3,10 @@
       
 Input two parameters `arg1` and `arg2`, and return whether they are strictly equal.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

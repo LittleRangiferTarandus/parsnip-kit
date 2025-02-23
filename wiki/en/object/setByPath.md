@@ -3,6 +3,10 @@
       
 Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to set the value `value`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

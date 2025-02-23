@@ -7,6 +7,7 @@ import { isNumber } from './isNumber'
  * @en Check if the input parameter is an integer or a `Number` object with an integer value.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isInt } from 'parsnip-kit'

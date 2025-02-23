@@ -3,6 +3,10 @@
       
 Convert the string to UPPERCASE_SNAKE_CASE.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

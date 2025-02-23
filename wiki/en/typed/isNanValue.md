@@ -3,6 +3,10 @@
       
 Check if the input parameter is a `NaN` or a `Number` object with a `NaN` value.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

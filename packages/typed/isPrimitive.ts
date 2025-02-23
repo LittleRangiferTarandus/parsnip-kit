@@ -6,6 +6,7 @@ import { isObject } from './isObject'
  * @en Check if the input parameter is a primitive type, including `number`, `string`, `boolean`, `null`, `undefined`, `symbol`, and `bigint`.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isPrimitive } from 'parsnip-kit'

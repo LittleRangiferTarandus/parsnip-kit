@@ -25,3 +25,9 @@ forEachFields(user, (value, key, obj) => {
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | 待遍历的对象  |
 | `iterator` | `(value: any, key: string, object: T) => void` | `false` | `undefined` | 迭代器函数  |
+
+#### Returns
+
+| Type |
+| ---  |
+| `undefined`  |

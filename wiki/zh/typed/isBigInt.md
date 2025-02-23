@@ -3,6 +3,10 @@
       
 判断入参是否为`bigint`。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

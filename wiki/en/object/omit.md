@@ -3,6 +3,10 @@
       
 Generate a new object or array from the input object or array with specified keys or indices removed. The returned value is a plain object or array, and the input will not be modified.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript

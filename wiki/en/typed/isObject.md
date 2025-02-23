@@ -3,6 +3,10 @@
       
 Check whether the input parameter is an object, including general objects (`{ key: 'value' }`), functions (`function() {}`), and instances of primitive type wrappers (`new Number(1)`), all of which would return `true`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

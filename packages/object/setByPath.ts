@@ -9,6 +9,7 @@ import { isObject } from '../typed/isObject'
  * @param {string} path @zh 字段所在的路径 @en Field path
  * @param {any} value @zh 设置的值 @en Value to be set
  * @returns {undefined}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { setByPath } from 'parsnip-kit'

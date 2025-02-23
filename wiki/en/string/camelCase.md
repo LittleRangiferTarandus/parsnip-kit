@@ -3,6 +3,10 @@
       
 Convert the string to camelCase.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

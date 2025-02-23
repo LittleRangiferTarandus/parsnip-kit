@@ -2,6 +2,10 @@
       
 The primitive types including `number`, `string`, `boolean`, `undefined`, `null`, `bigint`, and `symbol`
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -20,6 +24,10 @@ export type PrimitiveType =
       
 A string composed of numbers.
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -31,6 +39,10 @@ export type NumberString = `${number}`
       
 Non-function object.
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -40,6 +52,10 @@ export type ObjectLike = object & { call?: never; [x: PropertyKey]: any }
 # ExtractUnion
       
 Extract a union type from a tuple.
+
+> Added in v0.0.1
+
+
 
 ### Source
 
@@ -53,6 +69,10 @@ export type ExtractUnion<T extends readonly string[]> = {
 # KeyOrIndex
       
 Extracts a number from a string in the form of [${number}] or ${number}. Otherwise, returns the original string.
+
+> Added in v0.0.1
+
+
 
 ### Source
 

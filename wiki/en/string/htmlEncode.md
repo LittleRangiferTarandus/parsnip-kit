@@ -3,6 +3,10 @@
       
 Encode the string into HTML entities, converting special characters (such as <, >, &) to their corresponding HTML entities (e.g., `&lt;`, `&gt;`, `&amp;`). This prevents these characters from being mistakenly interpreted as part of HTML tags by the browser.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

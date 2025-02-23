@@ -8,6 +8,7 @@ import { isObject } from '../typed/isObject'
  * @param {object} obj @zh 待删除的对象 @en Object to be deleted
  * @param {string} path @zh 字段所在的路径 @en Field path
  * @returns {undefined}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { deleteByPath } from 'parsnip-kit'

@@ -3,6 +3,10 @@
       
 Check if the input parameter is a `null`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

@@ -5,6 +5,7 @@ import { ObjectLike } from '../common/types'
  * @en Check if the input parameter is an object, excluding functions.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isObjectLike } from 'parsnip-kit'

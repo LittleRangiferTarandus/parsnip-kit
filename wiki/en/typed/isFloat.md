@@ -3,6 +3,10 @@
       
 Check if the input parameter is a float or a `Number` object with a float value.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

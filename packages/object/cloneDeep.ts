@@ -28,6 +28,7 @@ type CustomizeClone = (
  * @param {any} obj @zh 待复制的参数 @en Parameter to be cloned
  * @param {(arg: any, key: string | undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any} [customizeClone] @zh 自定义复制普通对象和不支持的内置对象的行为 @en Customize the cloning behavior for plain objects and unsupported built-in objects
  * @returns {any}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { cloneDeep, getTypeTag } from 'parsnip-kit'

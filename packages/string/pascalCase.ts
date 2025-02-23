@@ -5,6 +5,7 @@ import { splitToWords } from './splitToWords'
  * @en Convert the string to PascalCase (also known as UpperCamelCase).
  * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { pascalCase } from 'parsnip-kit'

@@ -3,6 +3,7 @@
  * @en Input an object `obj`, and output two arrays: one containing its keys and the other containing its values.
  * @param {object} obj @zh 原对象 @en Original object
  * @returns {[string[], any[]]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { unzipToArrays } from 'parsnip-kit'

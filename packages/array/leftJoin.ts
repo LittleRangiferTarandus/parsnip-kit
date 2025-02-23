@@ -10,6 +10,7 @@ import { getByPath } from '../object/getByPath'
  * @param {string | ((item: any, index: number, arr: any[]) => any)} rightKey @zh 为右侧数组提供区分元素的标识 @en Provide an identifier to distinguish elements in the right array
  * @param {(left: any, right: any | undefined) => any} merge @zh 返回左右数组元素合并的结果 @en Return the result of merging elements from left and right arrays.
  * @returns {any[]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { leftJoin } from 'parsnip-kit'

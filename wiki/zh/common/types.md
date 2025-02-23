@@ -2,6 +2,10 @@
       
 基本类型，由`number`、`string`、`boolean`、`undefined`、`null`、`bigint`、`symbol`。
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -20,6 +24,10 @@ export type PrimitiveType =
       
 由数字组成的字符串。
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -31,6 +39,10 @@ export type NumberString = `${number}`
       
 非函数对象。
 
+> Added in v0.0.1
+
+
+
 ### Source
 
 ```typescript
@@ -40,6 +52,10 @@ export type ObjectLike = object & { call?: never; [x: PropertyKey]: any }
 # ExtractUnion
       
 从元组中提取联合类型。
+
+> Added in v0.0.1
+
+
 
 ### Source
 
@@ -53,6 +69,10 @@ export type ExtractUnion<T extends readonly string[]> = {
 # KeyOrIndex
       
 从形如 [${number}] 或 ${number} 的字符串中提取数字。其他情况则返回原始字符串。
+
+> Added in v0.0.1
+
+
 
 ### Source
 

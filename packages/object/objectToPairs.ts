@@ -3,6 +3,7 @@
  * @en Input an object `obj`, and output an array composed of each key-value pair of the object.
  * @param {object} obj @zh 原对象 @en Original object
  * @returns {[string, any][]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { objectToPairs } from 'parsnip-kit'

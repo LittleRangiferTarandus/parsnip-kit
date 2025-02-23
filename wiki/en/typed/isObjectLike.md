@@ -3,6 +3,10 @@
       
 Check if the input parameter is an object, excluding functions.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

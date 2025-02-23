@@ -3,6 +3,7 @@
  * @en Check if the input parameter is a `symbol`.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isSymbol } from 'parsnip-kit'

@@ -3,6 +3,10 @@
       
 Check whether the input parameter is a primitive number or a `Number` instance.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

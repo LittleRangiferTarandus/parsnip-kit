@@ -3,6 +3,10 @@
       
 Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to retrieve the value. If the traversal is interrupted (e.g., the path is invalid) or the value is undefined or null, use `defaultValue` as the default value.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

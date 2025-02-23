@@ -3,6 +3,10 @@
       
 Input an object `obj` and an iterator `iterator`, iterate over each field of the object, execute `iterator` for each field's value, remove the field if the return value `== false`, and return a new plain object or array.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts
@@ -34,3 +38,9 @@ const result2 = filterFields(arr1, iterator2)
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | Object to iterate |
 | `iterator` | `(value: any, key: string, object: T) => boolean` | `false` | `undefined` | Iterator function |
+
+#### Returns
+
+| Type |
+| ---  |
+| `object`  |

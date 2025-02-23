@@ -3,6 +3,10 @@
       
 Convert the string to kebab-case.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

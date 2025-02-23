@@ -3,6 +3,10 @@
       
 返回传入参数的类型标签，通过调用`Object.prototype.toString`方法实现。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

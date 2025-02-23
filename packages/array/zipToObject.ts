@@ -8,6 +8,7 @@ import { getByPath, isString } from '../main'
  * @param {string | ((item: any, index: number, arr: any[]) => any)} [getKey] @zh 把数组元素转换为键  @en Transform array elements into keys
  * @param {string | ((item: any, index: number, arr: any[]) => any)} [getValue] @zh 把数组元素转换为值  @en Transform array elements into values
  * @returns {{}}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { zipToObject } from 'parsnip-kit'

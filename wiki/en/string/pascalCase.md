@@ -3,6 +3,10 @@
       
 Convert the string to PascalCase (also known as UpperCamelCase).
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

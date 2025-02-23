@@ -3,6 +3,7 @@
  * @en Input a number `num` and output a string with thousand separators.
  * @param {number} num @zh 要格式化的数字 @en The number to format
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { thousandSeparator } from 'parsnip-kit'

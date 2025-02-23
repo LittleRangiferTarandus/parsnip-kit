@@ -5,6 +5,8 @@ import { isNumberString } from '../typed/isNumberString'
  * @en Input an object `obj` and an iterator `iterator`, iterate over each field of the object, execute `iterator` for each field's value, remove the field if the return value `== false`, and return a new plain object or array.
  * @param {object} obj @zh 待遍历的对象 @en Object to iterate
  * @param {(value: any, key: string, object: T) => boolean} iterator @zh 迭代器函数 @en Iterator function
+ * @returns {object}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { filterFields } from 'parsnip-kit'

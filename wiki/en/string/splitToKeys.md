@@ -3,6 +3,10 @@
       
 Split the path string used for accessing values into individual keys.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

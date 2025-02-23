@@ -9,6 +9,7 @@ import { isNumberString } from '../typed/isNumberString'
  * @param {object} obj - 待处理的对象或数组 @en The object or array to process
  * @param {string[]} keys - 需要删除的键或数组索引 @en The keys or array indices to delete
  * @returns {Omit<T, KeyOrIndex<ExtractUnion<R>>>}
+ * @version 0.0.1
  * @refer [KeyOrIndex](../common/types#keyorindex) [ExtractUnion](../common/types#extractunion)
  * @example
  * ```typescript

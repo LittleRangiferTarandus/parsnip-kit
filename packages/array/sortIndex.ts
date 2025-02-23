@@ -8,6 +8,7 @@ const stringComparator = (a: string, b: string) => {
  * @param {any[]} arr @zh 待排序数组 @en Array to be sorted
  * @param {(a: T, b: T) => number} [comparator] @zh 比较器 @en Comparator for sorting
  * @returns {number[]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { sortIndex } from 'parsnip-kit'

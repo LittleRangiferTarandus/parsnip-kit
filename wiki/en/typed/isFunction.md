@@ -3,6 +3,10 @@
       
 Check if the input parameter is a function, including classes (`class {}`), generator functions (`function*() {}`), and async functions (`async function() {}`).
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

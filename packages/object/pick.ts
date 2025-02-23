@@ -7,6 +7,7 @@ import { splitToKeys } from '../string/splitToKeys'
  * @param {object} obj - 待处理的对象或数组 @en The object or array to process
  * @param {string[]} keys - 需要提取的键或数组索引 @en The keys or array indices to extract
  * @returns {Pick<T, KeyOrIndex<ExtractUnion<R>> & keyof T>}
+ * @version 0.0.1
  * @refer [KeyOrIndex](../common/types#keyorindex) [ExtractUnion](../common/types#extractunion)
  * @example
  * ```typescript

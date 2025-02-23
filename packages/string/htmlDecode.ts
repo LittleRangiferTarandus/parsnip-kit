@@ -12,6 +12,7 @@ const decodeMap: { [key: string]: string } = {
  * @en Decode the string from HTML entities, converting specific HTML entities (such as `&lt;`, `&gt;`, `&amp;`) back to their corresponding plain characters (e.g., <, >, &).
  * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { htmlDecode } from 'parsnip-kit'

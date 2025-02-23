@@ -11,6 +11,7 @@ const escapeMap: { [key: string]: string } = {
  * @en Encode the string into HTML entities, converting special characters (such as <, >, &) to their corresponding HTML entities (e.g., `&lt;`, `&gt;`, `&amp;`). This prevents these characters from being mistakenly interpreted as part of HTML tags by the browser.
  * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
  * @returns {string}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { htmlEncode } from 'parsnip-kit'

@@ -7,6 +7,10 @@ Supports the same data types as the [clone](../object/clone) function. For objec
 
 An optional parameter `customizeClone` used to override the behavior when cloning unsupported objects and plain objects.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

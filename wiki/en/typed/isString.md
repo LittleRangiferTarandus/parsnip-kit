@@ -3,6 +3,10 @@
       
 Check whether the input parameter is a primitive string or a `String` instance.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

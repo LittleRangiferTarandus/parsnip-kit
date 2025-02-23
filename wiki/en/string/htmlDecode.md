@@ -3,6 +3,10 @@
       
 Decode the string from HTML entities, converting specific HTML entities (such as `&lt;`, `&gt;`, `&amp;`) back to their corresponding plain characters (e.g., <, >, &).
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

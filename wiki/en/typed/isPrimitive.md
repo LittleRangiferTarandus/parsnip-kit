@@ -3,6 +3,10 @@
       
 Check if the input parameter is a primitive type, including `number`, `string`, `boolean`, `null`, `undefined`, `symbol`, and `bigint`.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

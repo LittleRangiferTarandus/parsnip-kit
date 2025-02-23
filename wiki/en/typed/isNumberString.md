@@ -3,6 +3,10 @@
       
 Check if the input is string consisting only of numeric characters.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

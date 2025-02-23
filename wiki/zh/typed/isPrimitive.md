@@ -3,6 +3,10 @@
       
 判断入参是否为基本类型，基本类型包括数字、字符串、布尔值、`null`、`undefined`、`symbol`、`bigint`。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

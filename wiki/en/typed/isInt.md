@@ -3,6 +3,10 @@
       
 Check if the input parameter is an integer or a `Number` object with an integer value.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

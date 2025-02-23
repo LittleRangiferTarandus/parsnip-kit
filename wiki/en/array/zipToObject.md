@@ -3,6 +3,10 @@
       
 Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values. Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively. These can be field paths similar to [getByPath](../object/getByPath) or callback functions.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

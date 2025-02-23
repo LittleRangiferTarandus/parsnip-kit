@@ -8,6 +8,7 @@ import { getByPath } from '../object/getByPath'
  * @param {any[]} arr2 @zh 需要求对称差的数组 @en Array to be intersected
  * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
  * @returns {any[]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { symmetricDifference } from 'parsnip-kit'

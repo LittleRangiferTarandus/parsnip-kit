@@ -3,6 +3,10 @@
       
 判断入参是否为函数，包括类（`class {}`）、生成器（`function*() {}`）、异步函数（`async function() {}`）。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

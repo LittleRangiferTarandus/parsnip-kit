@@ -3,6 +3,10 @@
       
 Input two arrays `left` and `right`, and output the array formed by performing a left join of `left` with `right`. This is commonly used to combine arrays of objects that contain related information, similar to how it is done in SQL. Additionally, it accepts two parameters: `leftKey` and `rightKey`. These can be field paths similar to [getByPath](../object/getByPath) or callback functions, used to provide identifiers to distinguish elements. The `merge` function is used to generate the output array objects.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

@@ -13,11 +13,13 @@ function formatType(types) {
   return [types];
 }
 function generateMD(func) {
-  const { refer, functionName, content, needContent, args, returnType, lang, example } = func;
+  const { version, refer, functionName, content, needContent, args, returnType, lang, example } = func;
   return `
 # ${functionName}
       
-${func[lang + 'Description'] || func.description}
+${func[lang + 'Description'] || func.description}${
+  version ? `\n\n> Added in v${version}\n\n`: ''
+}
 
 ${
   example ? `### Usage\n\n${example}\n\n`: ''
@@ -55,6 +57,7 @@ function getFormatJsdoc(comment) {
   const returns = jsdoc.tags.find((item) => item.tag === 'returns');
   const refer = jsdoc.tags.find((item) => item.tag === 'refer');
   const example = jsdoc.tags.find((item) => item.tag === 'example');
+  const version = jsdoc.tags.find((item) => item.tag === 'version');
   const args = jsdoc.tags.filter((item) => item.tag === 'param').map((item) => {
     const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
@@ -77,6 +80,7 @@ function getFormatJsdoc(comment) {
       : '',
     example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
     args,
+    version: version ? [version.name, version.description].filter(Boolean).join(' ') : '',
     refer: refer ? [refer.name, refer.description].filter(Boolean).join(' ') : ''
   }
   langArr.forEach(langStr => {

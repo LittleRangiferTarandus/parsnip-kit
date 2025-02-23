@@ -7,6 +7,7 @@ import { getByPath, isString } from '../main'
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getKey] @zh 从子数组中提取键  @en Extract keys form sub-arrays
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getValue] @zh 从子数组中提取值  @en Extract values form sub-arrays
  * @returns {{}}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { pairsToObject } from 'parsnip-kit'

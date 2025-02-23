@@ -3,6 +3,10 @@
       
 输入一个对象`obj`和迭代器`iterator`，遍历对象的每个字段，对每个字段的值执行`iterator`，返回值`== false`则移除该字段，返回新的普通对象或数组。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts
@@ -34,3 +38,9 @@ const result2 = filterFields(arr1, iterator2)
 | --- | --- | --- | --- | --- |
 | `obj` | `object` | `false` | `undefined` | 待遍历的对象  |
 | `iterator` | `(value: any, key: string, object: T) => boolean` | `false` | `undefined` | 迭代器函数  |
+
+#### Returns
+
+| Type |
+| ---  |
+| `object`  |

@@ -3,6 +3,10 @@
       
 Determine whether the input parameter is a pseudo-array, i.e., an object that can be accessed via numeric indices (which is true for most ordinary JavaScript objects) and has a numeric `length` property.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

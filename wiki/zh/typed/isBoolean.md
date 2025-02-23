@@ -3,6 +3,10 @@
       
 判断入参是否为基本类型布尔值或者`Boolean`实例。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

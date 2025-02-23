@@ -3,6 +3,10 @@
       
 Convert the string to Title Case, with words separated by spaces and each word capitalized.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

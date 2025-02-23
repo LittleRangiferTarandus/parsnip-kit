@@ -8,6 +8,7 @@ import { getByPath } from '../object/getByPath'
  * @param {any[]} arr2 @zh 需要求差集的数组 @en Array for computing the difference
  * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
  * @returns {any[]}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { difference } from 'parsnip-kit'

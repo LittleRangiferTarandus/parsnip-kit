@@ -3,6 +3,10 @@
       
 Check if the input parameter is positive or negative infinity, or a Number object with a value of positive or negative infinity.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

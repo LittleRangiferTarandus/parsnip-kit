@@ -5,6 +5,7 @@ import { isNumber } from './isNumber'
  * @en Check if the input parameter is a `NaN` or a `Number` object with a `NaN` value.
  * @param {any} arg @zh 待判断的入参 @en Parameters for check
  * @returns {boolean}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { isNaN } from 'parsnip-kit'

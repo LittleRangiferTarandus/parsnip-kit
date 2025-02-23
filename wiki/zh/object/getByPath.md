@@ -3,6 +3,10 @@
       
 输入一个对象`obj`，和字段所在的路径`path`，按照路径深度遍历取值。当遍历路径中断或值为`undefined`、`null`时，使用`defaultValue`作为默认值。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

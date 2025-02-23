@@ -3,6 +3,10 @@
       
 Split the string used for naming into individual words.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts
