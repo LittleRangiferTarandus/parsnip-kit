@@ -47,10 +47,10 @@ export { sortIndex } from './array/sortIndex'
 
 export { range } from './number/range'
 
-export { pairsToObject } from './array/pairsToObject'
+export { itemsToObject } from './array/itemsToObject'
 export { zipToObject } from './array/zipToObject'
 export { unzipToArrays } from './object/unzipToArrays'
-export { objectToPairs } from './object/objectToPairs'
+export { objectToItems } from './object/objectToItems'
 
 export { clone } from './object/clone'
 export { cloneDeep } from './object/cloneDeep'
@@ -68,6 +68,10 @@ export { count } from './statistic/count'
 export { median } from './statistic/median'
 export { mode } from './statistic/mode'
 export { sum } from './statistic/sum'
+
+export { randomBoolean } from './random/randomBoolean'
+export { randomFromArray } from './random/randomFromArray'
+export { randomNumber } from './random/randomNumber'
 
 export type {
   PrimitiveType,
