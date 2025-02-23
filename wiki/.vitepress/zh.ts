@@ -10,6 +10,7 @@ const additionMap = {
   'array': '数组',
   'number': '数字',
   'common': '通用',
+  'statistic': '统计',
   'object': '对象',
 }
 
