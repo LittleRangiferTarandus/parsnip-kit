@@ -59,6 +59,9 @@ export { pick } from './object/pick'
 export { filterFields } from './object/filterFields'
 export { forEachFields } from './object/forEachFields'
 
+export { isEqual } from './object/isEqual'
+export { isEqualStrict } from './object/isEqualStrict'
+
 export type {
   PrimitiveType,
   NumberString,
