@@ -46,7 +46,7 @@ const order = [
   'typed',
   'random',
   'number',
-  'math',
+  'statistic',
   'common',
 ]
 
