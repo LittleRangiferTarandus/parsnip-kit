@@ -2,7 +2,7 @@ import { test, describe, expect } from 'vitest'
 import { leftJoin } from '../leftJoin'
 import { sortIndex } from '../sortIndex'
 import { zipToObject } from '../zipToObject'
-import { pairsToObject } from '../pairsToObject'
+import { itemsToObject } from '../itemsToObject'
 
 describe('array', () => {
   test('leftJoin', () => {
@@ -100,22 +100,22 @@ describe('array', () => {
       )
     ).eq('{"IAmBot":99999,"Alice":10,"Tom":2}')
   })
-  test('pairsToObject', () => {
+  test('itemsToObject', () => {
     const users = [
       ['Alex', 16, 'vip'],
       ['Bob', 659, 'viewer'],
       ['Carter', 155, 'user'],
       ['Daniel', 825, 'user']
     ]
-    expect(JSON.stringify(pairsToObject(users))).eq(
+    expect(JSON.stringify(itemsToObject(users))).eq(
       '{"Alex":16,"Bob":659,"Carter":155,"Daniel":825}'
     )
-    expect(JSON.stringify(pairsToObject(users, '[0]', '[2]'))).eq(
+    expect(JSON.stringify(itemsToObject(users, '[0]', '[2]'))).eq(
       '{"Alex":"vip","Bob":"viewer","Carter":"user","Daniel":"user"}'
     )
     expect(
       JSON.stringify(
-        pairsToObject(
+        itemsToObject(
           users,
           (pair) => pair[0],
           (pair) => `${pair[1]} replies`

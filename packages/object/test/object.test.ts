@@ -3,7 +3,7 @@ import { getByPath } from '../getByPath'
 import { setByPath } from '../setByPath'
 import { deleteByPath } from '../deleteByPath'
 import { unzipToArrays } from '../unzipToArrays'
-import { objectToPairs } from '../objectToPairs'
+import { objectToItems } from '../objectToItems'
 import { omit } from '../omit'
 import { pick } from '../pick'
 import { forEachFields } from '../forEachFields'
@@ -88,14 +88,14 @@ describe('object', () => {
       '[["Alex","Bob","Carter","Daniel"],[16,659,155,825]]'
     )
   })
-  test('objectToPairs', () => {
+  test('objectToItems', () => {
     const obj = {
       Alex: 16,
       Bob: 659,
       Carter: 155,
       Daniel: 825
     }
-    expect(JSON.stringify(objectToPairs(obj))).eq(
+    expect(JSON.stringify(objectToItems(obj))).eq(
       '[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]'
     )
   })
