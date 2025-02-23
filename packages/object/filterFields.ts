@@ -31,12 +31,13 @@ export function filterFields<T extends object>(
   iterator: (value: any, key: string, object: T) => boolean
 ) {
   const ans: any = Array.isArray(obj) ? [] : {}
-  for (const key in obj) {
+  const objKeys = Object.keys(obj)
+  for (const key of objKeys) {
     ans[key] = obj[key]
   }
 
   let count = 0
-  for (const key in obj) {
+  for (const key of objKeys) {
     if (!iterator(obj[key], key, obj)) {
       if (Array.isArray(ans) && isNumberString(key)) {
         ans.splice(parseInt(key) - count, 1)

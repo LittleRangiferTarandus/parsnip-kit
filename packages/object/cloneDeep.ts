@@ -151,7 +151,8 @@ function cloneDeepHelper(
       }
     } else if (Array.isArray(arg)) {
       ans = new Array(arg.length)
-      for (const key in arg as ObjectLike) {
+      const argKeys = Object.keys(arg)
+      for (const key of argKeys) {
         ans[key] = cloneWithCache(arg[key], cache, key, customizeClone)
       }
     } else {
@@ -194,7 +195,8 @@ function defaultClone4Object(
     ans = {}
   }
   cache.set(arg, ans)
-  for (const key in arg as ObjectLike) {
+  const argKeys = Object.keys(arg)
+  for (const key of argKeys) {
     ans[key] = cloneWithCache(arg[key], cache, key, customizeClone)
   }
   return ans

@@ -92,7 +92,8 @@ export function clone<T extends PrimitiveType | ObjectLike>(arg: T) {
       }
     } else if (Array.isArray(arg)) {
       ans = new Array(arg.length)
-      for (const key in arg as ObjectLike) {
+      const argKeys = Object.keys(arg)
+      for (const key of argKeys) {
         ans[key] = arg[key]
       }
     } else {
@@ -111,7 +112,8 @@ export function clone<T extends PrimitiveType | ObjectLike>(arg: T) {
           } else {
             ans = {}
           }
-          for (const key in arg as ObjectLike) {
+          const argKeys = Object.keys(arg)
+          for (const key of argKeys) {
             ans[key] = arg[key]
           }
         } else {

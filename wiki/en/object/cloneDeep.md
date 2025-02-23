@@ -1,5 +1,5 @@
 # cloneDeep
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-84.54%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-81.82%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-84.54%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-84.85%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-81.82%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-84.85%-brightgreen)
       
 Accepts an argument `arg` and returns its deep clone.
 

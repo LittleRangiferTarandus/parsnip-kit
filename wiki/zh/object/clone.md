@@ -1,5 +1,5 @@
 # clone
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-92.50%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.12%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-92.50%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.12%-brightgreen)
       
 输入一个参数`arg`，返回它的浅克隆。 
 

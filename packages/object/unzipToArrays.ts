@@ -19,11 +19,12 @@
  */
 export function unzipToArrays<T extends object>(
   obj: T
-): [(keyof T)[], T[keyof T][]] {
-  const keys: (keyof T)[] = []
+): [string[], T[keyof T][]] {
+  const keys: (string)[] = []
   const values: T[keyof T][] = []
 
-  for (const key in obj) {
+  const objKeys = Object.keys(obj)
+  for (const key of objKeys) {
     keys.push(key)
     values.push(obj[key])
   }

@@ -19,7 +19,8 @@ export function forEachFields<T extends object>(
   obj: T,
   iterator: (value: any, key: string, object: T) => void
 ) {
-  for (const key in obj) {
+  const objKeys = Object.keys(obj)
+  for (const key of objKeys) {
     iterator(obj[key], key, obj)
   }
 }

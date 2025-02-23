@@ -29,7 +29,8 @@ export function omit<T extends object, R extends readonly string[]>(
     .map((item) => (isNumberString(item) ? parseInt(item) : item))
 
   const ans: any = Array.isArray(obj) ? [] : {}
-  for (const key in obj) {
+  const objKeys = Object.keys(obj)
+  for (const key of objKeys) {
     ans[key] = obj[key]
   }
   resolvedKeys.sort((a, b) => {

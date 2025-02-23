@@ -19,10 +19,11 @@
  */
 export function objectToPairs<T extends object>(
   obj: T
-): [keyof T, T[keyof T]][] {
-  const ans: [keyof T, T[keyof T]][] = []
+): [string, T[keyof T]][] {
+  const ans: [string, T[keyof T]][] = []
 
-  for (const key in obj) {
+  const objKeys = Object.keys(obj)
+  for (const key of objKeys) {
     ans.push([key, obj[key]])
   }
 
