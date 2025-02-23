@@ -3,7 +3,7 @@ import { clone } from '../clone'
 import { cloneDeep } from '../cloneDeep'
 import { getTypeTag } from '../../main'
 
-describe('object', () => {
+describe('clone', () => {
   test('clone', () => {
     expect(clone(undefined)).eq(undefined)
     expect(clone(null)).eq(null)
