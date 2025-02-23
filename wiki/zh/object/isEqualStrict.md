@@ -1,20 +1,17 @@
-# snakeCase
+# isEqualStrict
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-把字符串转换到蛇形命名。
+输入两个参数`arg1`和`arg2`，返回它们是否严格相等。
 
 ### Usage
 
 ```ts
-import { snakeCase } from 'parsnip-kit'
+import { isEqualStrict } from 'parsnip-kit'
 
-snakeCase('HelloWorld') // 'hello_world'
-snakeCase('helloWorld') // 'hello_world'
-snakeCase('hello-world') // 'hello_world'
-snakeCase('hello_world') // 'hello_world'
-snakeCase('HELLO_WORLD') // 'hello_world'
-snakeCase('Hello World') // 'hello_world'
-snakeCase('-_HELLO World -_') // 'hello_world'
+isEqualStrict(1, 1) // true
+isEqualStrict(+0, -0) // true
+isEqualStrict(NaN, NaN) // true
+isEqualStrict({ a: 1 }, { a: 1 }) // false
 ```
 
 
@@ -24,10 +21,11 @@ snakeCase('-_HELLO World -_') // 'hello_world'
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arg` | `string` | `false` | `undefined` | 待转换的字符串  |
+| `arg1` | `any` | `false` | `undefined` | 待比较的变量  |
+| `arg2` | `any` | `false` | `undefined` | 待比较的变量  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `string`  |
+| `boolean`  |

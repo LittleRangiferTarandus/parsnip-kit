@@ -52,7 +52,7 @@ export type ExtractUnion<T extends readonly string[]> = {
 ```
 # KeyOrIndex
       
-从形如`\`[${number}]\``或`\`${number}\``的字符串中提取数字。其他情况则返回原始字符串。
+从形如 [${number}] 或 ${number} 的字符串中提取数字。其他情况则返回原始字符串。
 
 ### Source
 

@@ -3,7 +3,7 @@
       
 Accepts an argument `arg` and returns its shallow clone.
 
-Supports basic types, plain objects (`Object.prototype.toString.apply(arg).slice(8, -1)` returns `Object`), as well as built-in objects including these: `Array`, `Map`, `Set`, `Date`, `RegExp`.
+Supports basic types, plain objects (`Object.prototype.toString.apply(arg).slice(8, -1)` returns `"Object"`), as well as built-in objects including these: `Array`, `Map`, `Set`, `Date`, `RegExp`.
 
 Similar to Lodash's approach, for built-in objects that are not cloneable, such as `Error`, `Function`, `Promise`, `HTMLElement`, etc., an empty plain object will be returned.
 
@@ -18,7 +18,7 @@ Supported built-in objects for cloning:
 |Date and Time|`Date`|
 |Regular Expressions|`RegExp`|
 |Files and Streams|`Blob` `File` `ArrayBuffer`|
-|`TypedArray `|`Int8Array` `Uint8Array` `Uint8ClampedArray` `Int16Array` `Uint16Array` `Int32Array` `Uint32Array` `Float32Array` `Float64Array` `BigInt64Array` `BigUint64Array`|
+|`TypedArray`|`Int8Array` `Uint8Array` `Uint8ClampedArray` `Int16Array` `Uint16Array` `Int32Array` `Uint32Array` `Float32Array` `Float64Array` `BigInt64Array` `BigUint64Array`|
 
 
 ### Usage

@@ -52,7 +52,7 @@ export type ExtractUnion<T extends readonly string[]> = {
 ```
 # KeyOrIndex
       
-Extracts a number from a string in the form of `\`[${number}]\`` or `\`${number}\``. Otherwise, returns the original string.
+Extracts a number from a string in the form of [${number}] or ${number}. Otherwise, returns the original string.
 
 ### Source
 

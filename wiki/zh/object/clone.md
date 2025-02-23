@@ -3,7 +3,7 @@
       
 输入一个参数`arg`，返回它的浅克隆。 
 
-支持基本类型、普通对象（`arg => Object.prototype.toString.apply(arg).slice(8, -1)`返回`Object`），以及包括这些在内的内置对象：`Array`、`Map`、`Set`、`Date`、`RegExp`。
+支持基本类型、普通对象（`arg => Object.prototype.toString.apply(arg).slice(8, -1)`返回`"Object"`），以及包括这些在内的内置对象：`Array`、`Map`、`Set`、`Date`、`RegExp`。
 
 和 Lodash 处理思路类似，对于不支持复制的内置对象，例如`Error`、`Function`、`Promise`、`HTMLElement`等等，将返回空的普通对象。
 
