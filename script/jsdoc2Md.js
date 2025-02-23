@@ -17,7 +17,7 @@ function generateMD(func) {
   return `
 # ${functionName}
       
-${func[lang + 'Description'] || func.description}${
+${func[lang + 'Description'] || func['enDescription'] || func.description}${
   version ? `\n\n> Added in v${version}\n\n`: ''
 }
 
@@ -28,7 +28,7 @@ ${
 }${
   refer || returnType || args?.length ? '### API\n\n' : ''
 }${
-  args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item.desc} |`).join('\n')}\n\n` : ''
+  args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
 }${
   returnType ? `#### Returns\n\n| Type |\n| ---  |\n| \`${returnType}\`  |\n\n` : ''
 }${
