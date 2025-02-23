@@ -5,7 +5,7 @@ import { getTypeTag } from '../typed/getTypeTag'
 /**
  * @zh 输入一个参数`arg`，返回它的浅克隆。
  *
- * 支持基本类型、普通对象（`arg => Object.prototype.toString.apply(arg).slice(8, -1)`返回`Object`），以及包括这些在内的内置对象：`Array`、`Map`、`Set`、`Date`、`RegExp`。
+ * 支持基本类型、普通对象（`arg => Object.prototype.toString.apply(arg).slice(8, -1)`返回`"Object"`），以及包括这些在内的内置对象：`Array`、`Map`、`Set`、`Date`、`RegExp`。
  *
  * 和 Lodash 处理思路类似，对于不支持复制的内置对象，例如`Error`、`Function`、`Promise`、`HTMLElement`等等，将返回空的普通对象。
  *
@@ -24,7 +24,7 @@ import { getTypeTag } from '../typed/getTypeTag'
  *
  * @en Accepts an argument `arg` and returns its shallow clone.
  *
- * Supports basic types, plain objects (`Object.prototype.toString.apply(arg).slice(8, -1)` returns `Object`), as well as built-in objects including these: `Array`, `Map`, `Set`, `Date`, `RegExp`.
+ * Supports basic types, plain objects (`Object.prototype.toString.apply(arg).slice(8, -1)` returns `"Object"`), as well as built-in objects including these: `Array`, `Map`, `Set`, `Date`, `RegExp`.
  *
  * Similar to Lodash's approach, for built-in objects that are not cloneable, such as `Error`, `Function`, `Promise`, `HTMLElement`, etc., an empty plain object will be returned.
  *
@@ -39,7 +39,7 @@ import { getTypeTag } from '../typed/getTypeTag'
  * |Date and Time|`Date`|
  * |Regular Expressions|`RegExp`|
  * |Files and Streams|`Blob` `File` `ArrayBuffer`|
- * |`TypedArray `|`Int8Array` `Uint8Array` `Uint8ClampedArray` `Int16Array` `Uint16Array` `Int32Array` `Uint32Array` `Float32Array` `Float64Array` `BigInt64Array` `BigUint64Array`|
+ * |`TypedArray`|`Int8Array` `Uint8Array` `Uint8ClampedArray` `Int16Array` `Uint16Array` `Int32Array` `Uint32Array` `Float32Array` `Float64Array` `BigInt64Array` `BigUint64Array`|
  *
  * @param {PrimitiveType | ObjectLike} obj @zh 待复制的参数 @en Parameter to be cloned
  * @returns {PrimitiveType | ObjectLike}
