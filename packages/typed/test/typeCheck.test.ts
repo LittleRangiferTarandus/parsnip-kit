@@ -9,6 +9,7 @@ import { isSymbol } from '../isSymbol'
 import { isBigInt } from '../isBigInt'
 import { isPrimitive } from '../isPrimitive'
 import { getTypeTag } from '../getTypeTag'
+import { isArray } from '../isArray'
 
 describe('normal type', () => {
   test('isString', () => {
@@ -92,5 +93,9 @@ describe('normal type', () => {
     expect(getTypeTag(new Map())).toBe('Map')
     expect(getTypeTag(new Promise(() => {}))).toBe('Promise')
     expect(getTypeTag(Math)).toBe('Math')
+  })
+  test('isArray', () => {
+    expect(isArray('test')).eq(false)
+    expect(isArray([1, 2, 3])).eq(true)
   })
 })

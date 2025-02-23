@@ -20,6 +20,7 @@ export { isSymbol } from './typed/isSymbol'
 export { isBigInt } from './typed/isBigInt'
 export { isPrimitive } from './typed/isPrimitive'
 export { isNumberString } from './typed/isNumberString'
+export { isArray } from './typed/isArray'
 
 export { isFunction } from './typed/isFunction'
 export { isObjectLike } from './typed/isObjectLike'
