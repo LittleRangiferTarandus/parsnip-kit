@@ -40,13 +40,13 @@ const order = [
   'guide',
   'object',
   'array',
+  'statistic',
+  'number',
   'function',
   'async',
   'string',
   'typed',
   'random',
-  'number',
-  'statistic',
   'common',
 ]
 

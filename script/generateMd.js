@@ -71,7 +71,12 @@ function generateMD(lang, testReport) {
           return
         }
         const input = fs.readFileSync(fullPath, 'utf-8')
-        let output = jsdocToMD({ input, extname, lang, needContent: fullPath.endsWith('types.ts') })
+        let output = jsdocToMD({
+          input,
+          extname,
+          lang,
+          needContent: fullPath.includes('/common/')
+        })
         
         if (!output) {
           return
@@ -80,7 +85,7 @@ function generateMD(lang, testReport) {
         const path = fullPath.replace(/\//g, '\\')
         const fileData = testReport.coverageMap[path]
 
-        if (fileData) {
+        if (fileData && !fullPath.includes('/common/')) {
           const statement = `${(Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100).toFixed(2)}%`
           const branch = `${(Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100).toFixed(2)}%`
           const fn = `${(Object.keys(fileData.f).filter(key => fileData.f[key] > 0).length / Object.keys(fileData.fnMap).length * 100).toFixed(2)}%`
