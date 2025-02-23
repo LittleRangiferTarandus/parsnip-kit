@@ -1,6 +1,4 @@
-const stringComparator = (a: string, b: string) => {
-  return a.localeCompare(b)
-}
+import { stringComparatorAsc } from "../common/constants"
 
 /**
  * @zh 输入数组`arr`，输出一个数组，是排序前数组索引到排序后数组索引的映射。需要注意的是，数组`arr`自身不会被排序。`comparator`自定义比较器，为空时比较的逻辑与原生`sort`相同。
@@ -30,7 +28,7 @@ export function sortIndex<T>(
     if (comparator) {
       return comparator(arr[a], arr[b])
     } else {
-      return stringComparator(`${arr[a]}`, `${arr[b]}`)
+      return stringComparatorAsc(`${arr[a]}`, `${arr[b]}`)
     }
   })
   return indices

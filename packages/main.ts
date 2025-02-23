@@ -62,9 +62,22 @@ export { forEachFields } from './object/forEachFields'
 export { isEqual } from './object/isEqual'
 export { isEqualStrict } from './object/isEqualStrict'
 
+export { average } from './statistic/average'
+export { count } from './statistic/count'
+export { median } from './statistic/median'
+export { mode } from './statistic/mode'
+export { sum } from './statistic/sum'
+
 export type {
   PrimitiveType,
   NumberString,
   ExtractUnion,
   KeyOrIndex
 } from './common/types'
+
+export {
+  stringComparatorAsc,
+  stringComparatorDesc,
+  numberComparatorAsc,
+  numberComparatorDesc
+} from './common/constants'
