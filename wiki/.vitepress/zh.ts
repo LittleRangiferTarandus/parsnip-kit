@@ -13,6 +13,7 @@ const additionMap = {
   'common': '通用',
   'statistic': '统计',
   'object': '对象',
+  'random': '随机'
 }
 
 const sidebar = dfs4Md('zh', titleMap, additionMap)

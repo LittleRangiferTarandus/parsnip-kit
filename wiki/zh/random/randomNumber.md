@@ -1,7 +1,7 @@
-# objectToPairs
+# randomNumber
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-输入对象`obj`，输出一个由每个字段键值对组成的数组。
+返回随机数字，取值范围为 [`start`, `end`)。
 
 > Added in v0.0.1
 
@@ -10,16 +10,11 @@
 ### Usage
 
 ```ts
-import { objectToPairs } from 'parsnip-kit'
+import { randomNumber } from 'parsnip-kit'
 
-const obj = {
- Alex: 16,
- Bob: 659,
- Carter: 155,
- Daniel: 825
-}
-objectToPairs(obj)
-// [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
+randomNumber() // a number in [0, 1)
+randomNumber(0, 100) // a number in [0, 100)
+
 ```
 
 
@@ -29,10 +24,11 @@ objectToPairs(obj)
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | 原对象  |
+| `start` | `number` | `true` | `0` | 区间左边界  |
+| `end` | `number` | `true` | `0` | 区间右边界  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `[string, any][]`  |
+| `number`  |

@@ -1,7 +1,7 @@
-# objectToPairs
+# randomNumber
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-Input an object `obj`, and output an array composed of each key-value pair of the object.
+Returns a random number in interval [`start`, `end`).
 
 > Added in v0.0.1
 
@@ -10,16 +10,11 @@ Input an object `obj`, and output an array composed of each key-value pair of th
 ### Usage
 
 ```ts
-import { objectToPairs } from 'parsnip-kit'
+import { randomNumber } from 'parsnip-kit'
 
-const obj = {
- Alex: 16,
- Bob: 659,
- Carter: 155,
- Daniel: 825
-}
-objectToPairs(obj)
-// [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
+randomNumber() // a number in [0, 1)
+randomNumber(0, 100) // a number in [0, 100)
+
 ```
 
 
@@ -29,10 +24,11 @@ objectToPairs(obj)
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Original object |
+| `start` | `number` | `true` | `0` | The left boundary of the interval |
+| `end` | `number` | `true` | `0` | The right boundary of the interval |
 
 #### Returns
 
 | Type |
 | ---  |
-| `[string, any][]`  |
+| `number`  |
