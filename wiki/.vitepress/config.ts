@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import zh from './zh'
 import en from './en'
+import jp from './jp'
 
 export default defineConfig({
   head: [
@@ -21,5 +22,6 @@ export default defineConfig({
   locales: {
     zh: { label: '中文', ...zh },
     en: { label: 'English', ...en },
+    jp: { label: '日本語', ...jp },
   }
 })
