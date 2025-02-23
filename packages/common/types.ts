@@ -4,7 +4,7 @@ export type MapValue<T> = T extends Map<any, infer V> ? V : never
 export type SetValue<T> = T extends Set<infer K> ? K : never
 
 /**
- * @zh 基本类型，由`number`、`string`、`boolean`、`undefined`、`null`、`bigint`、`symbol`。
+ * @zh 基本类型，由`number`、`string`、`boolean`、`undefined`、`null`、`bigint`、`symbol`组成。
  * @en The primitive types including `number`, `string`, `boolean`, `undefined`, `null`, `bigint`, and `symbol`
  * @version 0.0.1
  */

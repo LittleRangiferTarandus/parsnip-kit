@@ -1,6 +1,6 @@
 # PrimitiveType
       
-基本类型，由`number`、`string`、`boolean`、`undefined`、`null`、`bigint`、`symbol`。
+基本类型，由`number`、`string`、`boolean`、`undefined`、`null`、`bigint`、`symbol`组成。
 
 > Added in v0.0.1
 
