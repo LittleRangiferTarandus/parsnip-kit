@@ -98,6 +98,11 @@ describe('object', () => {
     expect(JSON.stringify(objectToItems(obj))).eq(
       '[["Alex",16],["Bob",659],["Carter",155],["Daniel",825]]'
     )
+    expect(
+      objectToItems(obj, (value, key) => ({ [key]: value }))
+    ).toEqual(
+      [{ Alex: 16 }, { Bob: 659 }, { Carter: 155 }, { Daniel: 825 }]
+    )
   })
   test('omit', () => {
     const obj0 = { a: 1, b: 2, c: 3 }

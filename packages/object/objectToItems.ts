@@ -3,7 +3,7 @@
  * @en Input an object `obj`, and output an array composed of each field's key - value pairs, or return something based on the optional parameter `createItem`.
  * @param {object} obj @zh 原对象 @en Original object
  * @param {(value: any, key: string, obj: any) => any} [createItem] @zh 创建数组元素 @en To create element of array to be returned
- * @returns {[string, any][]}
+ * @returns {any[]}
  * @version 0.0.1
  * @example
  * ```ts
@@ -17,6 +17,9 @@
  * }
  * objectToItems(obj)
  * // [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
+ * 
+ * objectToItems(obj, (value, key) => ({ [key]: value }))
+ * // [{ Alex: 16 }, { Bob: 659 }, { Carter: 155 }, { Daniel: 825 }]
  * ```
  */
 export function objectToItems<T extends object>(
