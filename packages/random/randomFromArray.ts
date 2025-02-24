@@ -1,4 +1,4 @@
-import { randomNumber } from "./randomNumber";
+import { randomNumber } from './randomNumber'
 
 /**
  * @zh 输入一个数组`arr`，返回随机一个元素。
@@ -9,7 +9,7 @@ import { randomNumber } from "./randomNumber";
  * @example
  * ```ts
  * import { randomFromArray } from 'parsnip-kit'
- * 
+ *
  * randomFromArray([1, 2, 3, 4, 5]) // a element of input array. for example: 3
  *
  * ```

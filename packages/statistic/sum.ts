@@ -11,7 +11,7 @@ import { isString } from '../typed/isString'
  * @example
  * ```ts
  * import { sum } from 'parsnip-kit'
- * 
+ *
  * sum([1, 2, 3, 4]) // 10
  *
  * sum([{ value: 10 }, { value: 20 }], item => item.value) // 30
@@ -25,13 +25,14 @@ export function sum<T>(
 ): number {
   let ans = 0
   const len = data.length
-  
+
   for (let i = 0; i < len; i++) {
-    ans += getter !== undefined
-      ? isString(getter)
-        ? getByPath(data[i] as object, getter)
-        : getter(data[i], i, data)
-      : data[i]
+    ans +=
+      getter !== undefined
+        ? isString(getter)
+          ? getByPath(data[i] as object, getter)
+          : getter(data[i], i, data)
+        : data[i]
   }
   return ans
 }

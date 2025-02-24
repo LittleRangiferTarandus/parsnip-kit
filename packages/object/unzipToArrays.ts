@@ -21,7 +21,7 @@
 export function unzipToArrays<T extends object>(
   obj: T
 ): [string[], T[keyof T][]] {
-  const keys: (string)[] = []
+  const keys: string[] = []
   const values: T[keyof T][] = []
 
   const objKeys = Object.keys(obj)

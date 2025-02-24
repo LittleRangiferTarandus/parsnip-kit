@@ -17,7 +17,7 @@
  * }
  * objectToItems(obj)
  * // [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
- * 
+ *
  * objectToItems(obj, (value, key) => ({ [key]: value }))
  * // [{ Alex: 16 }, { Bob: 659 }, { Carter: 155 }, { Daniel: 825 }]
  * ```
@@ -30,7 +30,7 @@ export function objectToItems<T extends object>(
 
   const objKeys = Object.keys(obj)
   for (const key of objKeys) {
-    ans.push(createItem ? createItem(obj[key], key, obj): [key, obj[key]])
+    ans.push(createItem ? createItem(obj[key], key, obj) : [key, obj[key]])
   }
 
   return ans

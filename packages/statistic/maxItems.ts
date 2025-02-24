@@ -11,7 +11,7 @@ import { isString } from '../typed/isString'
  * @example
  * ```ts
  * import { maxItems } from 'parsnip-kit'
- * 
+ *
  * maxItems([1, 2, 3, 4]) // [4]
  *
  * maxItems([{ value: 10 }, { value: 20 }, { value: 20, key: 'count' }], item => item.value)
@@ -29,11 +29,12 @@ export function maxItems<T>(
   const len = data.length
   const valueMap = new Map<number, T[]>()
   for (let i = 0; i < len; i++) {
-    const value = getter !== undefined
-      ? isString(getter)
-        ? getByPath(data[i] as object, getter)
-        : getter(data[i], i, data)
-      : data[i]
+    const value =
+      getter !== undefined
+        ? isString(getter)
+          ? getByPath(data[i] as object, getter)
+          : getter(data[i], i, data)
+        : data[i]
     let group = valueMap.get(value)
     if (!group) {
       group = []

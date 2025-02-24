@@ -11,7 +11,7 @@ import { isString } from '../typed/isString'
  * @example
  * ```ts
  * import { max } from 'parsnip-kit'
- * 
+ *
  * max([1, 2, 3, 4]) // 4
  *
  * max([{ value: 10 }, { value: 20 }], item => item.value) // 20
@@ -25,13 +25,14 @@ export function max<T>(
 ): number {
   let ans = -Infinity
   const len = data.length
-  
+
   for (let i = 0; i < len; i++) {
-    const value = getter !== undefined
-      ? isString(getter)
-        ? getByPath(data[i] as object, getter)
-        : getter(data[i], i, data)
-      : data[i]
+    const value =
+      getter !== undefined
+        ? isString(getter)
+          ? getByPath(data[i] as object, getter)
+          : getter(data[i], i, data)
+        : data[i]
     if (value > ans) {
       ans = value
     }

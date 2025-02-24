@@ -1,6 +1,6 @@
-import { numberComparatorAsc } from "../common/constants"
-import { getByPath } from "../object/getByPath"
-import { isString } from "../typed/isString"
+import { numberComparatorAsc } from '../common/constants'
+import { getByPath } from '../object/getByPath'
+import { isString } from '../typed/isString'
 
 /**
  * @zh 计算传入数组的中位数，支持通过可选参数`getter`提取数值（或直接使用数组元素的数值）。`getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提取数值。
@@ -12,7 +12,7 @@ import { isString } from "../typed/isString"
  * @example
  * ```ts
  * import { median } from 'parsnip-kit'
- * 
+ *
  * median([1, 2, 3, 4, 0]) // 2
  * median([1, 2, 3, 4]) // 2.5
  *
@@ -34,7 +34,5 @@ export function median<T>(
   })
   copy.sort(numberComparatorAsc)
   const idx = Math.floor(copy.length / 2)
-  return copy.length & 1
-    ? copy[idx]
-    : (copy[idx] + copy[idx - 1]) / 2
+  return copy.length & 1 ? copy[idx] : (copy[idx] + copy[idx - 1]) / 2
 }

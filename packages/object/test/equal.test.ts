@@ -153,9 +153,17 @@ describe('equal', () => {
     const promise2 = Promise.resolve(1)
     expect(isEqual(promise1, promise2)).eq(false)
     expect(isEqual(promise1, promise1)).eq(true)
-  
-    const obj9 = { project: ['A', 'B', 'C'], startTime: new Date('2025-1-1'), status: { finish: false, block: true } }
-    const obj10 = { project: ['A', 'B', 'C'], startTime: new Date('2025-1-1'), status: { finish: false, block: true } }
+
+    const obj9 = {
+      project: ['A', 'B', 'C'],
+      startTime: new Date('2025-1-1'),
+      status: { finish: false, block: true }
+    }
+    const obj10 = {
+      project: ['A', 'B', 'C'],
+      startTime: new Date('2025-1-1'),
+      status: { finish: false, block: true }
+    }
     expect(isEqual(obj9, obj10)).eq(true)
   })
 })

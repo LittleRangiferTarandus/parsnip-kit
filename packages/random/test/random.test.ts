@@ -1,16 +1,17 @@
-import { describe, expect, test } from "vitest";
-import { randomBoolean } from "../randomBoolean";
-import { randomNumber } from "../randomNumber";
-import { randomFromArray } from "../randomFromArray";
+import { describe, expect, test } from 'vitest'
+import { randomBoolean } from '../randomBoolean'
+import { randomNumber } from '../randomNumber'
+import { randomFromArray } from '../randomFromArray'
 
-let _ = Math.random.bind(Math)
+const _ = Math.random.bind(Math)
 let seed = 42
 const setFakeRandom = (curSeed: number) => {
   seed = curSeed
   Math.random = () => {
-    const max = 1, min = 0
+    const max = 1,
+      min = 0
     seed = (seed * 9301 + 49297) % 233580
-    return min + seed / 233580 * (max - min)
+    return min + (seed / 233580) * (max - min)
   }
 }
 const undoSetFakeRandom = () => {

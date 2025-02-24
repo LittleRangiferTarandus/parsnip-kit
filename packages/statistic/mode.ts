@@ -1,4 +1,4 @@
-import { count } from "./count"
+import { count } from './count'
 
 /**
  * @zh 通过`getter`可选参数提取键值（或直接使用数组元素本身）,返回其中出现最多的值。`getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提供频率统计的标识。
