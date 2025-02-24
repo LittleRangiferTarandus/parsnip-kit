@@ -23,7 +23,7 @@ import { isString } from "../typed/isString"
  */
 export function median<T>(
   data: T[],
-  getter?: string | ((item: T, index: number | undefined, arr: T[]) => number)
+  getter?: string | ((item: T, index: number, arr: T[]) => number)
 ): number {
   const copy = data.map((item, index) => {
     return getter !== undefined
