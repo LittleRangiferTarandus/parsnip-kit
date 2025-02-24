@@ -32,7 +32,7 @@ mode(users, (user) => user.name.toLowerCase()) // ['alice']
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `data` | `any[]` | `false` | `undefined` | Input array |
-| `getter` | `string \| ((item: T, index: number \| undefined, arr: T[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
+| `getter` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
 
 #### Returns
 

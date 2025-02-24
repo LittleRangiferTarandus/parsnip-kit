@@ -35,4 +35,4 @@ itemsToObject(users, pair => pair[0], pair => `${pair[1]} replies`)
 
 | Type |
 | ---  |
-| `{}`  |
+| `object`  |

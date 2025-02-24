@@ -32,7 +32,7 @@ count(users, (user) => user.name.toLowerCase()) // Map { 'alice' => 2, 'bob' => 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
 | `data` | `any[]` | `false` | `undefined` | 输入的数组  |
-| `getter` | `string \| ((item: T, index: number \| undefined, arr: T[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
+| `getter` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
 
 #### Returns
 
