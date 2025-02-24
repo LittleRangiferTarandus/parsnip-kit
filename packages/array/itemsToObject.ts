@@ -6,7 +6,7 @@ import { getByPath, isString } from '../main'
  * @param {any[]} pairs @zh 键值对对象数组 @en The array of key-value object
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getKey] @zh 从子数组中提取键  @en Extract keys form sub-objects
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getValue] @zh 从子数组中提取值  @en Extract values form sub-objects
- * @returns {{}}
+ * @returns {object}
  * @example
  * ```ts
  * import { itemsToObject } from 'parsnip-kit'
