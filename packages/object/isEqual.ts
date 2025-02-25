@@ -68,10 +68,9 @@ import { isEqualStrict } from './isEqualStrict'
  * ```
  */
 export function isEqual(arg1: any, arg2: any) {
-  const cache = new WeakMap()
-  return isEqualHelper(arg1, arg2, cache)
+  return isEqualHelper(arg1, arg2)
 }
-function isEqualHelper(arg1: any, arg2: any, cache: WeakMap<any, any>) {
+function isEqualHelper(arg1: any, arg2: any) {
   if (isPrimitive(arg1) || isPrimitive(arg2)) {
     return isEqualStrict(arg1, arg2)
   }
@@ -82,15 +81,6 @@ function isEqualHelper(arg1: any, arg2: any, cache: WeakMap<any, any>) {
   const typeTag2 = getTypeTag(arg2)
   if (typeTag1 !== typeTag2) {
     return false
-  }
-  if (cache.has(arg1) && cache.get(arg1)?.has(arg2)) {
-    return cache.get(arg1)!.get(arg2)
-  } else {
-    let arg1Cache = cache.get(arg1)
-    if (!arg1Cache) {
-      ;(arg1Cache = new WeakMap()), cache.set(arg1, arg1Cache)
-    }
-    arg1Cache
   }
   if (Array.isArray(arg1)) {
     return isArrayAndObjectEqual(arg1, arg2)
