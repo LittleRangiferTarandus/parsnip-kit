@@ -13,7 +13,8 @@ const additionMap = {
   'common': '共通',
   'statistic': '統計',
   'object': 'オブジェクト',
-  'random': 'ランダム'
+  'random': 'ランダム',
+  'function': '関数'
 }
 
 const sidebar = dfs4Md('jp', titleMap, additionMap)
