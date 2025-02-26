@@ -1,23 +1,30 @@
-# itemsToObject
+# joinToObject
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-Input a object array `pairs`, and output a plain object composed of key-value pairs extracted from each sub-object. Optional parameters `getKey` and `getValue` can be provided to transform the array elements into keys and values. If not provided, the first element of each sub-object (index 0) will be used as the key, and the second element (index 1) will be used as the value. `getKey` and `getValue` can be field paths similar to [getByPath](../object/getByPath) or callback functions.
+Input an array of objects `fields`, and output a plain object formed by combining each item from the array.
+
+The optional parameters `getKey` and `getValue` are used to convert child objects into keys and values. When they are not provided, the first field of the array element is extracted by default. `getKey` and `getValue` can be field paths similar to [getByPath](../object/getByPath) or callback functions.
 
 ### Usage
 
 ```ts
-import { itemsToObject } from 'parsnip-kit'
+import { joinToObject } from 'parsnip-kit'
 
-const users = [['Alex', 16, 'vip'], ['Bob', 659, 'viewer'], ['Carter', 155, 'user'], ['Daniel', 825, 'user']]
+const users = [{ Alex: 'vip' }, { Bob: 'viewer' }, { Carter: 'user' }, { Daniel: 'user' }]
 
-itemsToObject(users)
-// { Alex: 16, Bob: 659, Carter: 155, Daniel: 825 }
-
-itemsToObject(users, '[0]', '[2]')
+joinToObject(users)
 // { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }
 
-itemsToObject(users, pair => pair[0], pair => `${pair[1]} replies`)
-// { Alex: '16 replies', Bob: '659 replies', Carter: '155 replies', Daniel: '825 replies' }
+const data = [
+  { name: 'Alex', type: 'vip' },
+  { name: 'Bob', type: 'viewer' },
+  { Carter: 'user' }, { Daniel: 'user' }
+]
+joinToObject(data, 'name', 'type')
+// { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }
+
+joinToObject(data, pair => pair.name, pair => pair.type)
+// { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }
 ```
 
 

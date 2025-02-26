@@ -2,7 +2,8 @@ import { test, describe, expect } from 'vitest'
 import { leftJoin } from '../leftJoin'
 import { sortIndex } from '../sortIndex'
 import { zipToObject } from '../zipToObject'
-import { itemsToObject } from '../itemsToObject'
+import { pairsToObject } from '../pairsToObject'
+import { joinToObject } from '../joinToObject'
 
 describe('array', () => {
   test('leftJoin', () => {
@@ -100,22 +101,22 @@ describe('array', () => {
       )
     ).eq('{"IAmBot":99999,"Alice":10,"Tom":2}')
   })
-  test('itemsToObject', () => {
+  test('pairsToObject', () => {
     const users = [
       ['Alex', 16, 'vip'],
       ['Bob', 659, 'viewer'],
       ['Carter', 155, 'user'],
       ['Daniel', 825, 'user']
     ]
-    expect(JSON.stringify(itemsToObject(users))).eq(
+    expect(JSON.stringify(pairsToObject(users))).eq(
       '{"Alex":16,"Bob":659,"Carter":155,"Daniel":825}'
     )
-    expect(JSON.stringify(itemsToObject(users, '[0]', '[2]'))).eq(
+    expect(JSON.stringify(pairsToObject(users, '[0]', '[2]'))).eq(
       '{"Alex":"vip","Bob":"viewer","Carter":"user","Daniel":"user"}'
     )
     expect(
       JSON.stringify(
-        itemsToObject(
+        pairsToObject(
           users,
           (pair) => pair[0],
           (pair) => `${pair[1]} replies`
@@ -124,5 +125,38 @@ describe('array', () => {
     ).eq(
       '{"Alex":"16 replies","Bob":"659 replies","Carter":"155 replies","Daniel":"825 replies"}'
     )
+  })
+  test('joinToObject', () => {
+    const users = [
+      { Alex: 'vip' },
+      { Bob: 'viewer' },
+      { Carter: 'user' },
+      { Daniel: 'user' }
+    ]
+    expect(joinToObject(users)).toEqual({
+      Alex: 'vip',
+      Bob: 'viewer',
+      Carter: 'user',
+      Daniel: 'user'
+    })
+    const data = [
+      { name: 'Alex', type: 'vip' },
+      { name: 'Bob', type: 'viewer' },
+      { name: 'Carter', type: 'user' },
+      { name: 'Daniel', type: 'user' }
+    ]
+    expect(joinToObject(data, 'name', 'type')).toEqual({
+      Alex: 'vip',
+      Bob: 'viewer',
+      Carter: 'user',
+      Daniel: 'user'
+    })
+    expect(
+      joinToObject(
+        data,
+        (pair) => pair.name,
+        (pair) => pair.type
+      )
+    ).toEqual({ Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' })
   })
 })

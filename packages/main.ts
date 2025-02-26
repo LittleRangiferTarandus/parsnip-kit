@@ -47,10 +47,11 @@ export { sortIndex } from './array/sortIndex'
 
 export { range } from './number/range'
 
-export { itemsToObject } from './array/itemsToObject'
+export { pairsToObject } from './array/pairsToObject'
 export { zipToObject } from './array/zipToObject'
 export { unzipToArrays } from './object/unzipToArrays'
-export { objectToItems } from './object/objectToItems'
+export { objectToPairs } from './object/objectToPairs'
+export { splitToArrays } from './object/splitToArrays'
 
 export { clone } from './object/clone'
 export { cloneDeep } from './object/cloneDeep'

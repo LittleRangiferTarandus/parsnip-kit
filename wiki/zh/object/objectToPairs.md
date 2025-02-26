@@ -1,7 +1,7 @@
-# objectToItems
+# objectToPairs
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-Input an object `obj`, and output an array composed of each field's key - value pairs, or return something based on the optional parameter `createItem`.
+输入对象`obj`，输出一个数组，由每个字段的键值对形成的数组组成数组，或由可选参数`createItem`返回组成。
 
 > Added in v0.0.1
 
@@ -10,7 +10,7 @@ Input an object `obj`, and output an array composed of each field's key - value 
 ### Usage
 
 ```ts
-import { objectToItems } from 'parsnip-kit'
+import { objectToPairs } from 'parsnip-kit'
 
 const obj = {
  Alex: 16,
@@ -18,10 +18,10 @@ const obj = {
  Carter: 155,
  Daniel: 825
 }
-objectToItems(obj)
+objectToPairs(obj)
 // [['Alex', 16], ['Bob', 659], ['Carter', 155], ['Daniel', 825]]
 
-objectToItems(obj, (value, key) => ({ [key]: value }))
+objectToPairs(obj, (value, key) => ({ [key]: value }))
 // [{ Alex: 16 }, { Bob: 659 }, { Carter: 155 }, { Daniel: 825 }]
 ```
 
@@ -32,8 +32,8 @@ objectToItems(obj, (value, key) => ({ [key]: value }))
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Original object |
-| `createItem` | `(value: any, key: string, obj: any) => any` | `true` | `undefined` | To create element of array to be returned |
+| `obj` | `object` | `false` | `undefined` | 原对象  |
+| `createItem` | `(value: any, key: string, obj: any) => any` | `true` | `undefined` | 创建数组元素  |
 
 #### Returns
 
