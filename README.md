@@ -13,9 +13,9 @@
 1. **🧳 Zero Dependencies**: Lightweight and efficient with no external dependencies, making it suitable for projects of any size.
 2. **🔩 Multi-functional**: Supports modules such as array, object, string, type checking, asynchronous operation, function, and statistic. Adds functions that developers have been eager for.
 3. **💡 Type-friendly**: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-4. **👌 Usability**: Intuitive and straightforward design, providing clear documentation and examples, enabling developers to quickly get started and use it.
+4. **🚀 Modern**: Built with modern JavaScript APIs, it aims to provide developers with commonly used utility functions that are not yet natively supported.
 5. **📦 Modular**: Supports ES6 modularization and tree-shaking.
-6. **🛠️ Engineering-focused**: Comprehensive front-end engineering: documentation generation, unit testing, code standards, and a documentation site.
+6. **🛠️ Easy to Maintain**: Has comprehensive unit tests and coding standards, and is equipped with automated document generation and a document site project, making it easy for subsequent expansion and maintenance.
 
 ## Use Cases
 `parsnip-kit` is designed for various JavaScript and TypeScript projects, from small tools to large applications. It aims to provide concise and efficient utility functions to save developers' time and effort.

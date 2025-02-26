@@ -20,11 +20,11 @@ features:
     details: Supports modules such as array, object, string, type checking, asynchronous operation, function, and statistic. Adds functions that developers have been eager for.
   - title: 💡 Type-friendly
     details: Written in TypeScript, providing accurate and complete type hints to enhance the development experience and code quality.
-  - title: 👌 Usability
-    details: Intuitive and straightforward design, providing clear documentation and examples, enabling developers to quickly get started and use it.
+  - title: 🚀 Modern
+    details: Built with modern JavaScript APIs, it aims to provide developers with commonly used utility functions that are not yet natively supported.
   - title: 📦 Modular
     details: Supports ES6 modularization and tree-shaking.
-  - title: 🛠️ Engineering-focused
-    details: Comprehensive front-end engineering：documentation generation, unit testing, code standards, and a documentation site.
+  - title: 🛠️ Easy to Maintain
+    details: Has comprehensive unit tests and coding standards, and is equipped with automated document generation and a document site project, making it easy for subsequent expansion and maintenance.
 ---
 
