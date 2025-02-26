@@ -62,5 +62,6 @@ export const numberComparatorAsc = (a: number, b: number) => {
 ```typescript
 export const numberComparatorDesc = (a: number, b: number) => {
   return b - a
+}
 
 ```

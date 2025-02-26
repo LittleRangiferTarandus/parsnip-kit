@@ -62,5 +62,6 @@ Comparator for sorting numbers in descending order.
 ```typescript
 export const numberComparatorDesc = (a: number, b: number) => {
   return b - a
+}
 
 ```
