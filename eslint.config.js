@@ -27,6 +27,7 @@ export default tseslint.config({
     "prefer-arrow-callback": "off",
     "@typescript-eslint/no-explicit-any": "off", // allow any type
     "@typescript-eslint/no-unsafe-function-type": "off",
-    "prefer-rest-params": "off"
+    "prefer-rest-params": "off",
+    "@typescript-eslint/no-this-alias": "off"
   },
 })
