@@ -5,6 +5,10 @@ Input an array of objects `fields`, and output a plain object formed by combinin
 
 The optional parameters `getKey` and `getValue` are used to convert child objects into keys and values. When they are not provided, the first field of the array element is extracted by default. `getKey` and `getValue` can be field paths similar to [getByPath](../object/getByPath) or callback functions.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts
@@ -18,7 +22,8 @@ joinToObject(users)
 const data = [
   { name: 'Alex', type: 'vip' },
   { name: 'Bob', type: 'viewer' },
-  { Carter: 'user' }, { Daniel: 'user' }
+  { name: 'Carter', type: 'user' },
+  { name: 'Daniel', type: 'user' }
 ]
 joinToObject(data, 'name', 'type')
 // { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }

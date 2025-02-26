@@ -9,6 +9,7 @@
  * @param {boolean} [options.immediate=false] @zh 是否立即执行第一次调用 @en Whether to execute the function immediately on the first call
  * @param {number} [options.maxWait] @zh 设置最大等待时间 @en Set the maximum waiting time
  * @returns {(...args: any[]) => void}
+ * @version 0.0.1
  * @example
  * ```typescript
  * import { debounce } from 'parsnip-kit'

@@ -13,6 +13,7 @@ const generateKey = (...args: any[]) => JSON.stringify(args)
  * @param { ( ...args: Parameters<T> ) => any } [resolver] @zh 用于生成缓存键的函数 @en A function used to generate cache keys
  * @param { Parameters<T>} [initCache] @zh 初始化缓存时的参数 @en Parameters for initializing the cache
  * @returns { ( ...args: Parameters<T> ) => ReturnType<T> }
+ * @version 0.0.1
  * @example
  * ```typescript
  * import { memoize } from 'parsnip-kit'

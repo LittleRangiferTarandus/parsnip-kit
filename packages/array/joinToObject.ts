@@ -11,6 +11,7 @@ import { getByPath, isString } from '../main'
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getKey] @zh 从子对象中提取键  @en Extract keys form sub-objects
  * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getValue] @zh 从子对象中提取值  @en Extract values form sub-objects
  * @returns {object}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { joinToObject } from 'parsnip-kit'
@@ -23,7 +24,8 @@ import { getByPath, isString } from '../main'
  * const data = [
  *   { name: 'Alex', type: 'vip' },
  *   { name: 'Bob', type: 'viewer' },
- *   { Carter: 'user' }, { Daniel: 'user' }
+ *   { name: 'Carter', type: 'user' },
+ *   { name: 'Daniel', type: 'user' }
  * ]
  * joinToObject(data, 'name', 'type')
  * // { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }

@@ -3,6 +3,10 @@
       
 输入一个对象`obj`和迭代器`iterator`，遍历对象的每个字段，对每个字段的值执行`iterator`。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

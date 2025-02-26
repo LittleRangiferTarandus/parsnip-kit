@@ -6,6 +6,10 @@ This is a memoize function, which is used to cache the return values of a functi
 By default, uses `JSON.stringify(arguments)` as the cache key.
 
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript

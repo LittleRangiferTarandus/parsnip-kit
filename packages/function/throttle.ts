@@ -8,6 +8,7 @@
  * @param {boolean} [options.leading=false] @en Whether to execute the function at the beginning of the wait interval @zh 是否在等待间隔开始时执行函数
  * @param {boolean} [options.trailing=true] @en Whether to execute the function at the end of the wait interval, if not already executed  @zh 是否在等待间隔结束时执行函数
  * @returns {(...args: any[]) => void}
+ * @version 0.0.1
  * @example
  * ```typescript
  * import { throttle } from 'parsnip-kit'

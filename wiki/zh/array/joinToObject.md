@@ -5,6 +5,10 @@
 
 可选参数`getKey`和`getValue`用于把子对象转换为键和值，为空时默认提取数组元素第一个字段。`getKey`和`getValue`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts
@@ -18,7 +22,8 @@ joinToObject(users)
 const data = [
   { name: 'Alex', type: 'vip' },
   { name: 'Bob', type: 'viewer' },
-  { Carter: 'user' }, { Daniel: 'user' }
+  { name: 'Carter', type: 'user' },
+  { name: 'Daniel', type: 'user' }
 ]
 joinToObject(data, 'name', 'type')
 // { Alex: 'vip', Bob: 'viewer', Carter: 'user', Daniel: 'user' }

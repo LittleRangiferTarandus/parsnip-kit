@@ -6,6 +6,10 @@
 默认使用 `JSON.stringify(arguments)` 作为缓存的 key。
 
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript

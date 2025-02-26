@@ -3,6 +3,10 @@
       
 A function that takes an object `obj` and an `iterator` function, iterates over each field of the object, and executes the `iterator` for each field's value.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```ts

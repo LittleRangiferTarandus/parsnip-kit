@@ -4,6 +4,7 @@
  * @param {object} obj @zh 待遍历的对象 @en Object to iterate
  * @param {(value: any, key: string, object: T) => void} iterator @zh 迭代器函数 @en Iterator function
  * @returns {undefined}
+ * @version 0.0.1
  * @example
  * ```ts
  * import { forEachFields } from 'parsnip-kit'

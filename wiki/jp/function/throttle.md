@@ -3,6 +3,10 @@
       
 Throttle function used to limit the frequency of function calls. It ensures that the function is not called more than once within a specified time interval.
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript

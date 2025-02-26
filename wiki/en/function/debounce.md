@@ -4,6 +4,10 @@
 This is a debounce function, which is used to limit the frequency of function calls. It will execute the function after a specified time interval. If the function is called multiple times within the interval, the previous timer will be cleared and reset.
 
 
+> Added in v0.0.1
+
+
+
 ### Usage
 
 ```typescript
