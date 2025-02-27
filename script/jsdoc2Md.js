@@ -13,7 +13,7 @@ function formatType(types) {
   return [types];
 }
 function generateMD(func) {
-  const { version, refer, functionName, content, needContent, args, returnType, lang, example } = func;
+  const { templates, version, refer, functionName, content, needContent, args, returnType, lang, example } = func;
   return `
 # ${functionName}
       
@@ -27,6 +27,8 @@ ${
   needContent ? `### Source\n\n\`\`\`typescript\n${content}\n\`\`\`\n\n`: ''
 }${
   refer || returnType || args?.length ? '### API\n\n' : ''
+}${
+  templates?.length ? `#### Type Parameter\n\n| Arg | Type | Description |\n| --- | --- | --- |\n${templates.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
 }${
   args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
 }${
@@ -58,6 +60,20 @@ function getFormatJsdoc(comment) {
   const refer = jsdoc.tags.find((item) => item.tag === 'refer');
   const example = jsdoc.tags.find((item) => item.tag === 'example');
   const version = jsdoc.tags.find((item) => item.tag === 'version');
+  const templates = jsdoc.tags.filter((item) => item.tag === 'template')?.map((item) => {
+    const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
+    const ans = {
+      name: item.name,
+      type: item.type,
+      optional: item.optional,
+      default: item.default,
+      desc: item.description,
+    }
+    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+      ans[arr[i * 2] + 'Desc'] = arr[i * 2 + 1]
+    }
+    return ans
+  }) || ''
   const args = jsdoc.tags.filter((item) => item.tag === 'param').map((item) => {
     const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
@@ -80,6 +96,7 @@ function getFormatJsdoc(comment) {
       : '',
     example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
     args,
+    templates,
     version: version ? [version.name, version.description].filter(Boolean).join(' ') : '',
     refer: refer ? [refer.name, refer.description].filter(Boolean).join(' ') : ''
   }
