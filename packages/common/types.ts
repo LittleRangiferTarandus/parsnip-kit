@@ -49,3 +49,47 @@ export type KeyOrIndex<T extends string> = T extends
   | `${infer D extends number}`
   ? D
   : T
+
+/**
+ * @zh 获取数组类型最后一个元素。
+ * @en Returns the last element of array type.
+ * @version 0.0.1
+ */
+export type Tail<T extends readonly any[]> = T extends readonly [
+  ...any[],
+  infer L
+]
+  ? L
+  : never
+
+/**
+ * @zh 获取数组类型第一个元素。
+ * @en Returns the first element of array type.
+ * @version 0.0.1
+ */
+export type Head<T extends readonly any[]> = T extends readonly [
+  infer L,
+  ...any[]
+]
+  ? L
+  : never
+
+/**
+ * @zh 获取数组`T`首端或者末端的元素，由类型`D`决定。
+ * @en Retrieve the first or last element of array `T`, determined by type `D`.
+ * @version 0.0.1
+ */
+export type Edge<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'left' ? Head<T> : Tail<T>
+
+/**
+ * @zh 和`Edge`类似，但是`D`取值`'left'`或者`'right'`时效果反过来。
+ * @en Similar to `Edge`, but the effects of `'left'` and `'right'` for D are reversed.
+ * @version 0.0.1
+ */
+export type EdgeReverse<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'right' ? Head<T> : Tail<T>
