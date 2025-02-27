@@ -7,11 +7,16 @@ Parsnip-Kit 是一个零依赖、多功能、模块化的 JavaScript 工具库�
 Parsnip-Kit 使用现代 JavaScript API 编写，所有工具函数都支持 TypeScript 类型，不管是开发应用还是阅读源码，都能带给开发者清新的体验。
 
 # 使用示例
-```ts
+```typescript
 import {
-  sum, median, average,
-  itemsToObject, leftJoin,
-  getByPath, omit, pick
+  sum,
+  median,
+  average,
+  pairsToObject,
+  leftJoin,
+  getByPath,
+  omit,
+  pick
 } from 'parsnip-kit'
 
 const data = [
@@ -38,7 +43,7 @@ average(data, 'blog.count') // 62
 sum(data, 'blog.count') // 186
 median(data, 'blog.count') // 55
 
-itemsToObject(data, 'name', 'blog.fans')
+pairsToObject(data, 'name', 'blog.fans')
 // { Alice: 45, Bob: 1546, Carlin: 56563 }
 
 getByPath(data, '[0].email')

@@ -7,11 +7,16 @@ It provides a wide range of utility functions covering type checking, arrays, ob
 Written using modern JavaScript APIs, Parsnip-Kit supports TypeScript types for all utility functions, offering developers a refreshing experience whether they are developing applications or reading the source code.
 
 # Example Usage
-```ts
+```typescript
 import {
-  sum, median, average,
-  itemsToObject, leftJoin,
-  getByPath, omit, pick
+  sum,
+  median,
+  average,
+  pairsToObject,
+  leftJoin,
+  getByPath,
+  omit,
+  pick
 } from 'parsnip-kit'
 
 const data = [
@@ -38,7 +43,7 @@ average(data, 'blog.count') // 62
 sum(data, 'blog.count') // 186
 median(data, 'blog.count') // 55
 
-itemsToObject(data, 'name', 'blog.fans')
+pairsToObject(data, 'name', 'blog.fans')
 // { Alice: 45, Bob: 1546, Carlin: 56563 }
 
 getByPath(data, '[0].email')

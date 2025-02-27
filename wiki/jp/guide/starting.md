@@ -7,11 +7,16 @@ Parsnip-Kit は、ゼロディペンダシ、マルチファンクション、�
 Parsnip-Kit は、モダンな JavaScript API を使用して書かれており、すべてのツール関数が TypeScript の型定義をサポートしています。アプリケーションの開発やソースコードの閲覧において、開発者に快適な体験を提供します。
 
 # 使用例
-```ts
+```typescript
 import {
-  sum, median, average,
-  itemsToObject, leftJoin,
-  getByPath, omit, pick
+  sum,
+  median,
+  average,
+  pairsToObject,
+  leftJoin,
+  getByPath,
+  omit,
+  pick
 } from 'parsnip-kit'
 
 const data = [
@@ -38,7 +43,7 @@ average(data, 'blog.count') // 62
 sum(data, 'blog.count') // 186
 median(data, 'blog.count') // 55
 
-itemsToObject(data, 'name', 'blog.fans')
+pairsToObject(data, 'name', 'blog.fans')
 // { Alice: 45, Bob: 1546, Carlin: 56563 }
 
 getByPath(data, '[0].email')
