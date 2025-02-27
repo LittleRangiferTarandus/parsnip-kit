@@ -83,4 +83,80 @@ export type KeyOrIndex<T extends string> = T extends
   ? D
   : T
 
+
+```
+# Tail
+      
+Returns the last element of array type.
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Tail<T extends readonly any[]> = T extends readonly [
+  ...any[],
+  infer L
+]
+  ? L
+  : never
+
+
+```
+# Head
+      
+Returns the first element of array type.
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Head<T extends readonly any[]> = T extends readonly [
+  infer L,
+  ...any[]
+]
+  ? L
+  : never
+
+
+```
+# Edge
+      
+Retrieve the first or last element of array `T`, determined by type `D`.
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Edge<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'left' ? Head<T> : Tail<T>
+
+
+```
+# EdgeReverse
+      
+Similar to `Edge`, but the effects of `'left'` and `'right'` for D are reversed.
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type EdgeReverse<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'right' ? Head<T> : Tail<T>
+
 ```

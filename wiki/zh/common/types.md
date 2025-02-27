@@ -83,4 +83,80 @@ export type KeyOrIndex<T extends string> = T extends
   ? D
   : T
 
+
+```
+# Tail
+      
+获取数组类型最后一个元素。
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Tail<T extends readonly any[]> = T extends readonly [
+  ...any[],
+  infer L
+]
+  ? L
+  : never
+
+
+```
+# Head
+      
+获取数组类型第一个元素。
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Head<T extends readonly any[]> = T extends readonly [
+  infer L,
+  ...any[]
+]
+  ? L
+  : never
+
+
+```
+# Edge
+      
+获取数组`T`首端或者末端的元素，由类型`D`决定。
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type Edge<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'left' ? Head<T> : Tail<T>
+
+
+```
+# EdgeReverse
+      
+和`Edge`类似，但是`D`取值`'left'`或者`'right'`时效果反过来。
+
+> Added in v0.0.1
+
+
+
+### Source
+
+```typescript
+export type EdgeReverse<
+  T extends readonly any[],
+  D = 'left' | 'right'
+> = D extends 'right' ? Head<T> : Tail<T>
+
 ```

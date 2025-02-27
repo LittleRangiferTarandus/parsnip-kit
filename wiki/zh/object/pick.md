@@ -10,6 +10,8 @@
 ### Usage
 
 ```typescript
+import { pick } from 'parsnip-kit'
+
 const obj = { a: 1, b: 2, c: 3 }
 const keys0 = ['a', 'c'] as const
 const result0 = pick(obj, keys0)
@@ -26,12 +28,19 @@ const result1 = pick(obj, keys1)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 非基本类型  |
+| `R` | `extends readonly string[]` | 字段路径数组类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | - 待处理的对象或数组 @en The object or array to process |
-| `keys` | `string[]` | `false` | `undefined` | - 需要提取的键或数组索引 @en The keys or array indices to extract |
+| `obj` | `T` | `false` | `undefined` | - 待处理的对象或数组 @en The object or array to process |
+| `keys` | `R` | `false` | `undefined` | - 需要提取的键或数组索引 @en The keys or array indices to extract |
 
 #### Returns
 

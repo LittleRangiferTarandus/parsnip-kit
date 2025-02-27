@@ -10,6 +10,8 @@
 ### Usage
 
 ```typescript
+import { omit } from 'parsnip-kit'
+
 const obj = omit({ a: 1, b: 2, c: 3 }, ['b', 'c'] as const)
 // Omit<{ a: number; b: number; c: number; }, "b" | "c">
 // { a: 1 }
@@ -21,12 +23,19 @@ const arr = omit([1, 2, 3, 4], ['[1]', '3'] as const)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 非基本类型  |
+| `R` | `extends readonly string[]` | 字段路径数组类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | - 待处理的对象或数组 @en The object or array to process |
-| `keys` | `string[]` | `false` | `undefined` | - 需要删除的键或数组索引 @en The keys or array indices to delete |
+| `obj` | `T` | `false` | `undefined` | - 待处理的对象或数组 @en The object or array to process |
+| `keys` | `R` | `false` | `undefined` | - 需要删除的键或数组索引 @en The keys or array indices to delete |
 
 #### Returns
 
