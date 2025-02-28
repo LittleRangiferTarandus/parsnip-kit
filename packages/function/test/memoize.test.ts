@@ -1,5 +1,5 @@
 import { describe, it, vi, expect, beforeEach } from 'vitest'
-import { memoize } from '../menoize'
+import { memoize } from '../memoize'
 
 describe('memoize function tests', () => {
   let testFunc: (...args: any[]) => number
