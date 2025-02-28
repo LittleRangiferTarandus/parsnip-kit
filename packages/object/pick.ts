@@ -14,7 +14,7 @@ import { splitToKeys } from '../string/splitToKeys'
  * @example
  * ```typescript
  * import { pick } from 'parsnip-kit'
- * 
+ *
  * const obj = { a: 1, b: 2, c: 3 }
  * const keys0 = ['a', 'c'] as const
  * const result0 = pick(obj, keys0)

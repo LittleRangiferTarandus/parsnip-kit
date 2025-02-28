@@ -16,7 +16,7 @@ import { isNumberString } from '../typed/isNumberString'
  * @example
  * ```typescript
  * import { omit } from 'parsnip-kit'
- * 
+ *
  * const obj = omit({ a: 1, b: 2, c: 3 }, ['b', 'c'] as const)
  * // Omit<{ a: number; b: number; c: number; }, "b" | "c">
  * // { a: 1 }
