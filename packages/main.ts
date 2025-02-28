@@ -47,6 +47,7 @@ export { sortIndex } from './array/sortIndex'
 
 export { range } from './number/range'
 
+export { joinToObject } from './array/joinToObject'
 export { pairsToObject } from './array/pairsToObject'
 export { zipToObject } from './array/zipToObject'
 export { unzipToArrays } from './object/unzipToArrays'
@@ -74,11 +75,27 @@ export { randomBoolean } from './random/randomBoolean'
 export { randomFromArray } from './random/randomFromArray'
 export { randomNumber } from './random/randomNumber'
 
+export { combine } from './function/combine'
+export { curry } from './function/curry'
+export { debounce } from './function/debounce'
+export { delay } from './function/delay'
+export { memoize } from './function/memoize'
+export { throttle } from './function/throttle'
+
+export { asyncForEach } from './async/asyncForEach'
+export { asyncForEachFields } from './async/asyncForEachFields'
+export { asyncMap } from './async/asyncMap'
+
 export type {
   PrimitiveType,
   NumberString,
   ExtractUnion,
-  KeyOrIndex
+  KeyOrIndex,
+  ObjectLike,
+  Tail,
+  Head,
+  Edge,
+  EdgeReverse
 } from './common/types'
 
 export {
