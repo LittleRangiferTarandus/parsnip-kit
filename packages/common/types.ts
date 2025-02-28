@@ -51,8 +51,8 @@ export type KeyOrIndex<T extends string> = T extends
   : T
 
 /**
- * @zh 获取数组类型最后一个元素。
- * @en Returns the last element of array type.
+ * @zh 获取元组类型最后一个元素。
+ * @en Returns the last element of tuple type.
  * @version 0.0.1
  */
 export type Tail<T extends readonly any[]> = T extends readonly [
@@ -63,8 +63,8 @@ export type Tail<T extends readonly any[]> = T extends readonly [
   : never
 
 /**
- * @zh 获取数组类型第一个元素。
- * @en Returns the first element of array type.
+ * @zh 获取元组类型第一个元素。
+ * @en Returns the first element of tuple type.
  * @version 0.0.1
  */
 export type Head<T extends readonly any[]> = T extends readonly [
@@ -75,8 +75,8 @@ export type Head<T extends readonly any[]> = T extends readonly [
   : never
 
 /**
- * @zh 获取数组`T`首端或者末端的元素，由类型`D`决定。
- * @en Retrieve the first or last element of array `T`, determined by type `D`.
+ * @zh 获取元组`T`首端或者末端的元素，由类型`D`决定。
+ * @en Retrieve the first or last element of tuple `T`, determined by type `D`.
  * @version 0.0.1
  */
 export type Edge<
