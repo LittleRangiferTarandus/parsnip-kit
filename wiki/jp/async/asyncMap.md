@@ -1,7 +1,7 @@
-# asyncForEachFields
+# asyncMap
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-A function that takes an object `obj` and an `iterator` function, iterates over each field of the object, and executes the `iterator` for each field's value.
+Input an array `array` and an iterator `iterator`, traverse each element of the array, execute the `iterator` on each element, and return an array composed of the return values after each execution using `await`.
 
 The `iterator` supports `async` functions or functions that return a `Promise`. The optional parameter `concurrent` controls whether the `iterator` functions are called concurrently. If the value is `'sequential'`, the next `iterator` will only be executed after the `Promise` returned by the previous `iterator` is either fulfilled or rejected.
 
@@ -13,36 +13,39 @@ The `iterator` supports `async` functions or functions that return a `Promise`. 
 ### Usage
 
 ```ts
-import { asyncForEachFields } from 'parsnip-kit'
+import { asyncMap } from 'parsnip-kit'
 
-const obj = { a: 1, b: 2, c: 3 }
-
+const array = [1, 2, 3]
 const logConcurrent = [] as any[]
-const iterator = (value, key, object) => {
+const iterator = (item, index, arr) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      logConcurrent.push({ key, value })
-      resolve(void 0)
+      logConcurrent.push({ item, index })
+      resolve({ item, index })
     }, Math.random() * 100)
   })
 }
-asyncForEachFields(obj, iterator, 'sequential').then(() => {
+asyncMap(obj, iterator).then(res => {
+  console.log(res)
+  // [{ item: 1, index: 0 }, { item: 2, index: 1 }, { item: 3, index: 2 }]
   console.log(logConcurrent)
-  // Array contain { key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 } with random order.
+  // Array contain { item: 1, index: 0 }, { item: 2, index: 1 }, { item: 3, index: 2 } with random order.
 })
 
 const logSequential = [] as any[]
-const iterator = (value, key, object) => {
+const iterator = (item, index, arr) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      logSequential.push({ key, value })
-      resolve(void 0)
+      logSequential.push({ item, index })
+      resolve({ item, index })
     }, Math.random() * 100)
   })
 }
-asyncForEachFields(obj, iterator, 'sequential').then(() => {
+asyncMap(obj, iterator, 'sequential').then(res => {
+  console.log(res)
+  // [{ item: 1, index: 0 }, { item: 2, index: 1 }, { item: 3, index: 2 }]
   console.log(logSequential)
-  // [{ key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }]
+  // [{ item: 1, index: 0 }, { item: 2, index: 1 }, { item: 3, index: 2 }]
 })
 ```
 
@@ -53,19 +56,20 @@ asyncForEachFields(obj, iterator, 'sequential').then(() => {
 
 | Arg | Type | Description |
 | --- | --- | --- |
-| `T` | `extends object` | Object type  |
+| `T` | ` ` | Element type of array  |
+| `U` | ` ` | Return type of the `iterator`  |
 | `R` | `extends 'concurrent' \| 'sequential' = 'concurrent' \| 'sequential'` | Concurrent type |
 
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `T` | `false` | `undefined` | Object to iterate |
-| `iterator` | `(value: any, key: string, object: T) => any` | `false` | `undefined` | Iterator function |
+| `obj` | `T[]` | `false` | `undefined` | Array to iterate |
+| `iterator` | `(item: T, index: number, array: T[]) => U \| Promise<U>` | `false` | `undefined` | Iterator function |
 | `concurrent` | `R` | `true` | `'concurrent'` | Concurrent type |
 
 #### Returns
 
 | Type |
 | ---  |
-| `Promise<void>`  |
+| `Promise<U[]>`  |

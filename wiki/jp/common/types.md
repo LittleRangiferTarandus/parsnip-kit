@@ -87,7 +87,7 @@ export type KeyOrIndex<T extends string> = T extends
 ```
 # Tail
       
-Returns the last element of array type.
+Returns the last element of tuple type.
 
 > Added in v0.0.1
 
@@ -107,7 +107,7 @@ export type Tail<T extends readonly any[]> = T extends readonly [
 ```
 # Head
       
-Returns the first element of array type.
+Returns the first element of tuple type.
 
 > Added in v0.0.1
 
@@ -127,7 +127,7 @@ export type Head<T extends readonly any[]> = T extends readonly [
 ```
 # Edge
       
-Retrieve the first or last element of array `T`, determined by type `D`.
+Retrieve the first or last element of tuple `T`, determined by type `D`.
 
 > Added in v0.0.1
 

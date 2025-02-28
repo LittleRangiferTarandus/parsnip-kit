@@ -87,7 +87,7 @@ export type KeyOrIndex<T extends string> = T extends
 ```
 # Tail
       
-获取数组类型最后一个元素。
+获取元组类型最后一个元素。
 
 > Added in v0.0.1
 
@@ -107,7 +107,7 @@ export type Tail<T extends readonly any[]> = T extends readonly [
 ```
 # Head
       
-获取数组类型第一个元素。
+获取元组类型第一个元素。
 
 > Added in v0.0.1
 
@@ -127,7 +127,7 @@ export type Head<T extends readonly any[]> = T extends readonly [
 ```
 # Edge
       
-获取数组`T`首端或者末端的元素，由类型`D`决定。
+获取元组`T`首端或者末端的元素，由类型`D`决定。
 
 > Added in v0.0.1
 
