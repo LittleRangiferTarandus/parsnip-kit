@@ -23,12 +23,18 @@ forEachFields(user, (value, key, obj) => {
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Object type  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Object to iterate |
-| `iterator` | `(value: any, key: string, object: T) => void` | `false` | `undefined` | Iterator function |
+| `obj` | `T` | `false` | `undefined` | Object to iterate |
+| `iterator` | `(value: any, key: string, object: T) => any` | `false` | `undefined` | Iterator function |
 
 #### Returns
 

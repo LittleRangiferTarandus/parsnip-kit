@@ -14,7 +14,8 @@ const additionMap = {
   'statistic': '統計',
   'object': 'オブジェクト',
   'random': 'ランダム',
-  'function': '関数'
+  'function': '関数',
+  'async': '非同期'
 }
 
 const sidebar = dfs4Md('jp', titleMap, additionMap)

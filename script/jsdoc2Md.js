@@ -28,7 +28,7 @@ ${
 }${
   refer || returnType || args?.length ? '### API\n\n' : ''
 }${
-  templates?.length ? `#### Type Parameter\n\n| Arg | Type | Description |\n| --- | --- | --- |\n${templates.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
+  templates?.length ? `#### Type Parameter\n\n| Arg | Type | Description |\n| --- | --- | --- |\n${templates.map((item) => `| \`${item.name}\` | ${'`' + (formatType(item.type).join(' \\| ') || ' ') + '`'} | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
 }${
   args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
 }${

@@ -1,7 +1,10 @@
-# forEachFields
+# asyncForEachFields
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
 A function that takes an object `obj` and an `iterator` function, iterates over each field of the object, and executes the `iterator` for each field's value.
+
+The `iterator` supports `async` functions or `Promise` returns. Only after the `Promise` returned by the previous `iterator` is fulfilled or rejected will the next `iterator` be executed.
+
 
 > Added in v0.0.1
 
@@ -10,14 +13,22 @@ A function that takes an object `obj` and an `iterator` function, iterates over 
 ### Usage
 
 ```ts
-import { forEachFields } from 'parsnip-kit'
+import { asyncForEachFields } from 'parsnip-kit'
 
-const user = { name: 'John', age: 30 }
-forEachFields(user, (value, key, obj) => {
-  console.log(`Key: ${key}, Value: ${value}`)
+const obj = { a: 1, b: 2, c: 3 }
+const log = [] as any[]
+const iterator = (value, key, object) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      log.push({ key, value })
+      resolve(void 0)
+    }, value * 100)
+  })
+}
+asyncForEachFields(obj, iterator).then(() => {
+  console.log(log)
+  // [{ key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }]
 })
-// Key: name, Value: John
-// Key: age, Value: 30
 ```
 
 
@@ -40,4 +51,4 @@ forEachFields(user, (value, key, obj) => {
 
 | Type |
 | ---  |
-| `undefined`  |
+| `Promise<void>`  |

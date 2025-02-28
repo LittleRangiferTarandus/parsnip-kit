@@ -14,7 +14,8 @@ const additionMap = {
   'statistic': '统计',
   'object': '对象',
   'random': '随机',
-  'function': '函数'
+  'function': '函数',
+  'async': '异步'
 }
 
 const sidebar = dfs4Md('zh', titleMap, additionMap)
