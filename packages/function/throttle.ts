@@ -33,16 +33,12 @@ export function throttle<T extends (...args: any[]) => any>(
   let previous = 0
   let timeout: number | undefined
   const { leading = false, trailing = true } = options || {}
-  let lastArgs: Parameters<T> | undefined
-  let lastThis: ThisParameterType<T> | undefined
 
   const throttled = function (
     this: ThisParameterType<T>,
     ...args: Parameters<T>
   ): void {
     const now = +new Date()
-    lastArgs = args
-    lastThis = this
 
     if (leading === false) {
       previous = now
@@ -54,15 +50,13 @@ export function throttle<T extends (...args: any[]) => any>(
         timeout = undefined
       }
       previous = now
-      func.apply(lastThis, lastArgs)
+      func.apply(this, args)
     }
     if (!timeout && trailing) {
       timeout = setTimeout(() => {
         timeout = undefined
         previous = leading ? +new Date() : 0
-        func.apply(lastThis, lastArgs)
-        lastArgs = undefined
-        lastThis = undefined
+        func.apply(this, args)
       }, remaining)
     }
   }

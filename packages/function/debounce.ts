@@ -47,8 +47,6 @@ export function debounce<T extends (...args: any[]) => any>(
   options?: { maxWait?: number; immediate?: boolean }
 ): (...args: Parameters<T>) => void {
   let timeout: number | undefined
-  let lastArgs: Parameters<T> | undefined
-  let lastThis: ThisParameterType<T> | undefined
   let maxTimeout: number | undefined
 
   const { immediate = false, maxWait } = options || {}
@@ -57,18 +55,15 @@ export function debounce<T extends (...args: any[]) => any>(
     this: ThisParameterType<T>,
     ...args: Parameters<T>
   ): void {
-    lastArgs = args
-    lastThis = this
-
     if (maxWait !== undefined && !maxTimeout) {
       maxTimeout = setTimeout(() => {
         maxTimeout = undefined
-        func.apply(lastThis, lastArgs)
+        func.apply(this, args)
       }, maxWait)
     }
 
     if (!timeout && immediate) {
-      func.apply(lastThis, lastArgs)
+      func.apply(this, args)
     }
     if (timeout) {
       clearTimeout(timeout)
@@ -80,9 +75,7 @@ export function debounce<T extends (...args: any[]) => any>(
         maxTimeout = undefined
       }
 
-      func.apply(lastThis, lastArgs)
-      lastArgs = undefined
-      lastThis = undefined
+      func.apply(this, args)
     }, wait)
   }
 
