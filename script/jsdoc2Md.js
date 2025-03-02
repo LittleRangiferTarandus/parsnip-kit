@@ -112,20 +112,27 @@ function getFunctionName(content) {
   const tokens = esprima.tokenize(content);
   let functionName = '';
   let lastToken = { type: '', value: '' };
+  let tokenType = 'variable'
   for (let i = 0; i < tokens.length; i++) {
     if (i >= 1) {
       lastToken = tokens[i - 1];
     }
     const { type, value } = lastToken;
     const isFunction2 =
-      type === 'Keyword' && ['function', 'const', 'type'].includes(value)
+      type === 'Keyword' && ['function', 'const'].includes(value)
       || type === 'Identifier' && ['interface', 'type'].includes(value);
     if (tokens[i].type === 'Identifier' && isFunction2) {
       functionName = tokens[i].value;
+      if (type === 'Identifier' && ['interface', 'type'].includes(value)) {
+        tokenType = 'type'
+      }
       break;
     }
   }
-  return functionName;
+  return {
+    functionName,
+    type: tokenType
+  };
 }
 function parseFile(file) {
   const codes = file.split(/\r\n|\n/);
@@ -159,12 +166,12 @@ function jsdocToMD(options) {
   const mds = parsedFiles.map((file) => {
     const { comment, content } = file;
     const formatJsdoc = getFormatJsdoc(comment);
-    const functionName = getFunctionName(content);
+    const { functionName, type } = getFunctionName(content);
     if (!comment) {
       return ''
     }
     const ans = generateMD({
-      ...formatJsdoc, content, lang, functionName, needContent
+      ...formatJsdoc, content, lang, functionName, needContent: (type === 'type' || needContent)
     }).trim()
     return ans
   });
