@@ -1,5 +1,5 @@
 # isEqual
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.96%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-84.75%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.96%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-93.67%-FF8C00)
       
 Input two parameters `arg1` and `arg2`, perform a deep comparison to check each of their properties, and return whether they are equal.
 

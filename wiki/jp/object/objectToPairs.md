@@ -1,5 +1,5 @@
 # objectToPairs
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 input an object `obj`, and output an array composed of arrays formed by each field's key-value pairs, or composed of the results returned by the optional parameter `createItem`.
 

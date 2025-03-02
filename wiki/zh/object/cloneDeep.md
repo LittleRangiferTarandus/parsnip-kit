@@ -1,5 +1,5 @@
 # cloneDeep
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-84.85%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-81.82%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-84.85%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-87.88%-FF8C00)
       
 输入一个参数`arg`，返回它的深复制。 
 

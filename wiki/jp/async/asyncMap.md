@@ -1,5 +1,5 @@
 # asyncMap
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 Input an array `array` and an iterator `iterator`, traverse each element of the array, execute the `iterator` on each element, and return an array composed of the return values after each execution using `await`.
 

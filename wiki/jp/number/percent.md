@@ -1,5 +1,5 @@
 # percent
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 Input a number `num` and a total `total` (default is 100), and output a formatted percentage string. An optional parameter `fixed` is available to control the number of decimal places, defaulting to 2.
 

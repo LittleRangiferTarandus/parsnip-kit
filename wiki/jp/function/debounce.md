@@ -1,5 +1,5 @@
 # debounce
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 This is a debounce function, which is used to limit the frequency of function calls. It will execute the function after a specified time interval. If the function is called multiple times within the interval, the previous timer will be cleared and reset.
 

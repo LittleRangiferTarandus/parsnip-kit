@@ -1,5 +1,5 @@
 # isObject
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 Check whether the input parameter is an object, including general objects (`{ key: 'value' }`), functions (`function() {}`), and instances of primitive type wrappers (`new Number(1)`), all of which would return `true`.
 

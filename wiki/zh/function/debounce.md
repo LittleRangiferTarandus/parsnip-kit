@@ -1,5 +1,5 @@
 # debounce
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 这是一个防抖函数，用于限制函数调用的频率。它会在指定的时间间隔后执行函数，如果在时间间隔内多次调用，会清除之前的定时器并重新计时。 
 

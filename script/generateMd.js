@@ -43,7 +43,7 @@ function calculateLineCoverage(coverageMap) {
 
   const lineCoverage = (coveredLines / totalLines) * 100 || 0
 
-  return lineCoverage.toFixed(2) + '%'
+  return lineCoverage
 }
 
 function generateMD(lang, testReport) {
@@ -86,22 +86,16 @@ function generateMD(lang, testReport) {
         const fileData = testReport.coverageMap[path]
 
         if (fileData && !fullPath.includes('/common/')) {
-          const statement = `${(Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100).toFixed(2)}%`
-          const branch = `${(Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100).toFixed(2)}%`
-          const fn = `${(Object.keys(fileData.f).filter(key => fileData.f[key] > 0).length / Object.keys(fileData.fnMap).length * 100).toFixed(2)}%`
+          const statement = (Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100)
+          const branch = (Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100)
+          const fn = (Object.keys(fileData.f).filter(key => fileData.f[key] > 0).length / Object.keys(fileData.fnMap).length * 100)
           const line = calculateLineCoverage(fileData)
 
           output.replace('\r\n', '\n')
           const idx = output.indexOf('\n')
-          output = output.slice(0, idx) + `\n![Static Badge](https://img.shields.io/badge/Statement%20Coverage-${
-            statement
-          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-${
-            branch
-          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-${
-            fn
-          }-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-${
-            line
-          }-brightgreen)` + output.slice(idx)
+          output = output.slice(0, idx) + `\n![Static Badge](https://img.shields.io/badge/Coverage-${
+            ((statement + branch + fn + line) / 4).toFixed(2) + '%'
+          }-FF8C00)` + output.slice(idx)
         }
 
         const dirPath = `${

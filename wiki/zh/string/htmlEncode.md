@@ -1,5 +1,5 @@
 # htmlEncode
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 将字符串进行 HTML 编码，将特殊字符（如 <、>、&）转换为对应的 HTML 实体（如 `&lt;`、`&gt;`、`&amp;`），从而防止这些字符被浏览器错误解析为 HTML 标签的一部分。
 

@@ -1,5 +1,5 @@
 # throttle
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-91.18%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-90.91%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-91.18%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-93.32%-FF8C00)
       
 节流函数用于限制函数调用的频率。它确保函数在指定的时间间隔内不会被多次调用。 
 

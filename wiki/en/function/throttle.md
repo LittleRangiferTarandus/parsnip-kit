@@ -1,5 +1,5 @@
 # throttle
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-91.18%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-90.91%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-91.18%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-93.32%-FF8C00)
       
 Throttle function used to limit the frequency of function calls. It ensures that the function is not called more than once within a specified time interval.
 

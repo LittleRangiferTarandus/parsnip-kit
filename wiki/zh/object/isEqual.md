@@ -1,5 +1,5 @@
 # isEqual
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-94.96%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-84.75%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-94.96%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-93.67%-FF8C00)
       
 输入两个参数`arg1`和`arg2`，执行深比较检查它们每个属性，返回它们是否相等，不支持循环引用。 
 

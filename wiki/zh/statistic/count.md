@@ -1,5 +1,5 @@
 # count
-![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
+![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
 通过`getter`可选参数提取键值（或直接使用数组元素本身），对提取的值进行计数统计。`getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提频率统计的标识。
 
