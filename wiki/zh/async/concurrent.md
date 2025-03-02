@@ -1,7 +1,7 @@
 # concurrent
 ![Static Badge](https://img.shields.io/badge/Statement%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Branch%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Function%20Coverage-100.00%-brightgreen) ![Static Badge](https://img.shields.io/badge/Line%20Coverage-100.00%-brightgreen)
       
-并行执行一组返回`Promise`的函数`functions`，参数`limit`限制同时运行的数量。
+并发执行一组返回`Promise`的函数`functions`，参数`limit`限制同时运行的数量。
 
 > Added in v0.0.1
 
