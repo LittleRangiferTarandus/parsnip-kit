@@ -86,6 +86,8 @@ export { asyncForEach } from './async/asyncForEach'
 export { asyncForEachFields } from './async/asyncForEachFields'
 export { asyncMap } from './async/asyncMap'
 
+export { concurrent } from './async/concurrent'
+
 export type {
   PrimitiveType,
   NumberString,
