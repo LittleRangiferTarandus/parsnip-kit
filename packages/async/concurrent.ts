@@ -1,5 +1,5 @@
 /**
- * @zh 并行执行一组返回`Promise`的函数`functions`，参数`limit`限制同时运行的数量。
+ * @zh 并发执行一组返回`Promise`的函数`functions`，参数`limit`限制同时运行的数量。
  * @en Execute a array of function `functions` that return `Promise` in parallel, with the `limit` parameter restricting the number of concurrent executions.
  *
  * @template {} T @zh 返回`Promise`的`value`类型 @en The `value` type returned by a function that returns a `Promise`
