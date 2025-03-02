@@ -62,8 +62,6 @@ export function retry<T>(
       try {
         const result = await func.apply(this, args)
         config.onSuccess(result, attempts + 1)
-        console.log(config.onSuccess)
-
         return {
           value: result,
           status: 'fulfilled' as const
