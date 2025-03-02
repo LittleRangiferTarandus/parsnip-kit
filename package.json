@@ -8,10 +8,10 @@
     "build": "vite build",
     "lint": "npx eslint packages/",
     "lint:fix": "npx eslint packages/ --fix",
-    "doc": "npm run test & node script/generateMd.js",
-    "docs:dev": "npm run doc & vitepress dev wiki",
-    "docs:build": "vitepress build wiki",
-    "docs:preview": "vitepress preview wiki"
+    "doc": "npm run test && node script/generateMd.js",
+    "docs:dev": "npm run doc && vitepress dev wiki",
+    "docs:build": "npm run doc && vitepress build wiki",
+    "docs:preview": "npm run doc && vitepress preview wiki"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^3.0.5",
