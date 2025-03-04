@@ -60,7 +60,9 @@ export function retry<T>(
 
     const executeTask = async () => {
       try {
-        const result = await func.apply(this, args)
+        const result = await Promise.resolve().then(() =>
+          Promise.resolve(func.apply(this, args))
+        )
         config.onSuccess(result, attempts + 1)
         return {
           value: result,
