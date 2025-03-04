@@ -38,7 +38,7 @@ concurrent(functions, 2).then(res => {
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `functions` | `((...args: any[]) => Promise<T>)[]` | `false` | `undefined` | 返回`Promise`的函数数组  |
+| `functions` | `(() => Promise<T>)[]` | `false` | `undefined` | 返回`Promise`的函数数组  |
 | `limit` | `number` | `false` | `undefined` | 同时运行的函数数量限制  |
 
 #### Returns

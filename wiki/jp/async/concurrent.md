@@ -39,7 +39,7 @@ concurrent(functions, 2).then(res => {
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `functions` | `((...args: any[]) => Promise<T>)[]` | `false` | `undefined` | Array of functions that return `Promise` |
+| `functions` | `(() => Promise<T>)[]` | `false` | `undefined` | Array of functions that return `Promise` |
 | `limit` | `number` | `false` | `undefined` | Array of functions that return `Promise` |
 
 #### Returns
