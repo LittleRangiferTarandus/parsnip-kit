@@ -87,6 +87,8 @@ export { asyncForEachFields } from './async/asyncForEachFields'
 export { asyncMap } from './async/asyncMap'
 
 export { concurrent } from './async/concurrent'
+export { sequential } from './async/sequential'
+export { retry } from './async/retry'
 
 export type {
   PrimitiveType,
