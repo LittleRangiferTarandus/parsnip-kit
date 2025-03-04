@@ -1,7 +1,7 @@
-# min
+# minItem
 ![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
-计算传入数组的最小值，支持通过可选参数`getter`提取数值（或直接使用数组元素的数值）。 
+计算传入数组的最小值，返回最小值所在的第一个数组元素，支持通过可选参数`getter`提取数值（或直接使用数组元素的数值）。 
 
 `getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提取数值。
 
@@ -12,13 +12,15 @@
 ### Usage
 
 ```ts
-import { min } from 'parsnip-kit'
+import { minItem } from 'parsnip-kit'
 
-min([1, 2, 3, 4]) // 1
+minItem([1, 2, 3, 4]) // 1
 
-min([{ value: 10 }, { value: 20 }], item => item.value) // 10
+minItem([{ value: 10 }, { value: 10, key: 'count' }, { value: 20 }], item => item.value)
+// { value: 10 }
 
-min([{ score: 85 }, { score: 95 }], 'score') // 85
+minItem([{ value: 10 }, { value: 10, key: 'count' }, { value: 20 }], 'value')
+// { value: 10 }
 ```
 
 
@@ -41,4 +43,4 @@ min([{ score: 85 }, { score: 95 }], 'score') // 85
 
 | Type |
 | ---  |
-| `number`  |
+| `T`  |

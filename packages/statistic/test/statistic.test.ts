@@ -6,8 +6,9 @@ import { count } from '../count'
 import { mode } from '../mode'
 import { max } from '../max'
 import { min } from '../min'
-import { maxItems } from '../maxItems'
-import { minItems } from '../minItems'
+import { maxItem } from '../maxItem'
+import { minItem } from '../minItem'
+import { modeItem } from '../modeItem'
 
 describe('statistic', () => {
   test('average', () => {
@@ -79,9 +80,24 @@ describe('statistic', () => {
       expect(res4Func.get(keys4Func[i])).eq(values4Func[i])
     }
   })
+  test('modeItem', () => {
+    const res4Number = modeItem([1, 2, 2, 3, 3, 3])
+    expect(res4Number).toEqual(3)
+
+    const users = [
+      { id: 1, name: 'Alice' },
+      { id: 2, name: 'Bob' },
+      { id: 1, name: 'alice' }
+    ]
+    const res4Path = modeItem(users, 'id')
+    expect(res4Path).toEqual({ id: 1, name: 'Alice' })
+
+    const res4Func = modeItem(users, (user) => user.name.toLowerCase())
+    expect(res4Func).toEqual({ id: 1, name: 'Alice' })
+  })
   test('mode', () => {
     const res4Number = mode([1, 2, 2, 3, 3, 3])
-    expect(res4Number).toEqual([3])
+    expect(res4Number).toEqual(3)
 
     const users = [
       { id: 1, name: 'Alice' },
@@ -89,10 +105,10 @@ describe('statistic', () => {
       { id: 1, name: 'alice' }
     ]
     const res4Path = mode(users, 'id')
-    expect(res4Path).toEqual([1])
+    expect(res4Path).toEqual(1)
 
     const res4Func = mode(users, (user) => user.name.toLowerCase())
-    expect(res4Func).toEqual(['alice'])
+    expect(res4Func).toEqual('alice')
   })
   test('max', () => {
     expect(max([1, 2, 3, 4])).eq(4)
@@ -104,34 +120,34 @@ describe('statistic', () => {
     expect(min([{ value: 10 }, { value: 20 }], (item) => item.value)).eq(10)
     expect(min([{ score: 85 }, { score: 95 }], 'score')).eq(85)
   })
-  test('maxItems', () => {
-    expect(maxItems([1, 2, 3, 4])).toEqual([4])
+  test('maxItem', () => {
+    expect(maxItem([1, 2, 3, 4])).toEqual(4)
     expect(
-      maxItems(
+      maxItem(
         [{ value: 10 }, { value: 20 }, { value: 20, key: 'count' }],
         (item) => item.value
       )
-    ).toEqual([{ value: 20 }, { value: 20, key: 'count' }])
+    ).toEqual({ value: 20 })
     expect(
-      maxItems(
+      maxItem(
         [{ value: 10 }, { value: 20 }, { value: 20, key: 'count' }],
         'value'
       )
-    ).toEqual([{ value: 20 }, { value: 20, key: 'count' }])
+    ).toEqual({ value: 20 })
   })
-  test('minItems', () => {
-    expect(minItems([1, 2, 3, 4])).toEqual([1])
+  test('minItem', () => {
+    expect(minItem([1, 2, 3, 4])).toEqual(1)
     expect(
-      minItems(
+      minItem(
         [{ value: 10 }, { value: 20 }, { value: 10, key: 'count' }],
         (item) => item.value
       )
-    ).toEqual([{ value: 10 }, { value: 10, key: 'count' }])
+    ).toEqual({ value: 10 })
     expect(
-      minItems(
+      minItem(
         [{ value: 10 }, { value: 20 }, { value: 10, key: 'count' }],
         'value'
       )
-    ).toEqual([{ value: 10 }, { value: 10, key: 'count' }])
+    ).toEqual({ value: 10 })
   })
 })

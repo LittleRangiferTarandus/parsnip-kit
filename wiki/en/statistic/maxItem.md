@@ -1,7 +1,7 @@
-# max
+# maxItem
 ![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
-Calculates the maximum of the input array, supporting the extraction of numeric values via an optional parameter `getter` (or directly using the numeric values of the array elements).
+Calculate the maximum value of the input array and return the first elements that have the maximum value, supporting the extraction of numeric values via an optional parameter `getter` (or directly using the numeric values of the array elements).
 
 The `getter` is a field path similar to [getByPath](../object/getByPath) or a callback function, for extracting numerical values.
 
@@ -12,13 +12,15 @@ The `getter` is a field path similar to [getByPath](../object/getByPath) or a ca
 ### Usage
 
 ```ts
-import { max } from 'parsnip-kit'
+import { maxItem } from 'parsnip-kit'
 
-max([1, 2, 3, 4]) // 4
+maxItem([1, 2, 3, 4]) // 4
 
-max([{ value: 10 }, { value: 20 }], item => item.value) // 20
+maxItem([{ value: 10 }, { value: 20 }, { value: 20, key: 'count' }], item => item.value)
+// { value: 20 }
 
-max([{ score: 85 }, { score: 95 }], 'score') // 95
+maxItem([{ value: 10 }, { value: 20 }, { value: 20, key: 'count' }], 'value')
+// { value: 20 }
 ```
 
 
@@ -41,4 +43,4 @@ max([{ score: 85 }, { score: 95 }], 'score') // 95
 
 | Type |
 | ---  |
-| `number`  |
+| `T`  |

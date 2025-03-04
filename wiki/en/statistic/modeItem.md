@@ -1,7 +1,7 @@
-# mode
+# modeItem
 ![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
-Extract key values using the optional `getter` parameter (or directly using the array elements themselves), and return the most frequently occurring value.
+Extract key values using the optional `getter` parameter (or directly using the array elements themselves), and return the first element that have the most frequently occurring value.
 
 The `getter` is a field path similar to [getByPath](../object/getByPath) or a callback function, used to provide a label for frequency statistics.
 
@@ -12,18 +12,18 @@ The `getter` is a field path similar to [getByPath](../object/getByPath) or a ca
 ### Usage
 
 ```ts
-import { mode } from 'parsnip-kit'
+import { modeItem } from 'parsnip-kit'
 
-mode([1, 2, 2, 3, 3, 3]) // 3
+modeItem([1, 2, 2, 3, 3, 3]) // 3
 
 const users = [
   { id: 1, name: 'Alice' },
   { id: 2, name: 'Bob' },
   { id: 1, name: 'alice' }
 ]
-mode(users, 'id') // 1
+modeItem(users, 'id') // { id: 1, name: 'Alice' }
 
-mode(users, (user) => user.name.toLowerCase()) // 'alice'
+modeItem(users, (user) => user.name.toLowerCase()) // { id: 1, name: 'Alice' }
 ```
 
 
@@ -46,4 +46,4 @@ mode(users, (user) => user.name.toLowerCase()) // 'alice'
 
 | Type |
 | ---  |
-| `any`  |
+| `T`  |

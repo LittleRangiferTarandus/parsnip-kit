@@ -1,9 +1,9 @@
-# count
+# modeItem
 ![Static Badge](https://img.shields.io/badge/Coverage-100.00%-FF8C00)
       
-通过`getter`可选参数提取键值（或直接使用数组元素本身），对提取的值进行计数统计。 
+通过`getter`可选参数提取键值（或直接使用数组元素本身）,返回其中出现最多的值所在的第一个数组元素。 
 
-`getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提频率统计的标识。
+`getter`是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提供频率统计的标识。
 
 > Added in v0.0.1
 
@@ -12,18 +12,18 @@
 ### Usage
 
 ```ts
-import { count } from 'parsnip-kit'
+import { modeItem } from 'parsnip-kit'
 
-count([1, 2, 2, 3, 3, 3]) // Map { 1 => 1, 2 => 2, 3 => 3 }
+modeItem([1, 2, 2, 3, 3, 3]) // 3
 
 const users = [
   { id: 1, name: 'Alice' },
   { id: 2, name: 'Bob' },
   { id: 1, name: 'alice' }
 ]
-count(users, 'id') // Map { 1 => 2, 2 => 1 }
+modeItem(users, 'id') // { id: 1, name: 'Alice' }
 
-count(users, (user) => user.name.toLowerCase()) // Map { 'alice' => 2, 'bob' => 1 }
+modeItem(users, (user) => user.name.toLowerCase()) // { id: 1, name: 'Alice' }
 ```
 
 
@@ -46,4 +46,4 @@ count(users, (user) => user.name.toLowerCase()) // Map { 'alice' => 2, 'bob' => 
 
 | Type |
 | ---  |
-| `Map<any, number>`  |
+| `T`  |
