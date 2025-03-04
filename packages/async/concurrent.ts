@@ -3,7 +3,7 @@
  * @en Execute a array of function `functions` that return `Promise` in parallel, with the `limit` parameter restricting the number of concurrent executions.
  *
  * @template {} T @zh 返回`Promise`的`value`类型 @en The `value` type returned by a function that returns a `Promise`
- * @param {((...args: any[]) => Promise<T>)[]} functions @zh 返回`Promise`的函数数组 @en Array of functions that return `Promise`
+ * @param {(() => Promise<T>)[]} functions @zh 返回`Promise`的函数数组 @en Array of functions that return `Promise`
  * @param {number} limit @zh 同时运行的函数数量限制 @en Array of functions that return `Promise`
  * @returns {Promise<PromiseSettledResult<Awaited<T>>[]>}
  * @version 0.0.1
@@ -25,7 +25,7 @@
  * ```
  */
 export async function concurrent<T>(
-  functions: ((...args: any[]) => Promise<T>)[],
+  functions: (() => Promise<T>)[],
   limit: number
 ) {
   const tasks: Promise<T>[] = []
