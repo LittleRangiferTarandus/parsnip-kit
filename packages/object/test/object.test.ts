@@ -85,9 +85,20 @@ describe('object', () => {
       Carter: 155,
       Daniel: 825
     }
-    expect(JSON.stringify(unzipToArrays(obj))).eq(
-      '[["Alex","Bob","Carter","Daniel"],[16,659,155,825]]'
-    )
+    expect(unzipToArrays(obj)).toEqual([
+      ['Alex', 'Bob', 'Carter', 'Daniel'],
+      [16, 659, 155, 825]
+    ])
+    expect(
+      unzipToArrays(
+        obj,
+        (_, key) => key.toUpperCase(),
+        (value) => value + ''
+      )
+    ).toEqual([
+      ['ALEX', 'BOB', 'CARTER', 'DANIEL'],
+      ['16', '659', '155', '825']
+    ])
   })
   test('splitToArrays', () => {
     const obj = {
