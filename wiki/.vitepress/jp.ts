@@ -2,8 +2,9 @@ import { defineConfig } from 'vitepress'
 import { dfs4Md } from './dfs4Md'
 
 const titleMap = {
-  'starting': 'はじめに',
-  'guide': '入門'
+  'starting': 'クイックスタート',
+  'guide': '入門',
+  'intro': 'はじめに'
 }
 const additionMap = {
   'string': '文字列',

@@ -3,7 +3,8 @@ import { dfs4Md } from './dfs4Md'
 
 const titleMap = {
   'starting': '快速开始',
-  'guide': '开始'
+  'guide': '开始',
+  'intro': '简介'
 }
 const additionMap = {
   'string': '字符串',
