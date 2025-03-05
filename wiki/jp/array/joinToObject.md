@@ -35,16 +35,26 @@ joinToObject(data, pair => pair.name, pair => pair.type)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of elements of array |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `pairs` | `any[]` | `false` | `undefined` | The array of key-value object |
-| `getKey` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | Extract keys form sub-objects |
-| `getValue` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | Extract values form sub-objects |
+| `pairs` | `T[]` | `false` | `undefined` | The array of key-value object |
+| `getKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Extract keys form sub-objects |
+| `getValue` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Extract values form sub-objects |
 
 #### Returns
 
 | Type |
 | ---  |
-| `object`  |
+| `ObjectLike`  |
+
+#### Reference
+
+[ObjectLike](../common/types#objectlike)

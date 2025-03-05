@@ -28,11 +28,17 @@ throttledWithOptions() // console.log is called immediately and again after 300m
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | 要节流的函数类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | `(...args: any[]) => any` | `false` | `undefined` | 要节流的函数 |
+| `func` | `T` | `false` | `undefined` | 要节流的函数 |
 | `wait` | `number` | `false` | `undefined` | 两次连续调用之间的间隔时间（毫秒） |
 | `options` | `object` | `true` | `undefined` | 可选参数对象  |
 | `options.leading` | `boolean` | `true` | `false` | 是否在等待间隔开始时执行函数 |
@@ -42,4 +48,4 @@ throttledWithOptions() // console.log is called immediately and again after 300m
 
 | Type |
 | ---  |
-| `(...args: any[]) => void`  |
+| `(...args: Parameters<T>) => void`  |

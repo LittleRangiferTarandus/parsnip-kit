@@ -18,7 +18,7 @@ symmetricDifference(
   [{ v: 1 }, { v: 2 }, { v: 3 }],
   [{ v: 1 }, { v: 4 }, { v: 8 }],
   'v'
-) // [{ v: 2 }, { v: 3 }, { v: 4 }, { v: 8 }]
+) // [{ v: 2 }, { v: 3 }, { v: 4 }, { v: 8 }] 
 
 symmetricDifference(
   [{ v: [1] }, { v: [2] }, { v: [3] }],
@@ -36,16 +36,22 @@ symmetricDifference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, in
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | 数组元素类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arr1` | `any[]` | `false` | `undefined` | 需要求对称差的数组  |
-| `arr2` | `any[]` | `false` | `undefined` | 需要求对称差的数组  |
-| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
+| `arr1` | `T[]` | `false` | `undefined` | 需要求对称差的数组  |
+| `arr2` | `T[]` | `false` | `undefined` | 需要求对称差的数组  |
+| `getter` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | 提供区分元素的标识  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any[]`  |
+| `T[]`  |

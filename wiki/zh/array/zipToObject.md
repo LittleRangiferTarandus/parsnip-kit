@@ -33,17 +33,28 @@ zipToObject(
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | 作为键的数组元素类型  |
+| `U` | ` ` | 作为值的数组元素类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `keys` | `any[]` | `false` | `undefined` | 作为键的数组  |
-| `values` | `any[]` | `false` | `undefined` | 作为值的数组   |
-| `getKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 把数组元素转换为键   |
-| `getValue` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | 把数组元素转换为值   |
+| `keys` | `T[]` | `false` | `undefined` | 作为键的数组  |
+| `values` | `U[]` | `false` | `undefined` | 作为值的数组   |
+| `getKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | 把数组元素转换为键   |
+| `getValue` | `string \| ((item: U, index: number, arr: U[]) => any)` | `true` | `undefined` | 把数组元素转换为值   |
 
 #### Returns
 
 | Type |
 | ---  |
-| `{}`  |
+| `ObjectLike`  |
+
+#### Reference
+
+[ObjectLike](../common/types#objectlike)

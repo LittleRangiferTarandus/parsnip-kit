@@ -32,11 +32,17 @@ const result2 = filterFields(arr1, iterator2)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of object to iterate |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Object to iterate |
+| `obj` | `T` | `false` | `undefined` | Object to iterate |
 | `iterator` | `(value: any, key: string, object: T) => boolean` | `false` | `undefined` | Iterator function |
 
 #### Returns

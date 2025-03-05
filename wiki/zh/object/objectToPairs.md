@@ -28,12 +28,18 @@ objectToPairs(obj, (value, key) => ({ [key]: value }))
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 原对象的类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | 原对象  |
-| `createItem` | `(value: any, key: string, obj: any) => any` | `true` | `undefined` | 创建数组元素  |
+| `obj` | `T` | `false` | `undefined` | 原对象  |
+| `createItem` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | 创建数组元素  |
 
 #### Returns
 

@@ -4,10 +4,11 @@ import { getByPath } from '../object/getByPath'
 /**
  * @zh 输入两个数组`arr1`、`arr2`，输出它们的交集。接收一个`getter`，它是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提供区分元素的标识。
  * @en Input two arrays `arr1` and `arr2`, and output their intersection. Accepts a `getter`, which can be a field path similar to [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
- * @param {any[]} arr1 @zh 需要求交集的数组 @en Array to be intersected
- * @param {any[]} arr2 @zh 需要求交集的数组 @en Array to be intersected
- * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
- * @returns {any[]}
+ * @template {} T @zh 数组元素类型 @en Type of elements of array
+ * @param {T[]} arr1 @zh 需要求交集的数组 @en Array to be intersected
+ * @param {T[]} arr2 @zh 需要求交集的数组 @en Array to be intersected
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
+ * @returns {T[]}
  * @version 0.0.1
  * @example
  * ```ts

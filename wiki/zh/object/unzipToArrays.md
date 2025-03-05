@@ -20,16 +20,28 @@ const obj = {
 }
 unzipToArrays(obj)
 // [['Alex', 'Bob', 'Carter', 'Daniel'], [16, 659, 155, 825]]
+
+unzipToArrays(obj, (_, key) => key.toUpperCase(), (value) => value + '')
+// [['ALEX', 'BOB', 'CARTER', 'DANIEL'], ['16', '659', '155', '825']]
+
 ```
 
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 原对象的类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | 原对象  |
+| `obj` | `T` | `false` | `undefined` | 原对象  |
+| `createKey` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | 创建 key 的数组元素  |
+| `createValue` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | 创建 value 的数组元素  |
 
 #### Returns
 

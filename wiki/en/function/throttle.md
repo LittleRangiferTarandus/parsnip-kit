@@ -27,11 +27,17 @@ throttledWithOptions() // console.log is called immediately and again after 300m
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | Type of function to throttle |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | `(...args: any[]) => any` | `false` | `undefined` | The function to throttle  |
+| `func` | `T` | `false` | `undefined` | The function to throttle  |
 | `wait` | `number` | `false` | `undefined` | The minimum allowed interval between two consecutive calls (in milliseconds).  |
 | `options` | `object` | `true` | `undefined` | Optional parameter object |
 | `options.leading` | `boolean` | `true` | `false` | Whether to execute the function at the beginning of the wait interval  |
@@ -41,4 +47,4 @@ throttledWithOptions() // console.log is called immediately and again after 300m
 
 | Type |
 | ---  |
-| `(...args: any[]) => void`  |
+| `(...args: Parameters<T>) => void`  |

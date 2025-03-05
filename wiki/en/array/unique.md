@@ -34,15 +34,21 @@ unique([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: number, 
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | Type of elements of array |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arr` | `any[]` | `false` | `undefined` | Array to be intersected |
-| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
+| `arr` | `T[]` | `false` | `undefined` | Array that needs to be deduplicated |
+| `getter` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any[]`  |
+| `T[]`  |

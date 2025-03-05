@@ -46,11 +46,17 @@ memoizedCalcWithAllArgs(2, 3)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | Type of function to memoize |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | ` (...args: any[]) => any ` | `false` | `undefined` | The function to memoize |
+| `func` | `T` | `false` | `undefined` | The function to memoize |
 | `resolver` | ` ( ...args: Parameters<T> ) => any ` | `true` | `undefined` | A function used to generate cache keys |
 | `initCache` | ` Parameters<T>` | `true` | `undefined` | Parameters for initializing the cache |
 

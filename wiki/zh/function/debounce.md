@@ -43,11 +43,17 @@ setTimeout(() => {
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | 要防抖的函数类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | `(...args: any[]) => any` | `false` | `undefined` | 要防抖的函数  |
+| `func` | `T` | `false` | `undefined` | 要防抖的函数  |
 | `wait` | `number` | `false` | `undefined` | 两次连续调用之间的延迟时间（毫秒）  |
 | `options` | `object` | `true` | `undefined` | 可选参数对象  |
 | `options.immediate` | `boolean` | `true` | `false` | 是否立即执行第一次调用  |
@@ -57,4 +63,4 @@ setTimeout(() => {
 
 | Type |
 | ---  |
-| `(...args: any[]) => void`  |
+| `(...args: Parameters<T>) => void`  |

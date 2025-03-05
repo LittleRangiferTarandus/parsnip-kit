@@ -33,17 +33,28 @@ zipToObject(
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | Type of elements of array serving as keys |
+| `U` | ` ` | Type of elements of array serving as values |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `keys` | `any[]` | `false` | `undefined` | The array serving as keys |
-| `values` | `any[]` | `false` | `undefined` | The array serving as values |
-| `getKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Transform array elements into keys |
-| `getValue` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Transform array elements into values |
+| `keys` | `T[]` | `false` | `undefined` | The array serving as keys |
+| `values` | `U[]` | `false` | `undefined` | The array serving as values |
+| `getKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Transform array elements into keys |
+| `getValue` | `string \| ((item: U, index: number, arr: U[]) => any)` | `true` | `undefined` | Transform array elements into values |
 
 #### Returns
 
 | Type |
 | ---  |
-| `{}`  |
+| `ObjectLike`  |
+
+#### Reference
+
+[ObjectLike](../common/types#objectlike)

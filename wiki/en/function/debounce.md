@@ -43,11 +43,17 @@ setTimeout(() => {
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | Type of function to debounce |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | `(...args: any[]) => any` | `false` | `undefined` | The function to debounce |
+| `func` | `T` | `false` | `undefined` | The function to debounce |
 | `wait` | `number` | `false` | `undefined` | The delay time between two consecutive calls (in milliseconds) |
 | `options` | `object` | `true` | `undefined` | Optional parameter object |
 | `options.immediate` | `boolean` | `true` | `false` | Whether to execute the function immediately on the first call |
@@ -57,4 +63,4 @@ setTimeout(() => {
 
 | Type |
 | ---  |
-| `(...args: any[]) => void`  |
+| `(...args: Parameters<T>) => void`  |

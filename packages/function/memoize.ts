@@ -9,7 +9,8 @@ const generateKey = (...args: any[]) => JSON.stringify(args)
  *
  * By default, uses `JSON.stringify(arguments)` as the cache key.
  *
- * @param { (...args: any[]) => any } func @zh 要记忆化的函数 @en The function to memoize
+ * @template {extends (...args: any[]) => any} T @zh 要记忆化的函数类型 @en Type of function to memoize
+ * @param {T} func @zh 要记忆化的函数 @en The function to memoize
  * @param { ( ...args: Parameters<T> ) => any } [resolver] @zh 用于生成缓存键的函数 @en A function used to generate cache keys
  * @param { Parameters<T>} [initCache] @zh 初始化缓存时的参数 @en Parameters for initializing the cache
  * @returns { ( ...args: Parameters<T> ) => ReturnType<T> }

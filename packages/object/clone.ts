@@ -1,6 +1,6 @@
 import { ObjectLike, PrimitiveType } from '../common/types'
-import { isObjectLike } from '../main'
 import { getTypeTag } from '../typed/getTypeTag'
+import { isObjectLike } from '../typed/isObjectLike'
 
 /**
  * @zh 输入一个参数`arg`，返回它的浅克隆。
@@ -41,8 +41,9 @@ import { getTypeTag } from '../typed/getTypeTag'
  * |Files and Streams|`Blob` `File` `ArrayBuffer`|
  * |`TypedArray`|`Int8Array` `Uint8Array` `Uint8ClampedArray` `Int16Array` `Uint16Array` `Int32Array` `Uint32Array` `Float32Array` `Float64Array` `BigInt64Array` `BigUint64Array`|
  *
- * @param {PrimitiveType | ObjectLike} obj @zh 待复制的参数 @en Parameter to be cloned
- * @returns {PrimitiveType | ObjectLike}
+ * @template {extends PrimitiveType | ObjectLike} T @zh 待复制参数的类型 @en Type of parameter to be cloned
+ * @param {T} obj @zh 待复制的参数 @en Parameter to be cloned
+ * @returns {T}
  * @version 0.0.1
  * @refer [PrimitiveType](../common/types#primitivetype) [ObjectLike](../common/types#objectlike)
  * @example

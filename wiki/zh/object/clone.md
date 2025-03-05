@@ -61,17 +61,23 @@ cloneMap === map // false
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends PrimitiveType \| ObjectLike` | 待复制参数的类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `PrimitiveType \| ObjectLike` | `false` | `undefined` | 待复制的参数  |
+| `obj` | `T` | `false` | `undefined` | 待复制的参数  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `PrimitiveType \| ObjectLike`  |
+| `T`  |
 
 #### Reference
 

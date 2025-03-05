@@ -13,7 +13,7 @@ Input two parameters `arg1` and `arg2`, and return whether they are strictly equ
 import { isEqualStrict } from 'parsnip-kit'
 
 isEqualStrict(1, 1) // true
-isEqualStrict(+0, -0) // true
+isEqualStrict(+0, -0) // false
 isEqualStrict(NaN, NaN) // true
 isEqualStrict({ a: 1 }, { a: 1 }) // false
 ```

@@ -54,18 +54,26 @@ leftJoin(
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 左连接中左侧数组元素类型  |
+| `U` | `extends object` | 左连接中右侧数组元素类型  |
+| `R` | `extends object` | 返回的数组元素类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `left` | `object[]` | `false` | `undefined` | 左连接中左侧的数组  |
-| `right` | `object[]` | `false` | `undefined` | 左连接中右侧的数组  |
-| `leftKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | 为左侧数组提供区分元素的标识  |
-| `rightKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | 为右侧数组提供区分元素的标识  |
-| `merge` | `(left: any, right: any \| undefined) => any` | `false` | `undefined` | 返回左右数组元素合并的结果  |
+| `left` | `T[]` | `false` | `undefined` | 左连接中左侧的数组  |
+| `right` | `U[]` | `false` | `undefined` | 左连接中右侧的数组  |
+| `leftKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `false` | `undefined` | 为左侧数组提供区分元素的标识  |
+| `rightKey` | `string \| ((item: U, index: number, arr: U[]) => any)` | `false` | `undefined` | 为右侧数组提供区分元素的标识  |
+| `merge` | `(left: T, right: U \| undefined) => R` | `false` | `undefined` | 返回左右数组元素合并的结果  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any[]`  |
+| `R[]`  |

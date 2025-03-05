@@ -1,5 +1,5 @@
 # cloneDeep
-![Static Badge](https://img.shields.io/badge/Coverage-87.88%-FF8C00)
+![Static Badge](https://img.shields.io/badge/Coverage-87.95%-FF8C00)
       
 输入一个参数`arg`，返回它的深复制。 
 
@@ -88,15 +88,21 @@ clonedTestObj3.a === clonedTestObj3 // true
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | 待复制参数的类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `any` | `false` | `undefined` | 待复制的参数  |
+| `obj` | `T` | `false` | `undefined` | 待复制的参数  |
 | `customizeClone` | `(arg: any, key: string \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | 自定义复制普通对象和不支持的内置对象的行为  |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any`  |
+| `T`  |

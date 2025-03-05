@@ -2,12 +2,13 @@
  * @en Throttle function used to limit the frequency of function calls. It ensures that the function is not called more than once within a specified time interval.
  * @zh 节流函数用于限制函数调用的频率。它确保函数在指定的时间间隔内不会被多次调用。
  *
- * @param {(...args: any[]) => any} func @en The function to throttle @zh 要节流的函数
+ * @template {extends (...args: any[]) => any} T @zh 要节流的函数类型 @en Type of function to throttle
+ * @param {T} func @en The function to throttle @zh 要节流的函数
  * @param {number} wait @en The minimum allowed interval between two consecutive calls (in milliseconds). @zh 两次连续调用之间的间隔时间（毫秒）
  * @param {object} [options] @zh 可选参数对象 @en Optional parameter object
  * @param {boolean} [options.leading=false] @en Whether to execute the function at the beginning of the wait interval @zh 是否在等待间隔开始时执行函数
  * @param {boolean} [options.trailing=true] @en Whether to execute the function at the end of the wait interval, if not already executed  @zh 是否在等待间隔结束时执行函数
- * @returns {(...args: any[]) => void}
+ * @returns {(...args: Parameters<T>) => void}
  * @version 0.0.1
  * @example
  * ```typescript

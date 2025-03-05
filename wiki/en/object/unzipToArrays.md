@@ -20,16 +20,28 @@ const obj = {
 }
 unzipToArrays(obj)
 // [['Alex', 'Bob', 'Carter', 'Daniel'], [16, 659, 155, 825]]
+
+unzipToArrays(obj, (_, key) => key.toUpperCase(), (value) => value + '')
+// [['ALEX', 'BOB', 'CARTER', 'DANIEL'], ['16', '659', '155', '825']]
+
 ```
 
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of original object |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Original object |
+| `obj` | `T` | `false` | `undefined` | Original object |
+| `createKey` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | To create element of array of keys to be returned |
+| `createValue` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | To create element of array of values to be returned |
 
 #### Returns
 

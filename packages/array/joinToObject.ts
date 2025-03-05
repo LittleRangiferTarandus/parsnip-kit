@@ -1,4 +1,6 @@
-import { getByPath, isString } from '../main'
+import { ObjectLike } from "../common/types"
+import { getByPath } from "../object/getByPath"
+import { isString } from "../typed/isString"
 
 /**
  * @zh 输入一个对象数组`fields`，输出从每一项对象组合起来形成的普通对象。
@@ -7,10 +9,12 @@ import { getByPath, isString } from '../main'
  * @en Input an array of objects `fields`, and output a plain object formed by combining each item from the array.
  *
  * The optional parameters `getKey` and `getValue` are used to convert child objects into keys and values. When they are not provided, the first field of the array element is extracted by default. `getKey` and `getValue` can be field paths similar to [getByPath](../object/getByPath) or callback functions.
- * @param {any[]} pairs @zh 键值对对象数组 @en The array of key-value object
- * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getKey] @zh 从子对象中提取键  @en Extract keys form sub-objects
- * @param {string | ((item: any[], index: number, arr: any[][]) => any)} [getValue] @zh 从子对象中提取值  @en Extract values form sub-objects
- * @returns {object}
+ * @template {extends object} T @zh 数组元素类型 @en Type of elements of array
+ * @param {T[]} pairs @zh 键值对对象数组 @en The array of key-value object
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getKey] @zh 从子对象中提取键  @en Extract keys form sub-objects
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getValue] @zh 从子对象中提取值  @en Extract values form sub-objects
+ * @returns {ObjectLike}
+ * @refer [ObjectLike](../common/types#objectlike)
  * @version 0.0.1
  * @example
  * ```ts
@@ -39,7 +43,7 @@ export function joinToObject<T extends object>(
   getKey?: string | ((item: T, index: number, arr: T[]) => any),
   getValue?: string | ((item: T, index: number, arr: T[]) => any)
 ) {
-  const ans = {}
+  const ans: ObjectLike = {}
   const len = fields.length
   for (let i = 0; i < len; i++) {
     const originalKey = Object.keys(fields[i])[0]

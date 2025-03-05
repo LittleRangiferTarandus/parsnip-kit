@@ -54,18 +54,26 @@ leftJoin(
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of elements of left array in a left join |
+| `U` | `extends object` | Type of elements of right array in a left join |
+| `R` | `extends object` | Type of elements of array returned |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `left` | `object[]` | `false` | `undefined` | The left array in a left join |
-| `right` | `object[]` | `false` | `undefined` | The right array in a left join |
-| `leftKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the left array |
-| `rightKey` | `string \| ((item: any, index: number, arr: any[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the right array |
-| `merge` | `(left: any, right: any \| undefined) => any` | `false` | `undefined` | Return the result of merging elements from left and right arrays. |
+| `left` | `T[]` | `false` | `undefined` | The left array in a left join |
+| `right` | `U[]` | `false` | `undefined` | The right array in a left join |
+| `leftKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the left array |
+| `rightKey` | `string \| ((item: U, index: number, arr: U[]) => any)` | `false` | `undefined` | Provide an identifier to distinguish elements in the right array |
+| `merge` | `(left: T, right: U \| undefined) => R` | `false` | `undefined` | Return the result of merging elements from left and right arrays. |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any[]`  |
+| `R[]`  |

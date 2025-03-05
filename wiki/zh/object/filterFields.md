@@ -32,11 +32,17 @@ const result2 = filterFields(arr1, iterator2)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 待遍历的对象的类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | 待遍历的对象  |
+| `obj` | `T` | `false` | `undefined` | 待遍历的对象  |
 | `iterator` | `(value: any, key: string, object: T) => boolean` | `false` | `undefined` | 迭代器函数  |
 
 #### Returns

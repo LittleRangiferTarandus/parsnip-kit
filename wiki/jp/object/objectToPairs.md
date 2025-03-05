@@ -28,12 +28,18 @@ objectToPairs(obj, (value, key) => ({ [key]: value }))
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of original object |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `object` | `false` | `undefined` | Original object |
-| `createItem` | `(value: any, key: string, obj: any) => any` | `true` | `undefined` | To create element of array to be returned |
+| `obj` | `T` | `false` | `undefined` | Original object |
+| `createItem` | `(value: T[string & keyof T], key: string, obj: T) => any` | `true` | `undefined` | To create element of array to be returned |
 
 #### Returns
 

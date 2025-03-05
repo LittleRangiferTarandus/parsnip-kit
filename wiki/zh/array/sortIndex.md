@@ -22,11 +22,17 @@ sortIndex([1, 25, 4, 9, 16]) // [0, 2, 3, 4, 1]
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | 数组元素类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arr` | `any[]` | `false` | `undefined` | 待排序数组  |
+| `arr` | `T[]` | `false` | `undefined` | 待排序数组  |
 | `comparator` | `(a: T, b: T) => number` | `true` | `undefined` | 比较器  |
 
 #### Returns

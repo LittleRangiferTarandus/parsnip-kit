@@ -3,12 +3,13 @@
  *
  * @en This is a debounce function, which is used to limit the frequency of function calls. It will execute the function after a specified time interval. If the function is called multiple times within the interval, the previous timer will be cleared and reset.
  *
- * @param {(...args: any[]) => any} func @zh 要防抖的函数 @en The function to debounce
+ * @template {extends (...args: any[]) => any} T @zh 要防抖的函数类型 @en Type of function to debounce
+ * @param {T} func @zh 要防抖的函数 @en The function to debounce
  * @param {number} wait @zh 两次连续调用之间的延迟时间（毫秒） @en The delay time between two consecutive calls (in milliseconds)
  * @param {object} [options] @zh 可选参数对象 @en Optional parameter object
  * @param {boolean} [options.immediate=false] @zh 是否立即执行第一次调用 @en Whether to execute the function immediately on the first call
  * @param {number} [options.maxWait] @zh 设置最大等待时间 @en Set the maximum waiting time
- * @returns {(...args: any[]) => void}
+ * @returns {(...args: Parameters<T>) => void}
  * @version 0.0.1
  * @example
  * ```typescript

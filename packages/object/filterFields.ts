@@ -3,7 +3,8 @@ import { isNumberString } from '../typed/isNumberString'
 /**
  * @zh 输入一个对象`obj`和迭代器`iterator`，遍历对象的每个字段，对每个字段的值执行`iterator`，返回值`== false`则移除该字段，返回新的普通对象或数组。
  * @en Input an object `obj` and an iterator `iterator`, iterate over each field of the object, execute `iterator` for each field's value, remove the field if the return value `== false`, and return a new plain object or array.
- * @param {object} obj @zh 待遍历的对象 @en Object to iterate
+ * @template {extends object} T @zh 待遍历的对象的类型 @en Type of object to iterate
+ * @param {T} obj @zh 待遍历的对象 @en Object to iterate
  * @param {(value: any, key: string, object: T) => boolean} iterator @zh 迭代器函数 @en Iterator function
  * @returns {object}
  * @version 0.0.1
@@ -31,7 +32,7 @@ import { isNumberString } from '../typed/isNumberString'
 export function filterFields<T extends object>(
   obj: T,
   iterator: (value: any, key: string, object: T) => boolean
-) {
+): object {
   const ans: any = Array.isArray(obj) ? [] : {}
   const objKeys = Object.keys(obj)
   for (const key of objKeys) {

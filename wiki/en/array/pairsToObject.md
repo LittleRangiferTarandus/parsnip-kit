@@ -27,16 +27,26 @@ pairsToObject(users, pair => pair[0], pair => `${pair[1]} replies`)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | Type of elements of array |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `pairs` | `any[]` | `false` | `undefined` | The array of key-value object |
-| `getKey` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | Extract keys form sub-arrays |
-| `getValue` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | Extract values form sub-arrays |
+| `pairs` | `T[]` | `false` | `undefined` | The array of key-value object |
+| `getKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Extract keys form sub-arrays |
+| `getValue` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Extract values form sub-arrays |
 
 #### Returns
 
 | Type |
 | ---  |
-| `object`  |
+| `ObjectLike`  |
+
+#### Reference
+
+[ObjectLike](../common/types#objectlike)

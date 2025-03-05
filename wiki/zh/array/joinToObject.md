@@ -35,16 +35,26 @@ joinToObject(data, pair => pair.name, pair => pair.type)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends object` | 数组元素类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `pairs` | `any[]` | `false` | `undefined` | 键值对对象数组  |
-| `getKey` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | 从子对象中提取键   |
-| `getValue` | `string \| ((item: any[], index: number, arr: any[][]) => any)` | `true` | `undefined` | 从子对象中提取值   |
+| `pairs` | `T[]` | `false` | `undefined` | 键值对对象数组  |
+| `getKey` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | 从子对象中提取键   |
+| `getValue` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | 从子对象中提取值   |
 
 #### Returns
 
 | Type |
 | ---  |
-| `object`  |
+| `ObjectLike`  |
+
+#### Reference
+
+[ObjectLike](../common/types#objectlike)

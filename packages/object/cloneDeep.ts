@@ -1,6 +1,7 @@
 import { ObjectLike } from '../common/types'
-import { isFunction, isObject } from '../main'
 import { getTypeTag } from '../typed/getTypeTag'
+import { isFunction } from '../typed/isFunction'
+import { isObject } from '../typed/isObject'
 import { cloneNotCollectionObject } from './clone'
 
 type CustomizeClone = (
@@ -25,9 +26,11 @@ type CustomizeClone = (
  * Supports the same data types as the [clone](../object/clone) function. For objects that are not supported, refers to Lodash's handling approach by returning these objects themselves to ensure the usability of the copy results.
  *
  * An optional parameter `customizeClone` used to override the behavior when cloning unsupported objects and plain objects.
- * @param {any} obj @zh 待复制的参数 @en Parameter to be cloned
+ *
+ * @template {} T @zh 待复制参数的类型 @en Type of parameter to be cloned
+ * @param {T} obj @zh 待复制的参数 @en Parameter to be cloned
  * @param {(arg: any, key: string | undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any} [customizeClone] @zh 自定义复制普通对象和不支持的内置对象的行为 @en Customize the cloning behavior for plain objects and unsupported built-in objects
- * @returns {any}
+ * @returns {T}
  * @version 0.0.1
  * @example
  * ```ts

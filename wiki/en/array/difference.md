@@ -36,16 +36,22 @@ difference([1.1, 2.4, 3.9, 4.16], [1, 2, 3, 4, 5, 6], (item: number, index: numb
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | Type of elements of array |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arr1` | `any[]` | `false` | `undefined` | Array for computing the difference |
-| `arr2` | `any[]` | `false` | `undefined` | Array for computing the difference |
-| `getter` | `string \| ((item: any, index: number, arr: any[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
+| `arr1` | `T[]` | `false` | `undefined` | Array for computing the difference |
+| `arr2` | `T[]` | `false` | `undefined` | Array for computing the difference |
+| `getter` | `string \| ((item: T, index: number, arr: T[]) => any)` | `true` | `undefined` | Provide an identifier to distinguish the elements |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any[]`  |
+| `T[]`  |

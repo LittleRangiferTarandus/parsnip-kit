@@ -61,17 +61,23 @@ cloneMap === map // false
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends PrimitiveType \| ObjectLike` | Type of parameter to be cloned |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `PrimitiveType \| ObjectLike` | `false` | `undefined` | Parameter to be cloned |
+| `obj` | `T` | `false` | `undefined` | Parameter to be cloned |
 
 #### Returns
 
 | Type |
 | ---  |
-| `PrimitiveType \| ObjectLike`  |
+| `T`  |
 
 #### Reference
 

@@ -1,13 +1,18 @@
-import { getByPath, isString } from '../main'
+import { ObjectLike } from "../common/types"
+import { getByPath } from "../object/getByPath"
+import { isString } from "../typed/isString"
 
 /**
  * @zh 输入两个数组`keys`和`values`，输出`keys`元素作为键，`values`元素作为值的普通对象。可选参数`getKey`和`getValue`用于把对象元素转换为键和值，它们是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
  * @en Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values. Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively. These can be field paths similar to [getByPath](../object/getByPath) or callback functions.
- * @param {any[]} keys @zh 作为键的数组 @en The array serving as keys
- * @param {any[]} values @zh 作为值的数组  @en The array serving as values
- * @param {string | ((item: any, index: number, arr: any[]) => any)} [getKey] @zh 把数组元素转换为键  @en Transform array elements into keys
- * @param {string | ((item: any, index: number, arr: any[]) => any)} [getValue] @zh 把数组元素转换为值  @en Transform array elements into values
- * @returns {{}}
+ * @template {} T @zh 作为键的数组元素类型 @en Type of elements of array serving as keys
+ * @template {} U @zh 作为值的数组元素类型 @en Type of elements of array serving as values
+ * @param {T[]} keys @zh 作为键的数组 @en The array serving as keys
+ * @param {U[]} values @zh 作为值的数组  @en The array serving as values
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getKey] @zh 把数组元素转换为键  @en Transform array elements into keys
+ * @param {string | ((item: U, index: number, arr: U[]) => any)} [getValue] @zh 把数组元素转换为值  @en Transform array elements into values
+ * @returns {ObjectLike}
+ * @refer [ObjectLike](../common/types#objectlike)
  * @version 0.0.1
  * @example
  * ```ts
@@ -37,7 +42,7 @@ export function zipToObject<T, U>(
   getKey?: string | ((item: T, index: number, arr: T[]) => any),
   getValue?: string | ((item: U, index: number, arr: U[]) => any)
 ) {
-  const ans = {}
+  const ans: ObjectLike = {}
 
   const len = keys.length
   for (let i = 0; i < len; i++) {

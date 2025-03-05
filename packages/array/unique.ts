@@ -4,9 +4,10 @@ import { getByPath } from '../object/getByPath'
 /**
  * @zh 输入数组`arr`返回其中只出现一次的元素。接收一个`getter`，它是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数，用于提供区分元素的标识。
  * @en Input an array `arr` and return the elements that appear only once. Accepts a `getter`, which can be a field path similar to [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
- * @param {any[]} arr @zh 需要求交集的数组 @en Array to be intersected
- * @param {string | ((item: any, index: number, arr: any[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
- * @returns {any[]}
+ * @template {} T @zh 元素类型 @en Type of elements of array
+ * @param {T[]} arr @zh 需要去重的数组 @en Array that needs to be deduplicated
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getter] @zh 提供区分元素的标识 @en Provide an identifier to distinguish the elements
+ * @returns {T[]}
  * @version 0.0.1
  * @example
  * ```ts

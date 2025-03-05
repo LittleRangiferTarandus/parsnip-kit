@@ -1,11 +1,12 @@
 # cloneDeep
-![Static Badge](https://img.shields.io/badge/Coverage-87.88%-FF8C00)
+![Static Badge](https://img.shields.io/badge/Coverage-87.95%-FF8C00)
       
 Accepts an argument `arg` and returns its deep clone.
 
 Supports the same data types as the [clone](../object/clone) function. For objects that are not supported, refers to Lodash's handling approach by returning these objects themselves to ensure the usability of the copy results.
 
 An optional parameter `customizeClone` used to override the behavior when cloning unsupported objects and plain objects.
+
 
 > Added in v0.0.1
 
@@ -88,15 +89,21 @@ clonedTestObj3.a === clonedTestObj3 // true
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | Type of parameter to be cloned |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `obj` | `any` | `false` | `undefined` | Parameter to be cloned |
+| `obj` | `T` | `false` | `undefined` | Parameter to be cloned |
 | `customizeClone` | `(arg: any, key: string \| undefined, cache: WeakMap<any, any>, defaultClone4Object: (arg: ObjectLike, cache: WeakMap<any, any>, customizeClone?: CustomizeClone) => any) => any` | `true` | `undefined` | Customize the cloning behavior for plain objects and unsupported built-in objects |
 
 #### Returns
 
 | Type |
 | ---  |
-| `any`  |
+| `T`  |

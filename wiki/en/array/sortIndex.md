@@ -22,11 +22,17 @@ sortIndex([1, 25, 4, 9, 16]) // [0, 2, 3, 4, 1]
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | ` ` | Type of elements of array |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `arr` | `any[]` | `false` | `undefined` | Array to be sorted |
+| `arr` | `T[]` | `false` | `undefined` | Array to be sorted |
 | `comparator` | `(a: T, b: T) => number` | `true` | `undefined` | Comparator for sorting |
 
 #### Returns

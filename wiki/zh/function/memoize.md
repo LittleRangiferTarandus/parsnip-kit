@@ -46,11 +46,17 @@ memoizedCalcWithAllArgs(2, 3)
 
 ### API
 
+#### Type Parameter
+
+| Arg | Type | Description |
+| --- | --- | --- |
+| `T` | `extends (...args: any[]) => any` | 要记忆化的函数类型  |
+
 #### Arguments
 
 | Arg | Type | Optional | Default | Description |
 | --- | --- | --- | --- | --- |
-| `func` | ` (...args: any[]) => any ` | `false` | `undefined` | 要记忆化的函数  |
+| `func` | `T` | `false` | `undefined` | 要记忆化的函数  |
 | `resolver` | ` ( ...args: Parameters<T> ) => any ` | `true` | `undefined` | 用于生成缓存键的函数  |
 | `initCache` | ` Parameters<T>` | `true` | `undefined` | 初始化缓存时的参数  |
 

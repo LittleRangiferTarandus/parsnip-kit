@@ -1,4 +1,5 @@
-import { getByPath, isString } from '../main'
+import { getByPath } from "../object/getByPath";
+import { isString } from "../typed/isString";
 
 /**
  * @zh 通过`getter`可选参数提取键值（或直接使用数组元素本身）,返回其中出现最多的值所在的第一个数组元素。
