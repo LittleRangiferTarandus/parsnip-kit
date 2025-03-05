@@ -10,14 +10,11 @@
  * import { isEqualStrict } from 'parsnip-kit'
  *
  * isEqualStrict(1, 1) // true
- * isEqualStrict(+0, -0) // true
+ * isEqualStrict(+0, -0) // false
  * isEqualStrict(NaN, NaN) // true
  * isEqualStrict({ a: 1 }, { a: 1 }) // false
  * ```
  */
 export function isEqualStrict(arg1: any, arg2: any) {
-  if (arg1 === 0 && arg2 === 0) {
-    return true
-  }
   return Object.is(arg1, arg2)
 }

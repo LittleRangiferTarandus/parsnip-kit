@@ -5,7 +5,7 @@ import { isEqual } from '../isEqual'
 describe('equal', () => {
   test('isEqualStrict', () => {
     expect(isEqualStrict(1, 1)).eq(true)
-    expect(isEqualStrict(+0, -0)).eq(true)
+    expect(isEqualStrict(+0, -0)).eq(false)
     expect(isEqualStrict(NaN, NaN)).eq(true)
     expect(isEqualStrict('hello', 'hello')).eq(true)
     expect(isEqualStrict(true, true)).eq(true)
