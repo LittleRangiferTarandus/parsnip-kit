@@ -1,0 +1,10 @@
+coverage/
+node_modules/
+script/
+wiki/
+dts-bundle-generator.config.json
+eslint.config.js
+README.jp.md
+README.zh.md
+tsconfig.json
+vite.config.ts
