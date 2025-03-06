@@ -159,4 +159,29 @@ export type EdgeReverse<
   D = 'left' | 'right'
 > = D extends 'right' ? Head<T> : Tail<T>
 
+
+```
+# EmptyOrParameters
+      
+返回函数的参数值类型，若非函数返回`never[]`类型。
+
+### Source
+
+```typescript
+export type EmptyOrParameters<T> = T extends (...args: any[]) => any
+  ? Parameters<T>
+  : never[]
+
+
+```
+# EmptyOrReturnType
+      
+返回函数的返回值类型，若非函数返回`void`类型。
+
+### Source
+
+```typescript
+export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
+  ? ReturnType<T>
+
 ```

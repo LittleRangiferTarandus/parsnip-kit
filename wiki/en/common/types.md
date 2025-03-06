@@ -159,4 +159,29 @@ export type EdgeReverse<
   D = 'left' | 'right'
 > = D extends 'right' ? Head<T> : Tail<T>
 
+
+```
+# EmptyOrParameters
+      
+Returns the parameter types of the function; if the input is not a function, returns the `never[]` type.
+
+### Source
+
+```typescript
+export type EmptyOrParameters<T> = T extends (...args: any[]) => any
+  ? Parameters<T>
+  : never[]
+
+
+```
+# EmptyOrReturnType
+      
+Returns the return type of the function; if the input is not a function, returns the `void` type.
+
+### Source
+
+```typescript
+export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
+  ? ReturnType<T>
+
 ```

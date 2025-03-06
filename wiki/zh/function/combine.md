@@ -50,8 +50,8 @@ combinedRightCurried(5) // 17
 
 | Type |
 | ---  |
-| `(...args: Parameters<Edge<T, R>>) => ReturnType<EdgeReverse<T, R>>`  |
+| `(...args: EmptyOrParameters<Edge<T, R>>) => EmptyOrReturnType<EdgeReverse<T, R>>`  |
 
 #### Reference
 
-[Edge](../common/types#edge) [EdgeReverse](../common/types#edgereverse)
+[Edge](../common/types#edge) [EdgeReverse](../common/types#edgereverse) [EmptyOrParameters](../common/types#emptyorparameters) [EmptyOrReturnType](../common/types#emptyorreturntype)

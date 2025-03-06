@@ -46,4 +46,4 @@ setByPath(test5, 'b', 2) // { a: 1, b: 2 }
 
 | Type |
 | ---  |
-| `undefined`  |
+| `void`  |

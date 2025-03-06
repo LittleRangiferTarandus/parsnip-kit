@@ -36,4 +36,4 @@ deleteByPath(test2, 'a.b') // { a: {}, d: [2] }
 
 | Type |
 | ---  |
-| `undefined`  |
+| `void`  |

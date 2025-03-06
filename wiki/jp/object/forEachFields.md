@@ -40,4 +40,4 @@ forEachFields(user, (value, key, obj) => {
 
 | Type |
 | ---  |
-| `undefined`  |
+| `void`  |
