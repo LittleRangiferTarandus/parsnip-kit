@@ -7,7 +7,7 @@ import { isObject } from '../typed/isObject'
  * @en Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to delete the field at the end of the path.
  * @param {object} obj @zh 待删除的对象 @en Object to be deleted
  * @param {string} path @zh 字段所在的路径 @en Field path
- * @returns {undefined}
+ * @returns {void}
  * @version 0.0.1
  * @example
  * ```ts

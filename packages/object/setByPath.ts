@@ -8,7 +8,7 @@ import { isObject } from '../typed/isObject'
  * @param {object} obj @zh 待取值的对象 @en Object to be set
  * @param {string} path @zh 字段所在的路径 @en Field path
  * @param {any} value @zh 设置的值 @en Value to be set
- * @returns {undefined}
+ * @returns {void}
  * @version 0.0.1
  * @example
  * ```ts

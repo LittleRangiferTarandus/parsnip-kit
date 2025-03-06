@@ -4,7 +4,7 @@
  * @template {extends object} T @en Object type @zh 对象类型
  * @param {T} obj @zh 待遍历的对象 @en Object to iterate
  * @param {(value: any, key: string, object: T) => any} iterator @zh 迭代器函数 @en Iterator function
- * @returns {undefined}
+ * @returns {void}
  * @version 0.0.1
  * @example
  * ```ts
