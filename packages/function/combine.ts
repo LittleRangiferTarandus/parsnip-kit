@@ -7,7 +7,7 @@ import { Edge, EdgeReverse, EmptyOrParameters, EmptyOrReturnType } from '../comm
  * @template {extends 'left' | 'right' = 'left' | 'right'} R @zh 结合方向类型 @en Combination direction type
  * @param {T} functions @zh 用于结合的函数数组 @en The array of functions to combine
  * @param {R} [direction='right'] @zh 函数结合的方向 @en The direction in which to combine the functions
- * @returns {(...args: Parameters<Edge<T, R>>) => ReturnType<EdgeReverse<T, R>>}
+ * @returns {(...args: EmptyOrParameters<Edge<T, R>>) => EmptyOrReturnType<EdgeReverse<T, R>>}
  * @version 0.0.1
  * @refer [Edge](../common/types#edge) [EdgeReverse](../common/types#edgereverse) [EmptyOrParameters](../common/types#emptyorparameters) [EmptyOrReturnType](../common/types#emptyorreturntype)
  * @example
