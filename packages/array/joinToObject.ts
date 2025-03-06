@@ -56,7 +56,7 @@ export function joinToObject<T extends object>(
       ? isString(getValue)
         ? getByPath(fields[i] as object, getValue)
         : getValue(fields[i], i, fields)
-      : fields[i][originalKey]
+      : (fields[i] as any)[originalKey]
     ans[key] = value
   }
   return ans

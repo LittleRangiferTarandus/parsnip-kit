@@ -29,11 +29,11 @@
 export function curry(fn: (...args: any[]) => any) {
   const argsLength = fn.length
 
-  return function curried(...args: any[]) {
+  return function curried(this: any, ...args: any[]) {
     if (args.length >= argsLength) {
       return fn.apply(this, args)
     } else {
-      return function (...restArgs: any[]) {
+      return function (this: any, ...restArgs: any[]) {
         return curried.apply(this, args.concat(restArgs))
       }
     }

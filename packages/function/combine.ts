@@ -1,4 +1,4 @@
-import { Edge, EdgeReverse } from '../common/types'
+import { Edge, EdgeReverse, EmptyOrParameters, EmptyOrReturnType } from '../common/types'
 
 /**
  * @en Combine multiple functions and execute them in the specified order of `direction`, by default of `'right'` meaning executing from right to left. The return of each function takes the next function as an argument.
@@ -9,7 +9,7 @@ import { Edge, EdgeReverse } from '../common/types'
  * @param {R} [direction='right'] @zh 函数结合的方向 @en The direction in which to combine the functions
  * @returns {(...args: Parameters<Edge<T, R>>) => ReturnType<EdgeReverse<T, R>>}
  * @version 0.0.1
- * @refer [Edge](../common/types#edge) [EdgeReverse](../common/types#edgereverse)
+ * @refer [Edge](../common/types#edge) [EdgeReverse](../common/types#edgereverse) [EmptyOrParameters](../common/types#emptyorparameters) [EmptyOrReturnType](../common/types#emptyorreturntype)
  * @example
  * ```typescript
  * import { combine } from 'parsnip-kit'
@@ -36,8 +36,8 @@ export function combine<
   R extends 'left' | 'right' = 'left' | 'right'
 >(functions: T, direction: R = 'right' as R) {
   return function combined(
-    ...args: Parameters<Edge<T, R>>
-  ): ReturnType<EdgeReverse<T, R>> {
+    ...args: EmptyOrParameters<Edge<T, R>>
+  ): EmptyOrReturnType<EdgeReverse<T, R>> {
     let result
     let functionsToRun
 

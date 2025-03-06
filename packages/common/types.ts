@@ -93,3 +93,10 @@ export type EdgeReverse<
   T extends readonly any[],
   D = 'left' | 'right'
 > = D extends 'right' ? Head<T> : Tail<T>
+
+export type EmptyOrParameters<T> = T extends (...args: any[]) => any
+  ? Parameters<T>
+  : []
+export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
+  ? ReturnType<T>
+  : undefined
