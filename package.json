@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest run --coverage",
-    "build": "vite build",
+    "build": "vite build && npx dts-bundle-generator -config dts-bundle-generator.config.json && node script/removeComment.js && npx eslint ./dist/parsnip-kit.d.ts --fix",
     "lint": "npx eslint packages/",
     "lint:fix": "npx eslint packages/ --fix",
     "doc": "npm run test && node script/generateMd.js",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "@vitest/coverage-v8": "^3.0.5",
     "comment-parser": "^1.4.1",
+    "dts-bundle-generator": "^9.5.1",
     "eslint": "^9.20.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -26,13 +27,25 @@
     "vitepress": "^1.6.3",
     "vitest": "^3.0.5"
   },
+  "main": "./dist/parsnip-kit.js",
   "exports": {
     "import": "./dist/parsnip-kit.js",
     "require": "./dist/parsnip-kit.cjs"
   },
+  "types": "dist/parsnip-kit.d.ts",
   "imports": {
     "parsnip-kit/*": "./packages/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LittleRangiferTarandus/parsnip-kit"
+  },
+  "author": {
+    "name": "Rangifer Tarandus",
+    "url": "https://github.com/LittleRangiferTarandus"
+  },
+  "license": "MIT",
+  "description": "A next-generation JS utility library, zero-dependency, with TypeScript support.",
   "keywords": [
     "tool",
     "kit",

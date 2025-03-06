@@ -11,14 +11,18 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noImplicitAny": false,
+
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "dist",
   },
-  "include": ["src"]
+  "include": ["packages"],
+  "exclude": ["node_modules", "dist", "packages/**/*.test.ts"]
 }
