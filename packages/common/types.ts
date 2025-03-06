@@ -94,9 +94,18 @@ export type EdgeReverse<
   D = 'left' | 'right'
 > = D extends 'right' ? Head<T> : Tail<T>
 
+/**
+ * @en Returns the parameter types of the function; if the input is not a function, returns the `never[]` type.
+ * @zh 返回函数的参数值类型，若非函数返回`never[]`类型。
+ */
 export type EmptyOrParameters<T> = T extends (...args: any[]) => any
   ? Parameters<T>
-  : []
+  : never[]
+
+/**
+ * @en Returns the return type of the function; if the input is not a function, returns the `void` type.
+ * @zh 返回函数的返回值类型，若非函数返回`void`类型。
+ */
 export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
   ? ReturnType<T>
-  : undefined
+  : void
