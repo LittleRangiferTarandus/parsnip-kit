@@ -50,6 +50,10 @@ const order = [
   'common',
 ]
 
+const guideOrder = [
+  'intro', 'starting'
+]
+
 export const dfs4Md = (lang: string, titleMap: Record<string, string>, additionMap?: Record<string, string>) => {
   const ans: any[] = []
   const files = fs.readdirSync('wiki/' + lang)
@@ -61,5 +65,16 @@ export const dfs4Md = (lang: string, titleMap: Record<string, string>, additionM
       orderedAns.push(entity)
     }
   })
+  const guidePages = orderedAns.find(e => e.key?.toLowerCase() === 'guide')
+  const cloned = [...guidePages.items]
+  guidePages.items = []
+  
+  guideOrder.forEach((e) => {
+    const entity = cloned.find(item => item.key?.toLowerCase() === e)
+    if (entity) {
+      guidePages.items.push(entity)
+    }
+  })
+
   return orderedAns
 }
