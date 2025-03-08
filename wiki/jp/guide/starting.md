@@ -1,5 +1,5 @@
-# 安装
-选择一个你喜欢的包管理器。
+# インストール
+お好みのパッケージマネージャーをお選びください。
 ::: code-group
 ```sh [npm]
 npm install parsnip-kit
@@ -17,17 +17,17 @@ pnpm install parsnip-kit
 bun install parsnip-kit
 ```
 :::
-# 兼容性
+# 互換性
 
-Parsnip Kit 支持在以下环境运行：
+Parsnip Kit は、以下の環境で実行をサポートしています：
 
 |<img src="../../js_logo.png" width="32px" height="32px"/>ECMAScript|<img src="../../edge_logo.svg" width="32px" height="32px"/>Edge|<img src="../../firefox_logo.svg" width="32px" height="32px"/>Firefox|<img src="../../firefox_logo.svg" width="32px" height="32px"/>Chrome|<img src="../../safari_logo.svg" width="32px" height="32px"/>Safari|
 |-|-|-|-|-|
 |≥2020|≥88|≥78|≥87|≥14|
 
-如果您需要支持旧版本的浏览器，请自行添加 [Babel](https://babeljs.io/) 和相应的 Polyfill。
+古いバージョンのブラウザをサポートする必要がある場合は、[Babel](https://babeljs.io/) と対応する Polyfill を手動で追加してください。
 
-# 使用示例
+# 使用例
 ```typescript
 import {
   sum,
@@ -39,7 +39,7 @@ import {
   omit,
   pick
 } from 'parsnip-kit'
-
+[](../../../packages/random/randomBoolean.ts)
 const data = [
   {
     id: 13, name: 'Alice', email: 'alice@example.test',
