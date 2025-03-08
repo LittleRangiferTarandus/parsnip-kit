@@ -39,7 +39,6 @@ import {
   omit,
   pick
 } from 'parsnip-kit'
-[](../../../packages/random/randomBoolean.ts)
 const data = [
   {
     id: 13, name: 'Alice', email: 'alice@example.test',
