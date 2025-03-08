@@ -1,4 +1,9 @@
-import { Edge, EdgeReverse, EmptyOrParameters, EmptyOrReturnType } from '../common/types'
+import {
+  Edge,
+  EdgeReverse,
+  EmptyOrParameters,
+  EmptyOrReturnType
+} from '../common/types'
 
 /**
  * @en Combine multiple functions and execute them in the specified order of `direction`, by default of `'right'` meaning executing from right to left. The return of each function takes the next function as an argument.

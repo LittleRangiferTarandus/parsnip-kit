@@ -1,4 +1,4 @@
-import { isUndefined } from "../typed/isUndefined"
+import { isUndefined } from '../typed/isUndefined'
 
 /**
  * @zh `sequential`通常用于顺序执行多个异步操作的场景。它接收一组返回`Promise`的函数`functions`，串行执行它们，函数接受`PromiseSettledResult`类型包裹的前一个函数的返回作为入参。

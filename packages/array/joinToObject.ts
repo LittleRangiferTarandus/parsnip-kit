@@ -1,6 +1,6 @@
-import { ObjectLike } from "../common/types"
-import { getByPath } from "../object/getByPath"
-import { isString } from "../typed/isString"
+import { ObjectLike } from '../common/types'
+import { getByPath } from '../object/getByPath'
+import { isString } from '../typed/isString'
 
 /**
  * @zh 输入一个对象数组`fields`，输出从每一项对象组合起来形成的普通对象。
