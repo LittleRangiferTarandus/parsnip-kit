@@ -12,7 +12,7 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/logo.svg' }
+      { rel: 'icon', href: '/parsnip-kit/logo.svg' }
     ]
   ],
   themeConfig: {
