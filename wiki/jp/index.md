@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "Parsnip-Kit"
   text: "次世代のJSユーティリティライブラリ。ゼロ依存、TypeScriptサポート。"
+  image:
+    src: /logo.svg
+    alt: logo
   actions:
     - theme: brand
       text: 始めましょう

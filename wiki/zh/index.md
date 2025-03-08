@@ -5,6 +5,9 @@ layout: home
 hero:
   name: "Parsnip-Kit"
   text: "新一代的 JS 工具函数库，零依赖、现代化、支持 TypeScript。"
+  image:
+    src: /logo.svg
+    alt: logo
   actions:
     - theme: brand
       text: 安装
