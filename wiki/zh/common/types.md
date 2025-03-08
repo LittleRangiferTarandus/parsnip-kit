@@ -183,5 +183,6 @@ export type EmptyOrParameters<T> = T extends (...args: any[]) => any
 ```typescript
 export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
   ? ReturnType<T>
+  : void
 
 ```

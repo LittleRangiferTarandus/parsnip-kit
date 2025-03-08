@@ -183,5 +183,6 @@ Returns the return type of the function; if the input is not a function, returns
 ```typescript
 export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
   ? ReturnType<T>
+  : void
 
 ```

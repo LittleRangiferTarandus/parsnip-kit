@@ -18,7 +18,7 @@ symmetricDifference(
   [{ v: 1 }, { v: 2 }, { v: 3 }],
   [{ v: 1 }, { v: 4 }, { v: 8 }],
   'v'
-) // [{ v: 2 }, { v: 3 }, { v: 4 }, { v: 8 }] 
+) // [{ v: 2 }, { v: 3 }, { v: 4 }, { v: 8 }]
 
 symmetricDifference(
   [{ v: [1] }, { v: [2] }, { v: [3] }],
