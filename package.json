@@ -1,6 +1,6 @@
 {
   "name": "parsnip-kit",
-  "version": "0.0.1",
+  "version": "0.0.1beta",
   "type": "module",
   "scripts": {
     "test": "vitest run --coverage",
@@ -10,7 +10,8 @@
     "doc": "npm run test && node script/generateMd.js",
     "docs:dev": "npm run doc && vitepress dev wiki",
     "docs:build": "npm run doc && vitepress build wiki",
-    "docs:preview": "npm run doc && vitepress preview wiki"
+    "docs:preview": "npm run doc && vitepress preview wiki",
+    "release": "npm run test && npm run lint:fix && npm run build && npm publish"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^3.0.5",
