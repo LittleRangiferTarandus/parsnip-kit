@@ -3,11 +3,15 @@ import zh from './zh'
 import en from './en'
 import jp from './jp'
 
+import fs from 'fs'
+
+const logo = fs.readFileSync('wiki/logo.svg', 'base64')
+
 export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/logo.svg' }
+      { rel: 'icon', href: 'data:image/svg+xml;base64,' + logo }
     ]
   ],
   lastUpdated: true,
@@ -17,7 +21,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' }
     ],
-    logo: '/logo.svg',
+    logo: 'data:image/svg+xml;base64,' + logo,
     search: {
       provider: 'local',
       options: {
