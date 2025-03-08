@@ -9,9 +9,12 @@ hero:
     - theme: brand
       text: 始めましょう
       link: /jp/guide/starting
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: Parsnip-Kit は何ですか？
+      link: /jp/guide/intro
+    - theme: alt
+      text: Github
+      link: https://github.com/LittleRangiferTarandus/parsnip-kit
 
 features:
   - title: 🧳 ゼロ依存

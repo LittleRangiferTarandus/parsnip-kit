@@ -7,11 +7,14 @@ hero:
   text: "A next-generation JS utility library, zero-dependency, with TypeScript support."
   actions:
     - theme: brand
-      text: Start
+      text: Install
       link: /en/guide/starting
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: What is Parsnip-Kit?
+      link: /en/guide/intro
+    - theme: alt
+      text: Github
+      link: https://github.com/LittleRangiferTarandus/parsnip-kit
 
 features:
   - title: 🧳 Zero Dependencies

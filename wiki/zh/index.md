@@ -4,14 +4,17 @@ layout: home
 
 hero:
   name: "Parsnip-Kit"
-  text: "次世代的 JS 工具函数库，零依赖、现代化、支持 TypeScript。"
+  text: "新一代的 JS 工具函数库，零依赖、现代化、支持 TypeScript。"
   actions:
     - theme: brand
-      text: 快速开始
+      text: 安装
       link: /zh/guide/starting
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
+    - theme: alt
+      text: Parsnip-Kit 是什么？
+      link: /zh/guide/intro
+    - theme: alt
+      text: Github
+      link: https://github.com/LittleRangiferTarandus/parsnip-kit
 
 features:
   - title: 🧳 零依赖
