@@ -32,7 +32,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'ホーム', link: '/jp' },
-      { text: 'ドキュメント', link: '/jp/guide/starting' }
+      { text: 'ドキュメント', link: '/jp/guide/intro' }
     ],
     sidebar: sidebar,
 
