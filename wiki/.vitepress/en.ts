@@ -9,12 +9,6 @@ const sidebar = dfs4Md('en', titleMap)
 
 export default defineConfig({
   title: "Parsnip-Kit wiki",
-  head: [
-    [
-      'link',
-      { rel: 'icon', href: '/parsnip-kit/logo.svg' }
-    ]
-  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

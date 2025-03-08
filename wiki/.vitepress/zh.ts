@@ -23,12 +23,6 @@ const sidebar = dfs4Md('zh', titleMap, additionMap)
 
 export default defineConfig({
   title: "Parsnip-Kit 文档",
-  head: [
-    [
-      'link',
-      { rel: 'icon', href: '/parsnip-kit/logo.svg' }
-    ]
-  ],
   themeConfig: {
     nav: [
       { text: '首页', link: '/zh' },

@@ -7,7 +7,7 @@ export default defineConfig({
   head: [
     [
       'link',
-      { rel: 'icon', href: '/parsnip-kit/logo.svg' }
+      { rel: 'icon', href: '/logo.svg' }
     ]
   ],
   lastUpdated: true,
@@ -17,7 +17,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' }
     ],
-    logo: '/parsnip-kit/logo.svg',
+    logo: '/logo.svg',
     search: {
       provider: 'local',
       options: {

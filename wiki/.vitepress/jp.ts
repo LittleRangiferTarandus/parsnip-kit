@@ -23,12 +23,6 @@ const sidebar = dfs4Md('jp', titleMap, additionMap)
 
 export default defineConfig({
   title: "Parsnip-Kit wiki",
-  head: [
-    [
-      'link',
-      { rel: 'icon', href: '/parsnip-kit/logo.svg' }
-    ]
-  ],
   themeConfig: {
     nav: [
       { text: 'ホーム', link: '/jp' },
