@@ -88,7 +88,12 @@ export { asyncMap } from './async/asyncMap'
 
 export { concurrent } from './async/concurrent'
 export { sequential } from './async/sequential'
+
 export { retry } from './async/retry'
+export type { RetryOptions } from './async/retry'
+
+export { randomString } from './random/randomString'
+export type { RandomStringOptions } from './random/randomString'
 
 export type {
   PrimitiveType,
@@ -99,7 +104,9 @@ export type {
   Tail,
   Head,
   Edge,
-  EdgeReverse
+  EdgeReverse,
+  EmptyOrParameters,
+  EmptyOrReturnType
 } from './common/types'
 
 export {
