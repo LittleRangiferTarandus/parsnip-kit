@@ -56,6 +56,8 @@ export { splitToArrays } from './object/splitToArrays'
 
 export { clone } from './object/clone'
 export { cloneDeep } from './object/cloneDeep'
+export type { CustomizeClone } from './object/cloneDeep'
+
 export { getTypeTag } from './typed/getTypeTag'
 export { omit } from './object/omit'
 export { pick } from './object/pick'
