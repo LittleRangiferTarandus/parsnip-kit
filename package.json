@@ -8,6 +8,7 @@
     "lint": "npx eslint packages/",
     "lint:fix": "npx eslint packages/ --fix",
     "doc": "npm run test && node script/generateMd.js",
+    "doc:pure": "node script/generateMd.js",
     "docs:dev": "npm run doc && vitepress dev wiki",
     "docs:build": "npm run doc && vitepress build wiki",
     "docs:preview": "npm run doc && vitepress preview wiki",
