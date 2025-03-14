@@ -6,3 +6,6 @@ dts-bundle-generator.config.json
 eslint.config.js
 tsconfig.json
 vite.config.ts
+
+package/**/*.test.ts
+package/**/*.test.js

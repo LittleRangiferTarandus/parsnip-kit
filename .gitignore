@@ -25,3 +25,8 @@ coverage
 *.sw?
 
 wiki/.vitepress/cache
+wiki/.vitepress/dist
+wiki/**/*.md
+
+!wiki/**/index.md
+!wiki/**/guide/*.md
