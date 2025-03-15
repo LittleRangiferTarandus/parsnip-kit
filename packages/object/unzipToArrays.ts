@@ -1,6 +1,6 @@
 /**
  * Input an object `obj`, and output two arrays: one containing its keys and the other containing its values.
- * @template {extends object} Tn Type of original object
+ * @template {extends object} T Type of original object
  * @param {T} obj Original object
  * @param {(value: T[string & keyof T], key: string, obj: T) => any} [createKey] To create element of array of keys to be returned
  * @param {(value: T[string & keyof T], key: string, obj: T) => any} [createValue] To create element of array of values to be returned
