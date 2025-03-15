@@ -7,7 +7,7 @@ import { isNumberString } from '../typed/isNumberString'
  * @param {(value: any, key: string, object: T) => boolean} iterator Iterator function
  * @returns {object}
  * @version 0.0.1
- * 
+ *
  */
 export function filterFields<T extends object>(
   obj: T,

@@ -6,7 +6,7 @@
  * @param {(value: T[string & keyof T], key: string, obj: T) => any} [createValue] To create element of array of values to be returned
  * @returns {[string[], any[]]}
  * @version 0.0.1
- * 
+ *
  */
 export function unzipToArrays<T extends object>(
   obj: T,

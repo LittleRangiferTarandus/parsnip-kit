@@ -3,7 +3,7 @@ import { getByPath } from '../object/getByPath'
 
 /**
  * Input two arrays `arr1` and `arr2`, and output their symmetric difference. Symmetric difference refers to the elements that are in either of the two sets but not in their intersection.
- * 
+ *
  * Accepts a `getter`, which can be a field path of [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
  * @template {} T  Type of elements of array
  * @param {T[]} arr1  Array for which the symmetric difference is to be calculated

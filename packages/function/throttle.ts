@@ -6,10 +6,10 @@
  * @param {number} wait The minimum allowed interval between two consecutive calls (in milliseconds).
  * @param {object} [options] Optional parameter object
  * @param {boolean} [options.leading=false] Whether to execute the function at the beginning of the wait interval
- * @param {boolean} [options.trailing=true]  Whether to execute the function at the end of the wait interval, if not already executed 
+ * @param {boolean} [options.trailing=true]  Whether to execute the function at the end of the wait interval, if not already executed
  * @returns {(...args: Parameters<T>) => void}
  * @version 0.0.1
- * 
+ *
  */
 export function throttle<T extends (...args: any[]) => any>(
   func: T,

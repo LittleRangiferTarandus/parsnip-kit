@@ -27,7 +27,7 @@ import { isEqualStrict } from './isEqualStrict'
  * @param {any} arg2 Variable to compare
  * @returns {boolean}
  * @version 0.0.1
- * 
+ *
  */
 export function isEqual(arg1: any, arg2: any) {
   return isEqualHelper(arg1, arg2)

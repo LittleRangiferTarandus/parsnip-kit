@@ -11,7 +11,7 @@ import { isNumberString } from '../typed/isNumberString'
  * @param {R} keys The keys or array indices to delete
  * @returns {Omit<T, KeyOrIndex<ExtractUnion<R>>>}
  * @version 0.0.1
- * 
+ *
  */
 export function omit<T extends object, R extends readonly string[]>(
   obj: T,

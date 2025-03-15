@@ -10,7 +10,7 @@ import { isString } from '../typed/isString'
  * @param {string | ((item: T, index: number, arr: T[]) => any)} [getter] Provide an identifier to distinguish the elements
  * @returns {T}
  * @version 0.0.1
- * 
+ *
  */
 export function modeItem<T>(
   data: T[],

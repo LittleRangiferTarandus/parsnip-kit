@@ -9,7 +9,7 @@ import { splitToKeys } from '../string/splitToKeys'
  * @template {extends readonly string[]} R Array type of field paths
  * @returns {Pick<T, KeyOrIndex<ExtractUnion<R>> & keyof T>}
  * @version 0.0.1
- * 
+ *
  */
 export function pick<T extends object, R extends readonly string[]>(
   obj: T,

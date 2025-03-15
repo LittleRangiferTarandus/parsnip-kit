@@ -1,4 +1,3 @@
-
 import { randomNumber } from './randomNumber'
 
 const lowercaseStr = 'abcdefghijklmnopqrstuvwxyz'

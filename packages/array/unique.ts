@@ -3,7 +3,7 @@ import { getByPath } from '../object/getByPath'
 
 /**
  * Input an array `arr` and return the elements that appear only once.
- * 
+ *
  * Accepts a `getter`, which can be a field path of [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
  * @template {} T  Type of elements of array
  * @param {T[]} arr  Array that needs to be deduplicated

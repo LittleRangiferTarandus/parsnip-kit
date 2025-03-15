@@ -4,9 +4,9 @@ import { isString } from '../typed/isString'
 
 /**
  * Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values.
- * 
+ *
  * Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively.
- * 
+ *
  * These can be field paths of [getByPath](../object/getByPath) or callback functions.
  * @template {} T Type of elements of array serving as keys
  * @template {} U Type of elements of array serving as values
@@ -16,7 +16,7 @@ import { isString } from '../typed/isString'
  * @param {string | ((item: U, index: number, arr: U[]) => any)} [getValue]  Transform array elements into values
  * @returns {ObjectLike}
  * @version 0.0.1
- * 
+ *
  */
 export function zipToObject<T, U>(
   keys: T[],
