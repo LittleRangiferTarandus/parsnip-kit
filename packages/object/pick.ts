@@ -5,7 +5,7 @@ import { splitToKeys } from '../string/splitToKeys'
  * Returns a new object or array containing the specified keys or indices extracted from the input object or array. The return value is a plain object or array and does not modify the original input.
  * @param {T} obj Type of the object to be processed
  * @param {R} keys The keys or array indices to extract
- * @template {extends object} T Complex type
+ * @template {extends object} T Type of the object to be processed
  * @template {extends readonly string[]} R Array type of field paths
  * @returns {Pick<T, KeyOrIndex<ExtractUnion<R>> & keyof T>}
  * @version 0.0.1

@@ -3,7 +3,7 @@ import { isObject } from '../typed/isObject'
 
 /**
  * Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to retrieve the value. If the traversal is interrupted (e.g., the path is invalid) or the value is undefined or null, use `defaultValue` as the default value.
- * @param {object} obj Object to be got
+ * @param {object} obj Object to get value
  * @param {string} path Field path
  * @param {any} [defaultValue] Default value
  * @returns {any}

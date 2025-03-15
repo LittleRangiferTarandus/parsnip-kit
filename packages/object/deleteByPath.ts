@@ -4,7 +4,7 @@ import { isObject } from '../typed/isObject'
 
 /**
  * Input an object `obj` and a field path `path`, then traverse the object deeply according to the path to delete the field at the end of the path.
- * @param {object} obj  Object to be deleted
+ * @param {object} obj  Object to delete value
  * @param {string} path  Field path
  * @returns {void}
  * @version 0.0.1
