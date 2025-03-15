@@ -49,11 +49,13 @@ function calculateLineCoverage(coverageMap) {
 function generateMD(lang, testReport) {
   const examplePath = fileURLToPath(new URL('../packages', import.meta.url))
   const docsPath = fileURLToPath(new URL('../wiki' + (!lang ? '' : ('/' + lang)), import.meta.url))
+  const templatePath = fileURLToPath(new URL('../docs' + (!lang ? '' : ('/' + lang)), import.meta.url))
   const exampleFiles = fs.readdirSync(examplePath)
 
   const dfs = (fileNames, prefixPath = []) => {
     fileNames.forEach((file) => {
       const [fileName, extname] = file.split('.')
+
       const fullPath = `${
         examplePath
       }/${
@@ -61,6 +63,13 @@ function generateMD(lang, testReport) {
       }${
         prefixPath.length ? '/' : ''
       }${file}`
+
+      const fullTemplatePath = `${
+        templatePath
+      }/${
+        prefixPath.join('/')
+      }/${fileName}.md`
+
       if (fs.statSync(fullPath).isDirectory()) {
         const nextFileNames = fs.readdirSync(fullPath)
         prefixPath.push(file)
@@ -70,12 +79,18 @@ function generateMD(lang, testReport) {
         if (file.endsWith('.test.ts')) {
           return
         }
+        
+        if (!fs.existsSync(fullTemplatePath)) {
+          return
+        }
         const input = fs.readFileSync(fullPath, 'utf-8')
+        const template = fs.readFileSync(fullTemplatePath, 'utf-8')
         let output = jsdocToMD({
           input,
           extname,
           lang,
-          needContent: fullPath.includes('/common/')
+          needContent: fullPath.includes('/common/'),
+          template
         })
         
         if (!output) {
@@ -93,9 +108,9 @@ function generateMD(lang, testReport) {
 
           output.replace('\r\n', '\n')
           const idx = output.indexOf('\n')
-          output = output.slice(0, idx) + `\n![Static Badge](https://img.shields.io/badge/Coverage-${
+          output = output.slice(0, idx) + `\n\n![Static Badge](https://img.shields.io/badge/Coverage-${
             ((statement + branch + fn + line) / 4).toFixed(2) + '%'
-          }-FF8C00)` + output.slice(idx)
+          }-FF8C00)\n\n` + output.slice(idx)
         }
 
         const dirPath = `${

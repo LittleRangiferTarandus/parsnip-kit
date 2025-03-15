@@ -3,38 +3,20 @@ import { getByPath } from '../object/getByPath'
 import { isString } from '../typed/isString'
 
 /**
- * @zh 输入两个数组`keys`和`values`，输出`keys`元素作为键，`values`元素作为值的普通对象。可选参数`getKey`和`getValue`用于把对象元素转换为键和值，它们是类似于[getByPath](../object/getByPath)的字段路径，或者回调函数。
- * @en Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values. Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively. These can be field paths similar to [getByPath](../object/getByPath) or callback functions.
- * @template {} T @zh 作为键的数组元素类型 @en Type of elements of array serving as keys
- * @template {} U @zh 作为值的数组元素类型 @en Type of elements of array serving as values
- * @param {T[]} keys @zh 作为键的数组 @en The array serving as keys
- * @param {U[]} values @zh 作为值的数组  @en The array serving as values
- * @param {string | ((item: T, index: number, arr: T[]) => any)} [getKey] @zh 把数组元素转换为键  @en Transform array elements into keys
- * @param {string | ((item: U, index: number, arr: U[]) => any)} [getValue] @zh 把数组元素转换为值  @en Transform array elements into values
+ * Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values.
+ * 
+ * Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively.
+ * 
+ * These can be field paths of [getByPath](../object/getByPath) or callback functions.
+ * @template {} T Type of elements of array serving as keys
+ * @template {} U Type of elements of array serving as values
+ * @param {T[]} keys  The array serving as keys
+ * @param {U[]} values  The array serving as values
+ * @param {string | ((item: T, index: number, arr: T[]) => any)} [getKey]  Transform array elements into keys
+ * @param {string | ((item: U, index: number, arr: U[]) => any)} [getValue]  Transform array elements into values
  * @returns {ObjectLike}
- * @refer [ObjectLike](../common/types#objectlike)
  * @version 0.0.1
- * @example
- * ```ts
- * import { zipToObject } from 'parsnip-kit'
- *
- * zipToObject(['id', 'name', 'skill'], [1, 'Alex', ['Javascript']])
- * // { id: 1, name: 'Alex', skill: ['Javascript'] }
- *
- * const users = [{ id: 0, user: 'IAmBot' }, { id: 2, user: 'Alice' }, { id: 5, user: 'Tom' }]
- * const record = [
- *   { system: 'Linux', count: 99999, userId: 0 },
- *   { system: 'Mac OS', count: 10, userId: 2 },
- *   { system: 'Window', count: 2, userId: 5 },
- * ]
- * zipToObject(
- *   users, record, 'user', 'count'
- * ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
- *
- * zipToObject(
- *   users, record, item => item.user, item => item.count
- * ) // { IAmBot: 99999, Alice: 10, Tom: 2 }
- * ```
+ * 
  */
 export function zipToObject<T, U>(
   keys: T[],

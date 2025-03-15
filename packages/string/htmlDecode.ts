@@ -8,20 +8,10 @@ const decodeMap: { [key: string]: string } = {
 }
 
 /**
- * @zh 将字符串进行 HTML 解码，将特定的 HTML 实体（如 `&lt;`、`&gt;`、`&amp;`）还原为普通字符（如 <、>、&）。
- * @en Decode the string from HTML entities, converting specific HTML entities (such as `&lt;`, `&gt;`, `&amp;`) back to their corresponding plain characters (e.g., <, >, &).
- * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
+ * Decode the string from HTML entities, converting specific HTML entities (such as `&lt;`, `&gt;`, `&amp;`) back to their corresponding plain characters (e.g., <, >, &).
+ * @param {any} arg The string to be converted.
  * @returns {string}
  * @version 0.0.1
- * @example
- * ```ts
- * import { htmlDecode } from 'parsnip-kit'
- *
- * htmlDecode('&#39;test&#39;') // '\'test\''
- * htmlDecode('&quot;test&quot;') // '"test"'
- * htmlDecode('&lt;img/&gt;') // '<img/>'
- * htmlDecode('talk &amp; code') // 'talk & code'
- * ```
  */
 
 export function htmlDecode(arg: string): string {

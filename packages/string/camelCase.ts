@@ -1,23 +1,10 @@
 import { splitToWords } from './splitToWords'
 
 /**
- * @zh 把字符串转换到小驼峰命名。
- * @en Convert the string to camelCase.
- * @param {any} arg @zh 待转换的字符串 @en The string to be converted.
+ * Convert the string to camelCase.
+ * @param {any} arg The string to be converted.
  * @returns {string}
  * @version 0.0.1
- * @example
- * ```ts
- * import { camelCase } from 'parsnip-kit'
- *
- * camelCase('HelloWorld') // 'helloWorld'
- * camelCase('helloWorld') // 'helloWorld'
- * camelCase('hello-world') // 'helloWorld'
- * camelCase('hello_world') // 'helloWorld'
- * camelCase('HELLO_WORLD') // 'helloWorld'
- * camelCase('Hello World') // 'helloWorld'
- * camelCase('-_HELLO World -_') // 'helloWorld'
- * ```
  */
 export function camelCase(arg: string): string {
   const words = splitToWords(arg)

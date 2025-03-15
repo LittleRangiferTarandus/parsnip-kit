@@ -1,33 +1,13 @@
 import { isNumberString } from '../typed/isNumberString'
 
 /**
- * @zh 输入一个对象`obj`和迭代器`iterator`，遍历对象的每个字段，对每个字段的值执行`iterator`，返回值`== false`则移除该字段，返回新的普通对象或数组。
- * @en Input an object `obj` and an iterator `iterator`, iterate over each field of the object, execute `iterator` for each field's value, remove the field if the return value `== false`, and return a new plain object or array.
- * @template {extends object} T @zh 待遍历的对象的类型 @en Type of object to iterate
- * @param {T} obj @zh 待遍历的对象 @en Object to iterate
- * @param {(value: any, key: string, object: T) => boolean} iterator @zh 迭代器函数 @en Iterator function
+ * Input an object `obj` and an iterator `iterator`, iterate over each field of the object, execute `iterator` for each field's value, remove the field if the return value `== false`, and return a new plain object or array.
+ * @template {extends object} T Type of object to iterate
+ * @param {T} obj Object to iterate
+ * @param {(value: any, key: string, object: T) => boolean} iterator Iterator function
  * @returns {object}
  * @version 0.0.1
- * @example
- * ```ts
- * import { filterFields } from 'parsnip-kit'
- *
- * const obj = { a: 1, b: 2, c: 3 }
- * const iterator0 = (value: number) => value > 1
- * const result0 = filterFields(obj, iterator0)
- * // { b: 2, c: 3 }
- *
- * const arr0 = [0, 1, 2, 3]
- * const iterator1 = (value: number) => value % 2 === 0
- * const result1 = filterFields(arr0, iterator1)
- * // [0, 2]
- *
- * const arr1 = [0, 1, 2, 3]
- * arr1['test'] = 'test'
- * const iterator2 = (value, key) => typeof key === 'string'
- * const result2 = filterFields(arr1, iterator2)
- * // [test: 'test']
- * ```
+ * 
  */
 export function filterFields<T extends object>(
   obj: T,

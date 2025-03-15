@@ -1,41 +1,19 @@
 /**
- * @zh 接受一个返回`Promise`的函数`func`和重试次数`maxRetries`（默认为 3），返回一个调用该函数失败时重试的函数。
- *
- * 可选参数`options`设置重试的配置，具体看[这里](#retryoptions)。
- *
- * @en Accepts a function `func` that returns a `Promise` and a `maxRetries` parameter (defaulting to 3), returning a function that retries the invocation of the given function upon failure.
+ * Accepts a function `func` that returns a `Promise` and a `maxRetries` parameter (defaulting to 3), returning a function that retries the invocation of the given function upon failure.
  *
  * The optional parameter `options` sets up the retry configuration, details of which can be found [here](#retryoptions).
  *
- * @template {} T @zh 函数`func`返回的`Promise`的`value`类型 @en Type of the `value` returned by the `Promise` of function `func`.
- * @param {(...args: any[]) => Promise<T>} func @zh 要重试的异步任务函数，必须返回一个`Promise` @en The asynchronous task function to be retried must return a Promise.
- * @param {number} [maxRetries=3] @zh 最大重试次数 @en Maximum number of retries
- * @param {RetryOptions} [options] @zh 配置选项 @en Configuration options
- * @param {number} [options.delay=300] @zh 重试的初始延迟时间（毫秒） @en Initial delay for retries (in milliseconds)
- * @param {number} [options.delayFactor=2] @zh 延迟时间的递增因子（每次重试时延迟时间乘以该值） @en Delay increment factor (the delay is multiplied by this value for each retry)
- * @param {(error: any, attempts: number) => boolean} [options.shouldRetry] @zh 决定是否重试的回调函数 @en Callback function to determine whether to retry
- * @param {(result: any, attempts: number) => any} [options.onSuccess] @zh 任务成功时的回调函数 @en Callback function when the task is successful
- * @param {(result: any, attempts: number) => any} [options.onFailure] @zh 任务失败时的回调函数 @en Callback function when the task fails
+ * @template {} T  Type of the `value` returned by the `Promise` of function `func`.
+ * @param {(...args: any[]) => Promise<T>} func The asynchronous task function to be retried must return a Promise.
+ * @param {number} [maxRetries=3] Maximum number of retries
+ * @param {RetryOptions} [options] Configuration options
+ * @param {number} [options.delay=300]  Initial delay for retries (in milliseconds)
+ * @param {number} [options.delayFactor=2]  Delay increment factor (the delay is multiplied by this value for each retry)
+ * @param {(error: any, attempts: number) => boolean} [options.shouldRetry]  Callback function to determine whether to retry
+ * @param {(result: any, attempts: number) => any} [options.onSuccess] Callback function when the task is successful
+ * @param {(result: any, attempts: number) => any} [options.onFailure] Callback function when the task fails
  * @returns {(...args: Parameters<typeof func>) => Promise<PromiseSettledResult<Awaited<T>>>}
  * @version 0.0.1
- * @example
- * ```ts
- * import { retry } from 'parsnip-kit'
- *
- * let times = 0
- * const func = async (a: number, b: number) => {
- *   if (times < 3) {
- *     times++
- *     throw new Error(`Error ${times}`)
- *   }
- *   return a + b
- * }
- * const retried = retry(func)
- * retried(2, 3).then(res => {
- *   console.log(res)
- *   // { status: 'fulfilled', value: 5 }
- * })
- * ```
  */
 export function retry<T>(
   func: (...args: any[]) => Promise<T>,
@@ -104,8 +82,7 @@ export function retry<T>(
 }
 
 /**
- * @zh `retry`函数的参数`options`的类型。
- * @en The `options` parameter of the `retry` function.
+ * The `options` parameter of the `retry` function.
  * @version 0.0.1
  */
 export interface RetryOptions {

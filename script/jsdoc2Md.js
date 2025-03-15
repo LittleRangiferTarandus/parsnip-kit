@@ -13,30 +13,109 @@ function formatType(types) {
   return [types];
 }
 function generateMD(func) {
-  const { templates, version, refer, functionName, content, needContent, args, returnType, lang, example } = func;
-  return `
-# ${functionName}
-      
-${func[lang + 'Description'] || func['enDescription'] || func.description}${
-  version ? `\n\n> Added in v${version}\n\n`: ''
-}
+  let {
+    templateFile,
+    templates,
+    version,
+    functionName,
+    description,
+    content,
+    args,
+    returnType,
+  } = func;
 
-${
-  example ? `### Usage\n\n${example}\n\n`: ''
-}${
-  needContent ? `### Source\n\n\`\`\`typescript\n${content}\n\`\`\`\n\n`: ''
-}${
-  refer || returnType || args?.length ? '### API\n\n' : ''
-}${
-  templates?.length ? `#### Type Parameter\n\n| Arg | Type | Description |\n| --- | --- | --- |\n${templates.map((item) => `| \`${item.name}\` | ${'`' + (formatType(item.type).join(' \\| ') || ' ') + '`'} | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
-}${
-  args?.length ? `#### Arguments\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${args.map((item) => `| \`${item.name}\` | ${'`' + formatType(item.type).join(' \\| ') + '`'} | \`${item.optional}\` | \`${item.default}\` | ${item[lang + 'Desc'] || item['enDesc'] || item.desc} |`).join('\n')}\n\n` : ''
-}${
-  returnType ? `#### Returns\n\n| Type |\n| ---  |\n| \`${returnType}\`  |\n\n` : ''
-}${
-  refer ? `#### Reference\n\n${refer}` : ''
-}
-`;
+  const descReg = new RegExp(`\\[\\[\\[desc ${functionName}([\\d\\D]*?)\\]\\]\\]`)
+  const matchDesc = templateFile.match(descReg)
+  if (matchDesc) {
+    templateFile = templateFile.slice(0, matchDesc.index)
+      + (matchDesc[1]?.split(/\n|\r\n/).map(e => e.trim()).join('\n').trim() || description)
+      + templateFile.slice(matchDesc.index + matchDesc[0].length)
+  }
+  
+  const matchVersion = templateFile.match(new RegExp(`\\[\\[\\[version ${functionName}([\\d\\D]*?)\\]\\]\\]`))
+  if (matchVersion) {
+    templateFile = templateFile.slice(0, matchVersion.index)
+      + (version ? `\n\n> Added in v${version}\n\n`: '')
+      + templateFile.slice(matchVersion.index + matchVersion[0].length)
+  }
+  
+  const matchTemplate = templateFile.match(new RegExp(`\\[\\[\\[template ${functionName}([\\d\\D]*?)\\]\\]\\]`))
+  if (matchTemplate) {
+    const dict = {}
+    if (matchTemplate[1]) {
+      let rows = matchTemplate[1].trim().split(/\n|\r\n/)
+      rows = rows.forEach(row => {
+        const idx = row.indexOf(':')
+        if (idx === -1) {
+          return
+        }
+        const key = row.slice(0, idx)
+        const value = row.slice(idx + 1)
+        dict[key.trim()] = value.trim()
+      })
+    }
+    const text = templates?.length
+      ? `\n\n| Arg | Type | Description |\n| --- | --- | --- |\n${
+        templates.map((item) => `| \`${
+          item.name
+        }\` | ${
+          '`' + (formatType(item.type).join(' \\| ') || ' ') + '`'
+        } | ${dict[item.name] || item.desc} |`).join('\n')
+      }\n\n` : ''
+      
+    templateFile = templateFile.slice(0, matchTemplate.index)
+      + text
+      + templateFile.slice(matchTemplate.index + matchTemplate[0].length)
+  }
+
+  const matchParams = templateFile.match(new RegExp(`\\[\\[\\[params ${functionName}([\\d\\D]*?)\\]\\]\\]`))
+  if (matchParams) {
+    const dict = {}
+    if (matchParams[1]) {
+      let rows = matchParams[1].trim().split(/\n|\r\n/)
+      rows = rows.forEach(row => {
+        const idx = row.indexOf(':')
+        if (idx === -1) {
+          return
+        }
+        const key = row.slice(0, idx)
+        const value = row.slice(idx + 1)
+        dict[key.trim()] = value.trim()
+      })
+    }
+    const text = args?.length
+      ? `\n\n| Arg | Type | Optional | Default | Description |\n| --- | --- | --- | --- | --- |\n${
+        args.map((item) => `| \`${item.name}\` | ${
+          '`' + formatType(item.type).join(' \\| ') + '`'
+        } | \`${
+          item.optional
+        }\` | \`${
+          item.default
+        }\` | ${
+          dict[item.name] || item.desc
+        } |`).join('\n')
+      }\n\n` : ''
+      
+    templateFile = templateFile.slice(0, matchParams.index)
+      + text
+      + templateFile.slice(matchParams.index + matchParams[0].length)
+  }
+
+  const matchReturns = templateFile.match(new RegExp(`\\[\\[\\[returns ${functionName}([\\d\\D]*?)\\]\\]\\]`))
+  if (matchReturns) {
+    templateFile = templateFile.slice(0, matchReturns.index)
+      + (returnType ? `\n\n| Type |\n| ---  |\n| \`${returnType}\`  |\n\n` : '')
+      + templateFile.slice(matchReturns.index + matchReturns[0].length)
+  }
+
+  const sourceReg = new RegExp(`\\[\\[\\[source ${functionName}([\\d\\D]*?)\\]\\]\\]`)
+  const matchSource = templateFile.match(sourceReg)
+  if (matchSource) {
+    templateFile = templateFile.slice(0, matchSource.index)
+      + `\n\n\`\`\`typescript\n${content}\`\`\``
+      + templateFile.slice(matchSource.index + matchSource[0].length)
+  }
+  return templateFile
 }
 
 function isEmpty(val) {
@@ -49,42 +128,30 @@ function formatExample(sources) {
   return sources.filter((item) => !item.includes('@example')).map((item) => item.slice(3)).join('\n');
 }
 
-const langArr = ['zh', 'en', 'jp']
-
 function getFormatJsdoc(comment) {
   if (!comment) {
     return {}
   }
   const [jsdoc] = parse(comment, { spacing: 'preserve' });
   const returns = jsdoc.tags.find((item) => item.tag === 'returns');
-  const refer = jsdoc.tags.find((item) => item.tag === 'refer');
-  const example = jsdoc.tags.find((item) => item.tag === 'example');
   const version = jsdoc.tags.find((item) => item.tag === 'version');
   const templates = jsdoc.tags.filter((item) => item.tag === 'template')?.map((item) => {
-    const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
       name: item.name,
       type: item.type,
       optional: item.optional,
       default: item.default,
       desc: item.description,
-    }
-    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
-      ans[arr[i * 2] + 'Desc'] = arr[i * 2 + 1]
     }
     return ans
   }) || ''
   const args = jsdoc.tags.filter((item) => item.tag === 'param').map((item) => {
-    const arr = item.description.split(/@(\w+)\s/).filter(Boolean)
     const ans = {
       name: item.name,
       type: item.type,
       optional: item.optional,
       default: item.default,
       desc: item.description,
-    }
-    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
-      ans[arr[i * 2] + 'Desc'] = arr[i * 2 + 1]
     }
     return ans
   })
@@ -94,18 +161,10 @@ function getFormatJsdoc(comment) {
     returnType: returns
       ? returns.type ? returns.type.replace(/\|/g, '\\|') : 'void'
       : '',
-    example: example?.source ? formatExample(example.source.map((item) => item.source)) : '',
     args,
     templates,
     version: version ? [version.name, version.description].filter(Boolean).join(' ') : '',
-    refer: refer ? [refer.name, refer.description].filter(Boolean).join(' ') : ''
   }
-  langArr.forEach(langStr => {
-    const textItem = jsdoc.tags.find((item) => item.tag === langStr)
-    if (textItem) {
-      ans[langStr + 'Description'] = [textItem.name, textItem.description].filter(Boolean).join(' ')
-    }
-  })
   return ans
 }
 function getFunctionName(content) {
@@ -161,21 +220,24 @@ function parseFile(file) {
   return result.filter(Boolean);
 }
 function jsdocToMD(options) {
-  const { input, extname, lang, needContent } = options;
+  const { input, extname, lang, needContent, template: templateFile } = options;
   const parsedFiles = parseFile(input);
-  const mds = parsedFiles.map((file) => {
+  const md = parsedFiles.reduce((pre, file) => {
     const { comment, content } = file;
     const formatJsdoc = getFormatJsdoc(comment);
     const { functionName, type } = getFunctionName(content);
     if (!comment) {
-      return ''
+      return pre
     }
     const ans = generateMD({
-      ...formatJsdoc, content, lang, functionName, needContent: (type === 'type' || needContent)
+      ...formatJsdoc,
+      content,
+      functionName,
+      templateFile: pre
     }).trim()
     return ans
-  });
-  return mds.filter(Boolean).join('\n').trim();
+  }, templateFile);
+  return md
 }
 export {
   jsdocToMD
