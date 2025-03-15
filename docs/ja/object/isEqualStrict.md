@@ -1,5 +1,6 @@
 # isEqualStrict
 [[[desc isEqualStrict
+2つのパラメータ `arg1` と `arg2` を入力し、厳格に等しいかどうかを返します。
 ]]]
 
 [[[version isEqualStrict
@@ -21,7 +22,8 @@ isEqualStrict({ a: 1 }, { a: 1 }) // false
 
 #### Arguments
 [[[params isEqualStrict
-
+arg1:比較する変数
+arg2:比較する変数
 ]]]
 #### Returns
 [[[returns isEqualStrict

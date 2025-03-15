@@ -1,5 +1,10 @@
 # cloneDeep
 [[[desc cloneDeep
+引数 `arg` を受け取り、そのディープコピーを返します。
+
+[clone](../object/clone) 関数と同じデータタイプをサポートしています。サポートされていないオブジェクトについては、Lodash の処理方法を参考に、これらのオブジェクト自身を返すことで、コピー結果の可用性を確保します。
+
+オプションパラメータ `customizeClone` を使用して、サポートされていないオブジェクトとプレーンオブジェクトをクローンする際の動作を上書きできます。
 ]]]
 
 [[[version cloneDeep
@@ -84,11 +89,12 @@ clonedTestObj3.a === clonedTestObj3 // true
 
 #### Type Parameter
 [[[template cloneDeep
-
+T:コピーされるパラメータの型
 ]]]
 #### Arguments
 [[[params cloneDeep
-
+obj:コピーされるパラメータ
+customizeClone:プレーンオブジェクトとサポートされていない組み込みオブジェクトのクローン動作をカスタマイズ
 ]]]
 #### Returns
 [[[returns cloneDeep

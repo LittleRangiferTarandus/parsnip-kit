@@ -1,5 +1,6 @@
 # getByPath
 [[[desc getByPath
+オブジェクト `obj` とフィールドパス `path` を入力し、パスに従ってオブジェクトを深くトラバースして値を取得します。トラバースが中断された場合（例えば、パスが無効）、または値が未定義または `null` の場合、`defaultValue` をデフォルト値として使用します。
 ]]]
 
 [[[version getByPath
@@ -23,7 +24,9 @@ getByPath({ a: 1 }, 'a[0].b.c', 'test') // 'test'
 
 #### Arguments
 [[[params getByPath
-
+path:フィールドパス
+defaultValue:デフォルト値
+obj:値を取得するオブジェクト
 ]]]
 #### Returns
 [[[returns getByPath

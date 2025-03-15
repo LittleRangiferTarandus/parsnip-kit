@@ -1,5 +1,6 @@
 # objectToPairs
 [[[desc objectToPairs
+オブジェクト `obj` を入力し、各フィールドのキー値ペアからなる配列、またはオプションパラメータ `createItem` によって返された結果からなる配列を出力します。
 ]]]
 
 [[[version objectToPairs
@@ -28,11 +29,12 @@ objectToPairs(obj, (value, key) => ({ [key]: value }))
 
 #### Type Parameter
 [[[template objectToPairs
-
+T: 元オブジェクトの型
 ]]]
 #### Arguments
 [[[params objectToPairs
-
+obj:元オブジェクト
+createItem:返却配列の要素を作成する
 ]]]
 #### Returns
 [[[returns objectToPairs

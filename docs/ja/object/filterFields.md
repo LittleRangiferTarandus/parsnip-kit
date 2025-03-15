@@ -1,5 +1,6 @@
 # filterFields
 [[[desc filterFields
+オブジェクト `obj` とイテレータ `iterator` を入力し、オブジェクトの各フィールドをイテレートし、各フィールドの値に対して `iterator` を実行します。戻り値が `== false` の場合、フィールドを削除し、新しいプレーンオブジェクトまたは配列を返します。
 ]]]
 
 [[[version filterFields
@@ -32,11 +33,12 @@ const result2 = filterFields(arr1, iterator2)
 
 #### Type Parameter
 [[[template filterFields
-
+T:イテレートするオブジェクトの型
 ]]]
 #### Arguments
 [[[params filterFields
-
+obj :イテレートするオブジェクト
+iterator :イテレータ関数
 ]]]
 #### Returns
 [[[returns filterFields

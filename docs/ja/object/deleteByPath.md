@@ -1,5 +1,6 @@
 # deleteByPath
 [[[desc deleteByPath
+オブジェクト `obj` とフィールドパス `path` を入力し、パスに従ってオブジェクトを深くトラバースして、パスの末端にあるフィールドを削除します。
 ]]]
 
 [[[version deleteByPath
@@ -25,7 +26,8 @@ deleteByPath(test2, 'a.b') // { a: {}, d: [2] }
 
 #### Arguments
 [[[params deleteByPath
-
+obj:値を削除するオブジェクト
+path :フィールドパス
 ]]]
 #### Returns
 [[[returns deleteByPath

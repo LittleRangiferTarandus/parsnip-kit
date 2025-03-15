@@ -1,5 +1,6 @@
 # pick
 [[[desc pick
+入力されたオブジェクトまたは配列から指定されたキーまたはインデックスを抽出し、新しいオブジェクトまたは配列を返します。戻り値はプレーンオブジェクトまたは配列であり、元の入力は変更されません。
 ]]]
 
 [[[version pick
@@ -28,11 +29,13 @@ const result1 = pick(obj, keys1)
 
 #### Type Parameter
 [[[template pick
-
+T:処理するオブジェクトの型
+R:フィールドパスの配列型
 ]]]
 #### Arguments
 [[[params pick
-
+obj:処理するオブジェクトまたは配列
+keys:抽出するキーまたは配列のインデックス
 ]]]
 #### Returns
 [[[returns pick

@@ -1,5 +1,6 @@
 # setByPath
 [[[desc setByPath
+オブジェクト `obj` とフィールドパス `path` を入力し、パスに従ってオブジェクトを深くトラバースして、値 `value` を設定します。
 ]]]
 
 [[[version setByPath
@@ -34,7 +35,9 @@ setByPath(test5, 'b', 2) // { a: 1, b: 2 }
 
 #### Arguments
 [[[params setByPath
-
+obj: 設定するオブジェクト
+path: フィールドパス
+value: 設定する値
 ]]]
 #### Returns
 [[[returns setByPath

@@ -1,5 +1,6 @@
 # omit
 [[[desc omit
+指定されたキーまたはインデックスを削除して、入力されたオブジェクトまたは配列から新しいオブジェクトまたは配列を生成します。戻り値はプレーンオブジェクトまたは配列であり、入力は変更されません。
 ]]]
 
 [[[version omit
@@ -23,11 +24,13 @@ const arr = omit([1, 2, 3, 4], ['[1]', '3'] as const)
 
 #### Type Parameter
 [[[template omit
-
+T:処理するオブジェクトの型
+R:フィールドパスの配列型
 ]]]
 #### Arguments
 [[[params omit
-
+obj:処理するオブジェクトまたは配列
+keys:削除するキーまたは配列のインデックス
 ]]]
 #### Returns
 [[[returns omit

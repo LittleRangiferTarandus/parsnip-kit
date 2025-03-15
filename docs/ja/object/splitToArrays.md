@@ -1,5 +1,6 @@
 # splitToArrays
 [[[desc splitToArrays
+オブジェクト `obj` を入力し、`obj` の各フィールドからなるプレーンオブジェクトの配列を出力します。オブジェクトごとに分割されたもの、またはオプションパラメータ `createItem` によって返された結果から構成された配列です。
 ]]]
 
 [[[version splitToArrays
@@ -28,11 +29,12 @@ splitToArrays(obj, (value, key) => [key, value])
 
 #### Type Parameter
 [[[template splitToArrays
-
+T:元オブジェクトの型
 ]]]
 #### Arguments
 [[[params splitToArrays
-
+obj:元オブジェクト
+createItem:返却配列の要素を作成する
 ]]]
 #### Returns
 [[[returns splitToArrays
