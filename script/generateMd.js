@@ -132,7 +132,7 @@ function generateMD(lang, testReport) {
   dfs(exampleFiles)
 }
 
-['en', 'zh', 'jp'].forEach(item => {
+['en', 'zh', 'ja'].forEach(item => {
   const data = JSON.parse(fs.readFileSync('coverage/coverage.json'))
   generateMD(item, data)
 })

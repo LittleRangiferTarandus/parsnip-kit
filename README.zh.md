@@ -9,7 +9,7 @@ Parsnip-Kit 是一个零依赖的 JavaScript 工具库，支持 TypeScript。它
 ## 语言版本
 - [中文](README.zh.md)
 - [English](README.md)
-- [日本語](README.jp.md)
+- [日本語](README.ja.md)
 
 # 安装
 ```sh 

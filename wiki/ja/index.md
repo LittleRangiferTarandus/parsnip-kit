@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 始めましょう
-      link: /jp/guide/starting
+      link: /ja/guide/starting
     - theme: alt
       text: Parsnip-Kit は何ですか？
-      link: /jp/guide/intro
+      link: /ja/guide/intro
     - theme: alt
       text: Github
       link: https://github.com/LittleRangiferTarandus/parsnip-kit

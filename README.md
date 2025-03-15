@@ -9,7 +9,7 @@ Parsnip-Kit is a zero-dependency JavaScript utility library that supports TypeSc
 ## Language Versions
 - [中文](README.zh.md)
 - [English](README.md)
-- [日本語](README.jp.md)
+- [日本語](README.ja.md)
 
 # Installation
 ```sh

@@ -19,14 +19,14 @@ const additionMap = {
   'async': '非同期'
 }
 
-const sidebar = dfs4Md('jp', titleMap, additionMap)
+const sidebar = dfs4Md('ja', titleMap, additionMap)
 
 export default defineConfig({
   title: "Parsnip-Kit wiki",
   themeConfig: {
     nav: [
-      { text: 'ホーム', link: '/jp' },
-      { text: 'ドキュメント', link: '/jp/guide/intro' }
+      { text: 'ホーム', link: '/ja' },
+      { text: 'ドキュメント', link: '/ja/guide/intro' }
     ],
     sidebar: sidebar,
 

@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import zh from './zh'
 import en from './en'
-import jp from './jp'
+import ja from './ja'
 
 export default defineConfig({
   head: [
@@ -39,7 +39,7 @@ export default defineConfig({
               }
             }
           },
-          jp: {
+          ja: {
             translations: {
               button: {
                 buttonText: '検索',
@@ -63,7 +63,7 @@ export default defineConfig({
   locales: {
     zh: { label: '中文', ...zh },
     en: { label: 'English', ...en },
-    jp: { label: '日本語', ...jp },
+    ja: { label: '日本語', ...ja },
   },
   base: '/parsnip-kit/'
 })

@@ -10,7 +10,7 @@
       ? path.length === 0 || path[0] === 'index'
       : path[0] === base && (!path[1] || path[1] === 'index')
     if (flag) {
-      const langTag = lang === 'zh-CN' ? 'zh' : lang === 'ja' ? 'jp' : 'en'
+      const langTag = lang === 'zh-CN' ? 'zh' : lang === 'ja' ? 'ja' : 'en'
       const aTag = document.createElement('a')
         aTag.href = langTag
         document.body.appendChild(aTag)

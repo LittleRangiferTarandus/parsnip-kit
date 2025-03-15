@@ -9,7 +9,7 @@ Parsnip-Kit は TypeScript 対応のゼロ依存 JavaScript ユーティリテ�
 ## 言語バージョン
 - [中文](README.zh.md)
 - [English](README.md)
-- [日本語](README.jp.md)
+- [日本語](README.ja.md)
 
 # インストール
 ```sh 
