@@ -37,11 +37,11 @@ randomString(
 ### API
 
 #### Arguments
-[[[params randomBoolean
+[[[params randomString
 
 ]]]
 #### Returns
-[[[returns randomBoolean
+[[[returns randomString
 
 ]]]
 # RandomStringOptions
