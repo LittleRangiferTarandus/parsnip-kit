@@ -100,6 +100,7 @@ function generateMD(lang, testReport) {
         const path = fullPath.replace(/\//g, '\\')
         const fileData = testReport.coverageMap[path]
 
+        const idx = output.indexOf('\n')
         if (fileData && !fullPath.includes('/common/')) {
           const statement = (Object.keys(fileData.s).filter(key => fileData.s[key] > 0).length / Object.keys(fileData.statementMap).length * 100)
           const branch = (Object.keys(fileData.b).filter(key => fileData.b[key][0] > 0).length / Object.keys(fileData.branchMap).length * 100)
@@ -107,12 +108,11 @@ function generateMD(lang, testReport) {
           const line = calculateLineCoverage(fileData)
 
           output.replace('\r\n', '\n')
-          const idx = output.indexOf('\n')
           output = output.slice(0, idx) + `\n\n![Static Badge](https://img.shields.io/badge/Coverage-${
             ((statement + branch + fn + line) / 4).toFixed(2) + '%'
           }-FF8C00)\n\n` + output.slice(idx)
         }
-
+        output = output.slice(0, idx) + `\n\n[[TOC]]` + output.slice(idx)
         const dirPath = `${
           docsPath
         }/${

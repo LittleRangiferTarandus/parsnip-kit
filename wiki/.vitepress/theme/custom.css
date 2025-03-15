@@ -14,3 +14,15 @@
 img[alt="Static Badge"] {
   display: inline-block;
 }
+
+@media screen and (min-width: 1280px) {
+  .table-of-contents {
+    position: fixed;
+    right: 24px;
+    z-index: 114514;
+  }
+}
+.table-of-contents ul {
+  list-style-type: none;
+  padding-left: 14px;
+}
