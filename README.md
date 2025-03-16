@@ -1,6 +1,6 @@
 # <center> Parsnip-Kit
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-blue)](https://www.typescriptlang.org/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.7.2-blue)](https://www.typescriptlang.org/) [![Vite](https://img.shields.io/badge/Vite-v6.1.0-7D85FF)](https://vite.dev/) [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 Parsnip-Kit is a zero-dependency JavaScript utility library that supports TypeScript. It provides a collection of practical utility functions to help developers handle common programming tasks more efficiently.
 
