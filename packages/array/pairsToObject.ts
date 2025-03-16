@@ -3,7 +3,7 @@ import { getByPath } from '../object/getByPath'
 import { isString } from '../typed/isString'
 
 /**
- * Input a object array `pairs`, and output a plain object composed of key-value pairs extracted from each sub-array. Optional parameters `getKey` and `getValue` can be provided to transform the array elements into keys and values. If not provided, the first element of each sub-array (index 0) will be used as the key, and the second element (index 1) will be used as the value.
+ * Input a object array `pairs`, and return a plain object composed of key-value pairs extracted from each sub-array. Optional parameters `getKey` and `getValue` can be provided to transform the array elements into keys and values. If not provided, the first element of each sub-array (index 0) will be used as the key, and the second element (index 1) will be used as the value.
  *
  * `getKey` and `getValue` can be field paths of [getByPath](../object/getByPath) or callback functions.
  * @template {extends object} T Type of elements of array

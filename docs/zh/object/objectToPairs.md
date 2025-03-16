@@ -1,6 +1,6 @@
 # objectToPairs
 [[[desc objectToPairs
-输入对象`obj`，输出一个数组，由每个字段的键值对形成的数组组成数组，或由可选参数`createItem`返回组成。
+输入对象`obj`，返回一个数组，由每个字段的键值对形成的数组组成数组，或由可选参数`createItem`返回组成。
 ]]]
 
 [[[version objectToPairs

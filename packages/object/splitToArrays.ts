@@ -1,5 +1,5 @@
 /**
- * Input an object `obj`, and output an array of plain objects formed from each field of the `obj`, split by the object, or composed of the results returned by the optional parameter `createItem`.
+ * Input an object `obj`, and return an array of plain objects formed from each field of the `obj`, split by the object, or composed of the results returned by the optional parameter `createItem`.
  * @template {extends object} T Type of original object
  * @param {object} obj Original object
  * @param {(value: T[string & keyof T], key: string, obj: T) => any} [createItem] To create element of array to be returned

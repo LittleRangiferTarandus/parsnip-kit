@@ -1,5 +1,5 @@
 /**
- * Input a number `num` and output a string with thousand separators.
+ * Input a number `num` and return a string with thousand separators.
  * @param {number} num  The number to format
  * @returns {string}
  * @version 0.0.1

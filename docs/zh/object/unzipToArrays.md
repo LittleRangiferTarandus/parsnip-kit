@@ -1,6 +1,6 @@
 # unzipToArrays
 [[[desc unzipToArrays
-输入对象`obj`，输出分别是它的键和值的数组。
+输入对象`obj`，返回分别是它的键和值的数组。
 ]]]
 
 [[[version unzipToArrays

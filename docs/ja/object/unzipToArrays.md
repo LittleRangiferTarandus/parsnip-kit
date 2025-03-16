@@ -1,6 +1,6 @@
 # unzipToArrays
 [[[desc unzipToArrays
-オブジェクト `obj` を入力し、キーを含む配列と値を含む配列の 2 つの配列を出力します。
+オブジェクト `obj` を入力し、キーを含む配列と値を含む配列の 2 つの配列を返します。
 ]]]
 
 [[[version unzipToArrays

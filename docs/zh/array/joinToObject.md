@@ -1,7 +1,7 @@
 # joinToObject
       
 [[[desc joinToObject
-  输入一个对象数组`fields`，输出从每一项对象组合起来形成的普通对象。
+  输入一个对象数组`fields`，返回从每一项对象组合起来形成的普通对象。
  
   可选参数`getKey`和`getValue`用于把子对象转换为键和值，为空时默认提取数组元素第一个字段。`getKey`和`getValue`是[getByPath](../object/getByPath)函数的字段路径，或者回调函数。
 ]]]

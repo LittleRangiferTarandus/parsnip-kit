@@ -1,7 +1,7 @@
 # difference
       
 [[[desc difference
-  输入两个数组`arr1`、`arr2`，输出`arr1` - `arr2`的差集。
+  输入两个数组`arr1`、`arr2`，返回`arr1` - `arr2`的差集。
   
   接收一个`getter`，它是[getByPath](../object/getByPath)函数的字段路径，或者回调函数，用于提供区分元素的标识。
 ]]]

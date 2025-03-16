@@ -3,7 +3,7 @@ import { getByPath } from '../object/getByPath'
 import { isString } from '../typed/isString'
 
 /**
- * Input an array of objects `fields`, and output a plain object formed by combining each item from the array.
+ * Input an array of objects `fields`, and return a plain object formed by combining each item from the array.
  *
  * The optional parameters `getKey` and `getValue` are used to convert child objects into keys and values. When they are not provided, the first field of the array element is extracted by default.
  *

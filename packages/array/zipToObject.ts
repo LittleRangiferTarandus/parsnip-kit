@@ -3,7 +3,7 @@ import { getByPath } from '../object/getByPath'
 import { isString } from '../typed/isString'
 
 /**
- * Input two arrays `keys` and `values`, and output a plain object where elements of `keys` serve as keys and elements of `values` serve as values.
+ * Input two arrays `keys` and `values`, and return a plain object where elements of `keys` serve as keys and elements of `values` serve as values.
  *
  * Optional parameters `getKey` and `getValue` can be provided to transform elements of the objects into keys and values, respectively.
  *

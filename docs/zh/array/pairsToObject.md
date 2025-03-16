@@ -1,7 +1,7 @@
 # pairsToObject
 
 [[[desc pairsToObject
-  输入一个二维数组`pairs`，输出从每一项中提取的键值对组成的普通对象。可选参数`getKey`和`getValue`用于把子对象转换为键和值，为空时默认取对象元素`[0]`作为键，元素`[1]`作为值。
+  输入一个二维数组`pairs`，返回从每一项中提取的键值对组成的普通对象。可选参数`getKey`和`getValue`用于把子对象转换为键和值，为空时默认取对象元素`[0]`作为键，元素`[1]`作为值。
   
   `getKey`和`getValue`是[getByPath](../object/getByPath)函数的字段路径，或者回调函数。
 ]]]

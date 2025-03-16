@@ -1,6 +1,6 @@
 # splitToArrays
 [[[desc splitToArrays
-输入对象`obj`，输出一个数组，由`obj`分割得到的每个字段普通对象组成数组，或由可选参数`createItem`返回组成。
+输入对象`obj`，返回一个数组，由`obj`分割得到的每个字段普通对象组成数组，或由可选参数`createItem`返回组成。
 ]]]
 
 [[[version splitToArrays

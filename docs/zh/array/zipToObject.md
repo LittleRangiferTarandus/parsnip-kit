@@ -1,7 +1,7 @@
 # zipToObject
 
 [[[desc zipToObject
-输入两个数组`keys`和`values`，输出`keys`元素作为键，`values`元素作为值的普通对象。
+输入两个数组`keys`和`values`，返回`keys`元素作为键，`values`元素作为值的普通对象。
 
 可选参数`getKey`和`getValue`用于把对象元素转换为键和值，它们是[getByPath](../object/getByPath)函数的字段路径，或者回调函数。
 ]]]

@@ -1,6 +1,6 @@
 # percent
 [[[desc percent
-输入数值`num`和总数`total`（默认 100），输出格式化的百分比字符串。可选参数`fixed`，控制小数位数，默认为 2。
+输入数值`num`和总数`total`（默认 100），返回格式化的百分比字符串。可选参数`fixed`，控制小数位数，默认为 2。
 ]]]
 
 [[[version percent

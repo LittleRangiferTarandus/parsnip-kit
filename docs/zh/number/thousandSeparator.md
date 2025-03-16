@@ -1,6 +1,6 @@
 # thousandSeparator
 [[[desc thousandSeparator
-输入一个数字`num`，输出一个包含千分分隔符的字符串。
+输入一个数字`num`，返回一个包含千分分隔符的字符串。
 ]]]
 
 [[[version thousandSeparator

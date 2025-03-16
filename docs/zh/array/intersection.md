@@ -1,7 +1,7 @@
 # intersection
       
 [[[desc intersection
-  输入两个数组`arr1`、`arr2`，输出它们的交集。
+  输入两个数组`arr1`、`arr2`，返回它们的交集。
   
   接收一个可选参数`getter`，它是[getByPath](../object/getByPath)函数的字段路径，或者回调函数，用于提供区分元素的标识。
 ]]]

@@ -2,7 +2,7 @@ import { isString } from '../typed/isString'
 import { getByPath } from '../object/getByPath'
 
 /**
- * Input two arrays `arr1` and `arr2`, and output the difference set of `arr1` - `arr2`.
+ * Input two arrays `arr1` and `arr2`, and return the difference set of `arr1` - `arr2`.
  *
  * Accepts a `getter`, which can be a field path of [getByPath](../object/getByPath) or a callback function, used to provide an identifier to distinguish elements.
  * @template {} T Type of elements of array
