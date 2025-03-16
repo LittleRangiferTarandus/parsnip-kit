@@ -91,7 +91,7 @@ const createFunctionTemplate = (moduleName, functionName) => {
   const filePath = path.join(modulePath, `${functionName}.ts`);
   
   const templateContent = fs.readFileSync('./script/template/func.txt', 'utf-8')
-    .replace('[[[function]]]', functionName)
+    .replaceAll('[[[function]]]', functionName)
   
   fs.writeFileSync(filePath, templateContent);
 	
@@ -112,7 +112,7 @@ const createDocsTemplate = (moduleName, functionName) => {
     const docPath = path.join(moduleDocsPath, `${functionName}.md`);
     
     const templateContent = fs.readFileSync('./script/template/doc.txt', 'utf-8')
-    	.replace('[[[function]]]', functionName)
+    	.replaceAll('[[[function]]]', functionName)
     fs.writeFileSync(docPath, templateContent);
 
 		console.log(`Document was created: ${docPath}`);
