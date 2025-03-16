@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'vitest'
 import { lexSort } from '../lexSort'
 import { sortWithIndex } from '../sortWithIndex'
+import { numberSort } from '../numberSort'
 
 const fruits = ['banana', 'apple', 'cherry', 'date']
 const mixedCaseFruits = ['Banana', 'apple', 'Cherry', 'date']
@@ -166,5 +167,86 @@ describe('sortWithIndex', () => {
       { details: { name: 'John' } }
     ])
     expect(indexMap).toEqual([1, 2, 0])
+  })
+})
+
+const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+
+describe('numberSort', () => {
+  test('sorts numbers in ascending order by default', () => {
+    const sorted = numberSort([...numbers])
+    expect(sorted).toEqual([1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9])
+  })
+
+  test('sorts numbers in descending order', () => {
+    const sorted = numberSort([...numbers], 'desc')
+    expect(sorted).toEqual([9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1])
+  })
+
+  test('uses getter as string path', () => {
+    const sortedByAgeAsc = numberSort([...people], 'asc', 'age')
+    expect(sortedByAgeAsc).toEqual([
+      { name: 'Alice', age: 25 },
+      { name: 'John', age: 30 },
+      { name: 'Bob', age: 35 }
+    ])
+
+    const sortedByAgeDesc = numberSort([...people], 'desc', 'age')
+    expect(sortedByAgeDesc).toEqual([
+      { name: 'Bob', age: 35 },
+      { name: 'John', age: 30 },
+      { name: 'Alice', age: 25 }
+    ])
+  })
+
+  test('uses getter as callback function', () => {
+    const sortedByAgeAsc = numberSort(
+      [...people],
+      'asc',
+      (person) => person.age
+    )
+    expect(sortedByAgeAsc).toEqual([
+      { name: 'Alice', age: 25 },
+      { name: 'John', age: 30 },
+      { name: 'Bob', age: 35 }
+    ])
+
+    const sortedByAgeDesc = numberSort(
+      [...people],
+      'desc',
+      (person) => person.age
+    )
+    expect(sortedByAgeDesc).toEqual([
+      { name: 'Bob', age: 35 },
+      { name: 'John', age: 30 },
+      { name: 'Alice', age: 25 }
+    ])
+  })
+
+  test('handles empty array', () => {
+    const emptyArray: number[] = []
+    const sorted = numberSort([...emptyArray])
+    expect(sorted).toEqual([])
+  })
+
+  test('handles array with single element', () => {
+    const singleElementArray = [42]
+    const sorted = numberSort([...singleElementArray])
+    expect(sorted).toEqual([42])
+  })
+
+  test('works with nested objects using getByPath', () => {
+    const nestedObjects = [
+      { details: { age: 30 } },
+      { details: { age: 25 } },
+      { details: { age: 35 } }
+    ]
+
+    const sorted = numberSort([...nestedObjects], 'asc', 'details.age')
+    expect(sorted).toEqual([
+      { details: { age: 25 } },
+      { details: { age: 30 } },
+      { details: { age: 35 } }
+    ])
   })
 })
