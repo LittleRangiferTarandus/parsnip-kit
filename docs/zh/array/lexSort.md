@@ -4,7 +4,7 @@
 
 `order` 可以是 `'asc'`（升序）或者 `desc`（降序），默认为 `'asc'`。内部会调用 [stringComparatorAsc](../common/constants#stringcomparatorasc) 或者 [stringComparatorDesc](../common/constants#stringcomparatordesc)。
 
-可选参数 `getter` 用于从数组 `arr` 的元素中获取字符串值，默认情况下直接使用元素本身进行排序。它值为 [getByPath](../object/getByPath) 函数的字段路径，或者回调函数。
+可选参数 `getter` 用于从数组 `arr` 的元素中获取字符串值，默认情况下直接使用元素本身进行排序。`getter`值为 [getByPath](../object/getByPath) 函数的字段路径，或者回调函数。
 ]]]
 [[[version lexSort
   

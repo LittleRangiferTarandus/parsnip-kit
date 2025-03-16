@@ -56,7 +56,7 @@ R:ソートの順序の型
 [[[params lexSort
 arr: ソート対象の配列
 order: ソートの順序
-getter: 配列要素から文字列値を抽出するもの
+getter: 配列要素から文字列値を取得するもの
 ]]]
 
 #### Returns
