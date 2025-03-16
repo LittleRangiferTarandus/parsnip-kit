@@ -27,7 +27,8 @@
     "typescript-eslint": "^8.24.0",
     "vite": "^6.1.0",
     "vitepress": "^1.6.3",
-    "vitest": "^3.0.5"
+    "vitest": "^3.0.5",
+    "inquirer": "^12.5.0"
   },
   "main": "./dist/parsnip-kit.js",
   "exports": {
@@ -53,8 +54,5 @@
     "kit",
     "utility",
     "parsnip"
-  ],
-  "dependencies": {
-    "inquirer": "^12.5.0"
-  }
+  ]
 }
