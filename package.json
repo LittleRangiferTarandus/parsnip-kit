@@ -12,7 +12,8 @@
     "docs:dev": "npm run doc && vitepress dev wiki",
     "docs:build": "npm run doc && vitepress build wiki",
     "docs:preview": "npm run doc && vitepress preview wiki",
-    "release": "npm run test && npm run lint:fix && npm run build && npm publish"
+    "release": "npm run test && npm run lint:fix && npm run build && npm publish",
+    "init": "node script/init.js"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^3.0.5",
@@ -52,5 +53,8 @@
     "kit",
     "utility",
     "parsnip"
-  ]
+  ],
+  "dependencies": {
+    "inquirer": "^12.5.0"
+  }
 }
