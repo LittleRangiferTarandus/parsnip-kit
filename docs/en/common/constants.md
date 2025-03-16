@@ -47,3 +47,24 @@
 [[[source numberComparatorDesc
   
 ]]]
+
+# codeUnitComparatorAsc
+[[[desc codeUnitComparatorAsc
+]]]
+
+[[[version codeUnitComparatorAsc
+  
+]]]
+### Source
+[[[source codeUnitComparatorAsc
+  
+]]]
+# codeUnitComparatorDesc
+[[[desc codeUnitComparatorDesc
+]]]
+
+[[[version codeUnitComparatorDesc
+]]]
+### Source
+[[[source codeUnitComparatorDesc
+]]]

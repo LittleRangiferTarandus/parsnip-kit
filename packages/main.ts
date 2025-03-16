@@ -97,6 +97,9 @@ export type { RetryOptions } from './async/retry'
 export { randomString } from './random/randomString'
 export type { RandomStringOptions } from './random/randomString'
 
+export { sortWithIndex } from './array/sortWithIndex'
+export { lexSort } from './array/lexSort'
+
 export type {
   PrimitiveType,
   NumberString,
@@ -115,5 +118,7 @@ export {
   stringComparatorAsc,
   stringComparatorDesc,
   numberComparatorAsc,
-  numberComparatorDesc
+  numberComparatorDesc,
+  codeUnitComparatorAsc,
+  codeUnitComparatorDesc
 } from './common/constants'
