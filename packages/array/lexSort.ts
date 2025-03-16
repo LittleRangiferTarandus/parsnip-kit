@@ -2,7 +2,7 @@
  * Sorts parameter `arr` lexicographically based on the order specified by parameter `order` with the default of `'asc'`.
  *
  * The parameter `order` can be specified as either `'asc'` (ascending order) or `'desc'` (descending order).
- * 
+ *
  * It will call [stringComparatorAsc](../common/constants#stringcomparatorasc) or [stringComparatorDesc](../common/constants#stringcomparatordesc) internally.
  *
  * The optional parameter `getter` is used to obtain the string value from elements of `arr`, with the default being to use the element itself for sorting.
