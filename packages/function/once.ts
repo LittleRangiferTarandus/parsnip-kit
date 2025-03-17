@@ -1,5 +1,5 @@
 /**
- * This is a function that accepts a function func and returns a new function that will be called only once. After the first call, it will return the cached result of the first call.
+ * This is a function that accepts a function `func` and returns a new function that will be called only once. After the first call, it will return the cached result of the first call.
  *
  * @template {extends (...args: any[]) => any} T Function type
  * @param {T} func The function only called once
