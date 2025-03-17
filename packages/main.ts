@@ -100,6 +100,9 @@ export type { RandomStringOptions } from './random/randomString'
 export { sortWithIndex } from './array/sortWithIndex'
 export { lexSort } from './array/lexSort'
 
+export { once } from './function/once'
+export { withFallback } from './function/withFallback'
+
 export type {
   PrimitiveType,
   NumberString,
@@ -111,7 +114,8 @@ export type {
   Edge,
   EdgeReverse,
   EmptyOrParameters,
-  EmptyOrReturnType
+  EmptyOrReturnType,
+  WithFallback
 } from './common/types'
 
 export {
