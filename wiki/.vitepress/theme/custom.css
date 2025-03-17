@@ -20,6 +20,7 @@ img[alt="Static Badge"] {
     position: fixed;
     right: 24px;
     z-index: 114514;
+    font-size: 14px;
   }
 }
 .table-of-contents ul {
