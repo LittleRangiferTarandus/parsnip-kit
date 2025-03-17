@@ -6,12 +6,13 @@
  * @returns {(...args: Parameters<T>) => ReturnType<T>}
  * @version 0.0.2
  */
-export function once<T extends (...args: any[]) => any>(
-  func: T,
-) {
+export function once<T extends (...args: any[]) => any>(func: T) {
   let called = false
   let cache: ReturnType<T> | undefined
-  return function (this: ThisParameterType<T>, ...args: Parameters<T>): ReturnType<T> {
+  return function (
+    this: ThisParameterType<T>,
+    ...args: Parameters<T>
+  ): ReturnType<T> {
     if (!called) {
       called = true
       cache = func.apply(this, args)
