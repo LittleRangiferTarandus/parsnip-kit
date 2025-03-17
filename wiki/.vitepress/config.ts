@@ -6,7 +6,7 @@ import ja from './ja'
 export default defineConfig({
   markdown: {
     toc: {
-      level: [1, 2, 3, 4, 5]
+      level: [1]
     }
   },
   head: [
