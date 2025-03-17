@@ -100,3 +100,10 @@ export type EmptyOrParameters<T> = T extends (...args: any[]) => any
 export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
   ? ReturnType<T>
   : void
+
+/**
+ * Either returns the result of type `T` or a fallback value `R` if the result is `null` or `undefined`.
+ * @version 0.0.2
+ */
+export type WithFallback<T extends (...args: any[]) => any, R> =
+  ReturnType<T> extends undefined | null ? R : ReturnType<T>
