@@ -141,3 +141,17 @@
 [[[source EmptyOrReturnType
   
 ]]]
+# WithFallback
+[[[desc WithFallback
+型 `T` の結果を返すか、結果が `null` または `undefined` の場合にデフォルト値の型 `R` を返します。
+
+]]]
+
+[[[version WithFallback
+  
+]]]
+
+### Source
+[[[source WithFallback
+  
+]]]

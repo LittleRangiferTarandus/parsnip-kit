@@ -43,3 +43,6 @@ defaultValue:デフォルト値
 [[[returns withFallback
 
 ]]]
+#### Reference
+
+[WithFallback](../common/types#withfallback)

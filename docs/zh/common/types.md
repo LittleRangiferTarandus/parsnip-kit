@@ -141,3 +141,16 @@
 [[[source EmptyOrReturnType
   
 ]]]
+# WithFallback
+[[[desc WithFallback
+返回函数 `T` 的返回值类型，如果是 `null` 或者 `undefined` 则返回默认值类型 `R`。
+]]]
+
+[[[version WithFallback
+  
+]]]
+
+### Source
+[[[source WithFallback
+  
+]]]
