@@ -1,3 +1,6 @@
+import { getByPath } from '../object/getByPath'
+import { stringComparatorAsc, stringComparatorDesc } from '../common/constants'
+import { isFunction } from '../typed/isFunction'
 /**
  * Sorts parameter `arr` lexicographically based on the order specified by parameter `order` with the default of `'asc'`.
  *
@@ -17,9 +20,6 @@
  * @version 0.0.2
  */
 
-import { getByPath } from '../object/getByPath'
-import { stringComparatorAsc, stringComparatorDesc } from '../common/constants'
-
 export function lexSort<T, R extends 'asc' | 'desc' = 'asc' | 'desc'>(
   arr: T[],
   order: R = 'asc' as R,
@@ -27,14 +27,14 @@ export function lexSort<T, R extends 'asc' | 'desc' = 'asc' | 'desc'>(
 ) {
   return arr.sort((a, b) => {
     const valueA = getter
-      ? typeof getter === 'string'
-        ? getByPath(a as any, getter)
-        : getter(a)
+      ? isFunction(getter)
+        ? getter(a)
+        : getByPath(a as any, getter)
       : a
     const valueB = getter
-      ? typeof getter === 'string'
-        ? getByPath(b as any, getter)
-        : getter(b)
+      ? isFunction(getter)
+        ? getter(b)
+        : getByPath(b as any, getter)
       : b
     return order === 'asc'
       ? stringComparatorAsc(valueA, valueB)
