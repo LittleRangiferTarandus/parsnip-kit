@@ -103,6 +103,8 @@ export { lexSort } from './array/lexSort'
 export { once } from './function/once'
 export { withFallback } from './function/withFallback'
 
+export { linkToTree } from './array/linkToTree'
+
 export type {
   PrimitiveType,
   NumberString,
@@ -115,7 +117,10 @@ export type {
   EdgeReverse,
   EmptyOrParameters,
   EmptyOrReturnType,
-  WithFallback
+  WithFallback,
+  LiteralStringWithFallback,
+  MappedTypeByKeyOrIndex,
+  DeepMappedTypeByKeyOrIndex
 } from './common/types'
 
 export {

@@ -107,3 +107,54 @@ export type EmptyOrReturnType<T> = T extends (...args: any[]) => any
  */
 export type WithFallback<T extends (...args: any[]) => any, R> =
   ReturnType<T> extends undefined | null ? R : ReturnType<T>
+
+/**
+ * This type provides a default string value `R` when string type `T` is too general (like string).
+ *
+ * It ensures type safety while allowing flexibility in scenarios such as configuration objects or optional parameters.
+ * @version 0.0.2
+ */
+export type LiteralStringWithFallback<T extends string, R extends string> = T &
+  R extends never
+  ? T
+  : R
+
+/**
+ * Generates plain objects or arrays based on input string/numeric index `T`, pointing to type `V`, with optionality controlled by type `O`.
+ * @version 0.0.2
+ */
+export type MappedTypeByKeyOrIndex<
+  T extends string,
+  V,
+  O extends boolean = false
+> =
+  KeyOrIndex<T> extends string
+    ? O extends false
+      ? { [P in T]: V }
+      : { [P in T]?: V }
+    : O extends false
+      ? unknown[] & { [P in KeyOrIndex<T>]: V }
+      : unknown[] & { [P in KeyOrIndex<T>]?: V }
+
+/**
+ * Recursively parses the field path `T` and creates nested plain objects or arrays. It can interpret nested path strings like `"data.[0].name"`, with the path's end field pointing to value `V`. `O` decides if the value is optional.
+ *
+ * It is very useful for creating complex nested types based on string templates.
+ * @version 0.0.2
+ */
+export type DeepMappedTypeByKeyOrIndex<
+  T extends string,
+  V,
+  O extends boolean = false
+> = T extends `[${infer Key extends number}][${infer Rest}`
+  ? MappedTypeByKeyOrIndex<`${Key}`, DeepMappedTypeByKeyOrIndex<`[${Rest}`, V>>
+  : T extends `${infer Key}[${infer Rest}`
+    ? MappedTypeByKeyOrIndex<
+        `${Key}`,
+        DeepMappedTypeByKeyOrIndex<`[${Rest}`, V>
+      >
+    : T extends `[${infer Key extends number}].${infer Rest}`
+      ? MappedTypeByKeyOrIndex<`${Key}`, DeepMappedTypeByKeyOrIndex<Rest, V>>
+      : T extends `${infer Key}.${infer Rest}`
+        ? MappedTypeByKeyOrIndex<`${Key}`, DeepMappedTypeByKeyOrIndex<Rest, V>>
+        : MappedTypeByKeyOrIndex<T, V, O>

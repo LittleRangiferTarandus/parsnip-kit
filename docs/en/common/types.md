@@ -154,3 +154,41 @@
 [[[source WithFallback
   
 ]]]
+# LiteralStringWithFallback
+[[[desc LiteralStringWithFallback
+
+]]]
+
+[[[version LiteralStringWithFallback
+  
+]]]
+
+### Source
+[[[source LiteralStringWithFallback
+  
+]]]
+# MappedTypeByKeyOrIndex
+[[[desc MappedTypeByKeyOrIndex
+]]]
+
+[[[version MappedTypeByKeyOrIndex
+  
+]]]
+
+### Source
+[[[source MappedTypeByKeyOrIndex
+  
+]]]
+# DeepMappedTypeByKeyOrIndex
+[[[desc DeepMappedTypeByKeyOrIndex
+
+]]]
+
+[[[version DeepMappedTypeByKeyOrIndex
+  
+]]]
+
+### Source
+[[[source DeepMappedTypeByKeyOrIndex
+  
+]]]

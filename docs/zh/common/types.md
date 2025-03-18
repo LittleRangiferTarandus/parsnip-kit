@@ -154,3 +154,46 @@
 [[[source WithFallback
   
 ]]]
+# LiteralStringWithFallback
+[[[desc LiteralStringWithFallback
+当字符串类型 `T` 太宽泛（例如 `string`）时，此类型会提供一个默认字符串值 `R`。
+
+它可以确保类型安全，在给配置对象或者可选参数设置默认值时非常有用。
+]]]
+
+[[[version LiteralStringWithFallback
+  
+]]]
+
+### Source
+[[[source LiteralStringWithFallback
+  
+]]]
+# MappedTypeByKeyOrIndex
+[[[desc MappedTypeByKeyOrIndex
+根据输入的字符串或数字索引 `T` 来生成普通对象或数组类型，该索引指向类型 `V`，类型 `O` 控制值是否可选。
+]]]
+
+[[[version MappedTypeByKeyOrIndex
+  
+]]]
+
+### Source
+[[[source MappedTypeByKeyOrIndex
+  
+]]]
+# DeepMappedTypeByKeyOrIndex
+[[[desc DeepMappedTypeByKeyOrIndex
+递归地解析字段路径 `T` 并创建嵌套普通对象或数组，它可以解析类似 `"data.[0].name"` 这样的嵌套路径字符串，路径末端的字段指向值 `V`。`O` 控制值是否可选。
+
+在基于字符串模板创建复杂的嵌套类型时非常有用。
+]]]
+
+[[[version DeepMappedTypeByKeyOrIndex
+  
+]]]
+
+### Source
+[[[source DeepMappedTypeByKeyOrIndex
+  
+]]]
