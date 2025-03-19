@@ -104,6 +104,7 @@ export { once } from './function/once'
 export { withFallback } from './function/withFallback'
 
 export { linkToTree } from './array/linkToTree'
+export { chunk } from './array/chunk'
 
 export type {
   PrimitiveType,
