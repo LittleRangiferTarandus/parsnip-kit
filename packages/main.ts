@@ -107,6 +107,7 @@ export { linkToTree } from './array/linkToTree'
 export { chunk } from './array/chunk'
 
 export { escapeRegExp } from './string/escapeRegExp'
+export { parseTemplate } from './string/parseTemplate'
 
 export type {
   PrimitiveType,
