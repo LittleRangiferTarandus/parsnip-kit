@@ -106,6 +106,8 @@ export { withFallback } from './function/withFallback'
 export { linkToTree } from './array/linkToTree'
 export { chunk } from './array/chunk'
 
+export { escapeRegExp } from './string/escapeRegExp'
+
 export type {
   PrimitiveType,
   NumberString,
