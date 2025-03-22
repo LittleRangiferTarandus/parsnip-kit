@@ -29,9 +29,29 @@ export default defineConfig({
       { text: 'ドキュメント', link: '/ja/guide/intro' }
     ],
     sidebar: sidebar,
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' }
-    ]
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          ja: {
+            translations: {
+              button: {
+                buttonText: '検索',
+                buttonAriaLabel: '検索'
+              },
+              modal: {
+                noResultsText: '関連結果が見つかりません',
+                resetButtonTitle: '検索条件をクリア',
+                footer: {
+                  selectText: '選択',
+                  navigateText: '切り替え',
+                  closeText: '検索を閉じる'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 })
