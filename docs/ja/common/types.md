@@ -198,3 +198,17 @@
 [[[source DeepMappedTypeByKeyOrIndex
   
 ]]]
+
+# DataUnit
+[[[desc DataUnit
+`DataUnit` 型は、デジタルデータの異なる単位を表します。
+]]]
+
+[[[version DataUnit
+  
+]]]
+
+### Source
+[[[source DataUnit
+  
+]]]

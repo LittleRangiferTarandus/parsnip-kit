@@ -197,3 +197,17 @@
 [[[source DeepMappedTypeByKeyOrIndex
   
 ]]]
+
+# DataUnit
+[[[desc DataUnit
+`DataUnit` 类型表示数据大小的不同单位。
+]]]
+
+[[[version DataUnit
+  
+]]]
+
+### Source
+[[[source DataUnit
+  
+]]]

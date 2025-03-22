@@ -158,3 +158,19 @@ export type DeepMappedTypeByKeyOrIndex<
       : T extends `${infer Key}.${infer Rest}`
         ? MappedTypeByKeyOrIndex<`${Key}`, DeepMappedTypeByKeyOrIndex<Rest, V>>
         : MappedTypeByKeyOrIndex<T, V, O>
+
+/**
+ * `DataUnit` type represents different units of digital data.
+ * @version 0.0.2
+ */
+export type DataUnit =
+  | 'bit'
+  | 'B'
+  | 'KB'
+  | 'MB'
+  | 'GB'
+  | 'TB'
+  | 'PB'
+  | 'EB'
+  | 'ZB'
+  | 'YB'

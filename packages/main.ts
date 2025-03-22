@@ -109,6 +109,8 @@ export { chunk } from './array/chunk'
 export { escapeRegExp } from './string/escapeRegExp'
 export { parseTemplate } from './string/parseTemplate'
 
+export { convertDataUnit } from './number/convertDataUnit'
+
 export type {
   PrimitiveType,
   NumberString,
@@ -124,7 +126,8 @@ export type {
   WithFallback,
   LiteralStringWithFallback,
   MappedTypeByKeyOrIndex,
-  DeepMappedTypeByKeyOrIndex
+  DeepMappedTypeByKeyOrIndex,
+  DataUnit
 } from './common/types'
 
 export {
