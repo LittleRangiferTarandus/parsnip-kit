@@ -5,6 +5,7 @@
 Parsnip-Kit is a zero-dependency JavaScript utility library that supports TypeScript. It provides a collection of practical utility functions to help developers handle common programming tasks more efficiently.
 
 [API Document](https://littlerangifertarandus.github.io/parsnip-kit/)
+[Npm](https://www.npmjs.com/package/parsnip-kit/)
 
 ## Language Versions
 - [中文](README.zh.md)
