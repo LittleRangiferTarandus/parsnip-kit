@@ -8,6 +8,15 @@ Parsnip-Kit は、モダンな JavaScript API を使用して書かれており�
 
 # 概要
 
-以下は Parsnip-Kit が提供するツール関数の概要です。
+以下は Parsnip-Kit が提供するツール関数の概要です：
+- Object: JavaScript オブジェクトを操作するツール関数。例：[cloneDeep](../object/cloneDeep)、[isEqual](../object/isEqual)、[getByPath](../object/getByPath)。
+- Array: 配列を操作するツール関数。例：[unique](../array/unique)、[intersection](../array/intersection)、[lexSort](../array/lexSort) と [numberSort](../array/numberSort)。
+- Statistic: JavaScript で記述統計を行うツール関数。[sum](../statistic/sum)、[maxItem](../statistic/maxItem) と [minItem](../statistic/minItem) を含む。
+- Number: 数値を処理するツール関数。例：[range](../number/range)、[thousandSeparator](../number/thousandSeparator) と [percent](../number/percent)。
+- Function: 関数の入参、戻り値、ロジックを処理する関数。例：[debounce](../function/debounce)、[throttle](../function/throttle)、[combine](../function/combine) と [curry](../function/curry)。
+- Async: 非同期プロセスを処理するツール関数。例：[concurrent](../async/concurrent)、[retry](../async/retry) と [asyncForEach](../async/asyncForEach)。
+- String: 文字列のツール関数。例：[camelCase](../string/camelCase)、[snakeCase](../string/snakeCase) と [htmlEncode](../string/htmlEncode)。
+- Typed: 入参の型を判断するための関数。例：[isPrimitive](../typed/isPrimitive)、[isNanValue](../typed/isNanValue) と [getTypeTag](../typed/getTypeTag)。
+- Random: ランダムなデータを生成する。例：[randomNumber](../random/randomNumber)、[randomString](../random/randomString) と [randomFromArray](../random/randomFromArray)。
 
 ![](../../overview.svg)

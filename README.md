@@ -11,7 +11,7 @@ Parsnip-Kit is a zero-dependency JavaScript utility library that supports TypeSc
 - [English](README.md)
 - [日本語](README.ja.md)
 
-# Installation
+## Installation
 ```sh
 npm install parsnip-kit
 ```
@@ -23,6 +23,19 @@ npm install parsnip-kit
 4. **🚀 Modern**: Built with modern JavaScript APIs, it aims to provide developers with commonly used utility functions that are not yet natively supported.
 5. **📦 Modular**: Supports ES6 modularization and tree-shaking.
 6. **🛠️ Easy to Maintain**: Has comprehensive unit tests and coding standards, and is equipped with automated document generation and a document site project, making it easy for subsequent expansion and maintenance.
+
+## Overview
+
+Here's an overview of the tool functions provided by Parsnip-Kit:
+- Object: For manipulating JavaScript objects, such as `cloneDeep`, `isEqual`, `getByPath`.
+- Array: For manipulating arrays, such as `unique`, `intersection`, `lexSort` and `numberSort`.
+- Statistic: For descriptive statistics in JavaScript, including `sum`, `maxItem` and `minItem`.
+- Number: For processing numbers, such as `range`, `thousandSeparator` and `percent`.
+- Function: Functions for handling function parameters, returns, and logic, such as: `debounce`, `throttle`, `combine` and `curry`.
+- Async: Focused on asynchronous process handling, such as `concurrent`, `retry` and `asyncForEach`.
+- String: String tool functions, such as `camelCase`, `snakeCase` and `htmlEncode`.
+- Typed: For checking the type of input parameters, including `isPrimitive`, `isNanValue` and `getTypeTag`.
+- Random: Generates random data, including `randomNumber`, `randomString` and `randomFromArray`.
 
 ## Use Cases
 Parsnip-Kit is designed for various JavaScript and TypeScript projects, from small tools to large applications. It aims to provide concise and efficient utility functions to save developers' time and effort.

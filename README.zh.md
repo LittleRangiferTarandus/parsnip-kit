@@ -11,11 +11,10 @@ Parsnip-Kit 是一个零依赖的 JavaScript 工具库，支持 TypeScript。它
 - [English](README.md)
 - [日本語](README.ja.md)
 
-# 安装
+## 安装
 ```sh 
 npm install parsnip-kit
 ```
-
 
 ## 功能特点
 1. **🧳 零依赖**：完全无外部依赖，轻量级且高效，适合各种大小的项目。
@@ -25,6 +24,19 @@ npm install parsnip-kit
 5. **📦 模块化**：支持 ES6 模块化，支持 Tree-shaking。
 6. **🛠️ 易维护**：项目具有完善的单元测试和代码规范，同时配备自动化文档生成以及文档站点项目，易于后续的扩展与维护。
 
+## 函数概览
+
+以下是 Parsnip-Kit 提供的工具函数概览：
+- Object: 操作 JavaScript 对象的工具函数，如 `cloneDeep`、`isEqual`、`getByPath`。
+- Array: 操作数组的工具函数，如 `unique`、`intersection`、`lexSort` 和 `numberSort`。
+- Statistic: 在 JavaScript 中进行描述统计的工具函数，包括 `sum`、`maxItem` 和 `minItem`。
+- Number: 处理数值的工具函数，如 `range`、`thousandSeparator` 和 `percent`。
+- Function: 处理函数入参、返回和行为的函数，如 `debounce`、`throttle`、`combine` 和 `curry`。
+- Async: 专注于处理异步流程处理的工具函数，如 `concurrent`、`retry` 和 `asyncForEach`。
+- String: 字符串工具函数，如 `camelCase`、`snakeCase` 和 `htmlEncode`。
+- Typed: 用于判断入参类型，包括 `isPrimitive`、`isNanValue` 和 `getTypeTag`。
+- Random: 生成随机数据，包括 `randomNumber`、`randomString` 和 `randomFromArray`。
+- 
 ## 使用场景
 Parsnip-Kit 适用于各种 JavaScript 和 TypeScript 项目，无论是小型工具还是大型应用。它旨在提供简洁、高效的工具函数，帮助开发者节省时间和精力。
 

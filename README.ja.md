@@ -11,7 +11,7 @@ Parsnip-Kit は TypeScript 対応のゼロ依存 JavaScript ユーティリテ�
 - [English](README.md)
 - [日本語](README.ja.md)
 
-# インストール
+## インストール
 ```sh 
 npm install parsnip-kit
 ```
@@ -24,6 +24,18 @@ npm install parsnip-kit
 4. **🚀 モダン化**: 現代の JavaScript API を基に構築されており、デベロッパーや開発者向けに、まだネイティブでサポートされていない一般的なツール関数を提供することを目的としています。
 5. **📦 モジュラー**: ES6モジュール化に対応し、Tree-shakingもサポートしています。
 6. **🛠️ 簡単メンテナンス**: 充実したユニットテストとコーディングルールが整っており、自動的なドキュメント生成とドキュメントサイトプロジェクトが装備されているため、拡張とメンテナンスが容易です。
+
+## 概要
+以下は Parsnip-Kit が提供するツール関数の概要です：
+- Object: JavaScript オブジェクトを操作するツール関数。例：`cloneDeep`、`isEqual`、`getByPath`。
+- Array: 配列を操作するツール関数。例：`unique`、`intersection`、`lexSort` と `numberSort`。
+- Statistic: JavaScript で記述統計を行うツール関数。`sum`、`maxItem` と `minItem` を含む。
+- Number: 数値を処理するツール関数。例：`range`、`thousandSeparator` と `percent`。
+- Function: 関数の入参、戻り値、ロジックを処理する関数。例：`debounce`、`throttle`、`combine` と `curry`。
+- Async: 非同期プロセスを処理するツール関数。例：`camelCase`、`snakeCase` と `htmlEncode`。
+- String: 文字列のツール関数。例：`camelCase`、`snakeCase` と `htmlEncode`。
+- Typed: 入参の型を判断するための関数。例： `isPrimitive`、`isNanValue` と `getTypeTag`。
+- Random: ランダムなデータを生成する。例：`randomNumber`、`randomString` と `randomFromArray`。
 
 ## 使用シーン
 Parsnip-Kit は、小型ツールから大型アプリケーションまで、さまざまな JavaScript および TypeScript プロジェクトに適しています。開発者の時間を節約し、労力を軽減するための簡潔で効率的なユーティリティ関数を提供することを目指しています。
