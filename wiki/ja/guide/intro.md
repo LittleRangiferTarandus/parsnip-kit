@@ -19,4 +19,4 @@ Parsnip-Kit は、モダンな JavaScript API を使用して書かれており�
 - Typed: 入参の型を判断するための関数。例：[isPrimitive](../typed/isPrimitive)、[isNanValue](../typed/isNanValue) と [getTypeTag](../typed/getTypeTag)。
 - Random: ランダムなデータを生成する。例：[randomNumber](../random/randomNumber)、[randomString](../random/randomString) と [randomFromArray](../random/randomFromArray)。
 
-![](../../overview.svg)
+![](/overview.svg)

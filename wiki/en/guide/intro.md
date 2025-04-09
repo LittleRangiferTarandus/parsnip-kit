@@ -19,4 +19,4 @@ Here's an overview of the tool functions provided by Parsnip-Kit:
 - Typed: For checking the type of input parameters, including [isPrimitive](../typed/isPrimitive), [isNanValue](../typed/isNanValue) and [getTypeTag](../typed/getTypeTag).
 - Random: Generates random data, including [randomNumber](../random/randomNumber), [randomString](../random/randomString) and [randomFromArray](../random/randomFromArray).
 
-![](../../overview.svg)
+![](/overview.svg)

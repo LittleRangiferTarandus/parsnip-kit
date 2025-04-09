@@ -19,4 +19,4 @@ Parsnip-Kit 使用现代 JavaScript API 编写，所有工具函数都支持 Typ
 - Typed: 用于判断入参类型，包括 [isPrimitive](../typed/isPrimitive)、[isNanValue](../typed/isNanValue) 和 [getTypeTag](../typed/getTypeTag)。
 - Random: 生成随机数据，包括 [randomNumber](../random/randomNumber)、[randomString](../random/randomString) 和 [randomFromArray](../random/randomFromArray)。
 
-![](../../overview.svg)
+![](/overview.svg)

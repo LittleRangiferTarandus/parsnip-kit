@@ -21,7 +21,7 @@ bun install parsnip-kit
 
 Parsnip Kit は、以下の環境で実行をサポートしています：
 
-|<img src="../../js_logo.png" width="32px" height="32px"/>ECMAScript|<img src="../../edge_logo.svg" width="32px" height="32px"/>Edge|<img src="../../firefox_logo.svg" width="32px" height="32px"/>Firefox|<img src="../../chrome_logo.svg" width="32px" height="32px"/>Chrome|<img src="../../safari_logo.svg" width="32px" height="32px"/>Safari|
+|<img src="/js_logo.png" width="32px" height="32px"/>ECMAScript|<img src="/edge_logo.svg" width="32px" height="32px"/>Edge|<img src="/firefox_logo.svg" width="32px" height="32px"/>Firefox|<img src="/chrome_logo.svg" width="32px" height="32px"/>Chrome|<img src="/safari_logo.svg" width="32px" height="32px"/>Safari|
 |-|-|-|-|-|
 |≥2020|≥88|≥78|≥87|≥14|
 
