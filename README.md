@@ -4,7 +4,7 @@
 
 Parsnip-Kit is a zero-dependency JavaScript utility library that supports TypeScript. It provides a collection of practical utility functions to help developers handle common programming tasks more efficiently.
 
-[API Document](https://littlerangifertarandus.github.io/parsnip-kit/)
+[API Document](https://shika-space.github.io/parsnip-kit/)
 [Npm](https://www.npmjs.com/package/parsnip-kit/)
 
 ## Language Versions
@@ -109,8 +109,8 @@ leftJoin(data, profile, 'id', 'id', (a, b) => ({...a, ...b}))
 ```
 
 ## Documentation & Support
-- **Documentation**: [View Documentation](https://littlerangifertarandus.github.io/parsnip-kit/) to learn more about the features and usage.
-- **Support**: Encountered issues during use? Feel free to submit [Issues](https://github.com/LittleRangiferTarandus/parsnip-kit/issues) or [Pull Requests](https://github.com/LittleRangiferTarandus/parsnip-kit/pulls).
+- **Documentation**: [View Documentation](https://shika-space.github.io/parsnip-kit/) to learn more about the features and usage.
+- **Support**: Encountered issues during use? Feel free to submit [Issues](https://github.com/shika-space/parsnip-kit/issues) or [Pull Requests](https://github.com/shika-space/parsnip-kit/pulls).
 
 ## License
 Parsnip-Kit is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.

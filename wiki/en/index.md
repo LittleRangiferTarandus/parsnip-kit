@@ -17,7 +17,7 @@ hero:
       link: /en/guide/intro
     - theme: alt
       text: Github
-      link: https://github.com/LittleRangiferTarandus/parsnip-kit
+      link: https://github.com/shika-space/parsnip-kit
 
 features:
   - title: 🧳 Zero Dependencies

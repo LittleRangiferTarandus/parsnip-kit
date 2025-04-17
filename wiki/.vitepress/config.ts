@@ -20,7 +20,7 @@ export default defineConfig({
   metaChunk: true,
   themeConfig: {
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' },
+      { icon: 'github', link: 'https://github.com/shika-space/parsnip-kit' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/parsnip-kit' }
     ],
     logo: '/logo.svg',

@@ -4,7 +4,7 @@
 
 Parsnip-Kit 是一个零依赖的 JavaScript 工具库，支持 TypeScript。它提供了一系列实用的工具函数，帮助开发者更高效地处理常见的编程任务。
 
-[API 文档](https://littlerangifertarandus.github.io/parsnip-kit/)
+[API 文档](https://shika-space.github.io/parsnip-kit/)
 [Npm](https://www.npmjs.com/package/parsnip-kit/)
 
 ## 语言版本
@@ -109,8 +109,8 @@ leftJoin(data, profile, 'id', 'id', (a, b) => ({...a, ...b}))
 ```
 
 ## 文档与支持
-- **文档**：[查看文档](https://littlerangifertarandus.github.io/parsnip-kit/)以了解更多功能和使用方法。
-- **支持**：在使用过程中遇到问题？欢迎提交 [Issue](https://github.com/LittleRangiferTarandus/parsnip-kit/issues) 或 [Pull Request](https://github.com/LittleRangiferTarandus/parsnip-kit/pulls)。
+- **文档**：[查看文档](https://shika-space.github.io/parsnip-kit/)以了解更多功能和使用方法。
+- **支持**：在使用过程中遇到问题？欢迎提交 [Issue](https://github.com/shika-space/parsnip-kit/issues) 或 [Pull Request](https://github.com/shika-space/parsnip-kit/pulls)。
 
 ## 许可
 Parsnip-Kit 采用 [MIT 许可证](LICENSE)，详情请查看 [LICENSE](LICENSE) 文件。

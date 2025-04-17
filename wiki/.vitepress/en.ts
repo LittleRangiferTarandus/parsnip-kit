@@ -16,9 +16,5 @@ export default defineConfig({
       { text: 'Doc', link: '/en/guide/intro' }
     ],
     sidebar: sidebar,
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/LittleRangiferTarandus/parsnip-kit' }
-    ]
   }
 })

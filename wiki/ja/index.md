@@ -17,7 +17,7 @@ hero:
       link: /ja/guide/intro
     - theme: alt
       text: Github
-      link: https://github.com/LittleRangiferTarandus/parsnip-kit
+      link: https://github.com/shika-space/parsnip-kit
 
 features:
   - title: 🧳 ゼロ依存
